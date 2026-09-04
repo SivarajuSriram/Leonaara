@@ -1535,7 +1535,8 @@ test.describe('header', () => {
     const links = page.locator('header .nav-main .level-0 a');
     await expect(links).toHaveCount(9);
     await expect(links.first()).toHaveText('Alpine Hide');
-    await expect(links.first()).toHaveCSS('opacity', '0.6');
+    // the open timeline tweens the .level-0 wrappers to opacity .6
+    await expect(page.locator('header .nav-main .level-0').first()).toHaveCSS('opacity', '0.6');
     await page.click('header .menu-bg', { position: { x: 1500, y: 500 } });
     await page.waitForTimeout(800);
     await expect(page.locator('header')).not.toHaveClass(/header-menu-open/);
@@ -2767,7 +2768,7 @@ describe('interleave', () => {
   it('handles counts that are not multiples of five', () => {
     const out = interleave(['a','b','c','d','e','f','g']);
     expect(out.length).toBe(30);
-    expect(out.slice(0, 10).join('')).toBe('abcdefgabc');
+    expect(out.slice(0, 10).join('')).toBe('abcdefgcde');
   });
   it('returns an empty list for no items', () => {
     expect(interleave([])).toEqual([]);
@@ -3154,7 +3155,7 @@ export function metadataFor(page: PageContent): Metadata {
     title: m.title,
     description: m.description,
     robots: { index: !m.robots.noIndex, follow: !m.robots.noFollow, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
-    alternates: { canonical: path, languages: { en: path, 'x-default': '/de/' } },
+    alternates: { canonical: path, languages: { en: path } }, // `de` hreflang is added when the German mirror exists (spec §2)
     openGraph: { title: m.ogTitle, description: m.ogDescription, type: 'website', images: m.ogImage ? [{ url: m.ogImage.src }] : [] },
     twitter: { card: 'summary', title: m.twitterTitle, description: m.twitterDescription, images: m.twitterImage ? [m.twitterImage.src] : [] },
   };
@@ -3198,10 +3199,10 @@ function renderSection(section: Section) {
 }
 
 export function SectionRenderer({ sections }: { sections: Section[] }) {
-  return <>{sections.map((section) => <span key={section.id} style={{ display: 'contents' }}>{renderSection(section)}</span>)}</>;
+  return <>{sections.map((section) => <Fragment key={section.id}>{renderSection(section)}</Fragment>)}</>;
 }
 ```
-`display: contents` keeps the wrapper out of layout so `main > .mask` selectors and the grid behave exactly as in the original DOM. The unit test's `:scope > .mask` works because jsdom ignores `display`; in the browser the DOM nesting is `main > span > div.mask`, which no original CSS rule depends on (checked: `docs/reference/css-clean/*.css` never uses `main >` or `> .mask`).
+(add `import { Fragment } from 'react';` at the top). Keyed fragments add no DOM node, so every section stays a direct child of `main` exactly like the original (`[page-id] main > div:first-child` rules in later phases depend on this).
 
 ```tsx
 // components/layout/BodyClass.tsx
