@@ -18,12 +18,17 @@ export function Picture({ image, widthD, heightD, widthM, heightM, lazy = true, 
   const isSvg = image.mime === 'image/svg+xml';
   const sources = isSvg ? [] : buildSources(image, preset);
 
-  const reveal = () => {
-    if (overlayRef.current && imgRef.current?.complete) {
-      gsap.to(overlayRef.current, { opacity: 0, duration: 0.5, ease: 'power1.out' });
-    }
-  };
-  useGSAP(() => { reveal(); }, { dependencies: [image.src] });
+  // Fade the dark overlay out once the image has loaded (original: 0.5s power1.out).
+  // A cached image can already be complete before React attaches a listener, so check `complete` first.
+  useGSAP(() => {
+    const img = imgRef.current;
+    const overlay = overlayRef.current;
+    if (!img || !overlay) return;
+    const fadeOverlay = () => gsap.to(overlay, { opacity: 0, duration: 0.5, ease: 'power1.out' });
+    if (img.complete) fadeOverlay();
+    else img.addEventListener('load', fadeOverlay, { once: true });
+    return () => img.removeEventListener('load', fadeOverlay);
+  }, { dependencies: [image.src] });
 
   const style = { '--ar-d': String(arD), '--ar-m': String(arM) } as CSSProperties;
   return (
@@ -42,7 +47,6 @@ export function Picture({ image, widthD, heightD, widthM, heightM, lazy = true, 
         alt={image.alt ?? ''}
         title={image.title ?? undefined}
         loading={lazy ? 'lazy' : undefined}
-        onLoad={reveal}
       />
       <div className="overlay" ref={overlayRef} />
     </picture>

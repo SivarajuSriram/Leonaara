@@ -21,3 +21,13 @@ test('/i rejects paths outside public/images', async ({ request }) => {
   const res = await request.get('/i?src=%2F..%2Fpackage.json&w=10');
   expect(res.status()).toBe(400);
 });
+
+test('/i returns 404 for a missing file', async ({ request }) => {
+  const res = await request.get('/i?src=%2Fimages%2Fdoes-not-exist.jpg&w=10');
+  expect(res.status()).toBe(404);
+});
+
+test('/i rejects a malformed extract', async ({ request }) => {
+  const res = await request.get('/i?src=%2Fimages%2FLogos%2Fbilanz.png&w=10&extract=a_b');
+  expect(res.status()).toBe(400);
+});

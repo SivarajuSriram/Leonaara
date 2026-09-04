@@ -32,7 +32,9 @@ export function buildSources(image: ImageRef, preset: SizePreset): SourceSpec[] 
   const out: SourceSpec[] = [];
   for (const cfg of CONFIGS) {
     const { width, height } = dims(preset, cfg.id);
+    // r: how many source pixels one rendered pixel maps to at this config's render size (cfg.size / width).
     const r = width ? cfg.size / width : 0;
+    // n: the preset's width/height ratio, or render-size/height when only a height is given.
     const n = width && height ? width / height : height ? cfg.size / height : 0;
     for (const bp of cfg.breakpoints) {
       out.push({
