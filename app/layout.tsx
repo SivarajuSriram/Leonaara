@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react';
 import '@/styles/globals.css';
+import { SmoothScroll } from '@/components/layout/SmoothScroll';
+import { PageTransition } from '@/components/layout/PageTransition';
 
 const FONTS = [
   'karol-sans-300-normal',
@@ -18,7 +20,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="format-detection" content="telephone=no" />
       </head>
-      <body>{children}</body>
+      <body>
+        <div className="body-inner">
+          <div id="__app">
+            <SmoothScroll>
+              <PageTransition>{children}</PageTransition>
+            </SmoothScroll>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="eriro-bg-attach" src="/HG.jpg" alt="" />
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
