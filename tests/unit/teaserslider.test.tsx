@@ -41,5 +41,10 @@ describe('TeaserSlider', () => {
     expect(container.querySelector('.navigation .prev span')?.textContent).toBe('PREV');
     expect(container.querySelector('.navigation .spacer')?.textContent).toBe('/');
     expect(container.querySelector('.navigation .next span')?.textContent).toBe('NEXT');
+
+    // navigation={{ prevEl: null, nextEl: null }} (not `true`) must keep Swiper
+    // from rendering its own default .swiper-button-prev/-next elements — those
+    // are the live site's blue chevrons and are not part of the original markup.
+    expect(container.querySelectorAll('.swiper-button-prev, .swiper-button-next').length).toBe(0);
   });
 });

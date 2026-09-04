@@ -27,9 +27,11 @@ describe('basic sections', () => {
     expect(container.firstElementChild?.className).toBe('default space-before- mask mask_imgtext');
     expect(container.querySelector('.image-left picture img')?.getAttribute('src')).toContain('w=501&h=390');
     expect(container.querySelector('.image-right picture img')?.getAttribute('src')).toContain('w=570&h=510');
-    // jsdom normalizes CRLF to LF while parsing the dangerouslySetInnerHTML fragment
-    // (WHATWG "preprocessing the input stream"), same as tests/unit/hero.test.tsx.
-    expect(container.querySelector('.content h2.title')?.innerHTML).toBe('Travel back <br>\nto the beginnings <br>\nof everything');
+    // The title renders through SplitWords, which strips the whitespace-only text
+    // node the CMS export leaves after every <br> (see stripBreakWhitespace in
+    // components/ui/SplitWords.tsx) before jsdom ever normalizes the CRLF, same as
+    // tests/unit/hero.test.tsx.
+    expect(container.querySelector('.content h2.title')?.innerHTML).toBe('Travel back <br>to the beginnings <br>of everything');
     expect(container.querySelector('.content .text a.linkdetail')?.getAttribute('href')).toBe('/en/alpine-hide/');
   });
   it('Img renders one full-bleed picture', () => {

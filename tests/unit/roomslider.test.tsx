@@ -46,5 +46,10 @@ describe('RoomSlider', () => {
 
     // Navigation renders because rooms.length (4) > 1.
     expect(container.querySelector('.navigation')).not.toBeNull();
+
+    // navigation={{ prevEl: null, nextEl: null }} (not `true`) must keep Swiper
+    // from rendering its own default .swiper-button-prev/-next elements — those
+    // are the live site's blue chevrons and are not part of the original markup.
+    expect(container.querySelectorAll('.swiper-button-prev, .swiper-button-next').length).toBe(0);
   });
 });

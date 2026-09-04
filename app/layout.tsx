@@ -25,16 +25,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="format-detection" content="telephone=no" />
       </head>
       <body className="pid-1 layout-layout-0">
-        <div className="body-inner">
-          <div id="__app">
-            <Header />
-            <SmoothScroll>
-              <PageTransition>{children}</PageTransition>
-              <Footer />
-            </SmoothScroll>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="eriro-bg-attach" src="/HG.jpg" alt="" />
-          </div>
+        <div id="__app">
+          <Header />
+          <SmoothScroll>
+            <PageTransition>{children}</PageTransition>
+            <Footer />
+          </SmoothScroll>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="eriro-bg-attach" src="/HG.jpg" alt="" />
         </div>
       </body>
     </html>

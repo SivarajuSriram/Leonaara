@@ -48,7 +48,12 @@ export function RoomSlider({ section }: { section: RoomSliderSection }) {
             loop
             // prevEl/nextEl are assigned in onBeforeInit (an init-time callback, not render)
             // rather than read here, since reading a ref's .current during render is unsafe.
-            navigation={true}
+            // Both keys must be present (even as null) here: swiper/react's needsNavigation()
+            // check only skips rendering its own default .swiper-button-prev/-next elements
+            // when navigation.prevEl/nextEl are already defined at mount. `navigation={true}`
+            // left them undefined, so Swiper injected its own default (blue chevron) buttons
+            // alongside the custom .navigation arrows below. Do not simplify this back to `true`.
+            navigation={{ prevEl: null, nextEl: null }}
             controller={{ control: [right, left] }}
             onBeforeInit={(s) => {
               const nav = s.params.navigation;
