@@ -1,0 +1,60 @@
+.ht-biglink {
+  font-size:4.5rem;
+  font-weight:300;
+  letter-spacing:.08em;
+  line-height:111%;
+  text-decoration:underline;
+  text-transform:uppercase;
+}
+@media (max-width:1023px) {
+  .ht-biglink {
+    font-size:3.5rem;
+    letter-spacing:.05em;
+    line-height:114%;
+  }
+}
+.ht-biglink:hover {
+  text-decoration-color:transparent;
+}
+.small-font {
+  font-size:2rem;
+  font-weight:400;
+  letter-spacing:.08em;
+  line-height:125%;
+  text-transform:uppercase;
+}
+@media (max-width:1023px) {
+  .small-font {
+    font-size:1.7rem;
+    letter-spacing:.08em;
+    line-height:94%;
+  }
+}
+a.ht-button {
+  border:2px solid #e4e0db;
+  font-size:2rem;
+  font-weight:300;
+  letter-spacing:.08em;
+  line-height:125%;
+  padding:1.5rem 2rem;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+@media (max-width:1023px) {
+  a.ht-button {
+    font-size:1.3rem;
+    letter-spacing:.05em;
+    line-height:131%;
+  }
+}
+a.ht-button:hover {
+  background-color:#e4e0db;
+}
+@media (max-width:1023px) {
+  a.ht-button {
+    padding:1rem 2rem;
+  }
+}
+.filled,.filled * {
+  fill:currentColor;
+}

@@ -1,0 +1,16 @@
+/* Global stylesheet: Tailwind (theme + utilities only, no preflight), design tokens,
+   self-hosted fonts, and the original site's reset/typography/grid/link CSS.
+   Nothing else is ever added here — component CSS lives next to its component. */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+  --color-ink: #211d1d;
+  --color-beige: #e4e0db;
+  --font-sans: karol-sans, sans-serif;
+}
+
+/* Global only: fonts, the original reset/typography/grid, shared link classes. Component CSS is imported by each component. */
+@import "./fonts.css";
+@import "./base.css";
+@import "./links.css";
