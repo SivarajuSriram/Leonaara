@@ -9,7 +9,7 @@ import { SplitWords } from '@/components/ui/SplitWords';
 import { RichText } from '@/components/ui/RichText';
 import { useGSAP } from '@/lib/gsap';
 import { horizontalLoop, type LoopTimeline } from '@/lib/horizontalLoop';
-import { TransitionLink } from '@/components/layout/TransitionLink';
+import { AppLink } from '@/components/layout/AppLink';
 import './PartnerMarquee.css';
 
 // Port of the original ordering: 5 buckets filled round-robin, output ceil(n/5)*5*3 items cycling per bucket.
@@ -31,7 +31,7 @@ export function interleave<T>(items: T[]): T[] {
 function Logo({ p }: { p: Partner }) {
   // Marquee logo image: 180 desktop / 120 mobile height, from js_DRc2neIx.js
   const pic = <Picture image={p.img[0]} heightD={180} heightM={120} lazy={false} />;
-  return p.link ? <TransitionLink href={p.link.href} target={p.link.target ?? undefined}>{pic}</TransitionLink> : pic;
+  return p.link ? <AppLink href={p.link.href} target={p.link.target ?? undefined}>{pic}</AppLink> : pic;
 }
 
 export function PartnerMarquee({ section }: { section: PartnerMarqueeSection }) {

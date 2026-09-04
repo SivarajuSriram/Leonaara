@@ -1,13 +1,13 @@
-// The original `.ht-biglink` link, navigating through TransitionLink.
+// The original `.ht-biglink` link, navigating through AppLink.
 import type { ReactNode } from 'react';
-import { TransitionLink } from '@/components/layout/TransitionLink';
+import { AppLink } from '@/components/layout/AppLink';
 
 type Props = { href: string; className?: string; target?: string; rel?: string; children: ReactNode };
 
 export function BigLink({ href, className, target, rel, children }: Props) {
   return (
-    <TransitionLink href={href} target={target} rel={rel} className={className ? `ht-biglink ${className}` : 'ht-biglink'}>
+    <AppLink href={href} target={target} rel={rel} className={className ? `ht-biglink ${className}` : 'ht-biglink'}>
       {children}
-    </TransitionLink>
+    </AppLink>
   );
 }

@@ -2,7 +2,6 @@ import type { ReactNode } from 'react';
 import '@/styles/globals.css';
 import { Header } from '@/components/layout/Header';
 import { SmoothScroll } from '@/components/layout/SmoothScroll';
-import { PageTransition } from '@/components/layout/PageTransition';
 import { Footer } from '@/components/layout/Footer';
 
 export const viewport = { width: 'device-width', initialScale: 1 };
@@ -28,7 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <div id="__app">
           <Header />
           <SmoothScroll>
-            <PageTransition>{children}</PageTransition>
+            {children}
             <Footer />
           </SmoothScroll>
           {/* eslint-disable-next-line @next/next/no-img-element */}

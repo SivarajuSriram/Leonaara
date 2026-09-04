@@ -1,6 +1,6 @@
 import type { Ref } from 'react';
 import { site } from '@/content/site';
-import { TransitionLink } from './TransitionLink';
+import { AppLink } from './AppLink';
 import { TelIcon, MailIcon, MapIcon, VoucherIcon, GalleryIcon } from '@/components/ui/icons';
 
 type Props = { ref: Ref<HTMLDivElement>; isHome: boolean; pathname: string };
@@ -14,9 +14,9 @@ export function MenuPanel({ ref, isHome, pathname }: Props) {
         <nav className="nav-info">
           <div className="tel-icon"><a href={`tel:${site.contact.tel}`}><TelIcon /></a></div>
           <div className="mail-icon"><a href={`mailto:${site.contact.email}`}><MailIcon /></a></div>
-          <div className="map-icon"><TransitionLink href={site.pageLinks.contact}><MapIcon /></TransitionLink></div>
-          <div className="voucher-icon"><TransitionLink href={site.pageLinks.voucher}><VoucherIcon /></TransitionLink></div>
-          <div className="gallery-icon"><TransitionLink href={site.pageLinks.gallery}><GalleryIcon /></TransitionLink></div>
+          <div className="map-icon"><AppLink href={site.pageLinks.contact}><MapIcon /></AppLink></div>
+          <div className="voucher-icon"><AppLink href={site.pageLinks.voucher}><VoucherIcon /></AppLink></div>
+          <div className="gallery-icon"><AppLink href={site.pageLinks.gallery}><GalleryIcon /></AppLink></div>
         </nav>
         <div className="mobile-hr" />
         <div className="main-nav-wrapper">
@@ -24,9 +24,9 @@ export function MenuPanel({ ref, isHome, pathname }: Props) {
           <nav aria-label="Menu" className={isHome ? 'nav-main' : 'nav-main fadeOut'}>
             {site.nav.map((item) => (
               <div key={item.uid} className="level-0">
-                <TransitionLink href={item.link} className={isActive(item.link) ? 'link-0 router-link-active' : 'link-0'}>
+                <AppLink href={item.link} className={isActive(item.link) ? 'link-0 router-link-active' : 'link-0'}>
                   {item.title}{' '}
-                </TransitionLink>
+                </AppLink>
                 <div className="sub"><div /></div>
               </div>
             ))}

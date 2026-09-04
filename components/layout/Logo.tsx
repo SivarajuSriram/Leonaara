@@ -2,7 +2,7 @@
 import { useRef } from 'react';
 import { gsap, useGSAP } from '@/lib/gsap';
 import { site } from '@/content/site';
-import { TransitionLink } from './TransitionLink';
+import { AppLink } from './AppLink';
 import { LogoIcon } from '@/components/ui/icons';
 
 // The fixed logo scrubs out while its own box scrolls past the top:
@@ -20,9 +20,9 @@ export function Logo() {
   return (
     <div className="logo-wrapper grid-container" ref={wrapperRef}>
       <div className="logo">
-        <TransitionLink href={site.pageLinks.home} className="router-link-active router-link-exact-active">
+        <AppLink href={site.pageLinks.home} className="router-link-active router-link-exact-active">
           <LogoIcon />
-        </TransitionLink>
+        </AppLink>
       </div>
     </div>
   );

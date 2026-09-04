@@ -1,7 +1,7 @@
 // components/layout/Footer.tsx
 import { site } from '@/content/site';
 import './Footer.css';
-import { TransitionLink } from './TransitionLink';
+import { AppLink } from './AppLink';
 import { LogoIcon, UnikateurIcon } from '@/components/ui/icons';
 import { RichText } from '@/components/ui/RichText';
 
@@ -32,10 +32,10 @@ export function Footer() {
       </div>
       <div className="lower-footer grid-container-inner">
         <nav className="nav-extra" aria-label="Footer Menu">
-          {site.footerNav.map((n) => <TransitionLink key={n.uid} href={n.link}>{n.title}</TransitionLink>)}
+          {site.footerNav.map((n) => <AppLink key={n.uid} href={n.link}>{n.title}</AppLink>)}
         </nav>
         <div className="logo">
-          <TransitionLink className="link-logo" href={site.pageLinks.home}><LogoIcon /></TransitionLink>
+          <AppLink className="link-logo" href={site.pageLinks.home}><LogoIcon /></AppLink>
         </div>
         <div className="luxury-hotels-logo">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -46,7 +46,7 @@ export function Footer() {
             {site.languages.map((l) => <a key={l.code} className={l.code === 'en' ? 'router-link-active' : ''} href={l.link}>{l.title}</a>)}
           </nav>
           <nav className="nav-footer" aria-label="Footer Privacy">
-            {site.privacyNav.map((n) => <TransitionLink key={n.uid} href={n.link}>{n.title}</TransitionLink>)}
+            {site.privacyNav.map((n) => <AppLink key={n.uid} href={n.link}>{n.title}</AppLink>)}
           </nav>
         </div>
         <div className="unikateur-signet">
