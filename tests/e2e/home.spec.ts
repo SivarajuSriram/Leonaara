@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('homepage renders all 15 sections with the original text', async ({ page }) => {
-  await page.goto('/en/');
+  await page.goto('/');
   await expect(page).toHaveTitle('eriro - Experience alpine originality');
   const masks = page.locator('main .mask');
   await expect(masks).toHaveCount(15);
@@ -18,6 +18,6 @@ test('homepage renders all 15 sections with the original text', async ({ page })
 });
 
 test('unknown routes show the error page', async ({ page }) => {
-  await page.goto('/en/does-not-exist/');
+  await page.goto('/does-not-exist/');
   await expect(page.locator('.mask_errorpage .errorTitle')).toHaveText('something went wrong');
 });

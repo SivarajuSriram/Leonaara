@@ -11,7 +11,7 @@ vi.mock('@/lib/gsap', () => ({
   ScrollSmoother: { create: vi.fn() },
   useGSAP: vi.fn(),
 }));
-vi.mock('next/navigation', () => ({ useRouter: () => ({ push: vi.fn() }), usePathname: () => '/en/' }));
+vi.mock('next/navigation', () => ({ useRouter: () => ({ push: vi.fn() }), usePathname: () => '/' }));
 
 describe('SectionRenderer', () => {
   it('renders every homepage section in order with its mask class', () => {
@@ -36,6 +36,6 @@ describe('metadataFor', () => {
     expect(m.description).toContain('smallest luxury hideaway');
     expect((m.openGraph as { title?: string }).title).toBe('eriro Alpine Hide');
     expect((m.openGraph as { images?: { url: string }[] }).images?.[0].url).toBe('/images/2c0a3fac2ab04ecb63b3c016f3214849.jpg');
-    expect(m.alternates?.canonical).toBe('/en/');
+    expect(m.alternates?.canonical).toBe('/');
   });
 });

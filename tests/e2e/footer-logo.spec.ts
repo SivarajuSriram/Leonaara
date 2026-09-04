@@ -8,7 +8,7 @@ import { test, expect } from '@playwright/test';
 // (ScrollSmoother) and mobile (native scroll) paths.
 
 async function scrollToBottomAndClickLogo(page: import('@playwright/test').Page) {
-  await page.goto('/en/');
+  await page.goto('/');
   await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
   await page.waitForTimeout(2000);
   // A coordinate-based .click() can land on the wrong element here: right
@@ -45,7 +45,7 @@ test('footer logo jumps to the top instantly instead of navigating (desktop, Scr
   await scrollToBottomAndClickLogo(page);
 
   expect(await scrollYNextFrame(page)).toBe(0);
-  expect(page.url()).toContain('/en/');
+  expect(page.url()).toContain('/');
   await expectPageFullyVisible(page);
 });
 
@@ -54,6 +54,6 @@ test('footer logo jumps to the top instantly instead of navigating (mobile, no s
   await scrollToBottomAndClickLogo(page);
 
   expect(await scrollYNextFrame(page)).toBe(0);
-  expect(page.url()).toContain('/en/');
+  expect(page.url()).toContain('/');
   await expectPageFullyVisible(page);
 });

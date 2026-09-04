@@ -9,7 +9,7 @@ async function expectPx(locator: Locator, property: string, expected: number) {
 
 test('root scale and body tokens match the original', async ({ page }) => {
   await page.setViewportSize({ width: 1920, height: 951 });
-  await page.goto('/en/');
+  await page.goto('/');
   const html = page.locator('html');
   await expectPx(html, 'font-size', 10);
   const body = page.locator('body');

@@ -5,7 +5,7 @@ import type { ScrollSmoother } from 'gsap/ScrollSmoother';
 import { AppLink } from '@/components/layout/AppLink';
 import { getSmoother } from '@/lib/smoother';
 
-vi.mock('next/navigation', () => ({ usePathname: () => '/en/', useRouter: () => ({ push: vi.fn() }) }));
+vi.mock('next/navigation', () => ({ usePathname: () => '/', useRouter: () => ({ push: vi.fn() }) }));
 // See tests/unit/roomslider.test.tsx: next/link silently strips trailing slashes
 // under Vitest (a webpack-only DefinePlugin flag), so stub it with a plain anchor.
 // The stub deliberately has no href attribute: jsdom has no router behind it, so
@@ -27,7 +27,7 @@ describe('AppLink same-route clicks', () => {
   });
 
   it('jumps to top instantly via the smoother instead of navigating when href matches the current pathname', () => {
-    const { container } = render(<AppLink href="/en/">Home</AppLink>);
+    const { container } = render(<AppLink href="/">Home</AppLink>);
     const anchor = container.querySelector('a')!;
 
     const notCancelled = fireEvent.click(anchor, { button: 0 });
@@ -37,7 +37,7 @@ describe('AppLink same-route clicks', () => {
   });
 
   it('treats a href missing the trailing slash as the same route', () => {
-    const { container } = render(<AppLink href="/en">Home</AppLink>);
+    const { container } = render(<AppLink href="/">Home</AppLink>);
     const anchor = container.querySelector('a')!;
 
     const notCancelled = fireEvent.click(anchor, { button: 0 });
@@ -47,7 +47,7 @@ describe('AppLink same-route clicks', () => {
   });
 
   it('lets a link to a different route navigate normally, with no scroll override', () => {
-    const { container } = render(<AppLink href="/en/spa/">Spa</AppLink>);
+    const { container } = render(<AppLink href="/spa/">Spa</AppLink>);
     const anchor = container.querySelector('a')!;
 
     const notCancelled = fireEvent.click(anchor, { button: 0 });
@@ -59,7 +59,7 @@ describe('AppLink same-route clicks', () => {
   it('falls back to an instant window.scrollTo when no ScrollSmoother exists (mobile)', () => {
     vi.mocked(getSmoother).mockReturnValue(null);
     const windowScrollTo = vi.spyOn(window, 'scrollTo').mockImplementation(() => {});
-    const { container } = render(<AppLink href="/en/">Home</AppLink>);
+    const { container } = render(<AppLink href="/">Home</AppLink>);
     const anchor = container.querySelector('a')!;
 
     fireEvent.click(anchor, { button: 0 });

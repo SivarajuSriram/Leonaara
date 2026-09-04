@@ -5,7 +5,7 @@ import { TeaserSlider } from '@/components/sections/TeaserSlider';
 import { home } from '@/content/en/home';
 
 vi.mock('@/lib/gsap', () => ({ gsap: { to: vi.fn() }, useGSAP: vi.fn(), SplitText: {}, ScrollTrigger: {} }));
-vi.mock('next/navigation', () => ({ useRouter: () => ({ push: vi.fn() }), usePathname: () => '/en/' }));
+vi.mock('next/navigation', () => ({ useRouter: () => ({ push: vi.fn() }), usePathname: () => '/' }));
 // next/link normalizes trailing slashes via a webpack DefinePlugin flag that only
 // exists in a real Next build; under Vitest it silently strips them, which would
 // make the href assertion below fail for reasons unrelated to TeaserSlider. Stub
@@ -30,7 +30,7 @@ describe('TeaserSlider', () => {
     expect(container.querySelector('.swiper.teaser-content h2.title')?.textContent).toBe('Bask in stillness');
     const btn = container.querySelector('.swiper.teaser-content a.ht-button');
     expect(btn?.textContent).toBe('Path to regeneration');
-    expect(btn?.getAttribute('href')).toBe('/en/spa/');
+    expect(btn?.getAttribute('href')).toBe('/spa/');
     expect(container.querySelector('.navigation')).toBeNull();
   });
   it('renders PREV / NEXT navigation for multiple slides', () => {

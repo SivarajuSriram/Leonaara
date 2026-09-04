@@ -167,7 +167,7 @@ export const home: PageContent = {
         },
         "content": {
           "title": "Travel back <br>\r\nto the beginnings <br>\r\nof everything",
-          "text": "<p>Become one: with origins, with nature, with yourself. A sense of infinite freedom unfolds when in the luxurious company of time as it stands still. <i>Welcome</i> to eriro, created with a mere nine suites with the intention of establishing the smallest Alpine hideaway in the Alps, located at an elevation of 1,550 metres, in Ehrwald/Tyrol. Archaic and pristine, the untamed nature of the mountain draws the eye to the essentials and fulfills the innately human desire for simplicity and authenticity.</p>\n<p><a href=\"/en/alpine-hide/\" class=\"linkdetail\">TO THE ALPINE HIDE</a></p>",
+          "text": "<p>Become one: with origins, with nature, with yourself. A sense of infinite freedom unfolds when in the luxurious company of time as it stands still. <i>Welcome</i> to eriro, created with a mere nine suites with the intention of establishing the smallest Alpine hideaway in the Alps, located at an elevation of 1,550 metres, in Ehrwald/Tyrol. Archaic and pristine, the untamed nature of the mountain draws the eye to the essentials and fulfills the innately human desire for simplicity and authenticity.</p>\n<p><a href=\"/alpine-hide/\" class=\"linkdetail\">TO THE ALPINE HIDE</a></p>",
           "imgleft": [
             {
               "src": "/images/eriro-ehrwald-alpine-hide-luxus-natur-01.jpg",
@@ -944,7 +944,7 @@ export const home: PageContent = {
         },
         "content": {
           "title": "Nature infuses<br>\r\nthe room",
-          "text": "<p>Stone, wood sourced from our own forests, and other natural Alpine materials from the area bring together eriro’s 9 suites, the rooms give a feeling of timeless luxury paired with authentic Alpine experience. Restrained in design and with an equal feel of cosiness, the suites provide a sense of structure and shelter. Nature, in its archaic splendour, floods into the room through floor-to-ceiling windows and lends to the interior with a play of light and colour.</p>\n<p><a href=\"/en/suites/boum/\" class=\"linkdetail\">TO THE SUITES</a></p>",
+          "text": "<p>Stone, wood sourced from our own forests, and other natural Alpine materials from the area bring together eriro’s 9 suites, the rooms give a feeling of timeless luxury paired with authentic Alpine experience. Restrained in design and with an equal feel of cosiness, the suites provide a sense of structure and shelter. Nature, in its archaic splendour, floods into the room through floor-to-ceiling windows and lends to the interior with a play of light and colour.</p>\n<p><a href=\"/suites/boum/\" class=\"linkdetail\">TO THE SUITES</a></p>",
           "imgleft": [
             {
               "src": "/images/eriro-ehrwald-alpine-hide-luxus-natur-02.jpg",
@@ -1008,7 +1008,7 @@ export const home: PageContent = {
         },
         "content": {
           "title": "The sound of nature echoes on skin",
-          "text": "<p>Here, the mountain’s contrasts meet: cool air and warm water, retreat and vastness. The saunas restore what the wind and altitude demand. Between them lies water, the primal element of life. Clear. Timeless. The spa is a return. To closeness, touch, and revitalising energy. Nature continues its work here, in water, warmth and wide-open space. From the sheltered interior, the spa opens out to the new alpine meadow infinity pool, where water, landscape and mountains become one.</p>\n<p>&nbsp;</p>\n<p><a href=\"/en/spa/\">DISCOVER THE SPA</a></p>",
+          "text": "<p>Here, the mountain’s contrasts meet: cool air and warm water, retreat and vastness. The saunas restore what the wind and altitude demand. Between them lies water, the primal element of life. Clear. Timeless. The spa is a return. To closeness, touch, and revitalising energy. Nature continues its work here, in water, warmth and wide-open space. From the sheltered interior, the spa opens out to the new alpine meadow infinity pool, where water, landscape and mountains become one.</p>\n<p>&nbsp;</p>\n<p><a href=\"/spa/\">DISCOVER THE SPA</a></p>",
           "imgleft": [
             {
               "src": "/images/Hendrik_Stüwe/Pool_Shooting_2605_11.jpg",
@@ -1241,7 +1241,7 @@ export const home: PageContent = {
         },
         "content": {
           "title": "The natural <br>\r\npower of the <br>\r\nmountain",
-          "text": "<p>Blissful and mellow as a summery lazing about in the Alpine meadows, wild and powerful as a sudden thunderstorm, the many moods of mountain nature hone our senses to the essential. In the seclusion of the Alps, we once again become one with nature. Time-transcending mountain experiences and rituals remind us of the value of ‘the little things in life’ and anchor themselves as lasting memories - and all these special moments are part of our all-in service, ready to be discovered and enjoyed.</p>\n<p><a href=\"/en/experiences/\" class=\"linkdetail\">TO THE EXPERIENCES</a></p>",
+          "text": "<p>Blissful and mellow as a summery lazing about in the Alpine meadows, wild and powerful as a sudden thunderstorm, the many moods of mountain nature hone our senses to the essential. In the seclusion of the Alps, we once again become one with nature. Time-transcending mountain experiences and rituals remind us of the value of ‘the little things in life’ and anchor themselves as lasting memories - and all these special moments are part of our all-in service, ready to be discovered and enjoyed.</p>\n<p><a href=\"/experiences/\" class=\"linkdetail\">TO THE EXPERIENCES</a></p>",
           "imgleft": [
             {
               "src": "/images/eriro-ehrwald-alpine-hide-luxus-natur-04.jpg",
@@ -1566,7 +1566,7 @@ export const home: PageContent = {
               "infotext": "Origins of the Alpine region",
               "linktext": "Path to regeneration",
               "link": {
-                "href": "/en/spa/",
+                "href": "/spa/",
                 "target": null,
                 "class": null,
                 "title": null,

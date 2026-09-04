@@ -14,12 +14,12 @@ export function getPage(slug: string): PageContent | undefined {
 // The original <head>: title, description, og:*, twitter:*, canonical (see docs/reference/pages/en.html).
 export function metadataFor(page: PageContent): Metadata {
   const m = page.meta;
-  const path = page.slug === '/' ? '/en/' : `/en${page.slug}/`;
+  const path = page.slug; // page.slug is already '/' for home; no /en prefix, no per-page rewrite needed
   return {
     title: m.title,
     description: m.description,
     robots: { index: !m.robots.noIndex, follow: !m.robots.noFollow, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
-    alternates: { canonical: path, languages: { en: path } }, // `de` hreflang is added when the German mirror exists (spec §2)
+    alternates: { canonical: path, languages: { en: path } },
     openGraph: { title: m.ogTitle, description: m.ogDescription, type: 'website', images: m.ogImage ? [{ url: m.ogImage.src }] : [] },
     twitter: { card: 'summary', title: m.twitterTitle, description: m.twitterDescription, images: m.twitterImage ? [m.twitterImage.src] : [] },
   };

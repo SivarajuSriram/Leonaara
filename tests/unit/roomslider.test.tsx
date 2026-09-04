@@ -10,7 +10,7 @@ vi.mock('@/lib/gsap', () => ({
   ScrollTrigger: { refresh: vi.fn() },
   useGSAP: vi.fn(),
 }));
-vi.mock('next/navigation', () => ({ useRouter: () => ({ push: vi.fn() }), usePathname: () => '/en/' }));
+vi.mock('next/navigation', () => ({ useRouter: () => ({ push: vi.fn() }), usePathname: () => '/' }));
 // next/link normalizes trailing slashes via a webpack DefinePlugin flag that only
 // exists in a real Next build; under Vitest it silently strips them, which would
 // make this assertion fail for reasons unrelated to RoomSlider. Stub it with a
@@ -42,7 +42,7 @@ describe('RoomSlider', () => {
     expect(activeSlide?.querySelector('.room-info-price')?.textContent).toBe(
       'from 775,- € / night per person / All-In'
     );
-    expect(activeSlide?.querySelector('a.ht-button')?.getAttribute('href')).toBe('/en/suites/boum/');
+    expect(activeSlide?.querySelector('a.ht-button')?.getAttribute('href')).toBe('/suites/boum/');
 
     // Navigation renders because rooms.length (4) > 1.
     expect(container.querySelector('.navigation')).not.toBeNull();

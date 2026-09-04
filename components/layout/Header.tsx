@@ -14,7 +14,7 @@ import './Header.css';
 
 export function Header() {
   const pathname = usePathname();
-  const isHome = pathname === '/en/' || pathname === '/en';
+  const isHome = pathname === '/';
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const headerRef = useRef<HTMLElement>(null);

@@ -18,7 +18,7 @@ export function RoomSlider({ section }: { section: RoomSliderSection }) {
   const [right, setRight] = useState<SwiperType | null>(null);
   const prevRef = useRef<HTMLDivElement>(null);
   const nextRef = useRef<HTMLDivElement>(null);
-  const suiteHref = (title: string) => `/en/suites/${title}/`;
+  const suiteHref = (title: string) => `/suites/${title}/`;
 
   return (
     <Mask type="roomslider" uid={section.id} appearance={section.appearance} className="grid-container">

@@ -13,7 +13,7 @@ vi.mock('@/lib/gsap', () => ({
   ScrollTrigger: { refresh: vi.fn() },
   useGSAP: vi.fn(),
 }));
-vi.mock('next/navigation', () => ({ useRouter: () => ({ push: vi.fn() }), usePathname: () => '/en/' }));
+vi.mock('next/navigation', () => ({ useRouter: () => ({ push: vi.fn() }), usePathname: () => '/' }));
 
 const sec = <T extends string>(i: number, type: T) => {
   const s = home.columns.colPos0[i];
@@ -32,7 +32,7 @@ describe('basic sections', () => {
     // components/ui/SplitWords.tsx) before jsdom ever normalizes the CRLF, same as
     // tests/unit/hero.test.tsx.
     expect(container.querySelector('.content h2.title')?.innerHTML).toBe('Travel back <br>to the beginnings <br>of everything');
-    expect(container.querySelector('.content .text a.linkdetail')?.getAttribute('href')).toBe('/en/alpine-hide/');
+    expect(container.querySelector('.content .text a.linkdetail')?.getAttribute('href')).toBe('/alpine-hide/');
   });
   it('Img renders one full-bleed picture', () => {
     const { container } = render(<Img section={sec(7, 'mask_img')} />);

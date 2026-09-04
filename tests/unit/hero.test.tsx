@@ -9,7 +9,7 @@ vi.mock('@/lib/gsap', () => ({
   ScrollTrigger: { refresh: vi.fn() },
   useGSAP: vi.fn(),
 }));
-vi.mock('next/navigation', () => ({ useRouter: () => ({ push: vi.fn() }), usePathname: () => '/en/' }));
+vi.mock('next/navigation', () => ({ useRouter: () => ({ push: vi.fn() }), usePathname: () => '/' }));
 
 describe('Hero', () => {
   const hero = home.columns.colPos0[0];

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('partner marquee moves, pauses on hover, and lays out 90 logos', async ({ page }) => {
-  await page.goto('/en/');
+  await page.goto('/');
   const wrap = page.locator('.mask_partnermarquee .marquee-wrapper');
   await wrap.scrollIntoViewIfNeeded();
   await expect(wrap.locator('.marquee-item')).toHaveCount(90);

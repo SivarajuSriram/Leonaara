@@ -3,7 +3,7 @@ import { OPEN, CLOSED } from '../../components/layout/menuAnimations';
 
 test.describe('header', () => {
   test('menu opens and closes with the original timeline', async ({ page }) => {
-    await page.goto('/en/');
+    await page.goto('/');
     const menu = page.locator('header .menu');
     await expect(menu).toHaveCSS('transform', /matrix\(1, 0, 0, 1, 0, -\d+/);
     await page.click('header .menu-button');
@@ -27,7 +27,7 @@ test.describe('header', () => {
   });
 
   test('scrolled class follows the original rule and the logo scrubs out', async ({ page }) => {
-    await page.goto('/en/');
+    await page.goto('/');
     // ScrollSmoother scrolls #smooth-content, so the placeholder page needs height there, not on body
     await page.evaluate(() => { (document.querySelector('#smooth-content') as HTMLElement).style.minHeight = '6000px'; });
     const logo = page.locator('header .logo-wrapper');

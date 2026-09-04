@@ -7,7 +7,7 @@ vi.mock('@/lib/smoother', () => ({ getSmoother: vi.fn() }));
 
 describe('isInternal', () => {
   it('accepts a same-origin path', () => {
-    expect(isInternal('/en/')).toBe(true);
+    expect(isInternal('/')).toBe(true);
   });
 
   it('rejects a protocol-relative URL', () => {
@@ -21,27 +21,27 @@ describe('isInternal', () => {
 
 describe('isCurrentPage', () => {
   it('matches an identical href and pathname', () => {
-    expect(isCurrentPage('/en/', '/en/')).toBe(true);
+    expect(isCurrentPage('/', '/')).toBe(true);
   });
 
   it('ignores a trailing slash on the href', () => {
-    expect(isCurrentPage('/en', '/en/')).toBe(true);
+    expect(isCurrentPage('/spa', '/spa/')).toBe(true);
   });
 
   it('ignores a trailing slash on the pathname', () => {
-    expect(isCurrentPage('/en/', '/en')).toBe(true);
+    expect(isCurrentPage('/spa/', '/spa')).toBe(true);
   });
 
   it('ignores a query string on the href', () => {
-    expect(isCurrentPage('/en/?ref=footer', '/en/')).toBe(true);
+    expect(isCurrentPage('/?ref=footer', '/')).toBe(true);
   });
 
   it('ignores a hash on the href', () => {
-    expect(isCurrentPage('/en/#top', '/en/')).toBe(true);
+    expect(isCurrentPage('/#top', '/')).toBe(true);
   });
 
   it('does not match a different route', () => {
-    expect(isCurrentPage('/en/spa/', '/en/')).toBe(false);
+    expect(isCurrentPage('/spa/', '/')).toBe(false);
   });
 });
 

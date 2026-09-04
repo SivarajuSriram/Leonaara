@@ -46,7 +46,7 @@ describe('site data', () => {
     expect(site.nav.map((n) => n.title)).toEqual([
       'Alpine Hide', 'Suites', 'All-In-Service', 'Experiences', 'Culinary', 'Spa', 'Origin', 'Summer', 'Winter',
     ]);
-    expect(site.nav[1].link).toBe('/en/suites/boum/');
+    expect(site.nav[1].link).toBe('/suites/boum/');
   });
   it('has contact and booking values', () => {
     expect(site.contact.email).toBe('hide@eriro.at');
@@ -55,6 +55,6 @@ describe('site data', () => {
     expect(site.footerNav.map((n) => n.title)).toEqual([
       'Booking conditions', 'eriro exclusive', 'Contact and arrival', 'Voucher', 'Newsletter', 'Jobs', 'Press',
     ]);
-    expect(site.privacyNav.map((n) => n.link)).toEqual(['/en/imprint/', '/en/privacy/', '/en/cookies/']);
+    expect(site.privacyNav.map((n) => n.link)).toEqual(['/imprint/', '/privacy/', '/cookies/']);
   });
 });
