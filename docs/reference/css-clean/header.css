@@ -249,8 +249,7 @@ header .nav-lang a.router-link-active {
     padding:0;
   }
   header .upper {
-    background-image:url("data:image/svg+xml;
-    charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='51' fill='none'%3E%3Cpath fill='%23E4E0DB' d='M85.957 0h276.648c.997 11.025-.235 35.217 0 50.668-2.229.36-.645.125-.997.167-1.936.375-19.8-.019-22.263.065h-2.901l-109.05-2.692-174.922 2.46-58.974-.984-4.32-33.56L-12 0z'/%3E%3C/svg%3E");
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='51' fill='none'%3E%3Cpath fill='%23E4E0DB' d='M85.957 0h276.648c.997 11.025-.235 35.217 0 50.668-2.229.36-.645.125-.997.167-1.936.375-19.8-.019-22.263.065h-2.901l-109.05-2.692-174.922 2.46-58.974-.984-4.32-33.56L-12 0z'/%3E%3C/svg%3E");
     background-position:100% 100%;
     background-repeat:no-repeat;
     background-size:cover;

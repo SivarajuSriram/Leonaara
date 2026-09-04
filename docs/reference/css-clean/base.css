@@ -349,8 +349,7 @@ a.linkdetail {
   }
 }
 :where(ul:not(.multiselect-options))>li:before {
-  background-image:url("data:image/svg+xml;
-  charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' fill='none'%3E%3Cpath fill='%23211D1D' d='M1.436 4A58 58 0 0 1 0 1.368L2.735 0s.65 1.538.923 2.803c0 0-1.402.855-2.222 1.197'/%3E%3C/svg%3E");
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' fill='none'%3E%3Cpath fill='%23211D1D' d='M1.436 4A58 58 0 0 1 0 1.368L2.735 0s.65 1.538.923 2.803c0 0-1.402.855-2.222 1.197'/%3E%3C/svg%3E");
   background-position:50%;
   background-repeat:no-repeat;
   background-size:contain;

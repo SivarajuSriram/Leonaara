@@ -56,8 +56,7 @@
     margin-top:6rem;
   }
   .mask_pagefilter .filterGrid {
-    background-image:url("data:image/svg+xml;
-    charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='53' fill='none'%3E%3Cpath fill='%23211D1D' d='M269.043 0H-7.605c-.997 10.83.235 37.594 0 52.772 2.23.354.645.123.997.164 1.936.369 3.144-1.213 5.608-1.13L41 53l45.5-1.194L312.5 53l49.002-1.194 4.32-32.967L367 0z'/%3E%3C/svg%3E");
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='53' fill='none'%3E%3Cpath fill='%23211D1D' d='M269.043 0H-7.605c-.997 10.83.235 37.594 0 52.772 2.23.354.645.123.997.164 1.936.369 3.144-1.213 5.608-1.13L41 53l45.5-1.194L312.5 53l49.002-1.194 4.32-32.967L367 0z'/%3E%3C/svg%3E");
     background-position:100% 100%;
     background-repeat:no-repeat;
     background-size:cover;
