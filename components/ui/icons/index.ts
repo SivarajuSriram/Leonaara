@@ -1,0 +1,10 @@
+export { MenuIcon } from './MenuIcon';
+export { LogoIcon } from './LogoIcon';
+export { TelIcon } from './TelIcon';
+export { MailIcon } from './MailIcon';
+export { MapIcon } from './MapIcon';
+export { VoucherIcon } from './VoucherIcon';
+export { GalleryIcon } from './GalleryIcon';
+export { ArrowSliderIcon } from './ArrowSliderIcon';
+export { SubmenuIcon } from './SubmenuIcon';
+export { UnikateurIcon } from './UnikateurIcon';

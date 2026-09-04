@@ -1,0 +1,11 @@
+// original: docs/reference/icons/submenuIcon.svg (submenuIcon)
+import type { SVGProps } from 'react';
+
+export function SubmenuIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg fill="none" viewBox="0 0 13 8" className="filled" {...props}>
+      <path fill="#211D1D" stroke="#211D1D" strokeWidth=".3" d="m.966 1.359-.202.093.163.15 4.42 4.087 1.05 1.386.14.185.112-.203.353-.634.054-.097-.078-.08-.91-.919h-.001l-4.26-4.248-.075-.075-.096.045z" />
+      <path fill="#211D1D" stroke="#211D1D" strokeWidth=".3" d="m11.645.937-.091-.194-.152.152L6.499 5.81l-.43.365-.079.067.036.097.262.713.082.223.168-.17 1.1-1.12 4.29-4.215.075-.074-.045-.096z" />
+    </svg>
+  );
+}
