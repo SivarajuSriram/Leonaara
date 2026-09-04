@@ -31,10 +31,13 @@ describe('Hero', () => {
     expect(container.querySelector('h2.titleh2')?.innerHTML).toBe(crlf(stripBreakWhitespace(hero.content.titleh2)));
     const big = container.querySelector('.image-big picture img') as HTMLImageElement;
     expect(big.getAttribute('src')).toContain('AlexMoling_Eriro_Exterior.jpg');
-    expect(big.getAttribute('src')).toContain('w=1014&h=780');
+    expect([big.getAttribute('width'), big.getAttribute('height')]).toEqual(['1014', '780']);
     expect(big.getAttribute('loading')).toBeNull();
     const small = container.querySelector('.image-small picture img') as HTMLImageElement;
-    expect(small.getAttribute('src')).toContain('w=272&h=360');
-    expect(container.querySelectorAll('.image-big source').length).toBe(6);
+    expect([small.getAttribute('width'), small.getAttribute('height')]).toEqual(['272', '360']);
+    // One art-direction <source> per Picture now (mobile variant); next/image's
+    // own optimizer generates the responsive srcSet, replacing the old six
+    // hand-built breakpoint <source> tags.
+    expect(container.querySelectorAll('.image-big source').length).toBe(1);
   });
 });

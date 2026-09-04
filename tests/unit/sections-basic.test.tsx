@@ -25,8 +25,10 @@ describe('basic sections', () => {
   it('ImgText renders both images, title and text with the link', () => {
     const { container } = render(<ImgText section={sec(1, 'mask_imgtext')} />);
     expect(container.firstElementChild?.className).toBe('default space-before- mask mask_imgtext');
-    expect(container.querySelector('.image-left picture img')?.getAttribute('src')).toContain('w=501&h=390');
-    expect(container.querySelector('.image-right picture img')?.getAttribute('src')).toContain('w=570&h=510');
+    const imgLeft = container.querySelector('.image-left picture img');
+    expect([imgLeft?.getAttribute('width'), imgLeft?.getAttribute('height')]).toEqual(['501', '390']);
+    const imgRight = container.querySelector('.image-right picture img');
+    expect([imgRight?.getAttribute('width'), imgRight?.getAttribute('height')]).toEqual(['570', '510']);
     // The title renders through SplitWords, which strips the whitespace-only text
     // node the CMS export leaves after every <br> (see stripBreakWhitespace in
     // components/ui/SplitWords.tsx) before jsdom ever normalizes the CRLF, same as
@@ -37,7 +39,8 @@ describe('basic sections', () => {
   it('Img renders one full-bleed picture', () => {
     const { container } = render(<Img section={sec(7, 'mask_img')} />);
     expect(container.firstElementChild?.className).toBe('default space-before- mask mask_img grid-container');
-    expect(container.querySelector('.image picture img')?.getAttribute('src')).toContain('w=1920&h=1080');
+    const img = container.querySelector('.image picture img');
+    expect([img?.getAttribute('width'), img?.getAttribute('height')]).toEqual(['1920', '1080']);
   });
   it('Video renders an empty wrapper when there is no video', () => {
     const { container } = render(<Video section={sec(2, 'mask_video')} />);
@@ -54,7 +57,9 @@ describe('basic sections', () => {
     const { container } = render(<Break section={sec(8, 'mask_break')} />);
     expect(container.querySelector('.break-wrapper.grid-container')).not.toBeNull();
     expect(container.querySelector('h2.title')?.innerHTML).toContain('Touch what time<br>');
-    expect(container.querySelector('.image-left picture img')?.getAttribute('src')).toContain('w=570&h=510');
-    expect(container.querySelector('.image-right picture img')?.getAttribute('src')).toContain('w=352&h=280');
+    const breakLeft = container.querySelector('.image-left picture img');
+    expect([breakLeft?.getAttribute('width'), breakLeft?.getAttribute('height')]).toEqual(['570', '510']);
+    const breakRight = container.querySelector('.image-right picture img');
+    expect([breakRight?.getAttribute('width'), breakRight?.getAttribute('height')]).toEqual(['352', '280']);
   });
 });

@@ -1,12 +1,9 @@
 'use client';
 import { useRef, type CSSProperties } from 'react';
+import { getImageProps } from 'next/image';
 import type { ImageRef } from '@/lib/content';
-import { buildSources, aspectRatios, extractParam, imgUrl, type SizePreset } from '@/lib/images';
+import { staticSrc, aspectRatios, renderSize, type SizePreset } from '@/lib/images';
 import { gsap, useGSAP } from '@/lib/gsap';
-import './Picture.css';
-
-// Mirrors the original Img.vue: a <picture> with six webp sources (3 desktop, 3 mobile),
-// a dark overlay that fades out once the image has loaded (original: 0.5s power1.out).
 
 type Props = SizePreset & { image: ImageRef; lazy?: boolean; className?: string };
 
@@ -14,12 +11,10 @@ export function Picture({ image, widthD, heightD, widthM, heightM, lazy = true, 
   const preset: SizePreset = { widthD, heightD, widthM, heightM };
   const imgRef = useRef<HTMLImageElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
-  const [arD, arM] = aspectRatios(image, preset);
   const isSvg = image.mime === 'image/svg+xml';
-  const sources = isSvg ? [] : buildSources(image, preset);
+  const [arD, arM] = aspectRatios(image, preset);
 
   // Fade the dark overlay out once the image has loaded (original: 0.5s power1.out).
-  // A cached image can already be complete before React attaches a listener, so check `complete` first.
   useGSAP(() => {
     const img = imgRef.current;
     const overlay = overlayRef.current;
@@ -31,24 +26,38 @@ export function Picture({ image, widthD, heightD, widthM, heightM, lazy = true, 
   }, { dependencies: [image.src] });
 
   const style = { '--ar-d': String(arD), '--ar-m': String(arM) } as CSSProperties;
+  const wrapperClass = ['relative block', className].filter(Boolean).join(' ');
+  const imgClass = 'block h-auto w-full [aspect-ratio:var(--ar-d)] max-lg:[aspect-ratio:var(--ar-m)]';
+  const overlayClass = 'pointer-events-none absolute inset-0 top-0 left-0 z-[5] h-full w-full bg-ink';
+
+  if (isSvg) {
+    return (
+      <picture className={wrapperClass} style={style}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img ref={imgRef} src={image.src} alt={image.alt ?? ''} title={image.title ?? undefined} loading={lazy ? 'lazy' : undefined} className={imgClass} />
+        <div className={overlayClass} ref={overlayRef} />
+      </picture>
+    );
+  }
+
+  const common = { alt: image.alt ?? '', sizes: '100vw', quality: 80 };
+  const d = renderSize(image, preset, 'default');
+  const m = renderSize(image, preset, 'mobile');
+  const { props: mobileProps } = getImageProps({ ...common, src: staticSrc(image, 'mobile'), width: m.width, height: m.height });
+  const { props: desktopProps } = getImageProps({ ...common, src: staticSrc(image, 'default'), width: d.width, height: d.height });
+
   return (
-    <picture className={className ? `picture ${className}` : 'picture'} style={style}>
-      {sources.map((s, i) => (
-        <source
-          key={i}
-          type="image/webp"
-          media={s.media}
-          srcSet={imgUrl(image.src, { w: s.width, h: s.height, extract: extractParam(image, i < 3 ? 'default' : 'mobile') })}
-        />
-      ))}
+    <picture className={wrapperClass} style={style}>
+      <source media="(max-width: 1023px)" srcSet={mobileProps.srcSet} />
+      {/* eslint-disable-next-line @next/next/no-img-element -- getImageProps' own art-direction pattern requires a plain <img>, next/image's <Image> can't sit inside a <picture> */}
       <img
+        {...desktopProps}
         ref={imgRef}
-        src={isSvg ? image.src : imgUrl(image.src, { w: widthD, h: heightD })}
-        alt={image.alt ?? ''}
         title={image.title ?? undefined}
         loading={lazy ? 'lazy' : undefined}
+        className={imgClass}
       />
-      <div className="overlay" ref={overlayRef} />
+      <div className={overlayClass} ref={overlayRef} />
     </picture>
   );
 }

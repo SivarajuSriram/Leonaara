@@ -17,5 +17,8 @@ test('partner marquee moves, pauses on hover, and lays out 90 logos', async ({ p
   const x4 = await first.evaluate((el) => el.getBoundingClientRect().left);
   expect(Math.abs(x4 - x3)).toBeLessThan(1);
   await expect(page.locator('.mask_partnermarquee .swiper-container')).toBeHidden();
-  await expect(wrap.locator('.marquee-item img').first()).toHaveAttribute('src', /h=180/);
+  // Was 'h=180' (the old /i?...h=180 crop-route query) — Picture now renders
+  // through next/image's own optimizer, which doesn't encode the requested
+  // height in the URL, so assert on the optimizer route itself instead.
+  await expect(wrap.locator('.marquee-item img').first()).toHaveAttribute('src', /\/_next\/image\/?\?/);
 });

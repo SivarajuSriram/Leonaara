@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "gen:image-crops": "tsx scripts/gen-image-crops.ts"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -18,7 +19,6 @@
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "sharp": "^0.34.5",
     "swiper": "^14.2.0"
   },
   "devDependencies": {
@@ -33,6 +33,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.4",
     "jsdom": "^26.1.0",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4",
     "tsx": "^4.23.13",
     "typescript": "^5",

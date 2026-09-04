@@ -24,8 +24,10 @@ describe('TeaserSlider', () => {
     if (s.type !== 'mask_teaserslider') throw new Error('expected teaserslider');
     const { container } = render(<TeaserSlider section={s} />);
     expect(container.querySelector('.teaser-wrapper.grid-container-inner')).not.toBeNull();
-    expect(container.querySelector('.swiper.image-left picture img')?.getAttribute('src')).toContain('w=277&h=330');
-    expect(container.querySelector('.swiper.image-right picture img')?.getAttribute('src')).toContain('w=876&h=960');
+    const teaserLeft = container.querySelector('.swiper.image-left picture img');
+    expect([teaserLeft?.getAttribute('width'), teaserLeft?.getAttribute('height')]).toEqual(['277', '330']);
+    const teaserRight = container.querySelector('.swiper.image-right picture img');
+    expect([teaserRight?.getAttribute('width'), teaserRight?.getAttribute('height')]).toEqual(['876', '960']);
     expect(container.querySelector('.swiper.infotext p.infotext')?.textContent).toBe('Origins of the Alpine region');
     expect(container.querySelector('.swiper.teaser-content h2.title')?.textContent).toBe('Bask in stillness');
     const btn = container.querySelector('.swiper.teaser-content a.ht-button');

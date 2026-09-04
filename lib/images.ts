@@ -1,22 +1,15 @@
 import type { ImageRef } from './content';
 
 export type SizePreset = { widthD?: number; heightD?: number; widthM?: number; heightM?: number };
-export type SourceSpec = { media: string; width?: number; height?: number };
 
-// original Img.vue: desktop renders at 1920 and serves 2560/1920/1440 sources;
-// mobile renders at 360 and serves 1024/768/480 sources.
-const CONFIGS = [
-  { id: 'default' as const, size: 1920, breakpoints: [{ view: 1920, size: 2560 }, { view: 1440, size: 1920 }, { view: 1024, size: 1440 }] },
-  { id: 'mobile' as const, size: 360, breakpoints: [{ view: 768, size: 1024 }, { view: 480, size: 768 }, { view: 0, size: 480 }] },
-];
+function dims(preset: SizePreset, which: 'default' | 'mobile') {
+  return which === 'default' ? { width: preset.widthD, height: preset.heightD } : { width: preset.widthM, height: preset.heightM };
+}
 
 // original truncates the crop fraction to 2 decimals before multiplying
 function trunc2(n: number): number {
   const m = n.toString().match(/^-?\d+(?:\.\d{0,2})?/);
   return m ? parseFloat(m[0]) : n;
-}
-function dims(preset: SizePreset, id: 'default' | 'mobile') {
-  return id === 'default' ? { width: preset.widthD, height: preset.heightD } : { width: preset.widthM, height: preset.heightM };
 }
 
 export function extractParam(image: ImageRef, which: 'default' | 'mobile'): string | undefined {
@@ -28,41 +21,37 @@ export function extractParam(image: ImageRef, which: 'default' | 'mobile'): stri
   ].join('_');
 }
 
-export function buildSources(image: ImageRef, preset: SizePreset): SourceSpec[] {
-  const out: SourceSpec[] = [];
-  for (const cfg of CONFIGS) {
-    const { width, height } = dims(preset, cfg.id);
-    // r: how many source pixels one rendered pixel maps to at this config's render size (cfg.size / width).
-    const r = width ? cfg.size / width : 0;
-    // n: the preset's width/height ratio, or render-size/height when only a height is given.
-    const n = width && height ? width / height : height ? cfg.size / height : 0;
-    for (const bp of cfg.breakpoints) {
-      out.push({
-        media: `(min-width: ${bp.view}px)`,
-        width: r !== 0 ? Math.round(bp.size / r) : undefined,
-        height: width && height ? Math.round(bp.size / r / n) : n !== 0 ? Math.round(bp.size / n) : undefined,
-      });
-    }
-  }
-  return out;
+// Deterministic static path for a (source, crop) pair: same directory as the
+// original, same extension, suffixed with which+extract. scripts/gen-image-crops.ts
+// writes files at exactly this path — this function and the script must never
+// drift apart, which is why both live in this repo (not one computed, one hardcoded).
+export function staticSrc(image: ImageRef, which: 'default' | 'mobile'): string {
+  if (image.mime === 'image/svg+xml') return image.src;
+  const extract = extractParam(image, which);
+  if (!extract) return image.src; // identity crop: the original file already is the answer
+  const dot = image.src.lastIndexOf('.');
+  return `${image.src.slice(0, dot)}__${which}-${extract}${image.src.slice(dot)}`;
 }
 
 export function aspectRatios(image: ImageRef, preset: SizePreset): [number, number] {
-  const ratio = (id: 'default' | 'mobile') => {
-    const { width, height } = dims(preset, id);
+  const ratio = (which: 'default' | 'mobile') => {
+    const { width, height } = dims(preset, which);
     if (width && height) return width / height;
-    const c = image.crop[id];
+    const c = image.crop[which];
     return (image.width * c.width) / (image.height * c.height);
   };
   return [ratio('default'), ratio('mobile')];
 }
 
-export function imgUrl(src: string, o: { w?: number; h?: number; q?: number; extract?: string }): string {
-  const p = new URLSearchParams();
-  p.set('src', src);
-  if (o.w) p.set('w', String(o.w));
-  if (o.h) p.set('h', String(o.h));
-  p.set('q', String(o.q ?? 80));
-  if (o.extract) p.set('extract', o.extract);
-  return `/i?${p.toString().replace(/\+/g, '%20')}`;
+// The width/height next/image's own optimizer needs: the preset override when
+// given, otherwise the natural aspect ratio at a base render size (1920 desktop,
+// 360 mobile — the original's own Img.vue render widths). next/image's `sizes`
+// prop handles picking a smaller device size for narrower viewports from there;
+// there is no need to enumerate breakpoints by hand any more.
+export function renderSize(image: ImageRef, preset: SizePreset, which: 'default' | 'mobile'): { width: number; height: number } {
+  const { width, height } = dims(preset, which);
+  if (width && height) return { width, height };
+  const base = which === 'default' ? 1920 : 360;
+  const ar = aspectRatios(image, preset)[which === 'default' ? 0 : 1];
+  return { width: base, height: Math.round(base / ar) };
 }
