@@ -1,7 +1,7 @@
 # eriro.at English site: 1:1 rebuild in Next.js
 
 Date: 2026-09-04
-Status: draft for review
+Status: approved 2026-09-04 (with the amendments in section 15)
 
 ## 1. Goal
 
@@ -23,7 +23,8 @@ Rebuild https://www.eriro.at/en/ (all 25 English pages plus the 7 routes the sit
 - Backend/CMS: content is static TypeScript files, not TYPO3.
 - Analytics and trackers (nootiz, gtag, AdditiveTR, Google site verification): not cloned.
 - The `mask_marquee` top ribbon component: exists in the bundle but no page currently uses it. Not built.
-- Real e-mail delivery from the forms: the route handler is built and validated, delivery is behind an optional env var (see 9.6).
+- Real e-mail delivery from the forms: deferred. The client-side form (UI, validation, submit states, thank-you redirect) is built; the route handler is a stub that validates and returns 200. See section 15.
+- Newsletter and voucher third-party widgets: not loaded. The pages keep their layout with an empty widget container. See section 15.
 
 ## 3. What the original is (findings)
 
@@ -297,10 +298,10 @@ Identical mechanics, different data:
 `.buttons-wrapper` cols 9–13 with two block `.ht-biglink`s: "Request" → `/en/request/?room={asacode}` and "Book" → booking link + `&room={bookingcode}`.
 
 ### 9.19 Maps
-Google Maps JS API (`@googlemaps/js-api-loader`, `version: 'weekly'`, `libraries: ['places']`, language `en`): centre 47.385007234125084 / 10.969970612228026, zoom 14, the site's custom style array (copied), marker SVG `eriro_map.svg` titled "Eriro", marker click opens `https://maps.app.goo.gl/HvBKVv4pwiadF5ix6`. Container `.google-map` cols 2–13, `height: 45vw` desktop with `border: 1px solid #e4e0db`, `45rem` mobile full-bleed. API key from `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` (the original's key is referrer-locked to eriro.at).
+Placeholder for now (user decision): the `.google-map` container (cols 2–13, `height: 45vw` desktop with `border: 1px solid #e4e0db`, `45rem` mobile full-bleed) holds a keyless Google Maps embed iframe of Hyderabad (`https://www.google.com/maps?q=Hyderabad&output=embed`, `width/height: 100%`, `border: 0`, `loading="lazy"`, `referrerpolicy="no-referrer-when-downgrade"`). The original's JS-API implementation (centre 47.385007234125084 / 10.969970612228026, zoom 14, custom style array, `eriro_map.svg` marker, click → `https://maps.app.goo.gl/HvBKVv4pwiadF5ix6`) is documented here so it can replace the placeholder later; the style array and marker are kept in the content file.
 
 ### 9.20 Newsletter and Voucher widgets
-Newsletter: renders the literal `<div id="additive-newsletter-664458cf61093">` (cols 6–11) and injects `https://newsletter.additive-apps.tech/eriro-at/widgets/e79ae8b2-1c7e-4467-a330-f48110f5a95d/en/` once. Voucher: `<div id="internetseite" class="aa-voucher-widget">` (cols 2–13) and injects `https://voucher.additive-apps.tech/eriro-at/widgets/7b12cd09-5819-4ac4-857c-e6c1a47ae604/en`. Both scripts are removed on unmount. Whether the third party renders on a non-eriro origin is outside our control; the markup and styling match regardless.
+Not loaded (user decision). Newsletter renders the literal empty `<div id="additive-newsletter-664458cf61093">` inside `.aa-newsletter-widget` (cols 6–11); Voucher renders the empty `<div id="internetseite" class="aa-voucher-widget">` (cols 2–13). No third-party script is injected, so the sections keep the original spacing and grid placement but show nothing inside. The script URLs stay in the content files as comments for later.
 
 ### 9.21 FooterPageText, IncludePage, CookieConsentButton
 Layout 8 pages (`page-id` 5/6/7 in the original): first section `padding-top: 45rem` (25rem mobile), `h1` 4rem uppercase, `h2` 3rem, `h3` 2rem bold, `p/ul/ol` 1.8rem lh 156%, links underlined with `hyphens: auto; word-break: break-all`. IncludePage renders the stored HTML (cookie policy tables, privacy text) inside `.t3-ce-rte` spanning cols 2–13. The `body` carries `pid-{pageId}` so these selectors keep working.
@@ -322,7 +323,7 @@ Field definitions are copied from the crawled `data.form.fields.pages` into `con
 - Layout: `form` cols 2–13; each `.section` (white background, `margin-bottom: 2rem`, `padding: 4.5rem 0`) has `.inner` (20-column grid cols 2–11) with `.title` 3rem/500 and items `margin-top: 5rem` spanning 10 (or `col3/col5/col7/col20`). Floating labels (`background: #fff`, `left: 1rem; top: 2rem`, `.active/.hasContent` → `translateY(-70%)`, colour `#211d1db3`), inputs `border: 1px solid #211d1d; border-radius: 3px; padding: 2rem`, focus `box-shadow: 0 0 5px 1px #c7c7c7`, error border `#ea0000` and right-aligned error text.
 - Fields: Input, Email, Tel, Textarea (auto-grow), Radio (salutation), Select (custom dropdown, GSAP height tween `.3s linear`, arrow rotate), DateRange (range picker with 2 months, min today, default today→+7 days, auto-apply, format `dd.mm.yyyy - dd.mm.yyyy`, read-only input), Counter (adults, +/− with 7rem-offset controls), Kids (0–6, each child adds a KidsAge select), RoomsSelect (custom dropdown with 130×90 preview image, title and price per suite, "No specific room preference…" first option, preselect from `?room=`), Checkbox (privacy, hand-drawn tick), Hidden, Divider, Text, Submit (`.ht-submit-button` with `animate`, `success`, `error` states). "Add room" / "Remove room" clone the Suite section (max index) exactly as the original `Page` component does.
 - Validation: react-hook-form + zod mirroring the original vee-validate/yup rules (required where `mandatory`, email format, phone kept only if longer than 3 chars). First error scrolls into view and focuses.
-- Submit: POST to `/api/forms/{request|contact}`; on 200 the button gets `success`, GA event is skipped, and after 300ms the browser navigates to the thank-you route. On error the button gets `error` for 2s. The handler validates with the same zod schema, builds the same summary the original mails (period, rooms with adults/children/ages/meal type, personal data) and, if `RESEND_API_KEY` and `FORM_TO_EMAIL` are set, sends it; otherwise it logs and still returns 200 so the flow can be tested end to end.
+- Submit: POST to `/api/forms/{request|contact}`; on 200 the button gets `success`, GA event is skipped, and after 300ms the browser navigates to the thank-you route. On error the button gets `error` for 2s. The handler is a stub for now (user decision): it validates with the same zod schema, logs the payload, and returns 200 so the flow can be tested end to end. E-mail delivery and the original's booking-engine payload are documented in the handler as a follow-up.
 
 ## 10. Assets
 
@@ -353,9 +354,13 @@ Only two layout modes exist: `≤1023px` and `≥1024px`, plus the root font-siz
 
 ## 14. Risks and open points
 
-- Font licence: Karol Sans is served from eriro's Adobe Fonts kit; self-hosting it is fine for local development but needs a licence before the site is published.
-- Images and copy belong to eriro; same caveat.
-- Google Maps needs the user's own API key; until then the map container renders empty with the correct size.
-- Third-party newsletter/voucher widgets are bound to the `eriro-at` tenant and may refuse to render off-domain.
+- Font licence: Karol Sans is served from eriro's Adobe Fonts kit; self-hosting it is fine for local development. The user has confirmed this build will not be deployed with eriro's fonts and images.
 - GSAP MorphSVG requires the morph target paths to be the exact strings from the bundle (already extracted for hamburger and accordion icons).
 - The `.mov` video may not play in Firefox; the original has the same limitation.
+
+## 15. Approved amendments (user, 2026-09-04)
+
+1. Maps: keyless Google Maps iframe of Hyderabad as a placeholder inside the original container (9.19).
+2. Forms: front end complete; backend delivery deferred, route handler is a validating stub (9.26).
+3. Newsletter and voucher widgets: not loaded; empty containers keep the layout (9.20).
+4. No Vercel deployment with eriro's fonts and images; local build only.
