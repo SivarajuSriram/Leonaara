@@ -1,0 +1,1 @@
+import{_ as t}from"./DBmJ1zCT.js";import{d as c,H as r,U as s,L as a}from"./BSNx7eCJ.js";import"./BeZH4lpK.js";const u=c({__name:"T3BlDefault",props:{content:{}},setup(m){return(e,p)=>{var o;const n=t;return(o=e.content)!=null&&o.colPos0?(r(),s(n,{key:0,content:e.content.colPos0},null,8,["content"])):a("",!0)}}});export{u as default};

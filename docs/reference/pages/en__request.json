@@ -1,0 +1,1470 @@
+{
+ "id": 10,
+ "type": "Standard",
+ "slug": "/request",
+ "media": [],
+ "meta": {
+  "title": "Your request at eriro",
+  "subtitle": "",
+  "abstract": "",
+  "description": "We create a personalized vacation offer for you at our exclusive hotel with only 9 suites at 1,550 meters in the Tyrolean Alps, Austria.",
+  "keywords": "",
+  "canonical": "",
+  "robots": {
+   "noIndex": false,
+   "noFollow": false
+  },
+  "author": "",
+  "authorEmail": "",
+  "ogTitle": "Request",
+  "ogDescription": "We create a personalized vacation offer for you at our exclusive hotel with only 9 suites at 1,550 meters in the Tyrolean Alps, Austria.",
+  "ogImage": null,
+  "twitterTitle": "Request",
+  "twitterDescription": "We create a personalized vacation offer for you at our exclusive hotel with only 9 suites at 1,550 meters in the Tyrolean Alps, Austria.",
+  "twitterCard": "summary",
+  "twitterImage": null
+ },
+ "categories": "",
+ "breadcrumbs": [
+  {
+   "title": "Home",
+   "link": "/en/",
+   "target": "",
+   "active": 1,
+   "current": 0,
+   "spacer": 0,
+   "hasSubpages": 1,
+   "pid": 0
+  },
+  {
+   "title": "Request",
+   "link": "/en/request/",
+   "target": "",
+   "active": 1,
+   "current": 1,
+   "spacer": 0,
+   "hasSubpages": 1,
+   "pid": 105
+  }
+ ],
+ "appearance": {
+  "layout": "layout-0",
+  "backendLayout": "defaultLayout"
+ },
+ "content": {
+  "colPos0": [
+   {
+    "id": 210,
+    "type": "mask_hero",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_hero",
+     "title": "A turn back with every meter of altitude",
+     "titleh2": "The origin one step closer",
+     "titleimg": "",
+     "text": "<p>It is our pleasure to satisfy your curiosity and answer any questions you may have about your stay with us at 1,550 metres.&nbsp;</p>",
+     "img": [],
+     "sideimg": [],
+     "imgsummer": [],
+     "sideimgsummer": [],
+     "herolayout": "only-text"
+    }
+   },
+   {
+    "id": 60,
+    "type": "powermail_pi1",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "data": {
+      "messages": "",
+      "errors": "",
+      "form": {
+       "action": "checkCreate",
+       "section": "c60",
+       "additionalAttributes": {
+        "data-powermail-validate": "data-powermail-validate",
+        "data-validate": "html5",
+        "data-powermail-ajax": "true",
+        "data-powermail-form": 1,
+        "data-powermail-ajax-uri": "/en/request/thank-you/"
+       },
+       "addQueryString": "0",
+       "settings": {
+        "receiverBody": "<p>test</p>",
+        "senderBody": "",
+        "thxRedirect": "/en/request/thank-you/"
+       },
+       "css": "",
+       "formUid": 1,
+       "showTitle": null,
+       "formClasses": "",
+       "moreSteps": "",
+       "title": "Request",
+       "fields": {
+        "action": "/en/request/?tx_powermail_pi1%5Baction%5D=checkCreate&tx_powermail_pi1%5Bcontroller%5D=Form&cHash=b29b35a96d7cdc2dd92c84b6b84373c6",
+        "pages": [
+         {
+          "title": "Stay",
+          "css": "",
+          "pageId": 3,
+          "fields": [
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": false,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Period",
+              "description": "2024-07-22",
+              "marker": "period"
+             },
+             "marker": "period",
+             "name": "tx_powermail_pi1[field][period]",
+             "css": "",
+             "datepickersettings": "date",
+             "fieldWrappingClasses": "powermail_field",
+             "fieldAndLabelWrappingClasses": "",
+             "type": "date",
+             "value": "",
+             "placeholder": "",
+             "fieldClasses": "",
+             "validationClass": "",
+             "additionalAttributes": [],
+             "id": "powermail_field_period"
+            }
+           }
+          ]
+         },
+         {
+          "title": "Suite",
+          "css": "room",
+          "pageId": 4,
+          "fields": [
+           {
+            "field": {
+             "type": "content",
+             "marker": "rooms",
+             "css": "",
+             "fieldAndLabelWrappingClasses": "",
+             "fieldWrappingClasses": "powermail_field",
+             "offsetClasses": "",
+             "value": {
+              "id": 222,
+              "type": "mask_powermailrooms",
+              "colPos": 0,
+              "categories": "",
+              "appearance": {
+               "layout": "default",
+               "frameClass": "default",
+               "spaceBefore": "",
+               "spaceAfter": ""
+              },
+              "content": {
+               "header": "Suite",
+               "subheader": "",
+               "headerLayout": 0,
+               "headerPosition": "",
+               "headerLink": "",
+               "type": "mask_powermailrooms",
+               "firstoption": "No specific room preference. I will take your recommendation.",
+               "rooms": [
+                {
+                 "uid": 3,
+                 "title": "boum",
+                 "minprice": "from 775,- € / night per person / All-In",
+                 "people": "for 2 persons",
+                 "size": "approx. 688 sq ft",
+                 "previewimage": [
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-1.jpg",
+                   "alt": "Living area of boum Suite: reclaimed wood ceiling, sculptural tree trunk daybed and linen sofa before panorama window with view of Wetterstein summits",
+                   "title": null,
+                   "dimensions": {
+                    "width": 8190,
+                    "height": 5463
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-1.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-9.jpg",
+                   "alt": "boum eriro Suite: reclaimed wood ceiling, stone lights and wool headboard framing double bed with white linen bedding and cashmere blanket on plank floor",
+                   "title": null,
+                   "dimensions": {
+                    "width": 8192,
+                    "height": 5464
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-9.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-12.jpg",
+                   "alt": "Bathroom of boum Suite with lime plaster walls, driftwood faucet, backlit mirror, reclaimed wood beam ceiling and glass rain shower",
+                   "title": null,
+                   "dimensions": {
+                    "width": 2048,
+                    "height": 1366
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-12.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-5.jpg",
+                   "alt": "Stylish interior of eriro Alpine Hide – sculptural designer light beneath reclaimed wood ceiling, linen fabrics and mountain panorama through window, warm sanctuary",
+                   "title": null,
+                   "dimensions": {
+                    "width": 2001,
+                    "height": 3000
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-5.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-16.jpg",
+                   "alt": "Private balcony lounge of boum Suite with upholstered daybed and wide view across green alpine meadows to summit silhouettes of Wetterstein",
+                   "title": null,
+                   "dimensions": {
+                    "width": 8192,
+                    "height": 5464
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-16.jpg"
+                  }
+                 ],
+                 "asacode": "1",
+                 "pid": 84,
+                 "sys_language_uid": 1,
+                 "_LOCALIZED_UID": 7
+                },
+                {
+                 "uid": 4,
+                 "title": "wisa",
+                 "minprice": "from 925,- € / night per person / All-In",
+                 "people": "for 2 persons",
+                 "size": "approx. 872 sq ft",
+                 "previewimage": [
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-43.jpg",
+                   "alt": "Eriro Suite living area with reclaimed wood ceiling, textured wool wall, sheepskin armchair before panorama window with terrace and view of conifer forests and mountain summits",
+                   "title": null,
+                   "dimensions": {
+                    "width": 7568,
+                    "height": 5048
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-43.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-44.jpg",
+                   "alt": "Eriro Suite seating area with white linen cushions, wooden table and pendant light before artful patchwork wool wall beneath rustic reclaimed wood beam ceiling",
+                   "title": null,
+                   "dimensions": {
+                    "width": 8183,
+                    "height": 5458
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-44.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-51.jpg",
+                   "alt": "Wisa Suite: reclaimed wood ceiling, natural stone wall and hand-woven dividers framing bed with white linen – sanctuary in honest materiality",
+                   "title": null,
+                   "dimensions": {
+                    "width": 8186,
+                    "height": 5460
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-51.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-55.jpg",
+                   "alt": "Bathroom of Wisa Suite: hand-plastered vanity, driftwood faucet, backlit mirror, reclaimed wood ceiling – purist elegance meets craftsmanship",
+                   "title": null,
+                   "dimensions": {
+                    "width": 8190,
+                    "height": 5463
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-55.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-57.jpg",
+                   "alt": "Cashmere blanket on wooden terrace of Wisa Suite at eriro with open view of Wetterstein massif, spruce forests and rock summits – alpine sanctuary",
+                   "title": null,
+                   "dimensions": {
+                    "width": 8192,
+                    "height": 5464
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-57.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-77.jpg",
+                   "alt": "Winter suite with wooden floor, desk, fur armchair and floor-to-ceiling window with panoramic view of snow-covered Zugspitze mountain range",
+                   "title": null,
+                   "dimensions": {
+                    "width": 8192,
+                    "height": 5464
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-77.jpg"
+                  }
+                 ],
+                 "asacode": "2",
+                 "pid": 85,
+                 "sys_language_uid": 1,
+                 "_LOCALIZED_UID": 8
+                },
+                {
+                 "uid": 5,
+                 "title": "felisa",
+                 "minprice": "from 1.075,- € / night per person / All-In",
+                 "people": "for 2-4 persons ",
+                 "size": "approx. 1065 sq ft",
+                 "previewimage": [
+                  {
+                   "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-luxus-suite-felisa-01.jpg",
+                   "alt": "Sunlit lounge corner at eriro Alpine Hide with handcrafted bouclé wall paneling, chess set on wooden table and inviting upholstered sofa in natural tones",
+                   "title": null,
+                   "dimensions": {
+                    "width": 1500,
+                    "height": 1800
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-luxus-suite-felisa-01.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/felisa/AlexMoling_Eriro_Rooms-20.jpg",
+                   "alt": "Glass-front fireplace with slate base and cream corner bench before panorama window to spruce forests and Wetterstein mountains, Marshall speaker at eriro Alpine Hide",
+                   "title": null,
+                   "dimensions": {
+                    "width": 8186,
+                    "height": 5460
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/felisa/AlexMoling_Eriro_Rooms-20.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/felisa/AlexMoling_Eriro_Rooms-31.jpg",
+                   "alt": "King bed with white hotel bedding on spruce platform, raw stone objects as wall art, golden straw headboard paneling at eriro Ehrwald beneath patinated beam ceiling",
+                   "title": null,
+                   "dimensions": {
+                    "width": 8192,
+                    "height": 5464
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/felisa/AlexMoling_Eriro_Rooms-31.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/felisa/AlexMoling_Eriro_Rooms-35.jpg",
+                   "alt": "Handcrafted vanity in bathroom of eriro Alpine Hide – fine care products, bronze faucet and wooden lattice panels in warm lighting mood",
+                   "title": null,
+                   "dimensions": {
+                    "width": 2001,
+                    "height": 3000
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/felisa/AlexMoling_Eriro_Rooms-35.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/felisa/AlexMoling_Eriro_Rooms-40.jpg",
+                   "alt": "Larch wood balcony of eriro with woven bench, wool cushion and direct Zugspitze view across alpine meadows to rugged Wetterstein walls in atmospheric haze",
+                   "title": null,
+                   "dimensions": {
+                    "width": 8192,
+                    "height": 5464
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/felisa/AlexMoling_Eriro_Rooms-40.jpg"
+                  }
+                 ],
+                 "asacode": "3",
+                 "pid": 93,
+                 "sys_language_uid": 1,
+                 "_LOCALIZED_UID": 9
+                },
+                {
+                 "uid": 6,
+                 "title": "himil",
+                 "minprice": "from 1.475,- € / night per person / All-In",
+                 "people": "for 4 persons",
+                 "size": "approx. 2293 sq ft",
+                 "previewimage": [
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/himil/AlexMoling_Eriro_Rooms-67.jpg",
+                   "alt": "Studio suite at eriro with slate fireplace plate, patinated barn boards, cream linen lounge and hanging limestone sculptures at Ehrwald",
+                   "title": null,
+                   "dimensions": {
+                    "width": 8156,
+                    "height": 5440
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/himil/AlexMoling_Eriro_Rooms-67.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/himil/AlexMoling_Eriro_Rooms-61.jpg",
+                   "alt": "Cream daybed beneath honey-colored spruce rafters with woven furniture on balcony, Zugspitze view over spruce forest and alpine meadows at eriro Alpine Hide Ehrwald",
+                   "title": null,
+                   "dimensions": {
+                    "width": 5969,
+                    "height": 5461
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "height": 1,
+                      "width": 0.729,
+                      "x": 0.07,
+                      "y": 0
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/_processed_/b/5/csm_AlexMoling_Eriro_Rooms-61_42616f9ad7.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/himil/AlexMoling_Eriro_Rooms-62.jpg",
+                   "alt": "Designed-through eriro suite with colonnade of spruce trunks, full-glass pivot doors to balcony and view of Wetterstein conifer forests",
+                   "title": null,
+                   "dimensions": {
+                    "width": 8145,
+                    "height": 5433
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/himil/AlexMoling_Eriro_Rooms-62.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/himil/AlexMoling_Eriro_Rooms-59.jpg",
+                   "alt": "Loft suite at eriro with white bed on stone platform beneath recycled beams, round logs, glass room dividers and raw stone lamps at Ehrwald",
+                   "title": null,
+                   "dimensions": {
+                    "width": 8190,
+                    "height": 5463
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/himil/AlexMoling_Eriro_Rooms-59.jpg"
+                  },
+                  {
+                   "originalUrl": "/fileadmin/user_upload/Suiten/himil/AlexMoling_Eriro_Rooms-74.jpg",
+                   "alt": "Open sleeping platform with white linens beneath larch wood roof, horizontal balcony slats framing Wetterstein Mountains panorama above spruce forests at eriro",
+                   "title": null,
+                   "dimensions": {
+                    "width": 8164,
+                    "height": 5445
+                   },
+                   "crop": {
+                    "default": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    },
+                    "mobile": {
+                     "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                     },
+                     "selectedRatio": "NaN",
+                     "focusArea": null
+                    }
+                   },
+                   "mime": "image/jpeg",
+                   "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/himil/AlexMoling_Eriro_Rooms-74.jpg"
+                  }
+                 ],
+                 "asacode": "4",
+                 "pid": 94,
+                 "sys_language_uid": 1,
+                 "_LOCALIZED_UID": 10
+                }
+               ]
+              }
+             },
+             "name": "tx_powermail_pi1[field][rooms]"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": false,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Trenner",
+              "description": "",
+              "marker": "trenner"
+             },
+             "marker": "trenner",
+             "name": "tx_powermail_pi1[field][trenner]",
+             "css": "",
+             "type": "divider",
+             "fieldClasses": "",
+             "additionalAttributes": [],
+             "id": "powermail_field_trenner"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": false,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Adults",
+              "description": "",
+              "marker": "adults"
+             },
+             "marker": "adults",
+             "name": "tx_powermail_pi1[field][adults]",
+             "css": "",
+             "type": "counter",
+             "fieldClasses": "",
+             "additionalAttributes": [],
+             "id": "powermail_field_adults"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": false,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Kids",
+              "description": "",
+              "marker": "kids"
+             },
+             "marker": "kids",
+             "name": "tx_powermail_pi1[field][kids]",
+             "css": "",
+             "type": "kids",
+             "fieldClasses": "",
+             "additionalAttributes": [],
+             "id": "powermail_field_kids"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": false,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Board",
+              "description": "",
+              "marker": "rationing"
+             },
+             "marker": "rationing",
+             "name": "tx_powermail_pi1[field][rationing]",
+             "css": "",
+             "fieldWrappingClasses": "powermail_field",
+             "fieldAndLabelWrappingClasses": "",
+             "validationClass": "",
+             "additionalAttributes": [],
+             "multiple": "",
+             "multiselect": false,
+             "type": "select",
+             "client": "1",
+             "options": [
+              {
+               "value": "12",
+               "label": "All-in-Service",
+               "isSelected": 0,
+               "cycle": 1,
+               "checked": false,
+               "additionalAttributes": []
+              }
+             ]
+            }
+           }
+          ]
+         },
+         {
+          "title": "Personal data",
+          "css": "",
+          "pageId": 6,
+          "fields": [
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": true,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Title",
+              "description": "Willechomen, dear {firstname},\r\nWillechomen, dear {firstname},\r\nWillechomen, dear {firstname},",
+              "marker": "salutation"
+             },
+             "marker": "salutation",
+             "name": "tx_powermail_pi1[field][salutation]",
+             "css": "",
+             "fieldWrappingClasses": "powermail_field",
+             "fieldAndLabelWrappingClasses": "",
+             "radioClasses": "radio",
+             "validationClass": "",
+             "additionalAttributes": {
+              "required": "required",
+              "aria-required": "true",
+              "data-powermail-required-message": "One of these fields must be filled!",
+              "data-powermail-errors-container": ".powermail_field_error_container_salutation",
+              "data-powermail-class-handler": ".powermail_fieldwrap_salutation > div > div"
+             },
+             "type": "radio",
+             "options": [
+              {
+               "value": "Mr.",
+               "label": "Mr.",
+               "isSelected": 0,
+               "cycle": 1,
+               "checked": false,
+               "additionalAttributes": {
+                "required": "required",
+                "aria-required": "true",
+                "data-powermail-required-message": "One of these fields must be filled!",
+                "data-powermail-errors-container": ".powermail_field_error_container_salutation",
+                "data-powermail-class-handler": ".powermail_fieldwrap_salutation > div > div"
+               }
+              },
+              {
+               "value": "Mrs.",
+               "label": "Mrs.",
+               "isSelected": 0,
+               "cycle": 2,
+               "checked": false,
+               "additionalAttributes": []
+              },
+              {
+               "value": "Non-binary",
+               "label": "Non-binary",
+               "isSelected": 0,
+               "cycle": 3,
+               "checked": false,
+               "additionalAttributes": []
+              }
+             ],
+             "client": "1"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": false,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Trenner",
+              "description": "",
+              "marker": "trenner_01"
+             },
+             "marker": "trenner_01",
+             "name": "tx_powermail_pi1[field][trenner_01]",
+             "css": "",
+             "type": "divider",
+             "fieldClasses": "",
+             "additionalAttributes": [],
+             "id": "powermail_field_trenner_01"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": true,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Name",
+              "description": "",
+              "marker": "firstname"
+             },
+             "marker": "firstname",
+             "name": "tx_powermail_pi1[field][firstname]",
+             "css": "",
+             "fieldWrappingClasses": "powermail_field",
+             "fieldAndLabelWrappingClasses": "",
+             "type": "input",
+             "typeSpecial": "text",
+             "value": "",
+             "placeholder": "",
+             "fieldClasses": "",
+             "validationClass": "",
+             "additionalAttributes": {
+              "required": "required",
+              "aria-required": "true",
+              "data-powermail-required-message": "This field must be filled!"
+             },
+             "id": "powermail_field_firstname"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": true,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Surname",
+              "description": "",
+              "marker": "lastname"
+             },
+             "marker": "lastname",
+             "name": "tx_powermail_pi1[field][lastname]",
+             "css": "",
+             "fieldWrappingClasses": "powermail_field",
+             "fieldAndLabelWrappingClasses": "",
+             "type": "input",
+             "typeSpecial": "text",
+             "value": "",
+             "placeholder": "",
+             "fieldClasses": "",
+             "validationClass": "",
+             "additionalAttributes": {
+              "required": "required",
+              "aria-required": "true",
+              "data-powermail-required-message": "This field must be filled!"
+             },
+             "id": "powermail_field_lastname"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": true,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Tel.",
+              "description": "",
+              "marker": "phone"
+             },
+             "marker": "phone",
+             "name": "tx_powermail_pi1[field][phone]",
+             "css": "",
+             "fieldWrappingClasses": "powermail_field",
+             "fieldAndLabelWrappingClasses": "",
+             "type": "input",
+             "typeSpecial": "tel",
+             "value": "",
+             "placeholder": "",
+             "fieldClasses": "",
+             "validationClass": "",
+             "additionalAttributes": {
+              "required": "required",
+              "aria-required": "true",
+              "data-powermail-required-message": "This field must be filled!",
+              "pattern": "^(\\+\\d{1,4}|0+\\d{1,5}|\\(\\d{1,5})[\\d\\s\\/\\(\\)-]*\\d+$",
+              "data-powermail-error-message": "This is not a valid Phone Number!"
+             },
+             "id": "powermail_field_phone"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": true,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "E-Mail",
+              "description": "",
+              "marker": "email"
+             },
+             "marker": "email",
+             "name": "tx_powermail_pi1[field][email]",
+             "css": "",
+             "fieldWrappingClasses": "powermail_field",
+             "fieldAndLabelWrappingClasses": "",
+             "type": "input",
+             "typeSpecial": "email",
+             "value": "",
+             "placeholder": "",
+             "fieldClasses": "",
+             "validationClass": "",
+             "additionalAttributes": {
+              "required": "required",
+              "aria-required": "true",
+              "data-powermail-required-message": "This field must be filled!",
+              "data-powermail-error-message": "This is not a valid email address!"
+             },
+             "id": "powermail_field_email"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": false,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Message",
+              "description": "",
+              "marker": "message"
+             },
+             "marker": "message",
+             "name": "tx_powermail_pi1[field][message]",
+             "css": "",
+             "fieldWrappingClasses": "powermail_field",
+             "fieldAndLabelWrappingClasses": "",
+             "type": "textarea",
+             "value": "",
+             "placeholder": "",
+             "fieldClasses": "",
+             "validationClass": "",
+             "additionalAttributes": [],
+             "id": "powermail_field_message"
+            }
+           },
+           {
+            "field": {
+             "type": "text",
+             "marker": "requiredfields",
+             "css": "",
+             "fieldAndLabelWrappingClasses": "",
+             "fieldWrappingClasses": "powermail_field",
+             "offsetClasses": "",
+             "text": "* Required fields",
+             "name": "tx_powermail_pi1[field][requiredfields][]"
+            }
+           },
+           {
+            "field": {
+             "type": "text",
+             "marker": "privacytext",
+             "css": "",
+             "fieldAndLabelWrappingClasses": "",
+             "fieldWrappingClasses": "powermail_field",
+             "offsetClasses": "",
+             "text": "You hereby declare that the data released by you for the purposes of sending product information, submitting special offers, as well as personal communications, may be used. There will be no passing on of the data to third parties. You may revoke your consent at any time. For more information see <a href=\"/en/privacy/\" target=\"noopener\">„Privacy“</a>.",
+             "name": "tx_powermail_pi1[field][privacytext][]"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": true,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Privacy Check",
+              "description": "Yes, I authorize the transmission of my personal details.",
+              "marker": "privacy"
+             },
+             "marker": "privacy",
+             "name": "tx_powermail_pi1[field][privacy]",
+             "css": "",
+             "type": "hanthacheckbox",
+             "fieldClasses": "",
+             "additionalAttributes": {
+              "required": "required",
+              "aria-required": "true",
+              "data-powermail-required-message": "This field must be filled!"
+             },
+             "id": "powermail_field_privacy"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": false,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Trenner",
+              "description": "",
+              "marker": "trenner_02"
+             },
+             "marker": "trenner_02",
+             "name": "tx_powermail_pi1[field][trenner_02]",
+             "css": "",
+             "type": "divider",
+             "fieldClasses": "",
+             "additionalAttributes": [],
+             "id": "powermail_field_trenner_02"
+            }
+           },
+           {
+            "field": {
+             "type": "hidden",
+             "marker": "json",
+             "name": "tx_powermail_pi1[field][json]",
+             "value": "",
+             "css": ""
+            }
+           },
+           {
+            "field": {
+             "type": "hidden",
+             "marker": "reguestanswer",
+             "name": "tx_powermail_pi1[field][reguestanswer]",
+             "value": "",
+             "css": ""
+            }
+           },
+           {
+            "field": {
+             "type": "hidden",
+             "marker": "mailcontent",
+             "name": "tx_powermail_pi1[field][mailcontent]",
+             "value": "",
+             "css": ""
+            }
+           },
+           {
+            "field": {
+             "type": "hidden",
+             "marker": "marketinginfo",
+             "name": "tx_powermail_pi1[field][marketinginfo]",
+             "value": "",
+             "css": ""
+            }
+           },
+           {
+            "field": {
+             "type": "hidden",
+             "marker": "periodhidden",
+             "name": "tx_powermail_pi1[field][periodhidden]",
+             "value": "",
+             "css": ""
+            }
+           },
+           {
+            "field": {
+             "marker": "submit",
+             "title": "Send the inquiry",
+             "css": "",
+             "type": "submit",
+             "fieldAndLabelWrappingClasses": "",
+             "fieldWrappingClasses": "powermail_field",
+             "offsetClasses": "",
+             "submitClasses": "powermail_submit"
+            }
+           }
+          ]
+         }
+        ],
+        "hiddenFields": [
+         {
+          "name": "tx_powermail_pi1[__referrer][@extension]",
+          "value": "Powermail"
+         },
+         {
+          "name": "tx_powermail_pi1[__referrer][@controller]",
+          "value": "Form"
+         },
+         {
+          "name": "tx_powermail_pi1[__referrer][@action]",
+          "value": "form"
+         },
+         {
+          "name": "tx_powermail_pi1[__referrer][@request]",
+          "value": "{\"@extension\":\"Powermail\",\"@controller\":\"Form\",\"@action\":\"form\"}2251f68fd7b087ced3a4700b4166d327348ef3b9"
+         },
+         {
+          "name": "tx_powermail_pi1[__trustedProperties]",
+          "value": "{\"field\":{\"period\":1,\"rooms\":1,\"trenner\":1,\"adults\":1,\"kids\":1,\"rationing\":1,\"salutation\":[1],\"trenner_01\":1,\"firstname\":1,\"lastname\":1,\"phone\":1,\"email\":1,\"message\":1,\"requiredfields\":1,\"privacytext\":1,\"privacy\":1,\"trenner_02\":1,\"json\":1,\"reguestanswer\":1,\"mailcontent\":1,\"marketinginfo\":1,\"periodhidden\":1},\"mail\":{\"form\":1}}98c5fffa8f890cf5f4ca6ff64b36c218491638ae"
+         },
+         {
+          "name": "tx_powermail_pi1[mail][form]",
+          "value": 1
+         }
+        ]
+       }
+      }
+     }
+    }
+   }
+  ]
+ },
+ "i18n": [
+  {
+   "languageId": 0,
+   "locale": "de_DE",
+   "title": "Deutsch",
+   "navigationTitle": "Deutsch",
+   "twoLetterIsoCode": "de",
+   "hreflang": "de",
+   "direction": "ltr",
+   "flag": "flags-multiple",
+   "link": "/de/anfrage/",
+   "active": 0,
+   "current": 0,
+   "available": 1
+  },
+  {
+   "languageId": 1,
+   "locale": "en_GB",
+   "title": "English",
+   "navigationTitle": "English",
+   "twoLetterIsoCode": "en",
+   "hreflang": "en",
+   "direction": "ltr",
+   "flag": "flags-en-us-gb",
+   "link": "/en/request/",
+   "active": 1,
+   "current": 0,
+   "available": 1
+  }
+ ],
+ "pid": 105,
+ "jsonld": ""
+}

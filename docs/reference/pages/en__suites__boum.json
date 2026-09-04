@@ -1,0 +1,1103 @@
+{
+ "id": 84,
+ "type": "Standard",
+ "slug": "/suites/boum",
+ "media": [],
+ "meta": {
+  "title": "boum Suite - experience retreat and tranquillity at the edge of the forest",
+  "subtitle": "",
+  "abstract": "",
+  "description": "The boum suite in the eriro - a retreat with a view of the untouched nature of the Alps. Experience the security and tranquillity of the forest. ",
+  "keywords": "",
+  "canonical": "",
+  "robots": {
+   "noIndex": false,
+   "noFollow": false
+  },
+  "author": "",
+  "authorEmail": "",
+  "ogTitle": "BOUM",
+  "ogDescription": "The boum suite in the eriro - a retreat with a view of the untouched nature of the Alps. Experience the security and tranquillity of the forest. ",
+  "ogImage": null,
+  "twitterTitle": "BOUM",
+  "twitterDescription": "The boum suite in the eriro - a retreat with a view of the untouched nature of the Alps. Experience the security and tranquillity of the forest. ",
+  "twitterCard": "summary",
+  "twitterImage": null
+ },
+ "categories": "",
+ "breadcrumbs": [
+  {
+   "title": "Home",
+   "link": "/en/",
+   "target": "",
+   "active": 1,
+   "current": 0,
+   "spacer": 0,
+   "hasSubpages": 1,
+   "pid": 0
+  },
+  {
+   "title": "BOUM",
+   "link": "/en/suites/boum/",
+   "target": "",
+   "active": 1,
+   "current": 1,
+   "spacer": 0,
+   "hasSubpages": 0,
+   "pid": 104
+  }
+ ],
+ "appearance": {
+  "layout": "layout-0",
+  "backendLayout": "2"
+ },
+ "content": {
+  "colPos0": [
+   {
+    "id": 104,
+    "type": "mask_hero",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_hero",
+     "title": "",
+     "titleh2": "Structure and <br>\r\nshelter",
+     "titleimg": "",
+     "text": "<p>Be at one with yourself, be present in the here and now. eriro has 9 suites to provide guests with an all-inclusive luxury stay with a personalised touch at a private retreat. Restrained in design and furnished with colours and materials that exude warmth, the suites provide structure and shelter: a protective place of comfort and refuge that brings nature directly into the room through its large windows.</p>",
+     "img": [],
+     "sideimg": [],
+     "imgsummer": [],
+     "sideimgsummer": [],
+     "herolayout": "only-text"
+    }
+   },
+   {
+    "id": 97,
+    "type": "mask_rooms",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Übersicht",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_rooms",
+     "rooms": [
+      {
+       "uid": "3",
+       "title": "boum",
+       "slug": "/suites/boum",
+       "lang": "1",
+       "pid": "84"
+      },
+      {
+       "uid": "4",
+       "title": "wisa",
+       "slug": "/suites/wisa",
+       "lang": "1",
+       "pid": "85"
+      },
+      {
+       "uid": "5",
+       "title": "felisa",
+       "slug": "/suites/felisa",
+       "lang": "1",
+       "pid": "93"
+      },
+      {
+       "uid": "6",
+       "title": "himil",
+       "slug": "/suites/himil",
+       "lang": "1",
+       "pid": "94"
+      }
+     ]
+    }
+   }
+  ],
+  "colPos5": [
+   {
+    "id": 96,
+    "type": "mask_roomdetail",
+    "colPos": 5,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_roomdetail",
+     "images": [
+      {
+       "originalUrl": "/fileadmin/user_upload/Icons/EN-icons_EN_King-size_bed.svg",
+       "alt": "Icon: King-size bed",
+       "title": null,
+       "dimensions": {
+        "width": 120,
+        "height": 120
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/svg+xml",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Icons/EN-icons_EN_King-size_bed.svg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Icons/EN-icons_EN_plattenspieler.svg",
+       "alt": "Icon: Record player",
+       "title": null,
+       "dimensions": {
+        "width": 120,
+        "height": 120
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/svg+xml",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Icons/EN-icons_EN_plattenspieler.svg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Icons/EN-icons_EN_sterne_daybed.svg",
+       "alt": "Icon: Star daybed",
+       "title": null,
+       "dimensions": {
+        "width": 120,
+        "height": 120
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/svg+xml",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Icons/EN-icons_EN_sterne_daybed.svg"
+      }
+     ],
+     "room": [
+      {
+       "uid": "3",
+       "title": "boum",
+       "description": "<p>As humans, we have always had a special connection to the forest. Trees, shrubs and mosses govern the harmonious cycle of nature in a silent exchange: from the flowering and radiance of summer to the warm tones of autumn and finally the white silence of winter, after which all life begins anew. The 5 boum suites are south-west facing, in the direction of the mighty, unspoiled forests of the Alps.&nbsp;</p>",
+       "minprice": "from 775,- € / night per person / All-In",
+       "people": "for 2 persons",
+       "size": "approx. 688 sq ft",
+       "previewimage": [
+        {
+         "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-1.jpg",
+         "alt": "Living area of boum Suite: reclaimed wood ceiling, sculptural tree trunk daybed and linen sofa before panorama window with view of Wetterstein summits",
+         "title": null,
+         "dimensions": {
+          "width": 8190,
+          "height": 5463
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-1.jpg"
+        },
+        {
+         "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-9.jpg",
+         "alt": "boum eriro Suite: reclaimed wood ceiling, stone lights and wool headboard framing double bed with white linen bedding and cashmere blanket on plank floor",
+         "title": null,
+         "dimensions": {
+          "width": 8192,
+          "height": 5464
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-9.jpg"
+        },
+        {
+         "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-12.jpg",
+         "alt": "Bathroom of boum Suite with lime plaster walls, driftwood faucet, backlit mirror, reclaimed wood beam ceiling and glass rain shower",
+         "title": null,
+         "dimensions": {
+          "width": 2048,
+          "height": 1366
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-12.jpg"
+        },
+        {
+         "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-5.jpg",
+         "alt": "Stylish interior of eriro Alpine Hide – sculptural designer light beneath reclaimed wood ceiling, linen fabrics and mountain panorama through window, warm sanctuary",
+         "title": null,
+         "dimensions": {
+          "width": 2001,
+          "height": 3000
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-5.jpg"
+        },
+        {
+         "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-16.jpg",
+         "alt": "Private balcony lounge of boum Suite with upholstered daybed and wide view across green alpine meadows to summit silhouettes of Wetterstein",
+         "title": null,
+         "dimensions": {
+          "width": 8192,
+          "height": 5464
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-16.jpg"
+        }
+       ],
+       "images": [
+        {
+         "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-luxus-suite-boum-02.jpg",
+         "alt": "Mindful touch of rough tree bark in alpine forest – sensual nature connection and slowing down at eriro Alpine Hide retreat in Alps",
+         "title": null,
+         "dimensions": {
+          "width": 1200,
+          "height": 1400
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-luxus-suite-boum-02.jpg"
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": 602,
+    "type": "mask_imgslider",
+    "colPos": 5,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_imgslider",
+     "images": [
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-81.jpg",
+       "alt": "eriro Alpine Hide – Light-flooded suite with reclaimed wood ceiling, designer furniture and panoramic view of snow-covered mountain forests from private balcony with lounge chair",
+       "title": null,
+       "dimensions": {
+        "width": 3000,
+        "height": 2001
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-81.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-9.jpg",
+       "alt": "boum eriro Suite: reclaimed wood ceiling, stone lights and wool headboard framing double bed with white linen bedding and cashmere blanket on plank floor",
+       "title": null,
+       "dimensions": {
+        "width": 8192,
+        "height": 5464
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-9.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-83.jpg",
+       "alt": "eriro Alpine Hide – Majestic snow summit framed through rustic wooden balcony struts, cinematic mountain view as living nature artwork",
+       "title": null,
+       "dimensions": {
+        "width": 3000,
+        "height": 2001
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-83.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-14.jpg",
+       "alt": "Luxurious rain shower beneath rustic reclaimed wood ceiling at eriro Alpine Hide – warm light and flowing water creating meditative spa ritual",
+       "title": null,
+       "dimensions": {
+        "width": 3000,
+        "height": 2001
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-14.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-86.jpg",
+       "alt": "eriro Alpine Hide – Sculptural designer light before weathered reclaimed wood and linen curtains, soft winter light through window as quiet still life",
+       "title": null,
+       "dimensions": {
+        "width": 2001,
+        "height": 3000
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-86.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-87.jpg",
+       "alt": "eriro Alpine Hide – Wide balcony view through wooden slats onto snow-covered alpine valley with imposing mountain summit and conifer forest beneath brilliant blue sky",
+       "title": null,
+       "dimensions": {
+        "width": 3000,
+        "height": 2001
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-87.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-84.jpg",
+       "alt": "eriro Alpine Hide – Cozy living room with linen sofa and cashmere blanket, surrounded by reclaimed wood walls with view of snow-covered conifer forests in warm winter light",
+       "title": null,
+       "dimensions": {
+        "width": 3000,
+        "height": 2001
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-84.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-48.jpg",
+       "alt": "Detail corner of boum Suite: turntable with vinyl, Marshall speaker, hand-thrown ceramic cups, French press and driftwood sculpture",
+       "title": null,
+       "dimensions": {
+        "width": 7790,
+        "height": 5196
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-48.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-3.jpg",
+       "alt": "Unique bathtub carved from tree trunk at eriro Alpine Hide – sunlight flooding through balcony doors with view of alpine mountain forests",
+       "title": null,
+       "dimensions": {
+        "width": 3000,
+        "height": 2001
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-3.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-8.jpg",
+       "alt": "Handcrafted wooden lattice cabinet with leather handle detail at eriro Alpine Hide – alpine craftsmanship meets contemporary furniture design",
+       "title": null,
+       "dimensions": {
+        "width": 3000,
+        "height": 2001
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-8.jpg"
+      }
+     ],
+     "imgsummer": []
+    }
+   },
+   {
+    "id": 102,
+    "type": "mask_list",
+    "colPos": 5,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Ausstattung",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_list",
+     "title": "The tranquillity <br>\r\nof the forest",
+     "text": "",
+     "listitems": [
+      {
+       "uid": "5",
+       "title": "Forest experience",
+       "text": "<p>The 527 sq ft suite on the upper floor harmonises Alpine cosiness with the deep calm of the nearby forest: time to relax and unwind.</p><ul><li><span>king-size bed und daybed</span></li><li><span>cosy nook with dining/games table</span></li><li><span>bathroom with rain shower</span></li><li><span>organic body care by March - made in austria</span></li><li><span>bathtub</span></li><li><span>161 sq ft balcony with star-gazer’s daybed&nbsp;</span></li><li><span>tea and coffee bar</span></li><li><span>minibar&nbsp;</span></li></ul>"
+      },
+      {
+       "uid": "6",
+       "title": "Nature cinema",
+       "text": "<p>The suites have been intentionally designed without a television: Nothing distracts more from the abundance and magnificence of nature as it stands before your very eyes. The suites are equipped with:</p><ul><li>Your personal pair of woollen socks</li><li><span>Wi-Fi</span></li><li><span>Record player and wireless speaker</span></li><li><span>Useful items for the mountain</span></li></ul>"
+      },
+      {
+       "uid": "21",
+       "title": "All-In-Service",
+       "text": "<p>eriro is located in the middle of an expanse of Alpine pastures and forests, a world away from everyday life and the noise of the valley. It is out of this unique positioning that our Alpine hideaway was conceived, offering you the following inclusive services:</p><ul><li>all meals, including food and drinks (excl. selected premium spirits)</li><li><span>parking lot and shuttle service&nbsp;</span></li><li><span>mountain cable car tickets or ski pass, depending on the season&nbsp;</span></li><li><span>mountain experiences including tour guide&nbsp;</span></li><li><span>bikes and mountain equipment such as snowshoes or hiking poles&nbsp;</span></li><li><span>spa facilities including pools, saunas, terrace, and relaxation and sound rooms</span></li></ul><p><a href=\"/en/all-in-service/\" title=\"More about the All-In Service\">More about the All-In Service</a></p>"
+      }
+     ]
+    }
+   },
+   {
+    "id": 217,
+    "type": "mask_img",
+    "colPos": 5,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "large",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_img",
+     "img": [
+      {
+       "originalUrl": "/fileadmin/user_upload/boum.jpg",
+       "alt": "Man mindfully touching lichen-covered tree bark in Tyrolean forest – architectural floor plan as overlay, eriro design philosophy nature and space",
+       "title": null,
+       "dimensions": {
+        "width": 2560,
+        "height": 1707
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/boum.jpg"
+      }
+     ],
+     "imgsummer": []
+    }
+   },
+   {
+    "id": 107,
+    "type": "mask_roomcta",
+    "colPos": 5,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_roomcta",
+     "room": [
+      {
+       "uid": "3",
+       "title": "boum",
+       "asacode": "1",
+       "bookingcode": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": 561,
+    "type": "mask_teaserslider",
+    "colPos": 5,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Teaser",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_teaserslider",
+     "teaserslides": [
+      {
+       "uid": "387",
+       "title": "Ochi Kema",
+       "imgleft": [
+        {
+         "originalUrl": "/fileadmin/user_upload/unikateur_Bilder/eriro_alpinehide_r%C3%BCckentropfen.jpg",
+         "alt": "Water droplets and goosebumps on sun-tanned shoulder after bathing – braided hair with grass blade, sensual eriro mountain lake experience",
+         "title": null,
+         "dimensions": {
+          "width": 2560,
+          "height": 1707
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/unikateur_Bilder/eriro_alpinehide_r%C3%BCckentropfen.jpg"
+        }
+       ],
+       "imgright": [
+        {
+         "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-ochi-kema-01.jpg",
+         "alt": "Quiet plunge pool of natural stone and reclaimed wood with mountain panorama in golden light – private spa luxury at eriro Alpine Hide",
+         "title": null,
+         "dimensions": {
+          "width": 1500,
+          "height": 1660
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-ochi-kema-01.jpg"
+        }
+       ],
+       "infotext": "Basking in nature and stillness",
+       "linktext": "Profound revitalization in the spa",
+       "link": {
+        "href": "/en/spa/",
+        "target": null,
+        "class": null,
+        "title": null,
+        "linkText": "t3://page?uid=108",
+        "additionalAttributes": []
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "colPos10": [
+   {
+    "id": 95,
+    "type": "room",
+    "colPos": 10,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "error": "Content Element with uid \"95\" and type \"room\" has no rendering definition!"
+    }
+   }
+  ]
+ },
+ "i18n": [
+  {
+   "languageId": 0,
+   "locale": "de_DE",
+   "title": "Deutsch",
+   "navigationTitle": "Deutsch",
+   "twoLetterIsoCode": "de",
+   "hreflang": "de",
+   "direction": "ltr",
+   "flag": "flags-multiple",
+   "link": "/de/suiten/boum/",
+   "active": 0,
+   "current": 0,
+   "available": 1
+  },
+  {
+   "languageId": 1,
+   "locale": "en_GB",
+   "title": "English",
+   "navigationTitle": "English",
+   "twoLetterIsoCode": "en",
+   "hreflang": "en",
+   "direction": "ltr",
+   "flag": "flags-en-us-gb",
+   "link": "/en/suites/boum/",
+   "active": 1,
+   "current": 0,
+   "available": 1
+  }
+ ],
+ "pid": 104,
+ "jsonld": ""
+}

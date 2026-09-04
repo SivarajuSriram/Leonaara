@@ -1,0 +1,946 @@
+{
+ "id": 95,
+ "type": "Standard",
+ "slug": "/contact-and-arrival",
+ "media": [],
+ "meta": {
+  "title": "Contact and Directions to eriro – Discover the origin at Ehrwalder Alm",
+  "subtitle": "",
+  "abstract": "",
+  "description": "Plan your journey to eriro – the unique retreat in the Tyrolean Alps, Austria. Contact us for more information on your all-inclusive hotel stay.",
+  "keywords": "",
+  "canonical": "",
+  "robots": {
+   "noIndex": false,
+   "noFollow": false
+  },
+  "author": "",
+  "authorEmail": "",
+  "ogTitle": "Contact and arrival",
+  "ogDescription": "Plan your journey to eriro – the unique retreat in the Tyrolean Alps, Austria. Contact us for more information on your all-inclusive hotel stay.",
+  "ogImage": null,
+  "twitterTitle": "Contact and arrival",
+  "twitterDescription": "Plan your journey to eriro – the unique retreat in the Tyrolean Alps, Austria. Contact us for more information on your all-inclusive hotel stay.",
+  "twitterCard": "summary",
+  "twitterImage": null
+ },
+ "categories": "",
+ "breadcrumbs": [
+  {
+   "title": "Home",
+   "link": "/en/",
+   "target": "",
+   "active": 1,
+   "current": 0,
+   "spacer": 0,
+   "hasSubpages": 1,
+   "pid": 0
+  },
+  {
+   "title": "Contact and arrival",
+   "link": "/en/contact-and-arrival/",
+   "target": "",
+   "active": 1,
+   "current": 1,
+   "spacer": 0,
+   "hasSubpages": 1,
+   "pid": 70
+  }
+ ],
+ "appearance": {
+  "layout": "layout-0",
+  "backendLayout": "defaultLayout"
+ },
+ "content": {
+  "colPos0": [
+   {
+    "id": 154,
+    "type": "mask_hero",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Discover the origins",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_hero",
+     "title": "The journey begins,<br>\r\nwith every meter of altitude",
+     "titleh2": "Discover the origins",
+     "titleimg": "",
+     "text": "<p>As you drift upwards in the cable car to 1,550 metres above sea level, Alpine pastures and mountains stretch before your eyes for as far as you can see, as the lights of the valley and everyday thoughts become ever smaller and eventually disappear. Even the journey that brings you to eriro is an experience.&nbsp;</p>",
+     "img": [],
+     "sideimg": [],
+     "imgsummer": [],
+     "sideimgsummer": [],
+     "herolayout": "only-text"
+    }
+   },
+   {
+    "id": 155,
+    "type": "mask_accordions",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Anreise",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_accordions",
+     "title": "",
+     "text": "",
+     "accordion": [
+      {
+       "uid": "17",
+       "title": "Mountains in sight: the route to Ehrwald",
+       "info": "",
+       "text": "<p>Prior to your arrival, we will send you a map with detailed directions to the covered parking lot near the the Ehrwalder Almbahn valley station. Ehrwald is easily accessible by both car and public transport. The nearest international airports are in Innsbruck, which is just over an hour away, and Munich, which is approximately two hours away by car.</p>",
+       "linktext": "",
+       "link": ""
+      },
+      {
+       "uid": "18",
+       "title": "Soar away with the Ehrwalder Almbahn cable car",
+       "info": "",
+       "text": "<p>A shuttle service will take care of your luggage and bring you from the carport to the Almbahn cable car valley station, where your mountain adventure will begin. From there on, you will be further accompanied by us.The climb to eriro can be done with the cable car or by foot, with additional options available if arriving outside the cable car’s operating hours. Soar away from everyday life: on your upward ascent to 1,550 metres above sea level, Alpine pastures and mountains stretch before your eyes for as far as you can see, as the lights of the valley become ever smaller and eventually disappear.&nbsp;</p>",
+       "linktext": "",
+       "link": ""
+      },
+      {
+       "uid": "19",
+       "title": "An Alpine experience: traversing ski slopes and Alpine meadows to eriro's doorstep",
+       "info": "",
+       "text": "<p>Your first mountain experience: as you arrive to the top at 1,550 metres, a guide will be waiting to accompany you with snowshoes or snowmobile across the ski slope to eriro. In the summertime, a golf cart will be waiting at the mountain station to greet you and escort you across the Alpine pasture.</p>",
+       "linktext": "",
+       "link": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": 260,
+    "type": "mask_maps",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Google Maps",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_maps",
+     "markertitle": "Eriro",
+     "lat": "47.385007234125084",
+     "lng": "10.969970612228026",
+     "popuptext": "",
+     "mapstyle": [
+      {
+       "featureType": "all",
+       "elementType": "geometry.fill",
+       "stylers": [
+        {
+         "color": "#f4f2ed"
+        }
+       ]
+      },
+      {
+       "featureType": "all",
+       "elementType": "geometry.stroke",
+       "stylers": [
+        {
+         "color": "#e4e0db"
+        }
+       ]
+      },
+      {
+       "featureType": "all",
+       "elementType": "labels.text.fill",
+       "stylers": [
+        {
+         "color": "#211d1d"
+        }
+       ]
+      },
+      {
+       "featureType": "all",
+       "elementType": "labels.text.stroke",
+       "stylers": [
+        {
+         "visibility": "off"
+        },
+        {
+         "color": "#ffffff"
+        }
+       ]
+      },
+      {
+       "featureType": "all",
+       "elementType": "labels.icon",
+       "stylers": [
+        {
+         "color": "#211d1d"
+        }
+       ]
+      },
+      {
+       "featureType": "landscape.natural.terrain",
+       "elementType": "all",
+       "stylers": [
+        {
+         "color": "#f0ede8"
+        }
+       ]
+      },
+      {
+       "featureType": "poi.business",
+       "elementType": "all",
+       "stylers": [
+        {
+         "visibility": "off"
+        }
+       ]
+      },
+      {
+       "featureType": "poi.government",
+       "elementType": "all",
+       "stylers": [
+        {
+         "visibility": "off"
+        }
+       ]
+      },
+      {
+       "featureType": "poi.medical",
+       "elementType": "all",
+       "stylers": [
+        {
+         "visibility": "off"
+        }
+       ]
+      },
+      {
+       "featureType": "poi.school",
+       "elementType": "all",
+       "stylers": [
+        {
+         "visibility": "off"
+        }
+       ]
+      },
+      {
+       "featureType": "poi.sports_complex",
+       "elementType": "all",
+       "stylers": [
+        {
+         "visibility": "on"
+        },
+        {
+         "color": "#e4e0db"
+        }
+       ]
+      },
+      {
+       "featureType": "poi.sports_complex",
+       "elementType": "geometry.fill",
+       "stylers": [
+        {
+         "visibility": "on"
+        },
+        {
+         "color": "#ece9e4"
+        }
+       ]
+      },
+      {
+       "featureType": "poi.sports_complex",
+       "elementType": "geometry.stroke",
+       "stylers": [
+        {
+         "visibility": "off"
+        }
+       ]
+      },
+      {
+       "featureType": "poi.sports_complex",
+       "elementType": "labels",
+       "stylers": [
+        {
+         "color": "#b5b2af"
+        }
+       ]
+      },
+      {
+       "featureType": "poi.sports_complex",
+       "elementType": "labels.text.stroke",
+       "stylers": [
+        {
+         "visibility": "off"
+        }
+       ]
+      },
+      {
+       "featureType": "road.highway",
+       "elementType": "all",
+       "stylers": [
+        {
+         "visibility": "on"
+        }
+       ]
+      },
+      {
+       "featureType": "road.highway",
+       "elementType": "geometry",
+       "stylers": [
+        {
+         "color": "#e4e0db"
+        }
+       ]
+      },
+      {
+       "featureType": "road.highway",
+       "elementType": "labels",
+       "stylers": [
+        {
+         "color": "#e4e0db"
+        },
+        {
+         "visibility": "off"
+        }
+       ]
+      },
+      {
+       "featureType": "road.highway",
+       "elementType": "labels.text.fill",
+       "stylers": [
+        {
+         "color": "#211d1d"
+        }
+       ]
+      },
+      {
+       "featureType": "road.highway",
+       "elementType": "labels.text.stroke",
+       "stylers": [
+        {
+         "color": "#ffffff"
+        }
+       ]
+      },
+      {
+       "featureType": "road.highway",
+       "elementType": "labels.icon",
+       "stylers": [
+        {
+         "color": "#ff0000"
+        }
+       ]
+      },
+      {
+       "featureType": "road.arterial",
+       "elementType": "labels.icon",
+       "stylers": [
+        {
+         "visibility": "off"
+        }
+       ]
+      },
+      {
+       "featureType": "transit",
+       "elementType": "all",
+       "stylers": [
+        {
+         "visibility": "off"
+        }
+       ]
+      },
+      {
+       "featureType": "water",
+       "elementType": "all",
+       "stylers": [
+        {
+         "color": "#d3e3ea"
+        }
+       ]
+      },
+      {
+       "featureType": "water",
+       "elementType": "labels.text.fill",
+       "stylers": [
+        {
+         "color": "#211d1d"
+        }
+       ]
+      },
+      {
+       "featureType": "water",
+       "elementType": "labels.text.stroke",
+       "stylers": [
+        {
+         "color": "#ff0000"
+        }
+       ]
+      }
+     ],
+     "markerimg": [
+      {
+       "originalUrl": "/fileadmin/user_upload/eriro_map.svg",
+       "alt": "Interactive location map with location in Ehrwald, Tyrol and surroundings",
+       "title": null,
+       "dimensions": {
+        "width": 26,
+        "height": 35
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/svg+xml",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro_map.svg"
+      }
+     ],
+     "markerlink": {
+      "href": "https://maps.app.goo.gl/HvBKVv4pwiadF5ix6",
+      "target": null,
+      "class": null,
+      "title": null,
+      "linkText": "https://maps.app.goo.gl/HvBKVv4pwiadF5ix6",
+      "additionalAttributes": []
+     },
+     "apikey": "AIzaSyBntOL1WOCt9g7LS0H655p1_33KeBn5YE8"
+    }
+   },
+   {
+    "id": 305,
+    "type": "mask_hero",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Kontakt ",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_hero",
+     "title": "Gazing into the distance,<br>\r\nescaping everyday life",
+     "titleh2": "A direct gateway <br>\r\nto nature",
+     "titleimg": "",
+     "text": "<p>Welcome to the origins, to the archaic nature of the Alps. Write us a message, we would be delighted to hear from you! If you would like to speak to us directly, provide your telephone number and we’ll gladly respond by phone to discuss your stay with us.</p>",
+     "img": [],
+     "sideimg": [],
+     "imgsummer": [],
+     "sideimgsummer": [],
+     "herolayout": "only-text"
+    }
+   },
+   {
+    "id": 283,
+    "type": "powermail_pi1",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "data": {
+      "messages": "",
+      "errors": "",
+      "form": {
+       "action": "checkCreate",
+       "section": "c283",
+       "additionalAttributes": {
+        "data-powermail-validate": "data-powermail-validate",
+        "data-validate": "html5",
+        "data-powermail-ajax": "true",
+        "data-powermail-form": 2,
+        "data-powermail-ajax-uri": "/en/contact-and-arrival/thank-you/"
+       },
+       "addQueryString": "0",
+       "settings": {
+        "receiverBody": "",
+        "senderBody": "",
+        "thxRedirect": "/en/contact-and-arrival/thank-you/"
+       },
+       "css": "",
+       "formUid": 2,
+       "showTitle": null,
+       "formClasses": "",
+       "moreSteps": "",
+       "title": "Contact",
+       "fields": {
+        "action": "/en/contact-and-arrival/?tx_powermail_pi1%5Baction%5D=checkCreate&tx_powermail_pi1%5Bcontroller%5D=Form&cHash=1e6d37fcb043a8cc219ddc1f1560201d",
+        "pages": [
+         {
+          "title": "Personal data",
+          "css": "",
+          "pageId": 7,
+          "fields": [
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": true,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Title",
+              "description": "Dear Mr {lastname},\r\nDear Ms {lastname},\r\nDear {firstname} {lastname},",
+              "marker": "salutation"
+             },
+             "marker": "salutation",
+             "name": "tx_powermail_pi1[field][salutation]",
+             "css": "",
+             "fieldWrappingClasses": "powermail_field",
+             "fieldAndLabelWrappingClasses": "",
+             "radioClasses": "radio",
+             "validationClass": "",
+             "additionalAttributes": {
+              "required": "required",
+              "aria-required": "true",
+              "data-powermail-required-message": "One of these fields must be filled!",
+              "data-powermail-errors-container": ".powermail_field_error_container_salutation",
+              "data-powermail-class-handler": ".powermail_fieldwrap_salutation > div > div"
+             },
+             "type": "radio",
+             "options": [
+              {
+               "value": "Mr.",
+               "label": "Mr.",
+               "isSelected": 0,
+               "cycle": 1,
+               "checked": false,
+               "additionalAttributes": {
+                "required": "required",
+                "aria-required": "true",
+                "data-powermail-required-message": "One of these fields must be filled!",
+                "data-powermail-errors-container": ".powermail_field_error_container_salutation",
+                "data-powermail-class-handler": ".powermail_fieldwrap_salutation > div > div"
+               }
+              },
+              {
+               "value": "Mrs.",
+               "label": "Mrs.",
+               "isSelected": 0,
+               "cycle": 2,
+               "checked": false,
+               "additionalAttributes": []
+              },
+              {
+               "value": "Non-binary",
+               "label": "Non-binary",
+               "isSelected": 0,
+               "cycle": 3,
+               "checked": false,
+               "additionalAttributes": []
+              }
+             ],
+             "client": "1"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": false,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Trenner",
+              "description": "",
+              "marker": "marker"
+             },
+             "marker": "marker",
+             "name": "tx_powermail_pi1[field][marker]",
+             "css": "",
+             "type": "divider",
+             "fieldClasses": "",
+             "additionalAttributes": [],
+             "id": "powermail_field_marker"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": true,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Name",
+              "description": "",
+              "marker": "firstname"
+             },
+             "marker": "firstname",
+             "name": "tx_powermail_pi1[field][firstname]",
+             "css": "",
+             "fieldWrappingClasses": "powermail_field",
+             "fieldAndLabelWrappingClasses": "",
+             "type": "input",
+             "typeSpecial": "text",
+             "value": "",
+             "placeholder": "",
+             "fieldClasses": "",
+             "validationClass": "",
+             "additionalAttributes": {
+              "required": "required",
+              "aria-required": "true",
+              "data-powermail-required-message": "This field must be filled!"
+             },
+             "id": "powermail_field_firstname"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": true,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Surname",
+              "description": "",
+              "marker": "lastname"
+             },
+             "marker": "lastname",
+             "name": "tx_powermail_pi1[field][lastname]",
+             "css": "",
+             "fieldWrappingClasses": "powermail_field",
+             "fieldAndLabelWrappingClasses": "",
+             "type": "input",
+             "typeSpecial": "text",
+             "value": "",
+             "placeholder": "",
+             "fieldClasses": "",
+             "validationClass": "",
+             "additionalAttributes": {
+              "required": "required",
+              "aria-required": "true",
+              "data-powermail-required-message": "This field must be filled!"
+             },
+             "id": "powermail_field_lastname"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": false,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Tel.",
+              "description": "",
+              "marker": "phone"
+             },
+             "marker": "phone",
+             "name": "tx_powermail_pi1[field][phone]",
+             "css": "",
+             "fieldWrappingClasses": "powermail_field",
+             "fieldAndLabelWrappingClasses": "",
+             "type": "input",
+             "typeSpecial": "tel",
+             "value": "",
+             "placeholder": "",
+             "fieldClasses": "",
+             "validationClass": "",
+             "additionalAttributes": {
+              "pattern": "^(\\+\\d{1,4}|0+\\d{1,5}|\\(\\d{1,5})[\\d\\s\\/\\(\\)-]*\\d+$",
+              "data-powermail-error-message": "This is not a valid Phone Number!"
+             },
+             "id": "powermail_field_phone"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": true,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "E-Mail",
+              "description": "",
+              "marker": "email"
+             },
+             "marker": "email",
+             "name": "tx_powermail_pi1[field][email]",
+             "css": "",
+             "fieldWrappingClasses": "powermail_field",
+             "fieldAndLabelWrappingClasses": "",
+             "type": "input",
+             "typeSpecial": "email",
+             "value": "",
+             "placeholder": "",
+             "fieldClasses": "",
+             "validationClass": "",
+             "additionalAttributes": {
+              "required": "required",
+              "aria-required": "true",
+              "data-powermail-required-message": "This field must be filled!",
+              "data-powermail-error-message": "This is not a valid email address!"
+             },
+             "id": "powermail_field_email"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": false,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Message",
+              "description": "",
+              "marker": "message"
+             },
+             "marker": "message",
+             "name": "tx_powermail_pi1[field][message]",
+             "css": "",
+             "fieldWrappingClasses": "powermail_field",
+             "fieldAndLabelWrappingClasses": "",
+             "type": "textarea",
+             "value": "",
+             "placeholder": "",
+             "fieldClasses": "",
+             "validationClass": "",
+             "additionalAttributes": [],
+             "id": "powermail_field_message"
+            }
+           },
+           {
+            "field": {
+             "type": "text",
+             "marker": "requiredfields",
+             "css": "",
+             "fieldAndLabelWrappingClasses": "",
+             "fieldWrappingClasses": "powermail_field",
+             "offsetClasses": "",
+             "text": "* Required fields",
+             "name": "tx_powermail_pi1[field][requiredfields][]"
+            }
+           },
+           {
+            "field": {
+             "type": "text",
+             "marker": "privacytext",
+             "css": "",
+             "fieldAndLabelWrappingClasses": "",
+             "fieldWrappingClasses": "powermail_field",
+             "offsetClasses": "",
+             "text": "You hereby declare that the data released by you for the purposes of sending product information, submitting special offers, as well as personal communications, may be used. There will be no passing on of the data to third parties. You may revoke your consent at any time. For more information see <a href=\"/en/privacy/\" target=\"noopener\">„Privacy“</a>.",
+             "name": "tx_powermail_pi1[field][privacytext][]"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": true,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Privacy Check",
+              "description": "Yes, I authorize the transmission of my personal details.",
+              "marker": "privacycheck"
+             },
+             "marker": "privacycheck",
+             "name": "tx_powermail_pi1[field][privacycheck]",
+             "css": "",
+             "type": "hanthacheckbox",
+             "fieldClasses": "",
+             "additionalAttributes": {
+              "required": "required",
+              "aria-required": "true",
+              "data-powermail-required-message": "This field must be filled!"
+             },
+             "id": "powermail_field_privacycheck"
+            }
+           },
+           {
+            "field": {
+             "label": {
+              "css": "",
+              "mandatory": false,
+              "linkedMandatory": null,
+              "labelClasses": "powermail_label",
+              "title": "Trenner",
+              "description": "",
+              "marker": "trenner"
+             },
+             "marker": "trenner",
+             "name": "tx_powermail_pi1[field][trenner]",
+             "css": "",
+             "type": "divider",
+             "fieldClasses": "",
+             "additionalAttributes": [],
+             "id": "powermail_field_trenner"
+            }
+           },
+           {
+            "field": {
+             "type": "hidden",
+             "marker": "mailcontent",
+             "name": "tx_powermail_pi1[field][mailcontent]",
+             "value": "",
+             "css": ""
+            }
+           },
+           {
+            "field": {
+             "marker": "anfragesenden",
+             "title": "Submit",
+             "css": "",
+             "type": "submit",
+             "fieldAndLabelWrappingClasses": "",
+             "fieldWrappingClasses": "powermail_field",
+             "offsetClasses": "",
+             "submitClasses": "powermail_submit"
+            }
+           }
+          ]
+         }
+        ],
+        "hiddenFields": [
+         {
+          "name": "tx_powermail_pi1[__referrer][@extension]",
+          "value": "Powermail"
+         },
+         {
+          "name": "tx_powermail_pi1[__referrer][@controller]",
+          "value": "Form"
+         },
+         {
+          "name": "tx_powermail_pi1[__referrer][@action]",
+          "value": "form"
+         },
+         {
+          "name": "tx_powermail_pi1[__referrer][@request]",
+          "value": "{\"@extension\":\"Powermail\",\"@controller\":\"Form\",\"@action\":\"form\"}2251f68fd7b087ced3a4700b4166d327348ef3b9"
+         },
+         {
+          "name": "tx_powermail_pi1[__trustedProperties]",
+          "value": "{\"field\":{\"salutation\":[1],\"marker\":1,\"firstname\":1,\"lastname\":1,\"phone\":1,\"email\":1,\"message\":1,\"requiredfields\":1,\"privacytext\":1,\"privacycheck\":1,\"trenner\":1,\"mailcontent\":1},\"mail\":{\"form\":1}}ccf2ab954889bfacc750454c711e55ca8b4a7d14"
+         },
+         {
+          "name": "tx_powermail_pi1[mail][form]",
+          "value": 2
+         }
+        ]
+       }
+      }
+     }
+    }
+   },
+   {
+    "id": 517,
+    "type": "mask_video",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_video",
+     "video": [
+      {
+       "originalUrl": "/fileadmin/user_upload/GONDEL3.mov",
+       "alt": null,
+       "title": null,
+       "dimensions": {
+        "width": 0,
+        "height": 0
+       },
+       "crop": "",
+       "mime": "video/quicktime",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/GONDEL3.mov"
+      }
+     ],
+     "videosummer": []
+    }
+   }
+  ]
+ },
+ "i18n": [
+  {
+   "languageId": 0,
+   "locale": "de_DE",
+   "title": "Deutsch",
+   "navigationTitle": "Deutsch",
+   "twoLetterIsoCode": "de",
+   "hreflang": "de",
+   "direction": "ltr",
+   "flag": "flags-multiple",
+   "link": "/de/kontakt-und-anreise/",
+   "active": 0,
+   "current": 0,
+   "available": 1
+  },
+  {
+   "languageId": 1,
+   "locale": "en_GB",
+   "title": "English",
+   "navigationTitle": "English",
+   "twoLetterIsoCode": "en",
+   "hreflang": "en",
+   "direction": "ltr",
+   "flag": "flags-en-us-gb",
+   "link": "/en/contact-and-arrival/",
+   "active": 1,
+   "current": 0,
+   "available": 1
+  }
+ ],
+ "pid": 70,
+ "jsonld": ""
+}

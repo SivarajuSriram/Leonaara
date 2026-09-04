@@ -1,0 +1,288 @@
+.mask_jobs .filter-grid {
+  border-bottom:2px solid #e4e0db;
+  grid-column-end:span 12;
+  grid-column-start:2;
+  margin-bottom:12.5rem;
+}
+.mask_jobs .jobs-filter {
+  cursor:pointer;
+  display:flex;
+  flex-wrap:wrap;
+  font-size:2rem;
+  font-weight:300;
+  grid-column-end:span 8;
+  grid-column-start:5;
+  letter-spacing:.08em;
+  line-height:125%;
+  text-transform:uppercase;
+}
+@media (max-width:1023px) {
+  .mask_jobs .jobs-filter {
+    font-size:1.3rem;
+    letter-spacing:.05em;
+    line-height:131%;
+  }
+}
+.mask_jobs .jobs-filter .jobs-item {
+  align-items:center;
+  display:flex;
+  flex-basis:33.33%;
+  margin-bottom:.5rem;
+  transition:all .5s;
+}
+.mask_jobs .jobs-filter .jobs-item.active {
+  text-shadow:0 0 #000;
+}
+.mask_jobs .jobs-filter .jobs-item:hover {
+  text-decoration:underline;
+}
+.mask_jobs .jobs-filter .checkbox {
+  align-items:center;
+  display:flex;
+  margin-right:2rem;
+}
+.mask_jobs .jobs-filter svg {
+  height:1rem;
+  margin:0 .5rem;
+  visibility:hidden;
+  width:1.3rem;
+}
+.mask_jobs .jobs-filter svg.visible {
+  visibility:visible;
+}
+.mask_jobs .content {
+  grid-column-end:span 4;
+  grid-column-start:6;
+}
+.mask_jobs .content .title {
+  margin-bottom:3rem;
+}
+.mask_jobs .content .title:last-child {
+  margin-bottom:9rem;
+}
+.mask_jobs .content .text {
+  margin-bottom:12rem;
+  transform:translate(9rem);
+}
+.mask_jobs .accordion-wrapper {
+  grid-column-end:span 12;
+  grid-column-start:2;
+}
+.mask_jobs .accordion {
+  margin-bottom:-2px;
+  overflow:hidden;
+}
+.mask_jobs .accordion-header {
+  border-top:2px solid #e4e0db;
+  cursor:pointer;
+  display:flex;
+  grid-column-end:span 12;
+  grid-column-start:1;
+  justify-content:space-between;
+  justify-self:flex-end;
+  max-width:66.66%;
+  padding-bottom:3rem;
+  padding-top:3rem;
+  width:100%;
+}
+.mask_jobs .accordion-header h4 {
+  transform:translate(9rem);
+  transition:all .5s;
+}
+.mask_jobs .accordion-header:hover h4 {
+  transform:translate(7.5rem);
+}
+.mask_jobs .accordion-side {
+  display:flex;
+}
+.mask_jobs .accordion-side .h4 {
+  text-transform:none;
+}
+.mask_jobs .accordion-icon {
+  height:2rem;
+  margin-left:12rem;
+  margin-right:.5rem;
+  width:2rem;
+}
+.mask_jobs .accordion-body {
+  grid-column-end:span 8;
+  grid-column-start:5;
+  height:0;
+  justify-self:flex-end;
+  overflow:hidden;
+  width:100%;
+}
+.mask_jobs .accordion-content {
+  display:grid;
+  padding-bottom:12rem;
+  grid-column-gap:var(--grid-gap);
+  grid-template-columns:repeat(8,1fr);
+}
+.mask_jobs .accordion-text {
+  grid-column-end:span 6;
+  grid-column-start:1;
+  transform:translate(9rem);
+}
+.mask_jobs .accordion-text ul {
+  margin-top:0;
+}
+.mask_jobs .accordion-text h4 {
+  margin-bottom:1.5rem;
+}
+.mask_jobs .accordion-text p {
+  margin-bottom:2rem;
+  min-height:4.5rem;
+}
+.mask_jobs .accordion-text :where(ul)+p {
+  margin-top:0;
+}
+.mask_jobs .button-wrapper {
+  direction:rtl;
+  display:flex;
+  grid-column-end:span 6;
+  grid-column-start:1;
+  justify-content:space-between;
+  justify-self:flex-end;
+  margin-top:12rem;
+  width:100%;
+}
+.mask_jobs .button-wrapper a {
+  direction:ltr;
+}
+.mask_jobs .accordion-bottom-hr {
+  border-bottom:2px solid #e4e0db;
+  grid-column-end:span 12;
+  grid-column-start:1;
+  justify-self:flex-end;
+  max-width:66.66%;
+  width:100%;
+}
+.mask_jobs .accordion.open h4 {
+  transform:translate(14.5rem);
+}
+.mask_jobs .accordion.open:hover h4 {
+  transform:translate(12.5rem);
+}
+.mask_jobs .v-enter-active,.mask_jobs .v-leave-active {
+  transition:opacity .5s ease;
+}
+.mask_jobs .v-enter-from,.mask_jobs .v-leave-to {
+  opacity:0;
+}
+@media (max-width:1023px) {
+  .mask_jobs .filter-grid {
+    margin-bottom:7.5rem;
+  }
+  .mask_jobs .jobs-filter {
+    grid-column-end:span 12;
+    grid-column-start:1;
+    justify-content:space-between;
+  }
+  .mask_jobs .jobs-filter .jobs-item {
+    align-items:center;
+    display:flex;
+    flex-basis:50%;
+    margin-bottom:.5rem;
+  }
+  .mask_jobs .jobs-filter .checkbox {
+    align-items:center;
+    display:flex;
+    margin-right:2rem;
+  }
+  .mask_jobs .jobs-filter svg {
+    height:1rem;
+    margin:0 .5rem;
+    visibility:hidden;
+    width:1.3rem;
+  }
+  .mask_jobs .jobs-filter svg.visible {
+    visibility:visible;
+  }
+  .mask_jobs .content {
+    grid-column-end:span 9;
+    grid-column-start:4;
+  }
+  .mask_jobs .content .title {
+    margin-bottom:1.5rem;
+  }
+  .mask_jobs .content .text,.mask_jobs .content .title:last-child {
+    margin-bottom:4rem;
+  }
+  .mask_jobs .content .text {
+    transform:translate(5.8rem);
+  }
+  .mask_jobs .accordion {
+    overflow:hidden;
+  }
+  .mask_jobs .accordion-header {
+    align-items:center;
+    flex-wrap:wrap;
+    max-width:83.33%;
+    padding-bottom:2rem;
+    padding-top:2rem;
+  }
+  .mask_jobs .accordion-header h4 {
+    transform:translate(0);
+  }
+  .mask_jobs .accordion-header .h4 {
+    margin-top:.5rem;
+    width:100%;
+  }
+  .mask_jobs .accordion-header:hover h4 {
+    transform:translate(0);
+  }
+  .mask_jobs .accordion-icon {
+    height:1.2rem;
+    margin-left:1rem;
+    margin-right:0;
+    width:1.2rem;
+  }
+  .mask_jobs .accordion-body {
+    grid-column-end:span 12;
+    grid-column-start:1;
+  }
+  .mask_jobs .accordion-content {
+    display:grid;
+    padding-bottom:4.5rem;
+    grid-column-gap:var(--grid-gap);
+    grid-template-columns:repeat(12,1fr);
+  }
+  .mask_jobs .accordion-text {
+    grid-column-end:span 9;
+    grid-column-start:3;
+    transform:translate(0);
+  }
+  .mask_jobs .accordion-text ul {
+    margin-top:0;
+  }
+  .mask_jobs .accordion-text h4 {
+    margin-bottom:1.5rem;
+  }
+  .mask_jobs .accordion-text p {
+    margin-bottom:2rem;
+    min-height:4.5rem;
+  }
+  .mask_jobs .accordion-text :where(ul)+p {
+    margin-top:0;
+  }
+  .mask_jobs .button-wrapper {
+    direction:rtl;
+    flex-wrap:wrap;
+    grid-column-end:span 10;
+    grid-column-start:1;
+    justify-self:flex-end;
+    margin-top:9rem;
+  }
+  .mask_jobs .button-wrapper a {
+    width:100%;
+  }
+  .mask_jobs .button-wrapper a+a {
+    margin-top:3rem;
+  }
+  .mask_jobs .accordion-bottom-hr {
+    max-width:83.33%;
+  }
+  .mask_jobs .accordion.open h4,.mask_jobs .accordion.open:hover h4 {
+    transform:translate(0);
+  }
+}

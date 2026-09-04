@@ -1,0 +1,21 @@
+.mask_voucher #internetseite {
+  font-size:1.6rem;
+  grid-column-end:span 12;
+  grid-column-start:2;
+  letter-spacing:0;
+  line-height:138%;
+  max-width:100%;
+}
+.mask_voucher #internetseite input {
+  height:auto;
+  line-height:unset;
+}
+.mask_voucher #internetseite input[type=checkbox],.mask_voucher #internetseite input[type=radio] {
+  border:0!important;
+}
+.mask_voucher #internetseite input[type=radio] {
+  -webkit-appearance:radio!important;
+}
+.mask_voucher #internetseite input[type=checkbox] {
+  -webkit-appearance:checkbox!important;
+}

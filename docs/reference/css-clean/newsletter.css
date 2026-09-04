@@ -1,0 +1,34 @@
+.mask_newsletter .aa-newsletter-widget {
+  grid-column-end:span 6;
+  grid-column-start:6;
+  max-width:100%;
+}
+.mask_newsletter .aa-newsletter-widget div a {
+  color:#211d1d;
+  text-decoration:underline;
+}
+.mask_newsletter .aa-newsletter-widget div a:hover {
+  text-decoration:none;
+}
+.mask_newsletter .aa-newsletter-widget div a span {
+  color:#211d1d;
+}
+.mask_newsletter .aa-newsletter-widget div input {
+  height:auto;
+  line-height:unset;
+}
+.mask_newsletter .aa-newsletter-widget div input[type=checkbox],.mask_newsletter .aa-newsletter-widget div input[type=radio] {
+  border:0!important;
+}
+.mask_newsletter .aa-newsletter-widget div input[type=radio] {
+  -webkit-appearance:radio!important;
+}
+.mask_newsletter .aa-newsletter-widget div input[type=checkbox] {
+  -webkit-appearance:checkbox!important;
+}
+@media (max-width:1023px) {
+  .mask_newsletter .aa-newsletter-widget {
+    grid-column-end:span 12;
+    grid-column-start:2;
+  }
+}

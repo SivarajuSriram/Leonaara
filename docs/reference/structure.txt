@@ -1,0 +1,1830 @@
+<body .pid-1 layout-layout-0>
+  <div . id=__nuxt>
+    <header .>
+      <div .upper grid-container>
+        <div .menu-wrapper>
+          <a .menu-button href=javascript:;>
+            <svg .menuIcon filled>
+        <div .button-wrapper>
+          <a .ht-biglink small-font href=/en/request/>
+            "Request"
+          <a .ht-biglink small-font href=https://be.synxis.com/?chain=22402&hotel=47531&src=24C>
+            "Book"
+        <div .menu-bg>
+        <div .menu-outline>
+          <div .menu>
+            <nav .nav-info>
+              <div .tel-icon>
+                <a . href=tel:0043 5673 40506>
+                  <svg .filled>
+              <div .mail-icon>
+                <a . href=mailto:hide@eriro.at>
+                  <svg .filled>
+              <div .map-icon>
+                <a . href=/en/contact-and-arrival/>
+                  <svg .filled>
+              <div .voucher-icon>
+                <a . href=/en/voucher/>
+                  <svg .filled>
+              <div .gallery-icon>
+                <a . href=/en/gallery/>
+                  <svg .filled>
+            <div .mobile-hr>
+            <div .main-nav-wrapper>
+              <nav .fadeOut nav-main>
+                <div .level-0>
+                  <a .link-0 href=/en/alpine-hide/>
+                    "Alpine Hide"
+                  <div .sub>
+                    <div .>
+                <div .level-0>
+                  <a .link-0 href=/en/suites/boum/>
+                    "Suites"
+                  <div .sub>
+                    <div .>
+                <div .level-0>
+                  <a .link-0 href=/en/all-in-service/>
+                    "All-In-Service"
+                  <div .sub>
+                    <div .>
+                <div .level-0>
+                  <a .link-0 href=/en/experiences/>
+                    "Experiences"
+                  <div .sub>
+                    <div .>
+                <div .level-0>
+                  <a .link-0 href=/en/culinary/>
+                    "Culinary"
+                  <div .sub>
+                    <div .>
+                <div .level-0>
+                  <a .link-0 href=/en/spa/>
+                    "Spa"
+                  <div .sub>
+                    <div .>
+                <div .level-0>
+                  <a .link-0 href=/en/origin/>
+                    "Origin"
+                  <div .sub>
+                    <div .>
+                <div .level-0>
+                  <a .link-0 href=/en/summer/>
+                    "Summer"
+                  <div .sub>
+                    <div .>
+                <div .level-0>
+                  <a .link-0 href=/en/winter/>
+                    "Winter"
+                  <div .sub>
+                    <div .>
+              <nav .nav-lang>
+      <div .logo-wrapper grid-container>
+        <div .logo>
+          <a .router-link-active router-link-exact-active href=/en/>
+            <svg .>
+    <div . id=smooth-wrapper>
+      <div . id=smooth-content>
+        <div .>
+          <main .>
+            <div .default space-before- mask mask_hero hero-default>
+              <div .grid-container>
+                <div .image-wrapper>
+                  <h1 .title>
+                    "the Zugspitze peak rises dramatically"
+                    <br .>
+                    "over Alpine pastures"
+                    <br .>
+                  <div .image-big>
+                    <picture . style="--c57b0150:1.3;--c57b013e:1.3076923076923077;">
+                      <source image/webp /_ipx/f_webp&q_80&extract_0_0_3000_2001&s_1352x1040/page/fileadmin/user_upload/unikateur_B
+                      <source image/webp /_ipx/f_webp&q_80&extract_0_0_3000_2001&s_1014x780/page/fileadmin/user_upload/unikateur_Bi
+                      <source image/webp /_ipx/f_webp&q_80&extract_0_0_3000_2001&s_761x585/page/fileadmin/user_upload/unikateur_Bil
+                      <source image/webp /_ipx/f_webp&q_80&extract_0_0_3000_2001&s_967x740/page/fileadmin/user_upload/unikateur_Bil
+                      <source image/webp /_ipx/f_webp&q_80&extract_0_0_3000_2001&s_725x555/page/fileadmin/user_upload/unikateur_Bil
+                      <source image/webp /_ipx/f_webp&q_80&extract_0_0_3000_2001&s_453x347/page/fileadmin/user_upload/unikateur_Bil
+                      <img . src=/_ipx/f_webp&q_80&s_1014x780/page/fileadmin/user_upload/unikateur_Bilder/AlexMoling_Eriro_Exterior.j alt="eriro Alpine Hide – exclusive wooden lodge amid flowering alpine meadow before imposing Wetterstein rock wall in golden evening light, pure alpine architecture">
+                      <div .overlay>
+                <p .titleimg h1>
+                  "The first steps in fresh powder snow,"
+                  <br .>
+                  "the head touches the sky"
+                <h2 .titleh2>
+                  "Rooted"
+                  <br .>
+                  "in its"
+                  <br .>
+                  "origins"
+                <div .image-small>
+                  <picture . style="--c57b0150:0.7555555555555555;--c57b013e:0.7555555555555555;">
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_363x480/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_272x360/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_204x270/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_387x512/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_290x384/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_181x240/page/fileadmin/user_upload/unikateur_Bil
+                    <img . src=/_ipx/f_webp&q_80&s_272x360/page/fileadmin/user_upload/unikateur_Bilder/eriro_alpinehide_lichtungfra alt="Woman in black dress standing on sunlit forest clearing at Ehrwald – Wetterstein summits and spruce forests at eriro Alpine Hide">
+                    <div .overlay>
+            <div .default space-before- mask mask_imgtext>
+              <div .grid-container>
+                <div .image-left>
+                  <picture . style="--c57b0150:1.2846153846153847;--c57b013e:1.1142857142857143;">
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_668x520/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_501x390/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_376x293/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_333x299/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_250x224/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_156x140/page/fileadmin/user_upload/unikateur_Bil
+                    <img . src=/_ipx/f_webp&q_80&s_501x390/page/fileadmin/user_upload/unikateur_Bilder/eriro_alpinehide_bergseemann alt="Meditation at crystal-clear Seebensee: Man practicing mindfulness before mirroring Zugspitze limestone wall at eriro Alpine Hide retreat">
+                    <div .overlay>
+                <div .image-right>
+                  <picture . style="--c57b0150:1.1176470588235294;--c57b013e:1.238888888888889;">
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1867&s_760x680/page/fileadmin/user_upload/Hendrik_St%25
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1867&s_570x510/page/fileadmin/user_upload/Hendrik_St%25
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1867&s_428x383/page/fileadmin/user_upload/Hendrik_St%25
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1867&s_634x512/page/fileadmin/user_upload/Hendrik_St%25
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1867&s_476x384/page/fileadmin/user_upload/Hendrik_St%25
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1867&s_297x240/page/fileadmin/user_upload/Hendrik_St%25
+                    <img . src=/_ipx/f_webp&q_80&s_570x510/page/fileadmin/user_upload/Hendrik_St%25C3%25BCwe/Pool_Shooting_2605_09_ alt="">
+                    <div .overlay>
+                <div .content>
+                  <h2 .title>
+                    "Travel back"
+                    <br .>
+                    "to the beginnings"
+                    <br .>
+                    "of everything"
+                  <div .text>
+                    <p .>
+                      "Become one: with origins, with nature, with yourself. A sense of infinite freedom unfolds when in the luxurious company of time as it stands still."
+                      <i .>
+                        "Welcome"
+                      "to eriro, created with a mere nine suites with the intention of establishing the smallest Alpine hideaway in the Alps, located at an elevation of 1,550 metres, in Ehrwald/Tyrol. Archaic and pristine, "
+                    <p .>
+                      <a .linkdetail href=/en/alpine-hide/>
+                        "TO THE ALPINE HIDE"
+            <div .default space-before- mask mask_video grid-container>
+            <div .default space-before- mask mask_quote>
+              <div .grid-container>
+                <div .quote-wrapper>
+                  <div .quote>
+                    <p .>
+                      "eriro – One of the "World’s Greatest Places 2025""
+                  <div .autor>
+                    "TIME"
+            <div .default space-before- mask mask_roomslider grid-container>
+              <div .grid-container-inner>
+                <div .swiper room-image-left>
+                  <div .swiper-wrapper>
+                    <div .swiper-slide roomslide>
+                      <picture . style="--c57b0150:0.8321759259259259;--c57b013e:0.84;">
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_8190_5463&s_959x1152/page/fileadmin/user_upload/Suiten/boum/
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_8190_5463&s_719x864/page/fileadmin/user_upload/Suiten/boum/A
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_8190_5463&s_539x648/page/fileadmin/user_upload/Suiten/boum/A
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_8190_5463&s_717x853/page/fileadmin/user_upload/Suiten/boum/A
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_8190_5463&s_538x640/page/fileadmin/user_upload/Suiten/boum/A
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_8190_5463&s_336x400/page/fileadmin/user_upload/Suiten/boum/A
+                        <img . src=/_ipx/f_webp&q_80&s_719x864/page/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-1.jpg alt="Living area of boum Suite: reclaimed wood ceiling, sculptural tree trunk daybed and linen sofa before panorama window with view of Wetterstein summits">
+                        <div .overlay>
+                    <div .swiper-slide roomslide>
+                      <picture . style="--c57b0150:0.8321759259259259;--c57b013e:0.84;">
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_7568_5048&s_959x1152/page/fileadmin/user_upload/Suiten/wisa/
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_7568_5048&s_719x864/page/fileadmin/user_upload/Suiten/wisa/A
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_7568_5048&s_539x648/page/fileadmin/user_upload/Suiten/wisa/A
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_7568_5048&s_717x853/page/fileadmin/user_upload/Suiten/wisa/A
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_7568_5048&s_538x640/page/fileadmin/user_upload/Suiten/wisa/A
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_7568_5048&s_336x400/page/fileadmin/user_upload/Suiten/wisa/A
+                        <img . src=/_ipx/f_webp&q_80&s_719x864/page/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-43.jpg alt="Eriro Suite living area with reclaimed wood ceiling, textured wool wall, sheepskin armchair before panorama window with terrace and view of conifer forests and mountain summits">
+                        <div .overlay>
+                    <div .swiper-slide roomslide>
+                      <picture . style="--c57b0150:0.8321759259259259;--c57b013e:0.84;">
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1800&s_959x1152/page/fileadmin/user_upload/eriro-alpine
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1800&s_719x864/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1800&s_539x648/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1800&s_717x853/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1800&s_538x640/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1800&s_336x400/page/fileadmin/user_upload/eriro-alpine-
+                        <img . src=/_ipx/f_webp&q_80&s_719x864/page/fileadmin/user_upload/eriro-alpine-hide-ehrwald-luxus-suite-felisa- alt="Sunlit lounge corner at eriro Alpine Hide with handcrafted bouclé wall paneling, chess set on wooden table and inviting upholstered sofa in natural tones">
+                        <div .overlay>
+                    <div .swiper-slide roomslide>
+                      <picture . style="--c57b0150:0.8321759259259259;--c57b013e:0.84;">
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_8156_5440&s_959x1152/page/fileadmin/user_upload/Suiten/himil
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_8156_5440&s_719x864/page/fileadmin/user_upload/Suiten/himil/
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_8156_5440&s_539x648/page/fileadmin/user_upload/Suiten/himil/
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_8156_5440&s_717x853/page/fileadmin/user_upload/Suiten/himil/
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_8156_5440&s_538x640/page/fileadmin/user_upload/Suiten/himil/
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_8156_5440&s_336x400/page/fileadmin/user_upload/Suiten/himil/
+                        <img . src=/_ipx/f_webp&q_80&s_719x864/page/fileadmin/user_upload/Suiten/himil/AlexMoling_Eriro_Rooms-67.jpg alt="Studio suite at eriro with slate fireplace plate, patinated barn boards, cream linen lounge and hanging limestone sculptures at Ehrwald">
+                        <div .overlay>
+                <div .swiper room-image-right>
+                  <div .swiper-wrapper>
+                    <div .swiper-slide roomslide>
+                      <picture . style="--c57b0150:0.861198738170347;--c57b013e:0.7555555555555555;">
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_364x423/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_273x317/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_205x238/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_387x512/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_290x384/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_181x240/page/fileadmin/user_upload/eriro-alpine-
+                        <img . src=/_ipx/f_webp&q_80&s_273x317/page/fileadmin/user_upload/eriro-alpine-hide-ehrwald-luxus-suite-boum-02 alt="Mindful touch of rough tree bark in alpine forest – sensual nature connection and slowing down at eriro Alpine Hide retreat in Alps">
+                        <div .overlay>
+                    <div .swiper-slide roomslide>
+                      <picture . style="--c57b0150:0.861198738170347;--c57b013e:0.7555555555555555;">
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_364x423/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_273x317/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_205x238/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_387x512/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_290x384/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_181x240/page/fileadmin/user_upload/eriro-alpine-
+                        <img . src=/_ipx/f_webp&q_80&s_273x317/page/fileadmin/user_upload/eriro-alpine-hide-ehrwald-luxus-suite-wisa-02 alt="Couple resting closely embraced in sunlit alpine meadow near eriro Alpine Hide – carefree togetherness dressed in linen and golden light">
+                        <div .overlay>
+                    <div .swiper-slide roomslide>
+                      <picture . style="--c57b0150:0.861198738170347;--c57b013e:0.7555555555555555;">
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_364x423/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_273x317/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_205x238/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_387x512/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_290x384/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_181x240/page/fileadmin/user_upload/eriro-alpine-
+                        <img . src=/_ipx/f_webp&q_80&s_273x317/page/fileadmin/user_upload/eriro-alpine-hide-ehrwald-luxus-suite-felisa- alt="Hand holding rough alpine limestone with moss at breaking edge – elemental materiality and mindful nature experience at eriro Alpine Hide retreat">
+                        <div .overlay>
+                    <div .swiper-slide roomslide>
+                      <picture . style="--c57b0150:0.861198738170347;--c57b013e:0.7555555555555555;">
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_364x423/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_273x317/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_205x238/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_387x512/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_290x384/page/fileadmin/user_upload/eriro-alpine-
+                        <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_1400&s_181x240/page/fileadmin/user_upload/eriro-alpine-
+                        <img . src=/_ipx/f_webp&q_80&s_273x317/page/fileadmin/user_upload/eriro-alpine-hide-ehrwald-luxus-suite-himil-0 alt="Silhouette at telescope at sunset over alpine summits – quiet evening rituals and awestruck nature observation at eriro Alpine Hide luxury retreat">
+                        <div .overlay>
+                <div .swiper room-content>
+                  <div .swiper-wrapper>
+                    <div .swiper-slide roomslide>
+                      <div .grid-container-inner>
+                        <h2 .>
+                          "boum"
+                        <div .room-info>
+                          <span .room-info-price>
+                            "from 775,- € / night per person / All-In"
+                          <span .room-info-size>
+                            "approx. 688 sq ft"
+                          <span .room-info-spacer>
+                          <span .room-info-people>
+                            "for 2 persons"
+                        <div .room-button>
+                          <a .ht-button href=/en/suites/boum/>
+                            "View Suite"
+                    <div .swiper-slide roomslide>
+                      <div .grid-container-inner>
+                        <h2 .>
+                          "wisa"
+                        <div .room-info>
+                          <span .room-info-price>
+                            "from 925,- € / night per person / All-In"
+                          <span .room-info-size>
+                            "approx. 872 sq ft"
+                          <span .room-info-spacer>
+                          <span .room-info-people>
+                            "for 2 persons"
+                        <div .room-button>
+                          <a .ht-button href=/en/suites/wisa/>
+                            "View Suite"
+                    <div .swiper-slide roomslide>
+                      <div .grid-container-inner>
+                        <h2 .>
+                          "felisa"
+                        <div .room-info>
+                          <span .room-info-price>
+                            "from 1.075,- € / night per person / All-In"
+                          <span .room-info-size>
+                            "approx. 1065 sq ft"
+                          <span .room-info-spacer>
+                          <span .room-info-people>
+                            "for 2-4 persons"
+                        <div .room-button>
+                          <a .ht-button href=/en/suites/felisa/>
+                            "View Suite"
+                    <div .swiper-slide roomslide>
+                      <div .grid-container-inner>
+                        <h2 .>
+                          "himil"
+                        <div .room-info>
+                          <span .room-info-price>
+                            "from 1.475,- € / night per person / All-In"
+                          <span .room-info-size>
+                            "approx. 2293 sq ft"
+                          <span .room-info-spacer>
+                          <span .room-info-people>
+                            "for 4 persons"
+                        <div .room-button>
+                          <a .ht-button href=/en/suites/himil/>
+                            "View Suite"
+                <div .navigation>
+                  <div .next swiper-button-lock>
+                    <svg .filled>
+                  <div .prev swiper-button-lock>
+                    <svg .filled>
+            <div .default space-before- mask mask_imgtext>
+              <div .grid-container>
+                <div .image-left>
+                  <picture . style="--c57b0150:1.2846153846153847;--c57b013e:1.1142857142857143;">
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_668x520/page/fileadmin/user_upload/eriro-ehrwald-
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_501x390/page/fileadmin/user_upload/eriro-ehrwald-
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_376x293/page/fileadmin/user_upload/eriro-ehrwald-
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_333x299/page/fileadmin/user_upload/eriro-ehrwald-
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_250x224/page/fileadmin/user_upload/eriro-ehrwald-
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_156x140/page/fileadmin/user_upload/eriro-ehrwald-
+                    <img . src=/_ipx/f_webp&q_80&s_501x390/page/fileadmin/user_upload/eriro-ehrwald-alpine-hide-luxus-natur-02.jpg alt="Matte black rainfall shower with golden light beam beneath recycled spruce rafters, spa ritual room at eriro Alpine Hide">
+                    <div .overlay>
+                <div .image-right>
+                  <picture . style="--c57b0150:1.1176470588235294;--c57b013e:1.238888888888889;">
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1350&s_760x680/page/fileadmin/user_upload/eriro-ehrwald
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1350&s_570x510/page/fileadmin/user_upload/eriro-ehrwald
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1350&s_428x383/page/fileadmin/user_upload/eriro-ehrwald
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1350&s_634x512/page/fileadmin/user_upload/eriro-ehrwald
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1350&s_476x384/page/fileadmin/user_upload/eriro-ehrwald
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1350&s_297x240/page/fileadmin/user_upload/eriro-ehrwald
+                    <img . src=/_ipx/f_webp&q_80&s_570x510/page/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-02.jpg alt="Cathedral suite at eriro with centuries-old spruce beams, bed with fur blanket, glass fireplace and integrated bath with matte black faucet beneath reclaimed wood ceiling">
+                    <div .overlay>
+                <div .content>
+                  <h2 .title>
+                    "Nature infuses"
+                    <br .>
+                    "the room"
+                  <div .text>
+                    <p .>
+                      "Stone, wood sourced from our own forests, and other natural Alpine materials from the area bring together eriro’s 9 suites, the rooms give a feeling of timeless luxury paired with authentic Alpine exp"
+                    <p .>
+                      <a .linkdetail href=/en/suites/boum/>
+                        "TO THE SUITES"
+            <div .default space-before- mask mask_imgtext>
+              <div .grid-container>
+                <div .image-left>
+                  <picture . style="--c57b0150:1.2846153846153847;--c57b013e:1.1142857142857143;">
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1868&s_668x520/page/fileadmin/user_upload/Hendrik_St%25
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1868&s_501x390/page/fileadmin/user_upload/Hendrik_St%25
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1868&s_376x293/page/fileadmin/user_upload/Hendrik_St%25
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1868&s_333x299/page/fileadmin/user_upload/Hendrik_St%25
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1868&s_250x224/page/fileadmin/user_upload/Hendrik_St%25
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1868&s_156x140/page/fileadmin/user_upload/Hendrik_St%25
+                    <img . src=/_ipx/f_webp&q_80&s_501x390/page/fileadmin/user_upload/Hendrik_St%25C3%25BCwe/Pool_Shooting_2605_11. alt="">
+                    <div .overlay>
+                <div .image-right>
+                  <picture . style="--c57b0150:1.1176470588235294;--c57b013e:1.238888888888889;">
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1867_2800&s_760x680/page/fileadmin/user_upload/Hendrik_St%25
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1867_2800&s_570x510/page/fileadmin/user_upload/Hendrik_St%25
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1867_2800&s_428x383/page/fileadmin/user_upload/Hendrik_St%25
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1867_2800&s_634x512/page/fileadmin/user_upload/Hendrik_St%25
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1867_2800&s_476x384/page/fileadmin/user_upload/Hendrik_St%25
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1867_2800&s_297x240/page/fileadmin/user_upload/Hendrik_St%25
+                    <img . src=/_ipx/f_webp&q_80&s_570x510/page/fileadmin/user_upload/Hendrik_St%25C3%25BCwe/Pool_Shooting_2605_01_ alt="">
+                    <div .overlay>
+                <div .content>
+                  <h2 .title>
+                    "The sound of nature echoes on skin"
+                  <div .text>
+                    <p .>
+                      "Here, the mountain’s contrasts meet: cool air and warm water, retreat and vastness. The saunas restore what the wind and altitude demand. Between them lies water, the primal element of life. Clear. Ti"
+                    <p .>
+                    <p .>
+                      <a . href=/en/spa/>
+                        "DISCOVER THE SPA"
+            <div .default space-before- mask mask_img grid-container>
+              <div .image>
+                <picture . style="--c57b0150:1.7777777777777777;--c57b013e:1.2;">
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1868&s_2560x1440/page/fileadmin/user_upload/Hendrik_St%
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1868&s_1920x1080/page/fileadmin/user_upload/Hendrik_St%
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1868&s_1440x810/page/fileadmin/user_upload/Hendrik_St%2
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1868&s_1024x853/page/fileadmin/user_upload/Hendrik_St%2
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1868&s_768x640/page/fileadmin/user_upload/Hendrik_St%25
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2800_1868&s_480x400/page/fileadmin/user_upload/Hendrik_St%25
+                  <img . src=/_ipx/f_webp&q_80&s_1920x1080/page/fileadmin/user_upload/Hendrik_St%25C3%25BCwe/Pool_Shooting_2605_1 alt="">
+                  <div .overlay>
+            <div .default space-before- mask mask_break>
+              <div .break-wrapper grid-container>
+                <div .image-left>
+                  <picture . style="--c57b0150:1.1176470588235294;--c57b013e:1.238888888888889;">
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_3838&s_760x680/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_3838&s_570x510/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_3838&s_428x383/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_3838&s_634x512/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_3838&s_476x384/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_3838&s_297x240/page/fileadmin/user_upload/unikateur_Bil
+                    <img . src=/_ipx/f_webp&q_80&s_570x510/page/fileadmin/user_upload/unikateur_Bilder/eriro_alpinehide_frosch.jpg alt="Tiny young toad sitting on gently opened palm in sunlight – golden bracelet, alpine nature discovery during eriro summer retreat">
+                    <div .overlay>
+                <h2 .title>
+                  "Touch what time"
+                  <br .>
+                  "has left untouched."
+                  <br .>
+                  <br .>
+                  "Experience"
+                  <br .>
+                  "the unexperienced."
+                <div .image-right>
+                  <picture . style="--c57b0150:1.2571428571428571;--c57b013e:1.2589928057553956;">
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_469x373/page/fileadmin/user_upload/eriro-ehrwald-
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_352x280/page/fileadmin/user_upload/eriro-ehrwald-
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_264x210/page/fileadmin/user_upload/eriro-ehrwald-
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_498x395/page/fileadmin/user_upload/eriro-ehrwald-
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_373x297/page/fileadmin/user_upload/eriro-ehrwald-
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_233x185/page/fileadmin/user_upload/eriro-ehrwald-
+                    <img . src=/_ipx/f_webp&q_80&s_352x280/page/fileadmin/user_upload/eriro-ehrwald-alpine-hide-luxus-natur-03.jpg alt="Hand holding birch log with beetle traces over campfire with sparks flying, stacked wood logs, snow background in eriro winter forest">
+                    <div .overlay>
+            <div .default space-before- mask mask_imgtext>
+              <div .grid-container>
+                <div .image-left>
+                  <picture . style="--c57b0150:1.2846153846153847;--c57b013e:1.1142857142857143;">
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_668x520/page/fileadmin/user_upload/DR1A6575.jpg
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_501x390/page/fileadmin/user_upload/DR1A6575.jpg
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_376x293/page/fileadmin/user_upload/DR1A6575.jpg
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_333x299/page/fileadmin/user_upload/DR1A6575.jpg
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_250x224/page/fileadmin/user_upload/DR1A6575.jpg
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_156x140/page/fileadmin/user_upload/DR1A6575.jpg
+                    <img . src=/_ipx/f_webp&q_80&s_501x390/page/fileadmin/user_upload/DR1A6575.jpg alt="eriro Alpine Hide – Dramatic alpine landscape with cloud-draped rock walls in golden evening light, wild mountain wilderness and dark conifer silhouettes">
+                    <div .overlay>
+                <div .image-right>
+                  <picture . style="--c57b0150:1.1176470588235294;--c57b013e:1.238888888888889;">
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_760x680/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_570x510/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_428x383/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_634x512/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_476x384/page/fileadmin/user_upload/unikateur_Bil
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_297x240/page/fileadmin/user_upload/unikateur_Bil
+                    <img . src=/_ipx/f_webp&q_80&s_570x510/page/fileadmin/user_upload/unikateur_Bilder/eriro_alpinehide_massivmann. alt="Person in yellow wool sweater before mighty Wetterstein rock wall at Ehrwald – alpine awe and vastness in scree field near eriro Alpine Hide">
+                    <div .overlay>
+                <div .content>
+                  <h2 .title>
+                    "The natural"
+                    <br .>
+                    "power of the"
+                    <br .>
+                    "mountain"
+                  <div .text>
+                    <p .>
+                      "Blissful and mellow as a summery lazing about in the Alpine meadows, wild and powerful as a sudden thunderstorm, the many moods of mountain nature hone our senses to the essential. In the seclusion of"
+                    <p .>
+                      <a .linkdetail href=/en/experiences/>
+                        "TO THE EXPERIENCES"
+            <div .default space-before- mask mask_img grid-container>
+              <div .image>
+                <picture . style="--c57b0150:1.7777777777777777;--c57b013e:1.2;">
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_2560x1440/page/fileadmin/user_upload/unikateur_B
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_1920x1080/page/fileadmin/user_upload/unikateur_B
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_1440x810/page/fileadmin/user_upload/unikateur_Bi
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_1024x853/page/fileadmin/user_upload/unikateur_Bi
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_768x640/page/fileadmin/user_upload/unikateur_Bil
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1708&s_480x400/page/fileadmin/user_upload/unikateur_Bil
+                  <img . src=/_ipx/f_webp&q_80&s_1920x1080/page/fileadmin/user_upload/unikateur_Bilder/eriro_alpinehide_lichtungf alt="Woman in black dress standing on sunlit forest clearing at Ehrwald – Wetterstein summits and spruce forests at eriro Alpine Hide">
+                  <div .overlay>
+            <div .default space-before- mask mask_imgtext>
+              <div .grid-container>
+                <div .image-left>
+                  <picture . style="--c57b0150:1.2846153846153847;--c57b013e:1.1142857142857143;">
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_668x520/page/fileadmin/user_upload/eriro-ehrwald-
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_501x390/page/fileadmin/user_upload/eriro-ehrwald-
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_376x293/page/fileadmin/user_upload/eriro-ehrwald-
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_333x299/page/fileadmin/user_upload/eriro-ehrwald-
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_250x224/page/fileadmin/user_upload/eriro-ehrwald-
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1200_950&s_156x140/page/fileadmin/user_upload/eriro-ehrwald-
+                    <img . src=/_ipx/f_webp&q_80&s_501x390/page/fileadmin/user_upload/eriro-ehrwald-alpinehide-kulinarik-04.jpg alt="Smoked lamb rack on alpine spruce branches with rising smoke – culinary experience at eriro Alpine Hide near Zugspitze">
+                    <div .overlay>
+                <div .image-right>
+                  <picture . style="--c57b0150:1.1176470588235294;--c57b013e:1.238888888888889;">
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1350&s_760x680/page/fileadmin/user_upload/eriro-ehrwald
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1350&s_570x510/page/fileadmin/user_upload/eriro-ehrwald
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1350&s_428x383/page/fileadmin/user_upload/eriro-ehrwald
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1350&s_634x512/page/fileadmin/user_upload/eriro-ehrwald
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1350&s_476x384/page/fileadmin/user_upload/eriro-ehrwald
+                    <source image/webp /_ipx/f_webp&q_80&extract_0_0_1500_1350&s_297x240/page/fileadmin/user_upload/eriro-ehrwald
+                    <img . src=/_ipx/f_webp&q_80&s_570x510/page/fileadmin/user_upload/eriro-ehrwald-alpinehide-kulinarik-01.jpg alt="Nordic-alpine cuisine at eriro: Transparent cucumber consommé with elderflowers, nettle, dill and chervil in white bowl on weathered reclaimed wood">
+                    <div .overlay>
+                <div .content>
+                  <h2 .title>
+                    "The flavour"
+                    <br .>
+                    "of mountain"
+                    <br .>
+                    "origins"
+                  <div .text>
+                    <p .>
+                      "A real fuir heats the stove, seasons and ever-changing weather conditions of the mountain are plated before you. Coarse and powerful like the rock of the mountain, or mild and delicate like a gentle s"
+            <div .default space-before- mask mask_img grid-container>
+              <div .image>
+                <picture . style="--c57b0150:1.7777777777777777;--c57b013e:1.2;">
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1440&s_2560x1440/page/fileadmin/user_upload/eriro-alpin
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1440&s_1920x1080/page/fileadmin/user_upload/eriro-alpin
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1440&s_1440x810/page/fileadmin/user_upload/eriro-alpine
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1440&s_1024x853/page/fileadmin/user_upload/eriro-alpine
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1440&s_768x640/page/fileadmin/user_upload/eriro-alpine-
+                  <source image/webp /_ipx/f_webp&q_80&extract_0_0_2560_1440&s_480x400/page/fileadmin/user_upload/eriro-alpine-
+                  <img . src=/_ipx/f_webp&q_80&s_1920x1080/page/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus alt="Carved tree trunk table at eriro with branch root feet, hand-thrown bowl, dried flower vase on wool felt rug before bamboo lattice">
+                  <div .overlay>
+            <div .default space-before- mask mask_teaserslider>
+              <div .grid-container>
+                <div .teaser-wrapper grid-container-inner>
+                  <div .swiper image-left>
+                    <div .swiper-wrapper>
+                      <div .swiper-slide>
+                        <div .>
+                          <picture . style="--c57b0150:0.8393939393939394;--c57b013e:0.7555555555555555;">
+                            <source image/webp /_ipx/f_webp&q_80&extract_0_0_2403_2867&s_369x440/page/fileadmin/user_upload/efbeebba62dc9
+                            <source image/webp /_ipx/f_webp&q_80&extract_0_0_2403_2867&s_277x330/page/fileadmin/user_upload/efbeebba62dc9
+                            <source image/webp /_ipx/f_webp&q_80&extract_0_0_2403_2867&s_208x248/page/fileadmin/user_upload/efbeebba62dc9
+                            <source image/webp /_ipx/f_webp&q_80&extract_0_0_2403_2867&s_387x512/page/fileadmin/user_upload/efbeebba62dc9
+                            <source image/webp /_ipx/f_webp&q_80&extract_0_0_2403_2867&s_290x384/page/fileadmin/user_upload/efbeebba62dc9
+                            <source image/webp /_ipx/f_webp&q_80&extract_0_0_2403_2867&s_181x240/page/fileadmin/user_upload/efbeebba62dc9
+                            <img . src=/_ipx/f_webp&q_80&s_277x330/page/fileadmin/user_upload/efbeebba62dc9d46c61edb9fb05fef06.jpg alt="Woman's hands meditatively cupping crystal-clear mountain spring water from Wetterstein stream with droplets and fine gold jewelry">
+                            <div .overlay>
+                  <div .swiper image-right>
+                    <div .swiper-wrapper>
+                      <div .swiper-slide>
+                        <div .>
+                          <picture . style="--c57b0150:0.9125;--c57b013e:0.84;">
+                            <source image/webp /_ipx/f_webp&q_80&extract_0_0_7564_5045&s_1168x1280/page/fileadmin/user_upload/Best-Of_Ale
+                            <source image/webp /_ipx/f_webp&q_80&extract_0_0_7564_5045&s_876x960/page/fileadmin/user_upload/Best-Of_Alex_
+                            <source image/webp /_ipx/f_webp&q_80&extract_0_0_7564_5045&s_657x720/page/fileadmin/user_upload/Best-Of_Alex_
+                            <source image/webp /_ipx/f_webp&q_80&extract_0_0_7564_5045&s_717x853/page/fileadmin/user_upload/Best-Of_Alex_
+                            <source image/webp /_ipx/f_webp&q_80&extract_0_0_7564_5045&s_538x640/page/fileadmin/user_upload/Best-Of_Alex_
+                            <source image/webp /_ipx/f_webp&q_80&extract_0_0_7564_5045&s_336x400/page/fileadmin/user_upload/Best-Of_Alex_
+                            <img . src=/_ipx/f_webp&q_80&s_876x960/page/fileadmin/user_upload/Best-Of_Alex_Moling/AlexMoling_Eriro_Wellness alt="Infinity pool at eriro with overflow edge toward sunset over Wetterstein and Mieminger ranges, mirroring water surface beneath dark wood ceiling">
+                            <div .overlay>
+                  <div .swiper infotext>
+                    <div .swiper-wrapper>
+                      <div .swiper-slide>
+                        <p .infotext>
+                          "Origins of the Alpine region"
+                  <div .swiper teaser-content>
+                    <div .swiper-wrapper>
+                      <div .swiper-slide>
+                        <div .teaser-content-inner>
+                          <h2 .title>
+                            "Bask in stillness"
+                          <a .ht-button href=/en/spa/>
+                            "Path to regeneration"
+            <div .default space-before- mask mask_partnermarquee>
+              <div .grid-container>
+                <div .content>
+                  <h2 .title>
+                    "Recommended by"
+                <div .swiper-container>
+                  <div .swiper>
+                    <div .swiper-wrapper>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.7994241842610366;--c57b013e:1.7994241842610366;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/bilanz.png alt="Logo BILANZ in red serif font – Swiss business magazine reporting on eriro Alpine Hide luxury hotel in Ehrwald, Tyrol">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:0.912;--c57b013e:0.912;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/ad.png alt="Logo AD Architectural Digest in black font – press report about eriro Alpine Hide design hotel in Ehrwald, Tyrol">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/cond%25C3%25A9_nast.png alt="Logo Condé Nast Traveler in elegant sans-serif – media partner of eriro Alpine Hide luxury hotel in Ehrwald, Zugspitze">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/elle.png alt="Logo ELLE in distinctive capital letter serif font – media mention of eriro Alpine Hide design hotel at Zugspitze">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/fallstaff.png alt="Logo Falstaff in elegant black serif font – culinary and lifestyle media partner of eriro Alpine Hide in Tyrol">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/financial_times.png alt="Logo Financial Times in classic serif font – British business newspaper reporting on eriro Alpine Hide in Tyrol">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/forbes.png alt="Logo Forbes in classic bold serif font – business magazine reporting on eriro Alpine Hide luxury hotel in Ehrwald">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/harpers_bazaar.png alt="Logo Harper's Bazaar in elegant serif font with high-contrast stroke weights – international press feature of eriro Alpine Hide">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/monocle.png alt="Logo Monocle in black font – international media feature about eriro Alpine Hide luxury hideaway near Zugspitze">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/national_geopgraphic.png alt="Logo National Geographic in yellow-black frame – international press coverage of eriro Alpine Hide luxury hotel in Ehrwald">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/robb_report.png alt="Logo Robb Report in classic serif font – American luxury lifestyle magazine about eriro Alpine Hide in Ehrwald">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/telegraph.png alt="Logo The Telegraph in Gothic script – international press mention of eriro Alpine Hide boutique hotel in Ehrwald at Zugspitze">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/the_times.png alt="Logo The Times with royal coat of arms between lion and unicorn – British newspaper reporting on eriro Alpine Hide">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/wallpaper.png alt="Logo Wallpaper* magazine in black font – design and architecture press partner of eriro Alpine Hide retreat in Ehrwald">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:0.912;--c57b013e:0.912;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/ad.png alt="Logo AD Architectural Digest in black font – press report about eriro Alpine Hide design hotel in Ehrwald, Tyrol">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/cond%25C3%25A9_nast.png alt="Logo Condé Nast Traveler in elegant sans-serif – media partner of eriro Alpine Hide luxury hotel in Ehrwald, Zugspitze">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/elle.png alt="Logo ELLE in distinctive capital letter serif font – media mention of eriro Alpine Hide design hotel at Zugspitze">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/fallstaff.png alt="Logo Falstaff in elegant black serif font – culinary and lifestyle media partner of eriro Alpine Hide in Tyrol">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/financial_times.png alt="Logo Financial Times in classic serif font – British business newspaper reporting on eriro Alpine Hide in Tyrol">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/forbes.png alt="Logo Forbes in classic bold serif font – business magazine reporting on eriro Alpine Hide luxury hotel in Ehrwald">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/harpers_bazaar.png alt="Logo Harper's Bazaar in elegant serif font with high-contrast stroke weights – international press feature of eriro Alpine Hide">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/monocle.png alt="Logo Monocle in black font – international media feature about eriro Alpine Hide luxury hideaway near Zugspitze">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/national_geopgraphic.png alt="Logo National Geographic in yellow-black frame – international press coverage of eriro Alpine Hide luxury hotel in Ehrwald">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/robb_report.png alt="Logo Robb Report in classic serif font – American luxury lifestyle magazine about eriro Alpine Hide in Ehrwald">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/telegraph.png alt="Logo The Telegraph in Gothic script – international press mention of eriro Alpine Hide boutique hotel in Ehrwald at Zugspitze">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/the_times.png alt="Logo The Times with royal coat of arms between lion and unicorn – British newspaper reporting on eriro Alpine Hide">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/wallpaper.png alt="Logo Wallpaper* magazine in black font – design and architecture press partner of eriro Alpine Hide retreat in Ehrwald">
+                          <div .overlay>
+                      <div .swiper-slide>
+                        <picture . style="--c57b0150:1.7994241842610366;--c57b013e:1.7994241842610366;">
+                          <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                          <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                          <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                          <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                          <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                          <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                          <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/michelin_guide_second.png alt="Logo Michelin Guide in red with blossom symbol and heart – gastronomic distinction for eriro Alpine Hide at Zugspitze">
+                          <div .overlay>
+                <div .marquee-wrapper>
+                  <div .marquee-inner>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.7994241842610366;--c57b013e:1.7994241842610366;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/bilanz.png alt="Logo BILANZ in red serif font – Swiss business magazine reporting on eriro Alpine Hide luxury hotel in Ehrwald, Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:0.912;--c57b013e:0.912;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/ad.png alt="Logo AD Architectural Digest in black font – press report about eriro Alpine Hide design hotel in Ehrwald, Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/cond%25C3%25A9_nast.png alt="Logo Condé Nast Traveler in elegant sans-serif – media partner of eriro Alpine Hide luxury hotel in Ehrwald, Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/elle.png alt="Logo ELLE in distinctive capital letter serif font – media mention of eriro Alpine Hide design hotel at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/fallstaff.png alt="Logo Falstaff in elegant black serif font – culinary and lifestyle media partner of eriro Alpine Hide in Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/financial_times.png alt="Logo Financial Times in classic serif font – British business newspaper reporting on eriro Alpine Hide in Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/forbes.png alt="Logo Forbes in classic bold serif font – business magazine reporting on eriro Alpine Hide luxury hotel in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/harpers_bazaar.png alt="Logo Harper's Bazaar in elegant serif font with high-contrast stroke weights – international press feature of eriro Alpine Hide">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/monocle.png alt="Logo Monocle in black font – international media feature about eriro Alpine Hide luxury hideaway near Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/national_geopgraphic.png alt="Logo National Geographic in yellow-black frame – international press coverage of eriro Alpine Hide luxury hotel in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/robb_report.png alt="Logo Robb Report in classic serif font – American luxury lifestyle magazine about eriro Alpine Hide in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/telegraph.png alt="Logo The Telegraph in Gothic script – international press mention of eriro Alpine Hide boutique hotel in Ehrwald at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/the_times.png alt="Logo The Times with royal coat of arms between lion and unicorn – British newspaper reporting on eriro Alpine Hide">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/wallpaper.png alt="Logo Wallpaper* magazine in black font – design and architecture press partner of eriro Alpine Hide retreat in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:0.912;--c57b013e:0.912;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/ad.png alt="Logo AD Architectural Digest in black font – press report about eriro Alpine Hide design hotel in Ehrwald, Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/cond%25C3%25A9_nast.png alt="Logo Condé Nast Traveler in elegant sans-serif – media partner of eriro Alpine Hide luxury hotel in Ehrwald, Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/elle.png alt="Logo ELLE in distinctive capital letter serif font – media mention of eriro Alpine Hide design hotel at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/fallstaff.png alt="Logo Falstaff in elegant black serif font – culinary and lifestyle media partner of eriro Alpine Hide in Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/financial_times.png alt="Logo Financial Times in classic serif font – British business newspaper reporting on eriro Alpine Hide in Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/forbes.png alt="Logo Forbes in classic bold serif font – business magazine reporting on eriro Alpine Hide luxury hotel in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/harpers_bazaar.png alt="Logo Harper's Bazaar in elegant serif font with high-contrast stroke weights – international press feature of eriro Alpine Hide">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/monocle.png alt="Logo Monocle in black font – international media feature about eriro Alpine Hide luxury hideaway near Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/national_geopgraphic.png alt="Logo National Geographic in yellow-black frame – international press coverage of eriro Alpine Hide luxury hotel in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/robb_report.png alt="Logo Robb Report in classic serif font – American luxury lifestyle magazine about eriro Alpine Hide in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/telegraph.png alt="Logo The Telegraph in Gothic script – international press mention of eriro Alpine Hide boutique hotel in Ehrwald at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/the_times.png alt="Logo The Times with royal coat of arms between lion and unicorn – British newspaper reporting on eriro Alpine Hide">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/wallpaper.png alt="Logo Wallpaper* magazine in black font – design and architecture press partner of eriro Alpine Hide retreat in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.7994241842610366;--c57b013e:1.7994241842610366;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/michelin_guide_second.png alt="Logo Michelin Guide in red with blossom symbol and heart – gastronomic distinction for eriro Alpine Hide at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/elle.png alt="Logo ELLE in distinctive capital letter serif font – media mention of eriro Alpine Hide design hotel at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/fallstaff.png alt="Logo Falstaff in elegant black serif font – culinary and lifestyle media partner of eriro Alpine Hide in Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.7994241842610366;--c57b013e:1.7994241842610366;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/bilanz.png alt="Logo BILANZ in red serif font – Swiss business magazine reporting on eriro Alpine Hide luxury hotel in Ehrwald, Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:0.912;--c57b013e:0.912;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/ad.png alt="Logo AD Architectural Digest in black font – press report about eriro Alpine Hide design hotel in Ehrwald, Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/cond%25C3%25A9_nast.png alt="Logo Condé Nast Traveler in elegant sans-serif – media partner of eriro Alpine Hide luxury hotel in Ehrwald, Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/monocle.png alt="Logo Monocle in black font – international media feature about eriro Alpine Hide luxury hideaway near Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/national_geopgraphic.png alt="Logo National Geographic in yellow-black frame – international press coverage of eriro Alpine Hide luxury hotel in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/financial_times.png alt="Logo Financial Times in classic serif font – British business newspaper reporting on eriro Alpine Hide in Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/forbes.png alt="Logo Forbes in classic bold serif font – business magazine reporting on eriro Alpine Hide luxury hotel in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/harpers_bazaar.png alt="Logo Harper's Bazaar in elegant serif font with high-contrast stroke weights – international press feature of eriro Alpine Hide">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/wallpaper.png alt="Logo Wallpaper* magazine in black font – design and architecture press partner of eriro Alpine Hide retreat in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:0.912;--c57b013e:0.912;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/ad.png alt="Logo AD Architectural Digest in black font – press report about eriro Alpine Hide design hotel in Ehrwald, Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/robb_report.png alt="Logo Robb Report in classic serif font – American luxury lifestyle magazine about eriro Alpine Hide in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/telegraph.png alt="Logo The Telegraph in Gothic script – international press mention of eriro Alpine Hide boutique hotel in Ehrwald at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/the_times.png alt="Logo The Times with royal coat of arms between lion and unicorn – British newspaper reporting on eriro Alpine Hide">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/financial_times.png alt="Logo Financial Times in classic serif font – British business newspaper reporting on eriro Alpine Hide in Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/forbes.png alt="Logo Forbes in classic bold serif font – business magazine reporting on eriro Alpine Hide luxury hotel in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/cond%25C3%25A9_nast.png alt="Logo Condé Nast Traveler in elegant sans-serif – media partner of eriro Alpine Hide luxury hotel in Ehrwald, Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/elle.png alt="Logo ELLE in distinctive capital letter serif font – media mention of eriro Alpine Hide design hotel at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/fallstaff.png alt="Logo Falstaff in elegant black serif font – culinary and lifestyle media partner of eriro Alpine Hide in Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/robb_report.png alt="Logo Robb Report in classic serif font – American luxury lifestyle magazine about eriro Alpine Hide in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/telegraph.png alt="Logo The Telegraph in Gothic script – international press mention of eriro Alpine Hide boutique hotel in Ehrwald at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/harpers_bazaar.png alt="Logo Harper's Bazaar in elegant serif font with high-contrast stroke weights – international press feature of eriro Alpine Hide">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/monocle.png alt="Logo Monocle in black font – international media feature about eriro Alpine Hide luxury hideaway near Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/national_geopgraphic.png alt="Logo National Geographic in yellow-black frame – international press coverage of eriro Alpine Hide luxury hotel in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/elle.png alt="Logo ELLE in distinctive capital letter serif font – media mention of eriro Alpine Hide design hotel at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/fallstaff.png alt="Logo Falstaff in elegant black serif font – culinary and lifestyle media partner of eriro Alpine Hide in Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/the_times.png alt="Logo The Times with royal coat of arms between lion and unicorn – British newspaper reporting on eriro Alpine Hide">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/wallpaper.png alt="Logo Wallpaper* magazine in black font – design and architecture press partner of eriro Alpine Hide retreat in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.7994241842610366;--c57b013e:1.7994241842610366;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/michelin_guide_second.png alt="Logo Michelin Guide in red with blossom symbol and heart – gastronomic distinction for eriro Alpine Hide at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/monocle.png alt="Logo Monocle in black font – international media feature about eriro Alpine Hide luxury hideaway near Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/national_geopgraphic.png alt="Logo National Geographic in yellow-black frame – international press coverage of eriro Alpine Hide luxury hotel in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.7994241842610366;--c57b013e:1.7994241842610366;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/bilanz.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/bilanz.png alt="Logo BILANZ in red serif font – Swiss business magazine reporting on eriro Alpine Hide luxury hotel in Ehrwald, Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:0.912;--c57b013e:0.912;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/ad.png alt="Logo AD Architectural Digest in black font – press report about eriro Alpine Hide design hotel in Ehrwald, Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/cond%25C3%25A9_nast.png alt="Logo Condé Nast Traveler in elegant sans-serif – media partner of eriro Alpine Hide luxury hotel in Ehrwald, Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/wallpaper.png alt="Logo Wallpaper* magazine in black font – design and architecture press partner of eriro Alpine Hide retreat in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:0.912;--c57b013e:0.912;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/ad.png alt="Logo AD Architectural Digest in black font – press report about eriro Alpine Hide design hotel in Ehrwald, Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/financial_times.png alt="Logo Financial Times in classic serif font – British business newspaper reporting on eriro Alpine Hide in Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/forbes.png alt="Logo Forbes in classic bold serif font – business magazine reporting on eriro Alpine Hide luxury hotel in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/harpers_bazaar.png alt="Logo Harper's Bazaar in elegant serif font with high-contrast stroke weights – international press feature of eriro Alpine Hide">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/financial_tim
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/financial_times.png alt="Logo Financial Times in classic serif font – British business newspaper reporting on eriro Alpine Hide in Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/forbes.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/forbes.png alt="Logo Forbes in classic bold serif font – business magazine reporting on eriro Alpine Hide luxury hotel in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/robb_report.png alt="Logo Robb Report in classic serif font – American luxury lifestyle magazine about eriro Alpine Hide in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/telegraph.png alt="Logo The Telegraph in Gothic script – international press mention of eriro Alpine Hide boutique hotel in Ehrwald at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/the_times.png alt="Logo The Times with royal coat of arms between lion and unicorn – British newspaper reporting on eriro Alpine Hide">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/robb_report.p
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/robb_report.png alt="Logo Robb Report in classic serif font – American luxury lifestyle magazine about eriro Alpine Hide in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/telegraph.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/telegraph.png alt="Logo The Telegraph in Gothic script – international press mention of eriro Alpine Hide boutique hotel in Ehrwald at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/cond%25C3%25A
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/cond%25C3%25A9_nast.png alt="Logo Condé Nast Traveler in elegant sans-serif – media partner of eriro Alpine Hide luxury hotel in Ehrwald, Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/elle.png alt="Logo ELLE in distinctive capital letter serif font – media mention of eriro Alpine Hide design hotel at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/fallstaff.png alt="Logo Falstaff in elegant black serif font – culinary and lifestyle media partner of eriro Alpine Hide in Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/elle.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/elle.png alt="Logo ELLE in distinctive capital letter serif font – media mention of eriro Alpine Hide design hotel at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/fallstaff.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/fallstaff.png alt="Logo Falstaff in elegant black serif font – culinary and lifestyle media partner of eriro Alpine Hide in Tyrol">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/harpers_bazaa
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/harpers_bazaar.png alt="Logo Harper's Bazaar in elegant serif font with high-contrast stroke weights – international press feature of eriro Alpine Hide">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/monocle.png alt="Logo Monocle in black font – international media feature about eriro Alpine Hide luxury hideaway near Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/national_geopgraphic.png alt="Logo National Geographic in yellow-black frame – international press coverage of eriro Alpine Hide luxury hotel in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/monocle.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/monocle.png alt="Logo Monocle in black font – international media feature about eriro Alpine Hide luxury hideaway near Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/national_geop
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/national_geopgraphic.png alt="Logo National Geographic in yellow-black frame – international press coverage of eriro Alpine Hide luxury hotel in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/the_times.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/the_times.png alt="Logo The Times with royal coat of arms between lion and unicorn – British newspaper reporting on eriro Alpine Hide">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/wallpaper.png alt="Logo Wallpaper* magazine in black font – design and architecture press partner of eriro Alpine Hide retreat in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.7994241842610366;--c57b013e:1.7994241842610366;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_3750_2084/page/fileadmin/user_upload/Logos/michelin_gu
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/michelin_guide_second.png alt="Logo Michelin Guide in red with blossom symbol and heart – gastronomic distinction for eriro Alpine Hide at Zugspitze">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:1.8;--c57b013e:1.8;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_900_500/page/fileadmin/user_upload/Logos/wallpaper.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/wallpaper.png alt="Logo Wallpaper* magazine in black font – design and architecture press partner of eriro Alpine Hide retreat in Ehrwald">
+                        <div .overlay>
+                    <div .marquee-item>
+                      <picture . style="--c57b0150:0.912;--c57b013e:0.912;">
+                        <source image/webp /_ipx/f_webp&q_80&h_240&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_180&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_135&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_341&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_256&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <source image/webp /_ipx/f_webp&q_80&h_160&extract_0_0_456_500/page/fileadmin/user_upload/Logos/ad.png
+                        <img . src=/_ipx/f_webp&q_80&h_180/page/fileadmin/user_upload/Logos/ad.png alt="Logo AD Architectural Digest in black font – press report about eriro Alpine Hide design hotel in Ehrwald, Tyrol">
+                        <div .overlay>
+          <footer .grid-container>
+            <div .upper-footer grid-container-inner>
+              <div .email>
+                <h4 .footer-title>
+                  "Contact"
+                <a . href=mailto:hide@eriro.at>
+                  "hide@eriro.at"
+                <br .>
+                <a . href=tel:0043 5673 40506>
+                  "0043 5673 40506"
+              <div .social>
+                <h4 .footer-title>
+                  "Follow us"
+                <div .t3-ce-rte>
+                  <a . href=https://www.instagram.com/eriro.alpinehide?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==>
+                    "Instagram"
+                  <br .>
+                  <a . href=https://www.facebook.com/eriroalpinehide>
+                    "Facebook"
+              <div .address>
+                <h4 .footer-title>
+                  "Address"
+                <div .t3-ce-rte>
+                  "Ehrwalder Alm 4"
+                  <br .>
+                  "6632 Ehrwald, Austria"
+              <div .partner>
+                <h4 .footer-title>
+                  "Partner"
+                <div .>
+                  <a . href=https://www.laposch.com/en/>
+                    "laposch.com"
+                  <br .>
+                  <a . href=https://www.hotel-spielmann.com/en/>
+                    "hotel-spielmann.com"
+            <div .lower-footer grid-container-inner>
+              <nav .nav-extra>
+                <a . href=/en/booking-conditions/>
+                  "Booking conditions"
+                <a . href=/en/eriro-exclusive/>
+                  "eriro exclusive"
+                <a . href=/en/contact-and-arrival/>
+                  "Contact and arrival"
+                <a . href=/en/voucher/>
+                  "Voucher"
+                <a . href=/en/newsletter/>
+                  "Newsletter"
+                <a . href=/en/jobs/>
+                  "Jobs"
+                <a . href=/en/press/>
+                  "Press"
+              <div .logo>
+                <a .router-link-active router-link-exact-active link-logo href=/en/>
+                  <svg .>
+              <div .luxury-hotels-logo>
+                <img . src=/_nuxt/slh_black.BiCXW4pd.png alt="Small Luxury Hotels of the World">
+              <div .footer-bottom-right>
+                <nav .nav-lang>
+                  <a . href=/de/>
+                    "Deutsch"
+                  <a .router-link-active href=/en/>
+                    "English"
+                <nav .nav-footer>
+                  <a . href=/en/imprint/>
+                    "Imprint"
+                  <a . href=/en/privacy/>
+                    "Privacy"
+                  <a . href=/en/cookies/>
+                    "Cookies"
+              <div .unikateur-signet>
+                <a . href=https://www.unikateur.com/>
+                  <span .>
+                    "unique hospitality concepts, by"
+                  <svg .filled>
+    <img .eriro-bg-attach src=/_nuxt/HG.COIENavY.jpg alt="">
+  <div . id=teleports>

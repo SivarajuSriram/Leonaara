@@ -1,0 +1,395 @@
+{
+ "id": 72,
+ "type": "Standard",
+ "slug": "/jobs",
+ "media": [],
+ "meta": {
+  "title": "Working at eriro – back to the origin – become part of the team",
+  "subtitle": "",
+  "abstract": "",
+  "description": "Working at eriro means going back to the origin. Be part of a team that feels connected to nature and aims to create unique experiences in an Alpine Hide.",
+  "keywords": "",
+  "canonical": "",
+  "robots": {
+   "noIndex": false,
+   "noFollow": true
+  },
+  "author": "",
+  "authorEmail": "",
+  "ogTitle": "Jobs",
+  "ogDescription": "Working at eriro means going back to the origin. Be part of a team that feels connected to nature and aims to create unique experiences in an Alpine Hide.",
+  "ogImage": null,
+  "twitterTitle": "Jobs",
+  "twitterDescription": "Working at eriro means going back to the origin. Be part of a team that feels connected to nature and aims to create unique experiences in an Alpine Hide.",
+  "twitterCard": "summary",
+  "twitterImage": null
+ },
+ "categories": "",
+ "breadcrumbs": [
+  {
+   "title": "Home",
+   "link": "/en/",
+   "target": "",
+   "active": 1,
+   "current": 0,
+   "spacer": 0,
+   "hasSubpages": 1,
+   "pid": 0
+  },
+  {
+   "title": "Jobs",
+   "link": "/en/jobs/",
+   "target": "",
+   "active": 1,
+   "current": 1,
+   "spacer": 0,
+   "hasSubpages": 0,
+   "pid": 70
+  }
+ ],
+ "appearance": {
+  "layout": "layout-0",
+  "backendLayout": "defaultLayout"
+ },
+ "content": {
+  "colPos0": [
+   {
+    "id": 465,
+    "type": "mask_hero",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Jobseite",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_hero",
+     "title": "to the natural beginnings<br>\r\nBack to the essentials, ",
+     "titleh2": "We are searching<br>\r\nfor people of<br>\r\ncharacter",
+     "titleimg": "",
+     "text": "",
+     "img": [
+      {
+       "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-11.jpg",
+       "alt": "Hostess in linen clothing serving ceramic bowl on tree trunk table with hand-carved wooden chairs and bamboo wall paneling at eriro",
+       "title": null,
+       "dimensions": {
+        "width": 1920,
+        "height": 1480
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-11.jpg"
+      }
+     ],
+     "sideimg": [
+      {
+       "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-09.jpg",
+       "alt": "Four hands breaking hand-baked whole grain bread apart in golden light above green alpine meadow, bread-breaking ritual at eriro Ehrwald",
+       "title": null,
+       "dimensions": {
+        "width": 1200,
+        "height": 1600
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-09.jpg"
+      }
+     ],
+     "imgsummer": [],
+     "sideimgsummer": [],
+     "herolayout": "subpage"
+    }
+   },
+   {
+    "id": 467,
+    "type": "mask_imgtext",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Jobseite",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_imgtext",
+     "title": "Sincere<br>\r\nand genuine<br>\r\nlike the mountain",
+     "text": "<p>Step back to the origins with us. eriro is a retreat located in the far reaches of Tyrol, surrounded by pristine nature: authentic and genuine, reminiscent of ancient times – a place where we move in rhythm with nature. We want to offer our guests a nature experience that is both tangible and meaningful. To achieve this, we are looking for people whose love for nature will organically help to shape this place.</p>",
+     "imgleft": [
+      {
+       "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-alpine-hide-luxus-natur-10.jpg",
+       "alt": "Open hand resting gently in fragrant alpine hay – sensual nature connection and traditional hay bath ritual at eriro Alpine Hide",
+       "title": null,
+       "dimensions": {
+        "width": 1200,
+        "height": 950
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-alpine-hide-luxus-natur-10.jpg"
+      }
+     ],
+     "imgright": [
+      {
+       "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-12.jpg",
+       "alt": "eriro Alpine Hide with larch slat balcony loggia on mountain meadow before vertical Wetterstein wall, golden evening sun and pine frame",
+       "title": null,
+       "dimensions": {
+        "width": 1500,
+        "height": 1350
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-12.jpg"
+      }
+     ],
+     "imgleftsummer": [],
+     "imgrightsummer": []
+    }
+   },
+   {
+    "id": 469,
+    "type": "mask_jobs",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_jobs",
+     "jobcategories": [
+      {
+       "uid": "38",
+       "categorie": "Housekeeping",
+       "jobs": [
+        {
+         "uid": "59",
+         "title": "Housekeeping (w|m|d)",
+         "info": "ab Juli 2024 | Jahresstelle",
+         "text": "<h4><span>Was zu deinen Aufgaben gehört</span></h4><ul><li>Du reinigst und pflegst die Gästezimmer, inklusive Bettwäschewechsel</li><li>Du kümmerst dich um die Reinigung der Sanitäranlagen und den SPA-Bereich</li><li>Du verwaltest die Gästezimmerartikel und füllst diese bei Bedarf auf</li><li>Du pflegst einen fachgerechten Umgang mit den Arbeitsgeräten</li><li>Du führst einen laufenden Informationsaustausch mit der Rezeption und den Hausmeistern</li></ul><p>&nbsp;</p>\n<h4><span>Was du mitbringst</span></h4><ul><li>Berufserfahrung als Zimmermädchen/-bursche von Vorteil</li><li>Alternativ werden auch interessierte Bewerber/innen angelernt</li><li>Verlässlichkeit und Gewissenhaftigkeit</li><li>Ordentliche, saubere und sorgfältige Arbeitsweise</li><li>Gepflegtes Auftreten</li><li>Teamfähigkeit und Kollegialität</li><li>Flexibilität, Pünktlichkeit, Zuverlässigkeit und Verantwortungsbewusstsein</li><li>Sprachen: Deutsch und Englisch Level B1 (weitere Sprachkenntnisse von Vorteil)</li></ul>",
+         "linktext": "Jetzt bewerben",
+         "link": {
+          "href": "mailto:team@eriro.at?subject=Bewerbung%20Housekeeping%20eriro",
+          "target": null,
+          "class": null,
+          "title": null,
+          "linkText": "mailto:team@eriro.at?subject=Bewerbung%20Housekeeping%20eriro",
+          "additionalAttributes": []
+         },
+         "linktexttel": "",
+         "linktel": ""
+        }
+       ]
+      },
+      {
+       "uid": "39",
+       "categorie": "Building services",
+       "jobs": [
+        {
+         "uid": "60",
+         "title": "Hausmeister (w|m|d)",
+         "info": "ab Juli 2024 | Jahresstelle",
+         "text": "<h4><span>Was zu deinen Aufgaben gehört</span></h4><ul><li>Du kümmerst dich um den Gepäckdienst bei An- und Abreise der Gäste</li><li>Du wickelst bei An- und Abreise den Gästetransport ab – vom Tal auf den Berg und wieder retour</li><li>Du kümmerst dich im Winter um die Schneeräumung&nbsp;</li><li>Du pflegst die Grün- und Außenanlagen im Sommer</li><li>Du führst regelmäßig die Protokolle unserer Wasseranlagen</li><li>Du überwachst die Sammelheizung</li><li>Du bist verantwortlich für die Müllentsorgung</li><li>Du wartest und reparierst die Anlagen im gesamten Hotel</li><li>Du führst vierteljährliche Kontrollen für anfallende Instandhaltungsarbeiten</li></ul><p>&nbsp;</p>\n<h4><span>Was du mitbringst</span></h4><ul><li>Berufserfahrung als Hausmeister von Vorteil, alternativ handwerkliche Ausbildung</li><li>Hohes Verantwortungsbewusstsein</li><li>Organisationsvermögen und Koordinationsfähigkeit</li><li>Flexibilität, Pünktlichkeit und Zuverlässigkeit&nbsp;</li><li>Lösungsorientierte und eigenständige Arbeitsweise</li><li>Herzliches und freundliches Auftreten</li><li>Führerschein F von Vorteil</li><li>Sprachen: Deutsch und Englisch Level B1 (weitere Sprachkenntnisse von Vorteil)</li></ul>",
+         "linktext": "Jetzt bewerben",
+         "link": {
+          "href": "mailto:team@eriro.at?subject=Bewerbung%20Hausmeister%20eriro",
+          "target": null,
+          "class": null,
+          "title": null,
+          "linkText": "mailto:team@eriro.at?subject=Bewerbung%20Hausmeister%20eriro",
+          "additionalAttributes": []
+         },
+         "linktexttel": "",
+         "linktel": ""
+        }
+       ]
+      },
+      {
+       "uid": "34",
+       "categorie": "Service",
+       "jobs": [
+        {
+         "uid": "53",
+         "title": "Chef de Rang (w|m|d)",
+         "info": "ab Juli 2024 | Jahresstelle",
+         "text": "<h4><span>Was zu deinen Aufgaben gehört</span></h4><ul><li>Du empfängst die Gäste im Restaurantbereich und begleitest sie zu ihrem Platz</li><li>Du bist zuständig für die Gästebetreuung im gesamten internen und externen Restaurantbereich und kümmerst dich stets um die Zufriedenheit der Gäste</li><li>Du nimmst Bestellungen auf, berätst die Gäste bei Speisen und Getränken und gibst Empfehlungen ab</li><li>Du übernimmst diversen Getränkeservice inklusive Weinservice</li><li>Du kümmerst dich um den Vorlegeservice und den Speiseservice gemeinsam mit dem Commis de Rang</li><li>Du pflegst einen engen Informationsaustausch mit der Rezeption und der Küche, vor allem bei speziellen Gästewünschen</li></ul><p>&nbsp;</p>\n<h4><span>Was du mitbringst</span></h4><ul><li>Abgeschlossene Ausbildung als Restaurantfachmann/Restaurantfachfrau</li><li>Mehrjährige Berufserfahrung als Chef de Rang</li><li>Ausbildung als Jungsommelier von Vorteil</li><li>Hohes Qualitäts- und Verantwortungsbewusstsein</li><li>Ausgeprägte Gäste- und Serviceorientierung</li><li>Teamfähigkeit und Kollegialität</li><li>Herzliches und freundliches Auftreten</li><li>Flexibilität und Bereitschaft für Schichtdienst</li><li>Sprachen: Deutsch und Englisch Level B2 (weitere Sprachkenntnisse von Vorteil)</li></ul>",
+         "linktext": "Jetzt bewerben",
+         "link": {
+          "href": "mailto:team@eriro.at?subject=Bewerbung%20Chef%20de%20Rang%20eriro",
+          "target": null,
+          "class": null,
+          "title": null,
+          "linkText": "mailto:team@eriro.at?subject=Bewerbung%20Chef%20de%20Rang%20eriro",
+          "additionalAttributes": []
+         },
+         "linktexttel": "",
+         "linktel": ""
+        }
+       ]
+      },
+      {
+       "uid": "33",
+       "categorie": "Kitchen",
+       "jobs": [
+        {
+         "uid": "52",
+         "title": "Abwäscher (w|m|d)",
+         "info": "ab September 2026 | Jahresstelle",
+         "text": "<h4><span>Was zu deinen Aufgaben gehört</span></h4><ul><li>Du reinigst Geschirr, Töpfe und Gläser</li><li>Du sorgst für Ordnung und Sauberkeit in den Kühlhäusern</li><li>Du bist mitverantwortlich für die Trennung und Entsorgung von Müll</li><li>Du unterstützt bei sämtlichen Reinigungsarbeiten in der Küche</li></ul><p>&nbsp;</p>\n<h4><span>Was du mitbringst</span></h4><ul><li>Erfahrung als Abwäscher von Vorteil</li><li>Sinn für Sauberkeit und Ordnung</li><li>Körperliche Fitness und Belastbarkeit</li><li>Teamfähigkeit und Kollegialität</li><li>Engagement, Zuverlässigkeit und eigenständige Arbeitsweise</li><li>Gepflegtes Auftreten</li><li>Gute Umgangsformen und Freude am Beruf</li><li>Flexibilität und Bereitschaft für Schichtdienst</li><li>Einhaltung aller Hygienestandards</li></ul>",
+         "linktext": "Jetzt bewerben",
+         "link": {
+          "href": "mailto:team@eriro.at?subject=Bewerbung%20Abw%C3%A4scher%20eriro",
+          "target": null,
+          "class": null,
+          "title": null,
+          "linkText": "mailto:team@eriro.at?subject=Bewerbung%20Abw%C3%A4scher%20eriro",
+          "additionalAttributes": []
+         },
+         "linktexttel": "",
+         "linktel": ""
+        }
+       ]
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "i18n": [
+  {
+   "languageId": 0,
+   "locale": "de_DE",
+   "title": "Deutsch",
+   "navigationTitle": "Deutsch",
+   "twoLetterIsoCode": "de",
+   "hreflang": "de",
+   "direction": "ltr",
+   "flag": "flags-multiple",
+   "link": "/de/jobs/",
+   "active": 0,
+   "current": 0,
+   "available": 1
+  },
+  {
+   "languageId": 1,
+   "locale": "en_GB",
+   "title": "English",
+   "navigationTitle": "English",
+   "twoLetterIsoCode": "en",
+   "hreflang": "en",
+   "direction": "ltr",
+   "flag": "flags-en-us-gb",
+   "link": "/en/jobs/",
+   "active": 1,
+   "current": 0,
+   "available": 1
+  }
+ ],
+ "pid": 70,
+ "jsonld": ""
+}

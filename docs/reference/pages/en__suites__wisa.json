@@ -1,0 +1,1103 @@
+{
+ "id": 85,
+ "type": "Standard",
+ "slug": "/suites/wisa",
+ "media": [],
+ "meta": {
+  "title": "wisa Suite - living with a view of the vastness of the alpine pastures & mountains",
+  "subtitle": "",
+  "abstract": "",
+  "description": "Living close to nature in the wisa Suite: flooded with light, with floor-to-ceiling glass fronts and direct access to the alpine meadows.",
+  "keywords": "",
+  "canonical": "",
+  "robots": {
+   "noIndex": false,
+   "noFollow": false
+  },
+  "author": "",
+  "authorEmail": "",
+  "ogTitle": "WISA",
+  "ogDescription": "Living close to nature in the wisa Suite: flooded with light, with floor-to-ceiling glass fronts and direct access to the alpine meadows.",
+  "ogImage": null,
+  "twitterTitle": "WISA",
+  "twitterDescription": "Living close to nature in the wisa Suite: flooded with light, with floor-to-ceiling glass fronts and direct access to the alpine meadows.",
+  "twitterCard": "summary",
+  "twitterImage": null
+ },
+ "categories": "",
+ "breadcrumbs": [
+  {
+   "title": "Home",
+   "link": "/en/",
+   "target": "",
+   "active": 1,
+   "current": 0,
+   "spacer": 0,
+   "hasSubpages": 1,
+   "pid": 0
+  },
+  {
+   "title": "WISA",
+   "link": "/en/suites/wisa/",
+   "target": "",
+   "active": 1,
+   "current": 1,
+   "spacer": 0,
+   "hasSubpages": 0,
+   "pid": 104
+  }
+ ],
+ "appearance": {
+  "layout": "layout-0",
+  "backendLayout": "2"
+ },
+ "content": {
+  "colPos0": [
+   {
+    "id": 105,
+    "type": "mask_hero",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_hero",
+     "title": "",
+     "titleh2": "Structure and<br>\r\nshelter",
+     "titleimg": "",
+     "text": "<p>Be at one with yourself, be present in the here and now. eriro has 9 suites to provide guests with an all-inclusive luxury stay with a personalised touch at a private retreat. Restrained in design and furnished with colours and materials that exude warmth, the suites provide structure and shelter: a protective place of comfort and refuge that brings nature directly into the room through its large windows.</p>",
+     "img": [],
+     "sideimg": [],
+     "imgsummer": [],
+     "sideimgsummer": [],
+     "herolayout": "only-text"
+    }
+   },
+   {
+    "id": 99,
+    "type": "mask_rooms",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Übersicht",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_rooms",
+     "rooms": [
+      {
+       "uid": "3",
+       "title": "boum",
+       "slug": "/suites/boum",
+       "lang": "1",
+       "pid": "84"
+      },
+      {
+       "uid": "4",
+       "title": "wisa",
+       "slug": "/suites/wisa",
+       "lang": "1",
+       "pid": "85"
+      },
+      {
+       "uid": "5",
+       "title": "felisa",
+       "slug": "/suites/felisa",
+       "lang": "1",
+       "pid": "93"
+      },
+      {
+       "uid": "6",
+       "title": "himil",
+       "slug": "/suites/himil",
+       "lang": "1",
+       "pid": "94"
+      }
+     ]
+    }
+   }
+  ],
+  "colPos5": [
+   {
+    "id": 100,
+    "type": "mask_roomdetail",
+    "colPos": 5,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_roomdetail",
+     "images": [
+      {
+       "originalUrl": "/fileadmin/user_upload/Icons/EN-icons_EN_Badewanne.svg",
+       "alt": "Icon: Bathtub",
+       "title": null,
+       "dimensions": {
+        "width": 120,
+        "height": 114
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/svg+xml",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Icons/EN-icons_EN_Badewanne.svg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Icons/EN-icons_EN_King-size_bed.svg",
+       "alt": "Icon: King-size bed",
+       "title": null,
+       "dimensions": {
+        "width": 120,
+        "height": 120
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/svg+xml",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Icons/EN-icons_EN_King-size_bed.svg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Icons/EN-icons_EN_sterne_daybed.svg",
+       "alt": "Icon: Star daybed",
+       "title": null,
+       "dimensions": {
+        "width": 120,
+        "height": 120
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/svg+xml",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Icons/EN-icons_EN_sterne_daybed.svg"
+      }
+     ],
+     "room": [
+      {
+       "uid": "4",
+       "title": "wisa",
+       "description": "<p>The view through the floor-to-ceiling glass windows evokes a freeing sense of endlessness, as the green of the vast Alpine meadows meets the jagged horizon carved out by mountains under a bright blue sky. Walk barefoot in your pyjamas through the still dew-covered grass, the scent of early blooming Alpine herbs fills the air: the wisa suites are located on the ground floor and feature a south-west facing terrace and direct access to the garden and to the Ehrwalder Alpine meadow.</p>",
+       "minprice": "from 925,- € / night per person / All-In",
+       "people": "for 2 persons",
+       "size": "approx. 872 sq ft",
+       "previewimage": [
+        {
+         "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-43.jpg",
+         "alt": "Eriro Suite living area with reclaimed wood ceiling, textured wool wall, sheepskin armchair before panorama window with terrace and view of conifer forests and mountain summits",
+         "title": null,
+         "dimensions": {
+          "width": 7568,
+          "height": 5048
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-43.jpg"
+        },
+        {
+         "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-44.jpg",
+         "alt": "Eriro Suite seating area with white linen cushions, wooden table and pendant light before artful patchwork wool wall beneath rustic reclaimed wood beam ceiling",
+         "title": null,
+         "dimensions": {
+          "width": 8183,
+          "height": 5458
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-44.jpg"
+        },
+        {
+         "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-51.jpg",
+         "alt": "Wisa Suite: reclaimed wood ceiling, natural stone wall and hand-woven dividers framing bed with white linen – sanctuary in honest materiality",
+         "title": null,
+         "dimensions": {
+          "width": 8186,
+          "height": 5460
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-51.jpg"
+        },
+        {
+         "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-55.jpg",
+         "alt": "Bathroom of Wisa Suite: hand-plastered vanity, driftwood faucet, backlit mirror, reclaimed wood ceiling – purist elegance meets craftsmanship",
+         "title": null,
+         "dimensions": {
+          "width": 8190,
+          "height": 5463
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-55.jpg"
+        },
+        {
+         "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-57.jpg",
+         "alt": "Cashmere blanket on wooden terrace of Wisa Suite at eriro with open view of Wetterstein massif, spruce forests and rock summits – alpine sanctuary",
+         "title": null,
+         "dimensions": {
+          "width": 8192,
+          "height": 5464
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-57.jpg"
+        },
+        {
+         "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-77.jpg",
+         "alt": "Winter suite with wooden floor, desk, fur armchair and floor-to-ceiling window with panoramic view of snow-covered Zugspitze mountain range",
+         "title": null,
+         "dimensions": {
+          "width": 8192,
+          "height": 5464
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-77.jpg"
+        }
+       ],
+       "images": [
+        {
+         "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-luxus-suite-wisa-02.jpg",
+         "alt": "Couple resting closely embraced in sunlit alpine meadow near eriro Alpine Hide – carefree togetherness dressed in linen and golden light",
+         "title": null,
+         "dimensions": {
+          "width": 1200,
+          "height": 1400
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-luxus-suite-wisa-02.jpg"
+        },
+        {
+         "originalUrl": "/fileadmin/user_upload/unikateur_Bilder/Winter/eriro_alpinehide_fu%C3%9Fstapfen.jpg",
+         "alt": "Deep footprints in powder snow at Wetterstein – snow-covered boots breaking trail through winter silence around eriro resort",
+         "title": null,
+         "dimensions": {
+          "width": 2560,
+          "height": 3838
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/unikateur_Bilder/Winter/eriro_alpinehide_fu%C3%9Fstapfen.jpg"
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": 605,
+    "type": "mask_imgslider",
+    "colPos": 5,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_imgslider",
+     "images": [
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-43.jpg",
+       "alt": "Eriro Suite living area with reclaimed wood ceiling, textured wool wall, sheepskin armchair before panorama window with terrace and view of conifer forests and mountain summits",
+       "title": null,
+       "dimensions": {
+        "width": 7568,
+        "height": 5048
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-43.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-44.jpg",
+       "alt": "Eriro Suite seating area with white linen cushions, wooden table and pendant light before artful patchwork wool wall beneath rustic reclaimed wood beam ceiling",
+       "title": null,
+       "dimensions": {
+        "width": 8183,
+        "height": 5458
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-44.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-48.jpg",
+       "alt": "Eriro Suite sideboard of reclaimed wood with turntable, Marshall speaker, ceramic cups, tea station and glass carafes – wood sculpture on linen wall",
+       "title": null,
+       "dimensions": {
+        "width": 7790,
+        "height": 5196
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-48.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-51.jpg",
+       "alt": "Wisa Suite: reclaimed wood ceiling, natural stone wall and hand-woven dividers framing bed with white linen – sanctuary in honest materiality",
+       "title": null,
+       "dimensions": {
+        "width": 8186,
+        "height": 5460
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-51.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-52.jpg",
+       "alt": "Sleeping area of Wisa Suite with solid wood bed on stone blocks, carved bathtub, reclaimed wood ceiling – archaic luxury for contemplation",
+       "title": null,
+       "dimensions": {
+        "width": 8192,
+        "height": 5464
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-52.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-55.jpg",
+       "alt": "Bathroom of Wisa Suite: hand-plastered vanity, driftwood faucet, backlit mirror, reclaimed wood ceiling – purist elegance meets craftsmanship",
+       "title": null,
+       "dimensions": {
+        "width": 8190,
+        "height": 5463
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-55.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-57.jpg",
+       "alt": "Cashmere blanket on wooden terrace of Wisa Suite at eriro with open view of Wetterstein massif, spruce forests and rock summits – alpine sanctuary",
+       "title": null,
+       "dimensions": {
+        "width": 8192,
+        "height": 5464
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/wisa/AlexMoling_Eriro_Rooms-57.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-14.jpg",
+       "alt": "Luxurious rain shower beneath rustic reclaimed wood ceiling at eriro Alpine Hide – warm light and flowing water creating meditative spa ritual",
+       "title": null,
+       "dimensions": {
+        "width": 3000,
+        "height": 2001
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/boum/AlexMoling_Eriro_Rooms-14.jpg"
+      }
+     ],
+     "imgsummer": []
+    }
+   },
+   {
+    "id": 125,
+    "type": "mask_list",
+    "colPos": 5,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Ausstattung",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_list",
+     "title": "The great expanse <br>\r\nof mountain meadows",
+     "text": "",
+     "listitems": [
+      {
+       "uid": "7",
+       "title": "Nature at your feet",
+       "text": "<p>The seamless transition from sunny meadows to terrace and magnificent wall of windows brings the Alpine experience directly into the 657 sq ft wisa suite. Pass the time together eating and playing games at the table in the cosy seating nook.&nbsp;</p><ul><li><span>king-size bed und daybed</span></li><li><span>bathroom with rain shower</span></li><li><span>organic body care by March - made in austria</span></li><li><span>bathtub</span></li><li><span>215 sq ft terrace with star-gazer’s daybed</span></li><li><span>tea and coffee bar</span></li><li><span>minibar</span></li></ul>"
+      },
+      {
+       "uid": "8",
+       "title": "Nature cinema",
+       "text": "<p>The suites have been intentionally designed without a television: Nothing distracts more from the abundance and magnificence of nature as it stands before your very eyes. The suites are equipped with:</p><ul><li>Your personal pair of woollen socks</li><li><span>Wi-Fi</span></li><li><span>Record player and wireless speaker</span></li><li><span>Useful items for the mountain</span></li></ul>"
+      },
+      {
+       "uid": "22",
+       "title": "All-In-Service",
+       "text": "<p>eriro is located in the middle of an expanse of Alpine pastures and forests, a world away from everyday life and the noise of the valley. It is out of this unique positioning that our Alpine hideaway was conceived, offering you the following inclusive services:</p><ul><li>all meals, including food and drinks (excl. selected premium spirits)</li><li><span>parking lot and shuttle service&nbsp;</span></li><li><span>mountain cable car tickets or ski pass, depending on the season&nbsp;</span></li><li><span>mountain experiences including tour guide&nbsp;</span></li><li><span>bikes and mountain equipment such as snowshoes or hiking poles&nbsp;</span></li><li><span>spa facilities including pools, saunas, terrace, and relaxation and sound rooms</span></li></ul><p><a href=\"/en/all-in-service/\">More about the All-In Service</a></p>"
+      }
+     ]
+    }
+   },
+   {
+    "id": 218,
+    "type": "mask_img",
+    "colPos": 5,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "large",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_img",
+     "img": [
+      {
+       "originalUrl": "/fileadmin/user_upload/wisa.jpg",
+       "alt": "Architectural suite floor plan with living area and kitchen as overlay on blurred alpine meadow scene – eriro spatial concept from nature",
+       "title": null,
+       "dimensions": {
+        "width": 2560,
+        "height": 1707
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/wisa.jpg"
+      }
+     ],
+     "imgsummer": []
+    }
+   },
+   {
+    "id": 126,
+    "type": "mask_roomcta",
+    "colPos": 5,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_roomcta",
+     "room": [
+      {
+       "uid": "4",
+       "title": "wisa",
+       "asacode": "2",
+       "bookingcode": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": 555,
+    "type": "mask_teaserslider",
+    "colPos": 5,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Teaser",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_teaserslider",
+     "teaserslides": [
+      {
+       "uid": "328",
+       "title": "Come face to face with the untouched",
+       "imgleft": [
+        {
+         "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-unerlebtes-erleben-01.jpg",
+         "alt": "Strong hands holding soft, natural sheep's wool – authentic craftsmanship and alpine materiality as soul of eriro Alpine Hide",
+         "title": null,
+         "dimensions": {
+          "width": 1200,
+          "height": 1400
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-unerlebtes-erleben-01.jpg"
+        }
+       ],
+       "imgright": [
+        {
+         "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-unerlebtes-erleben-02.jpg",
+         "alt": "Couple hand in hand in sunlit mountain forest with golden lens flare – romantic togetherness around eriro Alpine Hide",
+         "title": null,
+         "dimensions": {
+          "width": 1500,
+          "height": 1660
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-unerlebtes-erleben-02.jpg"
+        }
+       ],
+       "infotext": "Purely Alpine",
+       "linktext": "Nature and culture experience of the mountain",
+       "link": {
+        "href": "/en/experiences/",
+        "target": null,
+        "class": null,
+        "title": null,
+        "linkText": "t3://page?uid=60",
+        "additionalAttributes": []
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "colPos10": [
+   {
+    "id": 98,
+    "type": "room",
+    "colPos": 10,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "error": "Content Element with uid \"98\" and type \"room\" has no rendering definition!"
+    }
+   }
+  ]
+ },
+ "i18n": [
+  {
+   "languageId": 0,
+   "locale": "de_DE",
+   "title": "Deutsch",
+   "navigationTitle": "Deutsch",
+   "twoLetterIsoCode": "de",
+   "hreflang": "de",
+   "direction": "ltr",
+   "flag": "flags-multiple",
+   "link": "/de/suiten/wisa/",
+   "active": 0,
+   "current": 0,
+   "available": 1
+  },
+  {
+   "languageId": 1,
+   "locale": "en_GB",
+   "title": "English",
+   "navigationTitle": "English",
+   "twoLetterIsoCode": "en",
+   "hreflang": "en",
+   "direction": "ltr",
+   "flag": "flags-en-us-gb",
+   "link": "/en/suites/wisa/",
+   "active": 1,
+   "current": 0,
+   "available": 1
+  }
+ ],
+ "pid": 104,
+ "jsonld": ""
+}

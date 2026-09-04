@@ -1,0 +1,70 @@
+.mask_powermailform .item-text .item {
+  color:#211d1db3;
+  font-size:1.4rem;
+  font-size:1.5rem;
+  font-weight:300;
+  grid-column-end:span 20;
+  letter-spacing:0;
+  line-height:143%;
+  line-height:120%;
+  margin-top:4.5rem;
+  position:relative;
+}
+@media (max-width:1023px) {
+  .mask_powermailform .item-text .item {
+    font-size:1rem;
+    letter-spacing:0;
+    line-height:120%;
+  }
+}
+.mask_powermailform .item-text .item a:hover {
+  color:#c7c7c7;
+}
+.mask_powermailform .item-text .col3 {
+  grid-column-end:span 3;
+}
+.mask_powermailform .item-text .col5 {
+  grid-column-end:span 5;
+}
+.mask_powermailform .item-text .col7 {
+  grid-column-end:span 7;
+}
+.mask_powermailform .item-text .col20 {
+  grid-column-end:span 20;
+}
+.mask_powermailform .item-text .item-requiredfields {
+  margin-top:.2rem;
+  text-align:end;
+}
+@media (max-width:1023px) {
+  .mask_powermailform .item-text .item {
+    grid-column-end:span 20;
+    margin-top:3rem;
+  }
+  .mask_powermailform .item-text .col3 {
+    grid-column-end:span 3;
+  }
+  .mask_powermailform .item-text .col5 {
+    grid-column-end:span 5;
+  }
+  .mask_powermailform .item-text .col7 {
+    grid-column-end:span 7;
+  }
+  .mask_powermailform .item-text .col20 {
+    grid-column-end:span 20;
+  }
+  .mask_powermailform .item-text input {
+    padding:1.6rem 1.1rem;
+  }
+  .mask_powermailform .item-text .item-requiredfields {
+    margin-top:.2rem;
+  }
+}
+@media (max-width:1023px) and (max-width:1023px) {
+  .mask_powermailform .item-text .col3,.mask_powermailform .item-text .col5 {
+    grid-column-end:span 10;
+  }
+  .mask_powermailform .item-text .col7 {
+    grid-column-end:span 20;
+  }
+}

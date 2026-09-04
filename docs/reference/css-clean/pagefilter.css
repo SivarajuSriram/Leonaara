@@ -1,0 +1,85 @@
+.mask_pagefilter {
+  padding-bottom:.6rem;
+}
+.mask_pagefilter .grid-container-inner {
+  border-bottom:2px solid #e4e0db;
+  grid-column-end:span 12;
+  grid-column-start:2;
+}
+.mask_pagefilter .filterGrid {
+  background-image:linear-gradient(0);
+  transition:background-color .3s ease;
+  z-index:55;
+}
+@media (min-width:1024px) {
+  header:not(.header-menu-open)~div .filterGrid.filter-hover {
+    background-color:#e4e0db!important;
+  }
+}
+.mask_pagefilter .filter-wrapper {
+  display:flex;
+  grid-column-end:span 9;
+  grid-column-start:4;
+  width:100%;
+}
+.mask_pagefilter .filter-item {
+  cursor:pointer;
+  font-size:2.5rem;
+  font-weight:300;
+  letter-spacing:.05em;
+  line-height:148%;
+  margin-right:3rem;
+  text-decoration:underline;
+  text-decoration-color:transparent;
+  text-transform:uppercase;
+  transition:all .5s;
+}
+@media (max-width:1023px) {
+  .mask_pagefilter .filter-item {
+    font-size:1.6rem;
+    letter-spacing:0;
+    line-height:156%;
+  }
+}
+.mask_pagefilter .filter-item:hover {
+  text-decoration-color:currentColor;
+}
+.mask_pagefilter .filter-item:last-child {
+  margin-right:0;
+}
+.mask_pagefilter .filter-item.active {
+  text-decoration-color:currentColor;
+  text-shadow:0 0 #000;
+}
+@media (max-width:1023px) {
+  .mask_pagefilter {
+    margin-top:6rem;
+  }
+  .mask_pagefilter .filterGrid {
+    background-image:url("data:image/svg+xml;
+    charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='53' fill='none'%3E%3Cpath fill='%23211D1D' d='M269.043 0H-7.605c-.997 10.83.235 37.594 0 52.772 2.23.354.645.123.997.164 1.936.369 3.144-1.213 5.608-1.13L41 53l45.5-1.194L312.5 53l49.002-1.194 4.32-32.967L367 0z'/%3E%3C/svg%3E");
+    background-position:100% 100%;
+    background-repeat:no-repeat;
+    background-size:cover;
+    overflow:auto;
+    padding:2.5rem 0 1rem;
+    z-index:50;
+  }
+  .mask_pagefilter .grid-container-inner {
+    border-bottom:none;
+    grid-column-end:span 12;
+    grid-column-start:2;
+  }
+  .mask_pagefilter .filter-wrapper {
+    color:#e4e0db;
+    grid-column-end:span 12;
+    grid-column-start:1;
+  }
+  .mask_pagefilter .filter-item {
+    margin-right:2rem;
+  }
+  .mask_pagefilter .filter-item:last-child {
+    margin-right:0;
+    padding-right:1rem;
+  }
+}

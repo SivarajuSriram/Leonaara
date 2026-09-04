@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g id="Icons">
+    <path d="m92.62742,76.29817l-.67188.01019-.01624.7215-.01709.47473c.3786.00366.77789.00757,1.1944.0116l.00964-1.23016-.49884.01215Z" style="fill:#211d1d; stroke-width:0px;"></path>
+    <path d="m80.39012,57.06965v3.84998l-8.79999-.04999-4.86005.31-5.71997-.16998v-3.94c0-1.38,1.12-2.5,2.5-2.5h14.38c1.37,0,2.5,1.12,2.5,2.5Z" style="fill:none; stroke-width:0px;"></path>
+    <path d="m56.9901,57.06965v3.82001l-4.5-.13-14.88.26001v-3.95001c0-1.38,1.13-2.5,2.5-2.5h14.38c1.38,0,2.5,1.12,2.5,2.5Z" style="fill:none; stroke-width:0px;"></path>
+    <path d="m79.83012,78.50965v4.14001c0,.34998-.29004.63-.64001.63s-.64001-.28003-.64001-.63v-4.21002l1.28003.07001Z" style="fill:none; stroke-width:0px;"></path>
+    <path d="m39.45012,79.16963v3.48004c0,.34998-.29004.63-.64001.63s-.64001-.28003-.64001-.63v-3.48004h1.28003Z" style="fill:none; stroke-width:0px;"></path>
+    <path d="m92.27012,63.40968l-.03003.29999-.01001.19-.01001.45996-.03998,1.81-.08002,3.62-.13995,6.52002-39.15002.59003h-.08002s-15.01996-.65002-15.03998-.65002l-6.41003.09003-3.19995.04999-1.60004.02002-.33997.00995-.04999.01001-.12006.01001-.22998-13.02002,6.14001-.09998v.46997l.5-.00995,15.37-.27002,5.22998.27997,16.02002-.51996c3.64001.17999,11.12.56,11.14001.56l7.15997-.10004v-.44l4.97003.12006Z" style="fill:none; stroke-width:0px;"></path>
+    <path d="m94.39012,77.02967l-.40002-15.35004-6.71997.16998-.28003-18.35999-15.25.25h-.08002l-9.97998-.62-20.31.76001h-.06l-10.15997-.23999-.45001,17.98999-6.63.10999.15997,10.23004v.07996s-.06,2.73004-.14996,6.27002c4.73999.12,11.01001.27997,13.08997.33002v4c0,.89996.73999,1.63,1.64001,1.63s1.64001-.73004,1.64001-1.63v-3.97003l7.02997.03003,22.83002-1.23999,7.23999.40997v4.77002c0,.89996.73999,1.63,1.64001,1.63s1.64001-.73004,1.64001-1.63v-4.58002l11.79999.66998.47998.04999.01001-1.26996c.40997,0,.84003,0,1.28998.01001l-.01996-.5Zm-61.45001-31.99005l.20001-.00995.38-.01001,1.64996-.04999,3.29004-.11005.09998.01001,23.54999.78003,23.21002-.48004.02002.38.01996.86005.04004,2.04999.07996,4.08997v.08002s-.03998,1.34998-.09998,3.26001c-.03998.95996-.07001,2.06-.10999,3.20001-.01001.57001-.03003,1.14996-.05005,1.72998l-.01996.44-.01001.12-.03003.21002c-.09998-.02002-.20996-.03003-.31-.04004-.38-.01001-.75-.01996-1.09998-.03998-.72998-.02002-1.40002-.03998-1.97003-.06-.13995,0-.26996,0-.38995-.01001v-4.37c0-1.92999-1.57001-3.5-3.5-3.5h-14.38c-1.92999,0-3.5,1.57001-3.5,3.5v4.40997l-2.02002-.06v-4.34998c0-1.92999-1.57001-3.5-3.5-3.5h-14.38c-1.92999,0-3.5,1.57001-3.5,3.5v4.46002l.5-.01001v.12l-.5-.03003-.95996-.06-2.53003-.16998-.26001-8.16998-.14001-4.42004-.06995-2.20996-.03003-1.01001-.03998-.5.35999-.03003Zm47.45001,12.03003v3.84998l-8.79999-.04999-4.86005.31-5.71997-.16998v-3.94c0-1.38,1.12-2.5,2.5-2.5h14.38c1.37,0,2.5,1.12,2.5,2.5Zm-23.40002,0v3.82001l-4.5-.13-14.88.26001v-3.95001c0-1.38,1.13-2.5,2.5-2.5h14.38c1.38,0,2.5,1.12,2.5,2.5Zm-17.53998,25.58002c0,.34998-.29004.63-.64001.63s-.64001-.28003-.64001-.63v-3.48004h1.28003v3.48004Zm40.38,0c0,.34998-.29004.63-.64001.63s-.64001-.28003-.64001-.63v-4.21002l1.28003.07001v4.14001Zm12.40997-18.94l-.01001.19-.01001.45996-.03998,1.81-.08002,3.62-.13995,6.52002-39.15002.59003h-.08002s-15.01996-.65002-15.03998-.65002l-6.41003.09003-3.19995.04999-1.60004.02002-.33997.00995-.04999.01001-.12006.01001-.22998-13.02002,6.14001-.09998v.46997l.5-.00995,15.37-.27002,5.22998.27997,16.02002-.51996c3.64001.17999,11.12.56,11.14001.56l7.15997-.10004v-.44l4.97003.12006-.03003.29999Z" style="fill:#211d1d; stroke-width:0px;"></path>
+    <polygon points="36.61009 61.52967 36.61009 61.60963 35.65013 61.54963 36.61009 61.52967" style="fill:#fff; stroke-width:0px;"></polygon>
+    <polygon points="37.11009 61.51966 37.11009 61.63966 36.61009 61.60963 36.61009 61.52967 37.11009 61.51966" style="stroke-width:0px;"></polygon>
+  </g>
+  <g id="Text">
+    <text transform="translate(39.7604 17.0719) rotate(-19.09506)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">K</tspan>
+    </text>
+    <text transform="translate(47.06752 14.7467) rotate(-12.28237)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">I</tspan>
+    </text>
+    <text transform="translate(50.91323 13.75891) rotate(-3.80759)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">N</tspan>
+    </text>
+    <text transform="translate(61.49868 13.22424) rotate(7.78615)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">G</tspan>
+    </text>
+    <text transform="translate(71.11538 14.70324) rotate(18.56261)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">-</tspan>
+    </text>
+    <text transform="translate(79.48159 17.70813) rotate(27.79512)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">S</tspan>
+    </text>
+    <text transform="translate(85.65688 21.15051) rotate(34.21483)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">I</tspan>
+    </text>
+    <text transform="translate(88.99916 23.35998) rotate(41.41281)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">Z</tspan>
+    </text>
+    <text transform="translate(95.22866 29.0592) rotate(50.42459)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">E</tspan>
+    </text>
+    <text transform="translate(99.75942 34.79309) rotate(57.46434)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0"> </tspan>
+    </text>
+    <text transform="translate(102.39272 38.91027) rotate(64.84072)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">B</tspan>
+    </text>
+    <text transform="translate(105.6017 46.03576) rotate(73.61083)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">E</tspan>
+    </text>
+    <text transform="translate(107.63784 52.93176) rotate(83.56881)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">D</tspan>
+    </text>
+    <path d="m110.97782,73.56936c-4.95513,24.21512-26.38065,42.43064-52.06063,42.43064-29.34855,0-53.14025-23.7917-53.14025-53.14025,0-17.46256,8.42303-32.95783,21.42789-42.64459" style="fill:none; stroke:#211d1d; stroke-miterlimit:10;"></path>
+  </g>
+</svg>

@@ -1,0 +1,1263 @@
+{
+ "id": 88,
+ "type": "Standard",
+ "slug": "/gallery",
+ "media": [],
+ "meta": {
+  "title": "Experience eriro in pictures",
+  "subtitle": "",
+  "abstract": "",
+  "description": "Alpine originality captured in pictures: Experience the unique atmosphere of eriro in pictures: Architecture, nature and unforgettable moments at 1,550 meters. ",
+  "keywords": "",
+  "canonical": "",
+  "robots": {
+   "noIndex": false,
+   "noFollow": false
+  },
+  "author": "",
+  "authorEmail": "",
+  "ogTitle": "Gallery",
+  "ogDescription": "Alpine originality captured in pictures: Experience the unique atmosphere of eriro in pictures: Architecture, nature and unforgettable moments at 1,550 meters. ",
+  "ogImage": null,
+  "twitterTitle": "Gallery",
+  "twitterDescription": "Alpine originality captured in pictures: Experience the unique atmosphere of eriro in pictures: Architecture, nature and unforgettable moments at 1,550 meters. ",
+  "twitterCard": "summary",
+  "twitterImage": null
+ },
+ "categories": "",
+ "breadcrumbs": [
+  {
+   "title": "Home",
+   "link": "/en/",
+   "target": "",
+   "active": 1,
+   "current": 0,
+   "spacer": 0,
+   "hasSubpages": 1,
+   "pid": 0
+  },
+  {
+   "title": "Gallery",
+   "link": "/en/gallery/",
+   "target": "",
+   "active": 1,
+   "current": 1,
+   "spacer": 0,
+   "hasSubpages": 0,
+   "pid": 105
+  }
+ ],
+ "appearance": {
+  "layout": "layout-0",
+  "backendLayout": "defaultLayout"
+ },
+ "content": {
+  "colPos0": [
+   {
+    "id": 175,
+    "type": "mask_hero",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Bildergalerie",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_hero",
+     "title": "The omnipresence of <br>\r\nnature in pictures",
+     "titleh2": "Mountain <br>\r\nimpressions",
+     "titleimg": "",
+     "text": "<p>Coarse or gentle, imposing or small: on the mountain all life is governed by the prevailing moods of nature, seasons and the weather shape everyday life. Vast panoramas and intriguing details offer a glimpse: striking mountain impressions bring the experience of pristine Alpine nature at 1,550 m within reach, evoking memories of idyllic days on the mountain pasture and awakening the senses.&nbsp;</p>",
+     "img": [],
+     "sideimg": [],
+     "imgsummer": [],
+     "sideimgsummer": [],
+     "herolayout": "only-text"
+    }
+   },
+   {
+    "id": 110,
+    "type": "mask_gallery",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_gallery",
+     "images": [
+      {
+       "originalUrl": "/fileadmin/user_upload/Hendrik_St%C3%BCwe/Pool_Shooting_2605_10.jpg",
+       "alt": null,
+       "title": null,
+       "dimensions": {
+        "width": 2800,
+        "height": 1868
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Hendrik_St%C3%BCwe/Pool_Shooting_2605_10.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Best-Of_Alex_Moling/AlexMoling_Eriro_Rooms-59.jpg",
+       "alt": "Loft suite at eriro Ehrwald with recycled beams, white bed on stone slab, hanging limestone lights and spruce forest view through glass walls",
+       "title": null,
+       "dimensions": {
+        "width": 8190,
+        "height": 5463
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Best-Of_Alex_Moling/AlexMoling_Eriro_Rooms-59.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Best-Of_Alex_Moling/AlexMoling_Eriro_Wellness-9.jpg",
+       "alt": "Infinity pool at eriro with overflow edge toward sunset over Wetterstein and Mieminger ranges, mirroring water surface beneath dark wood ceiling",
+       "title": null,
+       "dimensions": {
+        "width": 7564,
+        "height": 5045
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Best-Of_Alex_Moling/AlexMoling_Eriro_Wellness-9.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-04.jpg",
+       "alt": "Exquisite wine collection in dark reclaimed wood shelf with temperature-controlled wine cooler at eriro Alpine Hide – rustic elegance meets cultivated indulgence",
+       "title": null,
+       "dimensions": {
+        "width": 1200,
+        "height": 1500
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-04.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/himil/AlexMoling_Eriro_Winter-first-4.jpg",
+       "alt": "eriro Alpine Hide – Winter idyll with skier before luxury chalet amid deeply snow-covered alpine landscape with mountain panorama and frosted firs",
+       "title": null,
+       "dimensions": {
+        "width": 3000,
+        "height": 2001
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/himil/AlexMoling_Eriro_Winter-first-4.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/unikateur_Bilder/Winter/eriro_alpinehide_gehen.jpg",
+       "alt": "Couple trudging through Wetterstein deep snow – she in cream wool coat, he in brown jacket with felt hat – shared winter joy at eriro resort",
+       "title": null,
+       "dimensions": {
+        "width": 2560,
+        "height": 3838
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/unikateur_Bilder/Winter/eriro_alpinehide_gehen.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-17.jpg",
+       "alt": "Preserving jars with pickled vegetables, berries and herbs on wooden board before rustic plank wall",
+       "title": null,
+       "dimensions": {
+        "width": 1500,
+        "height": 1001
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-17.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-05.jpg",
+       "alt": "Open fireplace before soft leather sofas and wooden lattice walls in warm evening light – cozy luxury in heart of eriro Alpine Hide",
+       "title": null,
+       "dimensions": {
+        "width": 1200,
+        "height": 1500
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-05.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-alpine-hide-luxus-natur-11.jpg",
+       "alt": "Woman with flowing wool scarf in snow-covered alpine landscape – winter freedom and natural elegance at eriro Alpine Hide experience",
+       "title": null,
+       "dimensions": {
+        "width": 1500,
+        "height": 1250
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-alpine-hide-luxus-natur-11.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-15.jpg",
+       "alt": "Sunlit wooden terrace with rattan chair and mountain panorama – quiet morning moments amid alpine forests at eriro Alpine Hide",
+       "title": null,
+       "dimensions": {
+        "width": 1500,
+        "height": 1500
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-15.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-10.jpg",
+       "alt": "Handmade preserving jars with fermented berries, herbs and alpine ingredients on rustic wooden shelf at eriro Alpine Hide – culinary craftsmanship",
+       "title": null,
+       "dimensions": {
+        "width": 1200,
+        "height": 1500
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-10.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-06.jpg",
+       "alt": "Delicate hand reaching for natural stones in hand-thrown bowl beside dried flowers – sensual detail moments at eriro Alpine Hide",
+       "title": null,
+       "dimensions": {
+        "width": 1200,
+        "height": 1500
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-06.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-04.jpg",
+       "alt": "Alpine farmer in loden wool coat with Nordic pattern gloves and knit cap before snow-covered Ehrwald winter landscape, eriro Alpine Hide",
+       "title": null,
+       "dimensions": {
+        "width": 1200,
+        "height": 1600
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-04.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/unikateur_Bilder/Winter/eriro_alpinehide_frontwinter.jpg",
+       "alt": "Rugged rock summit of Wetterstein beneath snow and ice, gray clouds above jagged limestone ridges – quiet majesty of mountains at eriro",
+       "title": null,
+       "dimensions": {
+        "width": 3838,
+        "height": 2560
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/unikateur_Bilder/Winter/eriro_alpinehide_frontwinter.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-11.jpg",
+       "alt": "Wild alpine thistles in warm backlight of golden hour – poetic nature details around eriro Alpine Hide, delicate beauty of mountain meadows",
+       "title": null,
+       "dimensions": {
+        "width": 1200,
+        "height": 1500
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-11.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-03.jpg",
+       "alt": "Impressive light installation with floating stones and massive reclaimed wood planks in stairwell of eriro Alpine Hide – art meets alpine architecture",
+       "title": null,
+       "dimensions": {
+        "width": 1200,
+        "height": 1500
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-03.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-14.jpg",
+       "alt": "Fine wine glasses on handcrafted wooden lattice shelf in warm sunlight – alpine culture of indulgence and hospitality at eriro Alpine Hide",
+       "title": null,
+       "dimensions": {
+        "width": 1500,
+        "height": 1500
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-14.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-12.jpg",
+       "alt": "Guest in mustard knit sweater gazing through binoculars into alpine world – mindful nature observation at eriro Alpine Hide",
+       "title": null,
+       "dimensions": {
+        "width": 1500,
+        "height": 1500
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-12.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-13.jpg",
+       "alt": "Handcrafted wooden shelf at eriro Alpine Hide with binoculars, ceramic jug and vinyl records – curated alpine homeliness full of soul",
+       "title": null,
+       "dimensions": {
+        "width": 1500,
+        "height": 1500
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-13.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/unikateur_Bilder/Winter/eriro_alpinehide_scheitel.jpg",
+       "alt": "Arms full of split wood logs with rough bark and snow crystals in wool sweater and linen shirt – anticipation of warming fire at Wetterstein",
+       "title": null,
+       "dimensions": {
+        "width": 2560,
+        "height": 3838
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/unikateur_Bilder/Winter/eriro_alpinehide_scheitel.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-09.jpg",
+       "alt": "Couple enjoying evening at fire pit before imposing alpine backdrop – romantic togetherness at eriro Alpine Hide at dusk",
+       "title": null,
+       "dimensions": {
+        "width": 1200,
+        "height": 1500
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-09.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-01.jpg",
+       "alt": "Soft towels in taupe and cream on rustic wooden bench in warm light – luxurious spa sanctuary at eriro Alpine Hide",
+       "title": null,
+       "dimensions": {
+        "width": 1200,
+        "height": 1500
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-01.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-07.jpg",
+       "alt": "Solid wood side tables of hand-carved tree trunks with ceramic cup and dried grasses at eriro Alpine Hide – warm alpine living culture",
+       "title": null,
+       "dimensions": {
+        "width": 1200,
+        "height": 1500
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-07.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/DR1A3243.jpg",
+       "alt": "Artfully circular plated dish with edible flowers and herbs on weathered wooden block – alpine eriro fine-dining culinary art",
+       "title": null,
+       "dimensions": {
+        "width": 800,
+        "height": 1200
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/DR1A3243.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-natur-lebensraum-02.jpg",
+       "alt": "Handcrafted wool patchwork wall with chess set in sunlit living area – alpine craftsmanship meets design at eriro Alpine Hide",
+       "title": null,
+       "dimensions": {
+        "width": 1500,
+        "height": 1660
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-natur-lebensraum-02.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Best-Of_Alex_Moling/AlexMoling_Eriro_Exterior-32.jpg",
+       "alt": "eriro Alpine Hide at dusk with golden-lit larch loggias and horizontal wood slats before shadowy Wetterstein massif on alpine slope",
+       "title": null,
+       "dimensions": {
+        "width": 8190,
+        "height": 5463
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Best-Of_Alex_Moling/AlexMoling_Eriro_Exterior-32.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-02.jpg",
+       "alt": "Luxurious bedroom at eriro Alpine Hide with white linen bedding, wool headboard and floating crystal lights of natural stone",
+       "title": null,
+       "dimensions": {
+        "width": 1200,
+        "height": 1500
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/galerie-alpine-hide-eriro-ehrwald-luxus-natur-02.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Suiten/himil/AlexMoling_Eriro_Winter-first-1.jpg",
+       "alt": "eriro Alpine Hide – Imposing wooden facade of luxury chalet with wraparound balconies before dramatic rock wall and pristine snow surface in Alps",
+       "title": null,
+       "dimensions": {
+        "width": 3000,
+        "height": 2001
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Suiten/himil/AlexMoling_Eriro_Winter-first-1.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/AlexMoling_Eriro_Winter-first-7.jpg",
+       "alt": "eriro Alpine Hide – Cozy bouclé armchairs before panorama window with breathtaking view of snow-covered alpine valley and frosted conifer forests",
+       "title": null,
+       "dimensions": {
+        "width": 2001,
+        "height": 3000
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/AlexMoling_Eriro_Winter-first-7.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/AlexMoling_Eriro_Winter-first-8.jpg",
+       "alt": "eriro Alpine Hide – Sunlit transition to wooden balcony with view of majestic mountain summit and cozy bouclé armchairs in warm light",
+       "title": null,
+       "dimensions": {
+        "width": 3000,
+        "height": 2001
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/AlexMoling_Eriro_Winter-first-8.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Hendrik_St%C3%BCwe/Pool_Shooting_2605_07.jpg",
+       "alt": null,
+       "title": null,
+       "dimensions": {
+        "width": 2800,
+        "height": 1868
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Hendrik_St%C3%BCwe/Pool_Shooting_2605_07.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Hendrik_St%C3%BCwe/L1021712.jpg",
+       "alt": null,
+       "title": null,
+       "dimensions": {
+        "width": 2800,
+        "height": 1864
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Hendrik_St%C3%BCwe/L1021712.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Hendrik_St%C3%BCwe/Pool_Shooting_2605_12.jpg",
+       "alt": null,
+       "title": null,
+       "dimensions": {
+        "width": 1868,
+        "height": 2800
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Hendrik_St%C3%BCwe/Pool_Shooting_2605_12.jpg"
+      },
+      {
+       "originalUrl": "/fileadmin/user_upload/Hendrik_St%C3%BCwe/_R8A5818.jpg",
+       "alt": null,
+       "title": null,
+       "dimensions": {
+        "width": 2800,
+        "height": 1868
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Hendrik_St%C3%BCwe/_R8A5818.jpg"
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "i18n": [
+  {
+   "languageId": 0,
+   "locale": "de_DE",
+   "title": "Deutsch",
+   "navigationTitle": "Deutsch",
+   "twoLetterIsoCode": "de",
+   "hreflang": "de",
+   "direction": "ltr",
+   "flag": "flags-multiple",
+   "link": "/de/bildgalerie/",
+   "active": 0,
+   "current": 0,
+   "available": 1
+  },
+  {
+   "languageId": 1,
+   "locale": "en_GB",
+   "title": "English",
+   "navigationTitle": "English",
+   "twoLetterIsoCode": "en",
+   "hreflang": "en",
+   "direction": "ltr",
+   "flag": "flags-en-us-gb",
+   "link": "/en/gallery/",
+   "active": 1,
+   "current": 0,
+   "available": 1
+  }
+ ],
+ "pid": 105,
+ "jsonld": ""
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120.58984 114.23897">
+  <g id="Icons">
+    <path d="m81.74973,67.96916v.02808h-.00936v-.02808h.00936Z" style="fill:#211e1e; stroke-width:0px;"></path>
+    <path d="m81.74973,67.2773v.69186h-.00936l.00936-.69186Z" style="fill:#211e1e; stroke-width:0px;"></path>
+    <polygon points="67.71153 65.08159 78.93058 65.08159 78.93058 57.73339 77.99562 57.73339 77.99562 64.14663 68.64648 64.14663 68.64648 57.93815 67.71153 57.79993 67.71153 65.08159" style="fill:#211e1e; stroke-width:0px;"></polygon>
+    <polygon points="67.71153 57.73339 67.71153 57.79993 68.64648 57.93815 68.64648 57.73339 67.71153 57.73339" style="fill:#211e1e; stroke-width:0px;"></polygon>
+    <polygon points="82.36683 53.84193 82.3294 56.21671 88.23835 55.76795 88.28509 53.65493 88.1729 53.65493 82.36683 53.84193" style="fill:none; stroke-width:0px;"></polygon>
+    <polygon points="82.36683 53.84193 82.3294 56.21671 88.23835 55.76795 88.28509 53.65493 88.1729 53.65493 82.36683 53.84193" style="fill:none; stroke-width:0px;"></polygon>
+    <polygon points="82.36683 53.84193 82.3294 56.21671 88.23835 55.76795 88.28509 53.65493 88.1729 53.65493 82.36683 53.84193" style="fill:none; stroke-width:0px;"></polygon>
+    <polygon points="82.36683 53.84193 82.3294 56.21671 88.23835 55.76795 88.28509 53.65493 88.1729 53.65493 82.36683 53.84193" style="fill:none; stroke-width:0px;"></polygon>
+    <path d="m81.17942,53.87931l-15.10892.4862-.57037-.03738.02808,1.6081.01872,1.5988.09347,6.07724c0,.00936-.01872.60775-.0561,1.45853-.00936.4301-.02808.91624-.03738,1.42116-.00936.2524-.01872.50486-.02808.75731l-.01872.14021c.12155.02808.93496.04674,1.31832.0561.4955.01872.80405.02808.80405.02808h.02808l13.40729-.187.14027-9.67681.01866-1.30897.00936-.57031v-.02808l-.03738-1.3557-.00936-.46748Z" style="fill:none; stroke-width:0px;"></path>
+    <path d="m89.56598,69.67079l-.35523-13.42601v-.11219l.08411-3.48738-6.90936-.187v-.10283l-6.98412-.10289-.32727.00936-9.47109-.26176-19.34431.31785v-1.96339c0-.43946-.35529-.80405-.79475-.80405-.4394,0-.79469.36459-.79469.80405v1.99147l-1.92601.02802-.17764-7.35813v-.01872s.0561-1.00036.10283-2.00077c.0561-1.00041.11219-2.01019.11219-2.01954,0-1.32763-.14957-2.73942.01872-3.88941.20566-1.19678.76667-2.3374,1.62682-3.21626l.00936-.00936c.90688-.82277,2.06622-1.30897,3.23492-1.40244.36465-.06545.7293-.09347,1.15004-.10283h.57031l.56095.06545c.74801.12155,1.47725.39267,2.13174.78533l.01872.00936c.87886.59839,1.56137,1.44918,2.0382,2.38414.45812.94432.6825,1.99147.66378,3.02926.43946.00936.95368.02808,1.44923.03743-.0561-2.26259-1.12196-4.45978-2.86097-5.85286l-.01872-.01872c-.80405-.70122-1.76709-1.23415-2.80488-1.53329-.52358-.15898-1.06587-.2431-1.60816-.27117-.50486-.02802-1.04715-.03738-1.59874.03743-2.56178.43004-4.65614,2.41215-5.39473,4.75891l-.00936.01872c-.33657.84143-.50486,1.78575-.52358,2.67397l-.09347,2.54306s.00936.51427.00936,1.03785c0,.51422.0093,1.02843.0093,1.02843l.13091,4.9179-.15893,4.39432-1.83254.02802v-2.07558c0-.43946-.35529-.80405-.79469-.80405-.43946,0-.79475.36459-.79475.80405v2.10366l-7.00284.11219.02808,2.21585v.08417s-.12155,4.45972-.2431,8.91013c-.0561,2.22521-.12155,4.45978-.15893,6.12397-.01872.84149-.03743,1.54271-.04674,2.0382.0093.28053.01866.49556.01866.64512,0,.14963.01872.22438.01872.22438.20566,1.73907.94432,3.43134,2.12238,4.73095,1.15934,1.31827,2.75808,2.24387,4.46908,2.64589.52358.08417,1.04715.14027,1.56137.13091.54229,0,.93496-.03738,1.4118-.0561l2.74878-.14957,5.48821-.28989,10.98577-.57967,21.48541,1.19678.44876.03738.01872-2.3374-.46748.00936-38.33334.57031h-.06545s-.90694-.03738-2.26264-.09347c-.33657-.01872-.71052-.02808-1.09389-.04674-.35529-.03743-.72924-.04674-1.09389-.14027-.74796-.15893-1.50527-.44876-2.18783-.87886-1.37436-.84143-2.2813-2.22521-2.65525-3.30974-.36465-1.10325-.34593-1.87928-.34593-1.87928l-.03743-.50486-.00936-.59839-.01866-1.20608-.02808-2.40285-.07476-4.82442-.06545-4.76827,13.08007-.54229h.02802s1.28089.14963,2.56178.29919c.63582.07481,1.27159.14957,1.75773.20566.47684.0561.79475.11225.79475.11225l13.57557-.55165-.12149,6.10526c0,.02808.01866,3.73054.01866,3.73054l.00936,1.24346,8.70447-.13085,8.8073.18695v-.75731l.00936-.69186v.69186c.2431.00936.49556.01872.74796.02808l-.16829-10.32193,5.86221.36459-.23374,10.11627-.08417,3.73048c-.04674,1.10325-.34593,2.17847-.90688,3.12279-1.10325,1.87928-3.17889,3.12273-5.3012,3.16017l-.38337.00936c-.00936.70122-.00936,1.48655-.01866,2.32804l.54224-.04674c2.58986-.19636,5.00207-1.66426,6.40451-3.77727.71058-1.04715,1.15934-2.27194,1.32763-3.51546.15893-1.29955.02802-2.36542.02802-3.49674Zm-25.17845-14.97801l-.02802,1.29955-7.35813.34593h-.02808s-6.2829-.45812-6.30162-.46748l-3.25364-.02802-7.76015,1.14998-7.16182-1.12196-.00936-.26176-.01866-1.20608-.01872-.28053,22.49512-.33657h.08417l9.3496.4862.0093.39267v.02808Zm16.83863,1.03779l-.00936.57031-.01866,1.30897-.14027,9.67681-13.40729.187h-.02808s-.30855-.00936-.80405-.02808c-.38337-.00936-1.19678-.02802-1.31832-.0561l.01872-.14021c.00936-.25246.01872-.50491.02808-.75731.0093-.50491.02802-.99105.03738-1.42116.03738-.85079.0561-1.44918.0561-1.45853l-.09347-6.07724-.01872-1.5988-.02808-1.6081.57037.03738,15.10892-.4862.00936.46748.03738,1.3557v.02808Zm7.0122.03738l-5.90895.44876.03743-2.37478,5.80606-.187h.11219l-.04674,2.11302Z" style="fill:#211e1e; stroke-width:0px;"></path>
+  </g>
+  <g id="Text">
+    <path d="m82.33101,106.65256c-6.7956,3.15571-14.37001,4.91725-22.35584,4.91725-29.34855,0-53.14025-23.7917-53.14025-53.14025,0-8.88001,2.17811-17.2513,6.02922-24.60876" style="fill:none; stroke:#211d1d; stroke-miterlimit:10;"></path>
+    <text transform="translate(21.80008 26.92118) rotate(-46.98483)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">F</tspan>
+    </text>
+    <text transform="translate(26.6868 21.77861) rotate(-38.24854)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">R</tspan>
+    </text>
+    <text transform="translate(33.14676 16.8621) rotate(-29.38008)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">E</tspan>
+    </text>
+    <text transform="translate(39.52225 13.387) rotate(-20.94817)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">E</tspan>
+    </text>
+    <text transform="translate(46.27957 10.84452) rotate(-11.58694)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">-</tspan>
+    </text>
+    <text transform="translate(55.00272 9.24345) rotate(-2.44833)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">S</tspan>
+    </text>
+    <text transform="translate(62.01736 9.01298) rotate(6.02504)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">T</tspan>
+    </text>
+    <text transform="translate(68.94949 9.76933) rotate(14.29469)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">A</tspan>
+    </text>
+    <text transform="translate(76.77078 11.76298) rotate(25.15927)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">N</tspan>
+    </text>
+    <text transform="translate(86.31277 16.43046) rotate(37.04772)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">D</tspan>
+    </text>
+    <text transform="translate(94.14285 22.72978) rotate(45.10692)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">I</tspan>
+    </text>
+    <text transform="translate(97.05789 25.44706) rotate(53.5526)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">N</tspan>
+    </text>
+    <text transform="translate(103.21316 34.07011) rotate(65.27785)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">G</tspan>
+    </text>
+    <text transform="translate(107.04666 43.07499) rotate(73.78853)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0"> </tspan>
+    </text>
+    <text transform="translate(108.42215 47.79081) rotate(81.22168)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">B</tspan>
+    </text>
+    <text transform="translate(109.55057 55.48417) rotate(90.92818)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">A</tspan>
+    </text>
+    <text transform="translate(109.42068 62.86601) rotate(98.59758)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">T</tspan>
+    </text>
+    <text transform="translate(108.23367 70.55546) rotate(108.8287)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">H</tspan>
+    </text>
+    <text transform="translate(104.87234 79.76982) rotate(119.03279)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">T</tspan>
+    </text>
+    <text transform="translate(101.07693 86.54716) rotate(129.10389)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">U</tspan>
+    </text>
+    <text transform="translate(94.78201 93.9705) rotate(139.16452)" style="fill:#211d1d; font-family:KarolSans-Light, 'Karol Sans'; font-size:14px; font-weight:300;">
+      <tspan x="0" y="0">B</tspan>
+    </text>
+  </g>
+</svg>

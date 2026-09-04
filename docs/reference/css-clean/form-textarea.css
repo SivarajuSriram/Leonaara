@@ -1,0 +1,115 @@
+.mask_powermailform .item-textarea .item {
+  grid-column-end:span 20;
+  margin-top:5rem;
+  position:relative;
+}
+.mask_powermailform .item-textarea .col3 {
+  grid-column-end:span 3;
+}
+.mask_powermailform .item-textarea .col5 {
+  grid-column-end:span 5;
+}
+.mask_powermailform .item-textarea .col7 {
+  grid-column-end:span 7;
+}
+.mask_powermailform .item-textarea .col20 {
+  grid-column-end:span 20;
+}
+.mask_powermailform .item-textarea label {
+  background:#fff;
+  font-size:2.4rem;
+  font-size:2.2rem;
+  font-weight:300;
+  left:1rem;
+  letter-spacing:.5em;
+  letter-spacing:0;
+  line-height:142%;
+  line-height:100%;
+  padding:0 1rem;
+  position:absolute;
+  top:2rem;
+  transition:.3s;
+}
+@media (max-width:1023px) {
+  .mask_powermailform .item-textarea label {
+    font-size:1.7rem;
+    font-size:1.3rem;
+    letter-spacing:.5em;
+    letter-spacing:0;
+    line-height:159%;
+    line-height:100%;
+  }
+}
+.mask_powermailform .item-textarea label.active,.mask_powermailform .item-textarea label.hasContent {
+  color:#211d1db3;
+  top:0;
+  transform:translateY(-70%);
+}
+.mask_powermailform .item-textarea textarea {
+  border:1px solid #211d1d;
+  border-radius:3px;
+  color:#211d1d;
+  font-size:2.4rem;
+  font-size:2.2rem;
+  font-weight:300;
+  height:12rem;
+  letter-spacing:.5em;
+  letter-spacing:0;
+  line-height:142%;
+  line-height:100%;
+  padding:2rem;
+  transition:all .5s;
+  width:100%;
+}
+@media (max-width:1023px) {
+  .mask_powermailform .item-textarea textarea {
+    font-size:1.7rem;
+    font-size:1.3rem;
+    letter-spacing:.5em;
+    letter-spacing:0;
+    line-height:159%;
+    line-height:100%;
+  }
+}
+.mask_powermailform .item-textarea textarea.active {
+  box-shadow:0 0 5px 1px #c7c7c7;
+}
+.mask_powermailform .item-textarea textarea.hasError {
+  border-color:#ea0000;
+}
+.mask_powermailform .item-textarea .error {
+  bottom:-.5rem;
+  color:#ea0000;
+  font-size:1.4rem;
+  font-size:1.5rem;
+  font-weight:300;
+  left:0;
+  letter-spacing:0;
+  line-height:143%;
+  line-height:120%;
+  position:absolute;
+  text-align:right;
+  transform:translateY(100%);
+  width:100%;
+}
+@media (max-width:1023px) {
+  .mask_powermailform .item-textarea .error {
+    font-size:1rem;
+    letter-spacing:0;
+    line-height:120%;
+  }
+  .mask_powermailform .item-textarea .item {
+    grid-column-end:span 20;
+    margin-top:3rem;
+  }
+  .mask_powermailform .item-textarea label {
+    left:.6rem;
+    padding:0 .5rem;
+    top:2rem;
+    transform:translateY(-50%);
+  }
+  .mask_powermailform .item-textarea textarea {
+    height:9rem;
+    padding:1.3rem 1rem;
+  }
+}

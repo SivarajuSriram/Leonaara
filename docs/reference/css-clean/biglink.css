@@ -1,0 +1,32 @@
+.ht-biglink {
+  font-size:4.5rem;
+  font-weight:300;
+  letter-spacing:.08em;
+  line-height:111%;
+  text-decoration:underline;
+  text-transform:uppercase;
+}
+@media (max-width:1023px) {
+  .ht-biglink {
+    font-size:3.5rem;
+    letter-spacing:.05em;
+    line-height:114%;
+  }
+}
+.ht-biglink:hover {
+  text-decoration-color:transparent;
+}
+.small-font {
+  font-size:2rem;
+  font-weight:400;
+  letter-spacing:.08em;
+  line-height:125%;
+  text-transform:uppercase;
+}
+@media (max-width:1023px) {
+  .small-font {
+    font-size:1.7rem;
+    letter-spacing:.08em;
+    line-height:94%;
+  }
+}

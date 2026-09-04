@@ -1,0 +1,475 @@
+{
+ "id": 60,
+ "type": "Standard",
+ "slug": "/experiences",
+ "media": [],
+ "meta": {
+  "title": "Experience untouched mountain worlds – eriro experiences",
+  "subtitle": "",
+  "abstract": "",
+  "description": "Experience eriro amidst untouched nature. Immerse yourself in the archaic mountain experiences in the Tyrolean Alps that bring you back to the origin.",
+  "keywords": "",
+  "canonical": "",
+  "robots": {
+   "noIndex": false,
+   "noFollow": false
+  },
+  "author": "",
+  "authorEmail": "",
+  "ogTitle": "Experiences",
+  "ogDescription": "Experience eriro amidst untouched nature. Immerse yourself in the archaic mountain experiences in the Tyrolean Alps that bring you back to the origin.",
+  "ogImage": null,
+  "twitterTitle": "Experiences",
+  "twitterDescription": "Experience eriro amidst untouched nature. Immerse yourself in the archaic mountain experiences in the Tyrolean Alps that bring you back to the origin.",
+  "twitterCard": "summary",
+  "twitterImage": null
+ },
+ "categories": "",
+ "breadcrumbs": [
+  {
+   "title": "Home",
+   "link": "/en/",
+   "target": "",
+   "active": 1,
+   "current": 0,
+   "spacer": 0,
+   "hasSubpages": 1,
+   "pid": 0
+  },
+  {
+   "title": "Experiences",
+   "link": "/en/experiences/",
+   "target": "",
+   "active": 1,
+   "current": 1,
+   "spacer": 0,
+   "hasSubpages": 0,
+   "pid": 1
+  }
+ ],
+ "appearance": {
+  "layout": "layout-0",
+  "backendLayout": "defaultLayout"
+ },
+ "content": {
+  "colPos0": [
+   {
+    "id": 184,
+    "type": "mask_hero",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Experiences",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_hero",
+     "title": "Memories that anchor in the heart",
+     "titleh2": "Touch what time<br>\r\nhas left <br>\r\nuntouched",
+     "titleimg": "",
+     "text": "<p>In the remote corners of the Tyrolean Alps, we become one with nature. A humbleness towards the magnificent mountains shapes all aspects of life. The seasons and their shifts in weather govern each day. Gracious and gentle, archaic and rugged, the mountain calls upon us to be alert and aware with all our senses – it sharpens the eye for the essentials. Experiences and traditions become lasting memories. Exploration, perception and connecting with yourself opens wide the dimension of being.&nbsp;</p>",
+     "img": [],
+     "sideimg": [],
+     "imgsummer": [],
+     "sideimgsummer": [],
+     "herolayout": "only-text"
+    }
+   },
+   {
+    "id": 213,
+    "type": "mask_pagefilter",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Seitenwechsel",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_pagefilter",
+     "pages": [
+      {
+       "uid": "1",
+       "title": "Leiba",
+       "slug": {
+        "href": "/en/leiba/",
+        "target": null,
+        "class": null,
+        "title": null,
+        "linkText": "97",
+        "additionalAttributes": []
+       }
+      },
+      {
+       "uid": "4",
+       "title": "Sela",
+       "slug": {
+        "href": "/en/sela/",
+        "target": null,
+        "class": null,
+        "title": null,
+        "linkText": "t3://page?uid=98",
+        "additionalAttributes": []
+       }
+      },
+      {
+       "uid": "5",
+       "title": "Herchomen",
+       "slug": {
+        "href": "/en/herchomen/",
+        "target": null,
+        "class": null,
+        "title": null,
+        "linkText": "t3://page?uid=115",
+        "additionalAttributes": []
+       }
+      },
+      {
+       "uid": "3",
+       "title": "Hantwerc",
+       "slug": {
+        "href": "/en/hantwerc/",
+        "target": null,
+        "class": null,
+        "title": null,
+        "linkText": "t3://page?uid=99",
+        "additionalAttributes": []
+       }
+      },
+      {
+       "uid": "2",
+       "title": "Sneo",
+       "slug": {
+        "href": "/en/sneo/",
+        "target": null,
+        "class": null,
+        "title": null,
+        "linkText": "t3://page?uid=100",
+        "additionalAttributes": []
+       }
+      }
+     ]
+    }
+   },
+   {
+    "id": 565,
+    "type": "mask_teaserslider",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Teaser",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_teaserslider",
+     "teaserslides": [
+      {
+       "uid": "424",
+       "title": "Mountain pleasures",
+       "imgleft": [
+        {
+         "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-berggenuss-01.jpg",
+         "alt": "Artful gourmet dish on stone plate at eriro Alpine Hide – edible alpine flowers, herbs and golden chips as homage to alpine terroir cuisine",
+         "title": null,
+         "dimensions": {
+          "width": 1200,
+          "height": 1400
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-berggenuss-01.jpg"
+        }
+       ],
+       "imgright": [
+        {
+         "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-berggenuss-02.jpg",
+         "alt": "Golden broth being poured from ceramic pitcher over mushrooms and elderflowers – intimate gourmet ritual in handcrafted bowl at eriro Alpine Hide",
+         "title": null,
+         "dimensions": {
+          "width": 1500,
+          "height": 1660
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-berggenuss-02.jpg"
+        }
+       ],
+       "infotext": "Weather on a plate in its many forms",
+       "linktext": "Flavour of mountain origins",
+       "link": {
+        "href": "/en/culinary/",
+        "target": null,
+        "class": null,
+        "title": null,
+        "linkText": "t3://page?uid=61",
+        "additionalAttributes": []
+       }
+      },
+      {
+       "uid": "425",
+       "title": "Step back to the origins",
+       "imgleft": [
+        {
+         "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-rueckkehr-ursprung-01.jpg",
+         "alt": "Wooden balcony of eriro Alpine Hide in warm evening light with view of rugged rock summits and dense conifer forest – pure alpine majesty",
+         "title": null,
+         "dimensions": {
+          "width": 1200,
+          "height": 1400
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-rueckkehr-ursprung-01.jpg"
+        }
+       ],
+       "imgright": [
+        {
+         "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-rueckkehr-ursprung-02.jpg",
+         "alt": "Light-flooded living area with massive wooden table, telescope and panoramic view of green alpine forests – quiet luxury moments at eriro Alpine Hide",
+         "title": null,
+         "dimensions": {
+          "width": 1500,
+          "height": 1660
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-rueckkehr-ursprung-02.jpg"
+        }
+       ],
+       "infotext": "Touch what time has left untouched",
+       "linktext": "To the Alpine Hide",
+       "link": {
+        "href": "/en/origin/",
+        "target": null,
+        "class": null,
+        "title": null,
+        "linkText": "t3://page?uid=86",
+        "additionalAttributes": []
+       }
+      },
+      {
+       "uid": "428",
+       "title": "Nature as a habitat",
+       "imgleft": [
+        {
+         "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-natur-lebensraum-01.jpg",
+         "alt": "Cozy moment in wool socks with coffee cup and photo book at natural stone fireplace – comforting sanctuary at eriro Alpine Hide",
+         "title": null,
+         "dimensions": {
+          "width": 1200,
+          "height": 1400
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-natur-lebensraum-01.jpg"
+        }
+       ],
+       "imgright": [
+        {
+         "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-natur-lebensraum-02.jpg",
+         "alt": "Handcrafted wool patchwork wall with chess set in sunlit living area – alpine craftsmanship meets design at eriro Alpine Hide",
+         "title": null,
+         "dimensions": {
+          "width": 1500,
+          "height": 1660
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-natur-lebensraum-02.jpg"
+        }
+       ],
+       "infotext": "At one with nature and the mountain",
+       "linktext": "Structure and shelter: the suites",
+       "link": {
+        "href": "/en/suites/boum/",
+        "target": null,
+        "class": null,
+        "title": null,
+        "linkText": "t3://page?uid=44",
+        "additionalAttributes": []
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "i18n": [
+  {
+   "languageId": 0,
+   "locale": "de_DE",
+   "title": "Deutsch",
+   "navigationTitle": "Deutsch",
+   "twoLetterIsoCode": "de",
+   "hreflang": "de",
+   "direction": "ltr",
+   "flag": "flags-multiple",
+   "link": "/de/erlebnisse/",
+   "active": 0,
+   "current": 0,
+   "available": 1
+  },
+  {
+   "languageId": 1,
+   "locale": "en_GB",
+   "title": "English",
+   "navigationTitle": "English",
+   "twoLetterIsoCode": "en",
+   "hreflang": "en",
+   "direction": "ltr",
+   "flag": "flags-en-us-gb",
+   "link": "/en/experiences/",
+   "active": 1,
+   "current": 0,
+   "available": 1
+  }
+ ],
+ "pid": 1,
+ "jsonld": ""
+}

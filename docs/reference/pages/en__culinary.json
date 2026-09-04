@@ -1,0 +1,795 @@
+{
+ "id": 61,
+ "type": "Standard",
+ "slug": "/culinary",
+ "media": [],
+ "meta": {
+  "title": "The taste of origin cuisine",
+  "subtitle": "",
+  "abstract": "",
+  "description": "Experience nature-connected delights at eriro. Immerse yourself in the world of primal cuisine and savor the culinary diversity of the mountain nature's seasons with every dish.",
+  "keywords": "",
+  "canonical": "",
+  "robots": {
+   "noIndex": false,
+   "noFollow": false
+  },
+  "author": "",
+  "authorEmail": "",
+  "ogTitle": "Culinary",
+  "ogDescription": "Experience nature-connected delights at eriro. Immerse yourself in the world of primal cuisine and savor the culinary diversity of the mountain nature's seasons with every dish.",
+  "ogImage": null,
+  "twitterTitle": "Culinary",
+  "twitterDescription": "Experience nature-connected delights at eriro. Immerse yourself in the world of primal cuisine and savor the culinary diversity of the mountain nature's seasons with every dish.",
+  "twitterCard": "summary",
+  "twitterImage": null
+ },
+ "categories": "",
+ "breadcrumbs": [
+  {
+   "title": "Home",
+   "link": "/en/",
+   "target": "",
+   "active": 1,
+   "current": 0,
+   "spacer": 0,
+   "hasSubpages": 1,
+   "pid": 0
+  },
+  {
+   "title": "Culinary",
+   "link": "/en/culinary/",
+   "target": "",
+   "active": 1,
+   "current": 1,
+   "spacer": 0,
+   "hasSubpages": 0,
+   "pid": 1
+  }
+ ],
+ "appearance": {
+  "layout": "layout-0",
+  "backendLayout": "defaultLayout"
+ },
+ "content": {
+  "colPos0": [
+   {
+    "id": 164,
+    "type": "mask_hero",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "The flavour of mountain origins",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_hero",
+     "title": "A taste of nature",
+     "titleh2": "The flavour<br>\r\nof mountain <br>\r\norigins",
+     "titleimg": "",
+     "text": "",
+     "img": [
+      {
+       "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-07.jpg",
+       "alt": "Alpine fine-dining at eriro: Tartare on split bone marrow with mushroom carpaccio, nasturtium, egg yolk dots and wildflowers on moss base",
+       "title": null,
+       "dimensions": {
+        "width": 1920,
+        "height": 1480
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-07.jpg"
+      }
+     ],
+     "sideimg": [
+      {
+       "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-alpinehide-kulinarik-03.jpg",
+       "alt": "Tyrolean spinach dumplings with sage butter foam in hand-thrown gradient ceramic bowl on light spruce wood table, eriro alpine cuisine",
+       "title": null,
+       "dimensions": {
+        "width": 1200,
+        "height": 1600
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-alpinehide-kulinarik-03.jpg"
+      }
+     ],
+     "imgsummer": [],
+     "sideimgsummer": [],
+     "herolayout": "subpage"
+    }
+   },
+   {
+    "id": 166,
+    "type": "mask_imgtext",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Wind and weather on a plate",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_imgtext",
+     "title": "Wind and weather <br>\r\non a plate",
+     "text": "<p>A cuisine of the origins, founded on preparation methods inspired by Alpine tradition and local ingredients. The focus is a new, exciting interpretation of treasured and familiar flavours. Menus embody the ever-changing weather conditions of the mountain in both taste and appearance: rough, rugged and powerful, or gentle, mild and delicate, the dishes are a reflection of the seasons and untamed forces of mountain nature.&nbsp;</p>",
+     "imgleft": [
+      {
+       "originalUrl": "/fileadmin/user_upload/unikateur_Bilder/Food/eriro_alpinehide_ei.jpg",
+       "alt": "Half eggshell with luminous yolk on hay in wooden bowl – dramatic light celebrating rustic authenticity of eriro gourmet cuisine",
+       "title": null,
+       "dimensions": {
+        "width": 2560,
+        "height": 3838
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/unikateur_Bilder/Food/eriro_alpinehide_ei.jpg"
+      }
+     ],
+     "imgright": [
+      {
+       "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-alpinehide-kulinarik-02.jpg",
+       "alt": "Tattooed hand pouring clear golden broth from matte black ceramic pitcher over chanterelles and elderflowers in stoneware bowl, eriro alpine cuisine",
+       "title": null,
+       "dimensions": {
+        "width": 1500,
+        "height": 1350
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-alpinehide-kulinarik-02.jpg"
+      }
+     ],
+     "imgleftsummer": [],
+     "imgrightsummer": []
+    }
+   },
+   {
+    "id": 544,
+    "type": "mask_img",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_img",
+     "img": [
+      {
+       "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-15.jpg",
+       "alt": "Eriro fine-dining with curved spruce wood bench, wool cushion, linen napkin and hand-thrown ceramic in warm evening light",
+       "title": null,
+       "dimensions": {
+        "width": 2560,
+        "height": 1440
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-15.jpg"
+      }
+     ],
+     "imgsummer": []
+    }
+   },
+   {
+    "id": 170,
+    "type": "mask_imgtext",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "A real \"Fuir\" heats the stove",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_imgtext",
+     "title": "A real <i>\"fuir\"</i><br>\r\nheats the stove",
+     "text": "<p>The way food has been cooked in the Alps for as long as anyone can remember. The <i>fuir</i> (local dialect for ‘fire’) of the restaurant’s open grill pays homage to the original way of life in the Alps. Impressive presentations on wood or stone, on grain or in the form of a nest, offer a multi-sensory culinary experience of the mountains through taste, smell, and visual aesthetic.</p>",
+     "imgleft": [
+      {
+       "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-alpinehide-kulinarik-05.jpg",
+       "alt": "Hand placing fine crystal wine glass on rustic reclaimed wood table in sunlight – dinner preparation at eriro Alpine Hide Ehrwald",
+       "title": null,
+       "dimensions": {
+        "width": 1200,
+        "height": 950
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-alpinehide-kulinarik-05.jpg"
+      }
+     ],
+     "imgright": [
+      {
+       "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-09.jpg",
+       "alt": "Smoking lamb chops on spruce branch bed in dark ceramic, rising aromatic smoke on rough reclaimed wood table in eriro restaurant Ehrwald",
+       "title": null,
+       "dimensions": {
+        "width": 1500,
+        "height": 1350
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-09.jpg"
+      }
+     ],
+     "imgleftsummer": [],
+     "imgrightsummer": []
+    }
+   },
+   {
+    "id": 167,
+    "type": "mask_img",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_img",
+     "img": [
+      {
+       "originalUrl": "/fileadmin/user_upload/unikateur_Bilder/Winter/AlexMoling_Eriro_Restaurant-26.jpg",
+       "alt": "Restaurant area at eriro Alpine Hide with set wooden table, wine glasses and terrace view onto snow-covered Zugspitze mountain panorama",
+       "title": null,
+       "dimensions": {
+        "width": 8192,
+        "height": 5464
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/unikateur_Bilder/Winter/AlexMoling_Eriro_Restaurant-26.jpg"
+      }
+     ],
+     "imgsummer": [
+      {
+       "originalUrl": "/fileadmin/user_upload/Eriro_Restaurant_ehrwalder-alm_oesterreich_genuss-01.jpg",
+       "alt": "Set fine-dining table of spruce wood with wine goblets and driftwood sculptures, golden evening sun over Wetterstein panorama in eriro restaurant",
+       "title": null,
+       "dimensions": {
+        "width": 2560,
+        "height": 1440
+       },
+       "crop": {
+        "default": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        },
+        "mobile": {
+         "cropArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+         },
+         "selectedRatio": "NaN",
+         "focusArea": null
+        }
+       },
+       "mime": "image/jpeg",
+       "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Eriro_Restaurant_ehrwalder-alm_oesterreich_genuss-01.jpg"
+      }
+     ]
+    }
+   },
+   {
+    "id": 211,
+    "type": "mask_teaserslider",
+    "colPos": 0,
+    "categories": "",
+    "appearance": {
+     "layout": "default",
+     "frameClass": "default",
+     "spaceBefore": "",
+     "spaceAfter": ""
+    },
+    "content": {
+     "header": "Teaser",
+     "subheader": "",
+     "headerLayout": 0,
+     "headerPosition": "",
+     "headerLink": "",
+     "type": "mask_teaserslider",
+     "teaserslides": [
+      {
+       "uid": "55",
+       "title": "Nature in harmony",
+       "imgleft": [
+        {
+         "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-natur-harmonie-01.jpg",
+         "alt": "Handcrafted Pssst door sign of wood and natural stone on textured wool carpet – loving detail at eriro Alpine Hide hideaway",
+         "title": null,
+         "dimensions": {
+          "width": 1200,
+          "height": 1400
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-natur-harmonie-01.jpg"
+        }
+       ],
+       "imgright": [
+        {
+         "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-natur-harmonie-02.jpg",
+         "alt": "Woman in black dress walking through sunny clearing between spruces and mountain silhouettes – mindful nature connection at eriro Alpine Hide",
+         "title": null,
+         "dimensions": {
+          "width": 1500,
+          "height": 1660
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-natur-harmonie-02.jpg"
+        }
+       ],
+       "infotext": "Step back to the beginnings of everything",
+       "linktext": "How eriro came to be",
+       "link": {
+        "href": "/en/alpine-hide/",
+        "target": null,
+        "class": null,
+        "title": null,
+        "linkText": "t3://page?uid=58",
+        "additionalAttributes": []
+       }
+      },
+      {
+       "uid": "51",
+       "title": "Ochi Kema",
+       "imgleft": [
+        {
+         "originalUrl": "/fileadmin/user_upload/unikateur_Bilder/eriro_alpinehide_r%C3%BCckentropfen.jpg",
+         "alt": "Water droplets and goosebumps on sun-tanned shoulder after bathing – braided hair with grass blade, sensual eriro mountain lake experience",
+         "title": null,
+         "dimensions": {
+          "width": 2560,
+          "height": 1707
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/unikateur_Bilder/eriro_alpinehide_r%C3%BCckentropfen.jpg"
+        }
+       ],
+       "imgright": [
+        {
+         "originalUrl": "/fileadmin/user_upload/Hendrik_St%C3%BCwe/_R8A5800.jpg",
+         "alt": null,
+         "title": null,
+         "dimensions": {
+          "width": 2800,
+          "height": 1868
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/Hendrik_St%C3%BCwe/_R8A5800.jpg"
+        }
+       ],
+       "infotext": "Basking in nature and stillness",
+       "linktext": "Profound revitalization in the spa",
+       "link": {
+        "href": "/en/spa/",
+        "target": null,
+        "class": null,
+        "title": null,
+        "linkText": "t3://page?uid=108",
+        "additionalAttributes": []
+       }
+      },
+      {
+       "uid": "54",
+       "title": "Come face to face with the untouched",
+       "imgleft": [
+        {
+         "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-unerlebtes-erleben-01.jpg",
+         "alt": "Strong hands holding soft, natural sheep's wool – authentic craftsmanship and alpine materiality as soul of eriro Alpine Hide",
+         "title": null,
+         "dimensions": {
+          "width": 1200,
+          "height": 1400
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-unerlebtes-erleben-01.jpg"
+        }
+       ],
+       "imgright": [
+        {
+         "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-ehrwald-unerlebtes-erleben-02.jpg",
+         "alt": "Couple hand in hand in sunlit mountain forest with golden lens flare – romantic togetherness around eriro Alpine Hide",
+         "title": null,
+         "dimensions": {
+          "width": 1500,
+          "height": 1660
+         },
+         "crop": {
+          "default": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          },
+          "mobile": {
+           "cropArea": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+           },
+           "selectedRatio": "NaN",
+           "focusArea": null
+          }
+         },
+         "mime": "image/jpeg",
+         "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-ehrwald-unerlebtes-erleben-02.jpg"
+        }
+       ],
+       "infotext": "Purely Alpine",
+       "linktext": "Nature and culture experiences of the mountain",
+       "link": {
+        "href": "/en/experiences/",
+        "target": null,
+        "class": null,
+        "title": null,
+        "linkText": "t3://page?uid=60",
+        "additionalAttributes": []
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "i18n": [
+  {
+   "languageId": 0,
+   "locale": "de_DE",
+   "title": "Deutsch",
+   "navigationTitle": "Deutsch",
+   "twoLetterIsoCode": "de",
+   "hreflang": "de",
+   "direction": "ltr",
+   "flag": "flags-multiple",
+   "link": "/de/kulinarik/",
+   "active": 0,
+   "current": 0,
+   "available": 1
+  },
+  {
+   "languageId": 1,
+   "locale": "en_GB",
+   "title": "English",
+   "navigationTitle": "English",
+   "twoLetterIsoCode": "en",
+   "hreflang": "en",
+   "direction": "ltr",
+   "flag": "flags-en-us-gb",
+   "link": "/en/culinary/",
+   "active": 1,
+   "current": 0,
+   "available": 1
+  }
+ ],
+ "pid": 1,
+ "jsonld": ""
+}
