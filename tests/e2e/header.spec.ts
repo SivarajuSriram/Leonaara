@@ -28,7 +28,8 @@ test.describe('header', () => {
 
   test('scrolled class follows the original rule and the logo scrubs out', async ({ page }) => {
     await page.goto('/en/');
-    await page.evaluate(() => { document.body.style.minHeight = '6000px'; });
+    // ScrollSmoother scrolls #smooth-content, so the placeholder page needs height there, not on body
+    await page.evaluate(() => { (document.querySelector('#smooth-content') as HTMLElement).style.minHeight = '6000px'; });
     const logo = page.locator('header .logo-wrapper');
     await expect(logo).toHaveCSS('opacity', '1');
     await page.mouse.wheel(0, 300);
