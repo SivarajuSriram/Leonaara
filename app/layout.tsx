@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import '@/styles/globals.css';
+import { Header } from '@/components/layout/Header';
 import { SmoothScroll } from '@/components/layout/SmoothScroll';
 import { PageTransition } from '@/components/layout/PageTransition';
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <div className="body-inner">
           <div id="__app">
+            <Header />
             <SmoothScroll>
               <PageTransition>{children}</PageTransition>
             </SmoothScroll>

@@ -7,10 +7,12 @@ import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin';
 import { Draggable } from 'gsap/Draggable';
 import { InertiaPlugin } from 'gsap/InertiaPlugin';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+// EasePack: the original's menu and logo tweens use expoScale(...)
+import { ExpoScaleEase } from 'gsap/EasePack';
 import { useGSAP } from '@gsap/react';
 
 if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText, MorphSVGPlugin, Draggable, InertiaPlugin, ScrollToPlugin, useGSAP);
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText, MorphSVGPlugin, Draggable, InertiaPlugin, ScrollToPlugin, ExpoScaleEase, useGSAP);
 }
 
-export { gsap, ScrollTrigger, ScrollSmoother, SplitText, MorphSVGPlugin, Draggable, InertiaPlugin, ScrollToPlugin, useGSAP };
+export { gsap, ScrollTrigger, ScrollSmoother, SplitText, MorphSVGPlugin, Draggable, InertiaPlugin, ScrollToPlugin, ExpoScaleEase, useGSAP };
