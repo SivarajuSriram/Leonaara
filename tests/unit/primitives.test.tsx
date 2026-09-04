@@ -4,8 +4,6 @@ import { Mask } from '@/components/sections/Mask';
 import { isWinter } from '@/lib/season';
 import { setSmoother, onSmoother } from '@/lib/smoother';
 
-vi.mock('next/navigation', () => ({ useRouter: () => ({ push: vi.fn() }), usePathname: () => '/en/' }));
-
 describe('Mask', () => {
   it('renders the original wrapper classes and uid', () => {
     const { container } = render(

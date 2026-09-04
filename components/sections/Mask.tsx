@@ -9,6 +9,7 @@ export function Mask({ type, uid, appearance, className, as: Tag = 'div', childr
   const cls = [`${appearance.layout}`, `space-before-${appearance.spaceBefore}`, 'mask', `mask_${type}`, className]
     .filter(Boolean)
     .join(' ');
+  // 'uid' is a non-standard attribute the original markup carries; spreading it keeps TypeScript's JSX typing happy.
   return (
     <Tag className={cls} {...{ uid: `c${uid}` }}>
       {children}

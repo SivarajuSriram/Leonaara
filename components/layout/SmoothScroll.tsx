@@ -34,13 +34,14 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
       ScrollTrigger.refresh();
     };
     sync();
-    let t: ReturnType<typeof setTimeout>;
+    let t: ReturnType<typeof setTimeout> | undefined;
     const onResize = () => {
-      clearTimeout(t);
+      if (t) clearTimeout(t);
       t = setTimeout(sync, 150);
     };
     window.addEventListener('resize', onResize);
     return () => {
+      if (t) clearTimeout(t);
       window.removeEventListener('resize', onResize);
       kill();
     };
