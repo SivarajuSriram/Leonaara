@@ -44,7 +44,7 @@ export function RoomSlider({ section }: { section: RoomSliderSection }) {
             className="room-content"
             modules={[Navigation, Controller, EffectFade]}
             effect="fade"
-            speed={1300}
+            speed={1300} // Content fade transition: 1300ms, from js_Buj7d3j6.js
             loop
             // prevEl/nextEl are assigned in onBeforeInit (an init-time callback, not render)
             // rather than read here, since reading a ref's .current during render is unsafe.
