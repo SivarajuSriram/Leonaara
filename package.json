@@ -9,11 +9,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:e2e": "playwright test",
-    "gen:content": "tsx scripts/gen-content.ts",
-    "qa:shots": "tsx scripts/qa/screenshots.ts",
-    "qa:text": "tsx scripts/qa/textdiff.ts",
-    "qa:diff": "tsx scripts/qa/diff.ts"
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -31,15 +27,12 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.3",
     "@types/node": "^20.19.43",
-    "@types/pngjs": "^6.0.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^4.7.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.4",
     "jsdom": "^26.1.0",
-    "pixelmatch": "^7.2.0",
-    "pngjs": "^7.0.0",
     "tailwindcss": "^4",
     "tsx": "^4.23.13",
     "typescript": "^5",
