@@ -3,6 +3,7 @@ import '@/styles/globals.css';
 import { Header } from '@/components/layout/Header';
 import { SmoothScroll } from '@/components/layout/SmoothScroll';
 import { PageTransition } from '@/components/layout/PageTransition';
+import { Footer } from '@/components/layout/Footer';
 
 const FONTS = [
   'karol-sans-300-normal',
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <Header />
             <SmoothScroll>
               <PageTransition>{children}</PageTransition>
+              <Footer />
             </SmoothScroll>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className="eriro-bg-attach" src="/HG.jpg" alt="" />

@@ -1,0 +1,239 @@
+footer {
+  font-size:2rem;
+  font-weight:400;
+  letter-spacing:.08em;
+  line-height:125%;
+  margin-top:19rem;
+  text-transform:uppercase;
+}
+@media (max-width:1023px) {
+  footer {
+    font-size:1.7rem;
+    letter-spacing:.08em;
+    line-height:94%;
+  }
+}
+footer .footer-title {
+  margin-bottom:1rem;
+}
+footer .invisible {
+  visibility:hidden;
+}
+footer a:not(.link-logo) {
+  color:#211d1d;
+  text-decoration:underline;
+  text-decoration-color:transparent;
+}
+footer a:not(.link-logo):hover {
+  text-decoration-color:#211d1d;
+}
+footer a:not(.link-logo).router-link-active {
+  font-size:2rem;
+  font-weight:300;
+  letter-spacing:.08em;
+  line-height:125%;
+  opacity:.5;
+  text-transform:uppercase;
+}
+@media (max-width:1023px) {
+  footer a:not(.link-logo).router-link-active {
+    font-size:1.3rem;
+    letter-spacing:.05em;
+    line-height:131%;
+  }
+}
+footer nav a {
+  display:block;
+}
+footer .upper-footer {
+  border-top:2px solid #e4e0db;
+  grid-column-end:span 12;
+  grid-column-start:2;
+  padding-bottom:6rem;
+  padding-top:6rem;
+}
+footer .upper-footer .email,footer .upper-footer .social,footer .upper-footer .tel {
+  grid-column-end:span 3;
+}
+footer .upper-footer .social {
+  justify-self:flex-start;
+  text-align:left;
+}
+footer .upper-footer .address,footer .upper-footer .partner {
+  grid-column-end:span 3;
+  justify-self:flex-end;
+  text-align:right;
+}
+footer .lower-footer {
+  align-items:flex-end;
+  border-top:2px solid #e4e0db;
+  grid-column-end:span 12;
+  grid-column-start:2;
+  padding-bottom:2.5rem;
+  padding-top:6rem;
+}
+footer .lower-footer .logo,footer .lower-footer .nav-extra {
+  grid-column-end:span 3;
+}
+footer .lower-footer .logo svg {
+  width:29.4rem;
+}
+footer .lower-footer .footer-bottom-right {
+  grid-column-end:span 3;
+  justify-self:flex-end;
+  text-align:right;
+}
+footer .lower-footer .luxury-hotels-logo {
+  grid-column-end:span 1;
+  grid-column-start:9;
+  justify-self:flex-end;
+  text-align:right;
+  width:90%;
+}
+footer .lower-footer .luxury-hotels-logo img {
+  width:100%;
+}
+footer .lower-footer .nav-footer {
+  margin-top:3rem;
+}
+footer .lower-footer .unikateur-signet {
+  font-size:1.5rem;
+  font-weight:400;
+  grid-column-end:span 12;
+  grid-column-start:1;
+  justify-self:flex-end;
+  letter-spacing:.07em;
+  line-height:100%;
+  margin-top:6rem;
+  text-transform:none;
+}
+@media (max-width:1023px) {
+  footer .lower-footer .unikateur-signet {
+    font-size:1.2rem;
+    letter-spacing:.07em;
+    line-height:100%;
+  }
+}
+footer .lower-footer .unikateur-signet a {
+  display:inline-flex;
+  white-space:pre;
+}
+footer .lower-footer .unikateur-signet svg {
+  height:100%;
+  width:7.1rem;
+}
+@media (max-width:1023px) {
+  footer {
+    font-size:1.3rem;
+    letter-spacing:.05em;
+    line-height:131%;
+    margin-top:6rem;
+  }
+  footer .footer-title {
+    margin-bottom:.5rem;
+  }
+  footer a:not(.link-logo) {
+    font-size:1.3rem;
+    letter-spacing:.05em;
+    line-height:131%;
+  }
+  footer a:not(.link-logo).router-link-active {
+    font-size:1.3rem;
+    letter-spacing:.05em;
+    line-height:131%;
+    opacity:.5;
+  }
+  footer .upper-footer {
+    grid-column-end:span 12;
+    grid-column-start:2;
+    padding-bottom:4rem;
+    padding-top:2rem;
+  }
+  footer .upper-footer .email {
+    grid-column-end:span 6;
+  }
+  footer .upper-footer .tel {
+    grid-column-end:span 6;
+    justify-self:flex-end;
+    text-align:right;
+  }
+  footer .upper-footer .social {
+    grid-column-end:span 5;
+    grid-column-start:8;
+    grid-row-start:2;
+    justify-self:flex-end;
+    margin-top:3rem;
+    text-align:right;
+  }
+  footer .upper-footer .address {
+    grid-column-end:span 6;
+    margin-top:0;
+  }
+  footer .upper-footer .partner {
+    grid-column-end:span 6;
+    justify-self:flex-start;
+    margin-top:3rem;
+    text-align:left;
+  }
+  footer .lower-footer {
+    align-items:flex-start;
+    padding-bottom:2rem;
+    padding-top:2rem;
+  }
+  footer .lower-footer .nav-extra {
+    justify-self:flex-end;
+    margin-bottom:3rem;
+  }
+  footer .lower-footer .logo,footer .lower-footer .nav-extra {
+    grid-column-end:span 6;
+    grid-row-start:1;
+    text-align:right;
+  }
+  footer .lower-footer .logo {
+    grid-column-start:1;
+    justify-self:flex-start;
+  }
+  footer .lower-footer .logo svg {
+    width:13.7rem;
+  }
+  footer .lower-footer .footer-bottom-right {
+    grid-column-end:span 6;
+    grid-column-start:1;
+    grid-row-start:2;
+    justify-self:flex-start;
+  }
+  footer .lower-footer .luxury-hotels-logo {
+    align-self:flex-end;
+    grid-column-end:span 3;
+    grid-column-start:10;
+    justify-self:flex-end;
+    text-align:right;
+  }
+  footer .lower-footer .nav-footer {
+    margin-top:1.5rem;
+  }
+  footer .lower-footer .nav-footer,footer .lower-footer .nav-lang {
+    justify-self:flex-start;
+    text-align:left;
+  }
+  footer .lower-footer .unikateur-signet {
+    font-size:1.5rem;
+    font-weight:400;
+    letter-spacing:.07em;
+    line-height:100%;
+    margin-top:4rem;
+  }
+  footer .lower-footer .unikateur-signet a {
+    align-items:baseline;
+  }
+  footer .lower-footer .unikateur-signet svg {
+    width:6rem;
+  }
+}
+@media (max-width:1023px) and (max-width:1023px) {
+  footer .lower-footer .unikateur-signet {
+    font-size:1.2rem;
+    letter-spacing:.07em;
+    line-height:100%;
+  }
+}
