@@ -1,7 +1,6 @@
 'use client';
 import { useRef } from 'react';
 import type { ImgTextSection } from '@/lib/content';
-import { Mask } from './Mask';
 import { Picture } from '@/components/ui/Picture';
 import { SplitWords } from '@/components/ui/SplitWords';
 import { RichText } from '@/components/ui/RichText';
@@ -18,8 +17,10 @@ export function ImgText({ section }: { section: ImgTextSection }) {
   const rightRef = useRef<HTMLDivElement>(null);
   useParallax(leftRef, 1.5); // original: smoother.effects(picture-left, { speed: 1.5 })
   useParallax(rightRef, 1.05); // original: smoother.effects(picture-right, { speed: 1.05 })
+  const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_imgtext']
+    .filter(Boolean).join(' ');
   return (
-    <Mask type="imgtext" uid={section.id} appearance={section.appearance}>
+    <div className={cls} {...{ uid: `c${section.id}` }}>
       <div className="grid-container">
         {left.map((img, i) => (
           <div className="image-left" key={i} ref={i === 0 ? leftRef : undefined}>
@@ -38,6 +39,6 @@ export function ImgText({ section }: { section: ImgTextSection }) {
           {c.text ? <RichText className="text" html={c.text} /> : null}
         </div>
       </div>
-    </Mask>
+    </div>
   );
 }

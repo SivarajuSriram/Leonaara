@@ -1,7 +1,6 @@
 'use client';
 import { useRef } from 'react';
 import type { HeroSection } from '@/lib/content';
-import { Mask } from './Mask';
 import { Picture } from '@/components/ui/Picture';
 import { SplitWords } from '@/components/ui/SplitWords';
 import { RichText } from '@/components/ui/RichText';
@@ -21,8 +20,11 @@ export function Hero({ section }: { section: HeroSection }) {
   useParallax(bigRef, 1.15); // original: smoother.effects(picture[0], { speed: 1.15 })
   useParallax(smallRef, 1.5); // original: smoother.effects(picture[1], { speed: 1.5 })
 
+  const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_hero', `hero-${c.herolayout}`]
+    .filter(Boolean).join(' ');
+
   return (
-    <Mask type="hero" uid={section.id} appearance={section.appearance} className={`hero-${c.herolayout}`}>
+    <div className={cls} {...{ uid: `c${section.id}` }}>
       <div className="grid-container">
         <div className="image-wrapper">
           {c.title ? <h1 className="title" dangerouslySetInnerHTML={{ __html: c.title }} /> : null}
@@ -41,6 +43,6 @@ export function Hero({ section }: { section: HeroSection }) {
           </div>
         ))}
       </div>
-    </Mask>
+    </div>
   );
 }

@@ -3,7 +3,6 @@ import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, A11y, Keyboard, FreeMode } from 'swiper/modules';
 import type { PartnerMarqueeSection, Partner } from '@/lib/content';
-import { Mask } from './Mask';
 import { Picture } from '@/components/ui/Picture';
 import { SplitWords } from '@/components/ui/SplitWords';
 import { RichText } from '@/components/ui/RichText';
@@ -50,8 +49,11 @@ export function PartnerMarquee({ section }: { section: PartnerMarqueeSection }) 
     return () => { loopRef.current?.kill(); loopRef.current = null; };
   }, { scope: wrapRef });
 
+  const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_partnermarquee']
+    .filter(Boolean).join(' ');
+
   return (
-    <Mask type="partnermarquee" uid={section.id} appearance={section.appearance}>
+    <div className={cls} {...{ uid: `c${section.id}` }}>
       <div className="grid-container">
         <div className="content">
           {c.title ? <SplitWords as="h2" className="title" html={c.title} /> : null}
@@ -68,6 +70,6 @@ export function PartnerMarquee({ section }: { section: PartnerMarqueeSection }) 
           </div>
         </div>
       </div>
-    </Mask>
+    </div>
   );
 }

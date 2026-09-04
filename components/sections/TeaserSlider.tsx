@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Controller, EffectFade, Navigation } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
 import type { TeaserSliderSection } from '@/lib/content';
-import { Mask } from './Mask';
 import { Picture } from '@/components/ui/Picture';
 import { Button } from '@/components/ui/Button';
 import { ArrowSliderIcon } from '@/components/ui/icons';
@@ -19,9 +18,11 @@ export function TeaserSlider({ section }: { section: TeaserSliderSection }) {
   const prevRef = useRef<HTMLDivElement>(null);
   const nextRef = useRef<HTMLDivElement>(null);
   const multi = slides.length > 1;
+  const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_teaserslider']
+    .filter(Boolean).join(' ');
 
   return (
-    <Mask type="teaserslider" uid={section.id} appearance={section.appearance}>
+    <div className={cls} {...{ uid: `c${section.id}` }}>
       <div className="grid-container">
         <div className="teaser-wrapper grid-container-inner">
           <Swiper className="image-left" loop allowTouchMove={false} onSwiper={setLeft}>
@@ -108,6 +109,6 @@ export function TeaserSlider({ section }: { section: TeaserSliderSection }) {
           ) : null}
         </div>
       </div>
-    </Mask>
+    </div>
   );
 }

@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Controller, EffectFade, Navigation } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
 import type { RoomSliderSection } from '@/lib/content';
-import { Mask } from './Mask';
 import { Picture } from '@/components/ui/Picture';
 import { Button } from '@/components/ui/Button';
 import { ArrowSliderIcon } from '@/components/ui/icons';
@@ -19,9 +18,11 @@ export function RoomSlider({ section }: { section: RoomSliderSection }) {
   const prevRef = useRef<HTMLDivElement>(null);
   const nextRef = useRef<HTMLDivElement>(null);
   const suiteHref = (title: string) => `/suites/${title}/`;
+  const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_roomslider', 'grid-container']
+    .filter(Boolean).join(' ');
 
   return (
-    <Mask type="roomslider" uid={section.id} appearance={section.appearance} className="grid-container">
+    <div className={cls} {...{ uid: `c${section.id}` }}>
       <div className="grid-container-inner">
         <Swiper className="room-image-left" loop allowTouchMove={false} onSwiper={setLeft}>
           {rooms.map((r) => (
@@ -85,6 +86,6 @@ export function RoomSlider({ section }: { section: RoomSliderSection }) {
           </div>
         ) : null}
       </div>
-    </Mask>
+    </div>
   );
 }

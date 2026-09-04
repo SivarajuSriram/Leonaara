@@ -1,7 +1,6 @@
 'use client';
 import { useRef } from 'react';
 import type { QuoteSection } from '@/lib/content';
-import { Mask } from './Mask';
 import { Picture } from '@/components/ui/Picture';
 import { SplitWords } from '@/components/ui/SplitWords';
 import { useParallax } from '@/components/ui/useParallax';
@@ -11,8 +10,10 @@ export function Quote({ section }: { section: QuoteSection }) {
   const c = section.content;
   const imgRef = useRef<HTMLDivElement>(null);
   useParallax(imgRef, 1.6); // original: smoother.effects(picture, { speed: 1.6 })
+  const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_quote']
+    .filter(Boolean).join(' ');
   return (
-    <Mask type="quote" uid={section.id} appearance={section.appearance}>
+    <div className={cls} {...{ uid: `c${section.id}` }}>
       <div className="grid-container">
         {c.img.map((img, i) => (
           <div className="image" key={i} ref={i === 0 ? imgRef : undefined}>
@@ -25,6 +26,6 @@ export function Quote({ section }: { section: QuoteSection }) {
           <div className="autor">{c.autor}</div>
         </div>
       </div>
-    </Mask>
+    </div>
   );
 }

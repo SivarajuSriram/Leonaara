@@ -1,7 +1,6 @@
 'use client';
 import { useRef } from 'react';
 import type { BreakSection } from '@/lib/content';
-import { Mask } from './Mask';
 import { Picture } from '@/components/ui/Picture';
 import { SplitWords } from '@/components/ui/SplitWords';
 import { useParallax } from '@/components/ui/useParallax';
@@ -17,8 +16,10 @@ export function Break({ section }: { section: BreakSection }) {
   const rightRef = useRef<HTMLDivElement>(null);
   useParallax(leftRef, 1.2); // original: smoother.effects(picture-left, { speed: 1.2 })
   useParallax(rightRef, 1.5); // original: smoother.effects(picture-right, { speed: 1.5 })
+  const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_break']
+    .filter(Boolean).join(' ');
   return (
-    <Mask type="break" uid={section.id} appearance={section.appearance}>
+    <div className={cls} {...{ uid: `c${section.id}` }}>
       <div className="break-wrapper grid-container">
         {left.map((img, i) => (
           <div className="image-left" key={i} ref={i === 0 ? leftRef : undefined}>
@@ -34,6 +35,6 @@ export function Break({ section }: { section: BreakSection }) {
           </div>
         ))}
       </div>
-    </Mask>
+    </div>
   );
 }

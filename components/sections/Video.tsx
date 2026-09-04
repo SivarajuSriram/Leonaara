@@ -3,7 +3,6 @@
 // play while it's visible, pause when it isn't.
 import { useEffect, useRef } from 'react';
 import type { VideoRef, VideoSection } from '@/lib/content';
-import { Mask } from './Mask';
 import { useIsWinter } from '@/lib/season';
 import './Video.css';
 
@@ -41,13 +40,15 @@ export function Video({ section }: { section: VideoSection }) {
   const c = section.content;
   const winter = useIsWinter();
   const list: VideoRef[] = !winter && c.videosummer.length ? c.videosummer : c.video;
+  const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_video', 'grid-container']
+    .filter(Boolean).join(' ');
   return (
-    <Mask type="video" uid={section.id} appearance={section.appearance} className="grid-container">
+    <div className={cls} {...{ uid: `c${section.id}` }}>
       {list.map((v, i) => (
         <div key={i}>
           <Player src={v.src} />
         </div>
       ))}
-    </Mask>
+    </div>
   );
 }
