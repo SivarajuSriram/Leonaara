@@ -8,10 +8,8 @@ const META_KEYS = new Set(['header', 'subheader', 'headerLayout', 'headerPositio
 function isImage(o: unknown): o is Json {
   return !!o && typeof o === 'object' && 'originalUrl' in (o as Json) && 'dimensions' in (o as Json);
 }
-// originalUrl is percent-encoded once by the CMS export; some paths (e.g. ones
-// that already contained a literal "%" in the filename) end up encoded twice.
-// A second decodeURIComponent is a no-op on an already-decoded string, so
-// calling it twice is safe and covers both cases without detecting which one we have.
+// Some paths in the crawl are percent-encoded twice; decoding twice restores
+// them (paths here never contain a literal '%').
 function toSrc(originalUrl: string): string {
   let p = originalUrl;
   try { p = decodeURIComponent(p); } catch { /* keep */ }

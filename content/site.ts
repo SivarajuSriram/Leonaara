@@ -32,8 +32,9 @@ export const site = {
   ],
   pageLinks: { home: '/en/', request: '/en/request/', contact: '/en/contact-and-arrival/', voucher: '/en/voucher/', gallery: '/en/gallery/' },
   contact: { email: 'hide@eriro.at', tel: '0043 5673 40506', address: 'Ehrwalder Alm 4\r\n6632 Ehrwald, Austria' },
+  // raw value (no <br>); the footer applies nl2br like the original
   socialHtml:
-    '<a href="https://www.instagram.com/eriro.alpinehide?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" rel="nofollow" target="_blank" aria-label="Instagram">Instagram</a><br>\r\n<a href="https://www.facebook.com/eriroalpinehide" rel="nofollow" target="_blank" aria-label="Facebook">Facebook</a>',
+    '<a href="https://www.instagram.com/eriro.alpinehide?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" rel="nofollow" target="_blank" aria-label="Instagram">Instagram</a>\r\n<a href="https://www.facebook.com/eriroalpinehide" rel="nofollow" target="_blank" aria-label="Facebook">Facebook</a>',
   partnerHtml:
     '<a href="https://www.laposch.com/en/" target="_blank" rel="noopener" aria-label="www.laposch.com">laposch.com</a><br>\r\n<a href="https://www.hotel-spielmann.com/en/" target="_blank" rel="noopener" aria-label="www.hotel-spielmann.com">hotel-spielmann.com</a>',
   bookingLink: 'https://be.synxis.com/?chain=22402&hotel=47531&src=24C',
