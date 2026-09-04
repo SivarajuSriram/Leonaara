@@ -5,6 +5,8 @@ import { SmoothScroll } from '@/components/layout/SmoothScroll';
 import { PageTransition } from '@/components/layout/PageTransition';
 import { Footer } from '@/components/layout/Footer';
 
+export const viewport = { width: 'device-width', initialScale: 1 };
+
 const FONTS = [
   'karol-sans-300-normal',
   'karol-sans-300-italic',
@@ -22,7 +24,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="format-detection" content="telephone=no" />
       </head>
-      <body>
+      <body className="pid-1 layout-layout-0">
         <div className="body-inner">
           <div id="__app">
             <Header />
