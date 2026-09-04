@@ -364,3 +364,229 @@ Only two layout modes exist: `≤1023px` and `≥1024px`, plus the root font-siz
 2. Forms: front end complete; backend delivery deferred, route handler is a validating stub (9.26).
 3. Newsletter and voucher widgets: not loaded; empty containers keep the layout (9.20).
 4. No Vercel deployment with eriro's fonts and images; local build only.
+
+## 16. Phase 1b amendments — architecture rework & scope changes (user, 2026-09-04)
+
+Status: **drafted, independently critiqued and revised, all open points resolved
+2026-09-04 — ready for final user sign-off before planning.** The critique pass
+caught and fixed: an incorrect Playwright-deletion claim (§16.2 — the
+`tests/e2e/` suite is a real, unrelated test suite and stays), an understated
+`/en/` blast radius (§16.1), an incomplete beige-background list missing the menu
+panel/mobile SVG blob/filter-hover sites (§16.3), and a missing §8 supersession
+plus an under-specified Tailwind escape-hatch for cross-sibling hover cascades
+(§16.4). §16.7's four open points are all resolved. Written from the Phase 1b ledger
+(`.superpowers/sdd/2026-09-04-eriro-phase1-home/progress.md`, entries from
+2026-09-04 18:36 onward) and `/home/sriram/Desktop/HANDOFF.md` §2, both of which
+quote the user's own words verbatim; this section formalises those into spec
+language. It supersedes specific line items below by reference — it does not edit
+them in place, so the original decision (and why it changed) stays legible.
+
+Scope: applies first to the homepage, the only page built so far. Binding for every
+later page too, so §4's routes and §13's phasing are read with these amendments in
+force once work resumes on them.
+
+### 16.1 No `/en/` prefix, no language layer at all
+
+Supersedes §2 item 1 and every `/en/...` path in §4. The German mirror is not
+"phase 3, not in this spec" (deferred) — it is **cancelled**. There is exactly one
+language, so there is no reason for a language segment in the URL. Home moves from
+`app/en/page.tsx` to `app/page.tsx` (root `/`). The `/ → /en/` redirect in §4's
+route table no longer exists — `/` **is** the homepage. Every other route in §4
+loses its `/en/` prefix when it is eventually built (`/all-in-service/`,
+`/suites/boum/`, etc.); `hreflang` stays omitted, permanently now rather than
+provisionally.
+
+`/en/` is not confined to the route folder — it is already hardcoded in built
+code and tests, all of which are in scope for this item: every nav/footer `href`
+in `content/site.ts` (nine-plus entries, e.g. `/en/alpine-hide/`); the URL builder
+in `lib/pages.ts`; `Header.tsx`'s `isHome` check
+(`pathname === '/en/' || pathname === '/en'`); `playwright.config.ts`'s
+`webServer.url: 'http://localhost:3000/en/'`; and the `/en/` assertions spread
+across all 7 `tests/e2e/*.spec.ts` files and several `tests/unit/*.test.ts(x)`
+files (15 files reference `/en/` in total). All of these are updated as part of
+this item, not left for a later pass.
+
+### 16.2 No live fetching, no generated content, no custom runtime image route
+
+Verbatim: *"do not use cheap tricks for fetching the information and images to
+display on this local version by using script files or any cheap tactics — build
+them correctly."* Confirmed via follow-up to cover all three of the following.
+Supersedes §5's `scripts/gen-content.ts`+`content/en/home.ts` pipeline description,
+§9.24's `/i`-route-shaped Picture design as currently implemented, and §12 item 1's
+Playwright-vs-live screenshot diff.
+
+- **Content**: delete `scripts/gen-content.ts` and the generated
+  `content/en/home.ts` (currently a direct serialisation of the crawled TYPO3
+  payload — `mask_hero`/`appearance`/`content` nesting, `id`/`uid` fields, `\r\n` in
+  strings — unreadable to a new developer). Replace with one small,
+  **hand-written** content file per page: a plain object literal, one entry per
+  section, using the `Section` union from §6 directly (not the TYPO3 shape). Text
+  values are still copied verbatim from the crawled reference (typos and all, per
+  §6) — "hand-written" means the *file*, not the *wording*, is authored by hand.
+- **Images**: delete `app/i/route.ts`, the hand-rolled crop+resize server it runs
+  at request time, and the `sharp` runtime dependency it needs. **Resolved
+  (§16.7(a)):** the original site's own `_ipx` (Nuxt's built-in image module) is
+  itself a framework-native on-demand resize/format service — the same kind of
+  thing as Next's `next/image` — the only capability gap is that `_ipx` also does
+  arbitrary-rectangle cropping, which `next/image`'s built-in `/_next/image`
+  optimizer cannot. So: crop each image to its per-breakpoint rectangle (from
+  §9.24's crop table) **once, offline**, and commit the cropped files under
+  `public/images/`; `next/image` then handles resizing/format/lazy-loading from
+  those cropped files live, matching the original's architecture (a framework-
+  provided optimizer, not a custom script) rather than pre-baking every
+  breakpoint size as a separate static file.
+- **QA**: delete `scripts/qa/screenshots.ts`, `scripts/qa/diff.ts`,
+  `scripts/qa/textdiff.ts` and the `pixelmatch`/`pngjs`/`@types/pngjs`
+  dependencies they alone justify. §12 item 1 and 2 (screenshot diff, text diff)
+  are retired as *live* comparisons; going forward, QA compares the build against
+  the already-downloaded reference material in `docs/reference/screenshots/` and
+  the crawled reference HTML/JSON, never against a live fetch. §12 item 3
+  (behaviour checklist) and item 4 (`next build`, Lighthouse) are unaffected.
+  **`@playwright/test` is *not* deleted** — `playwright.config.ts` and the 7 specs
+  under `tests/e2e/` are a genuine, already-committed behavioural e2e suite
+  (header scroll state, room-slider hrefs, marquee, the `/i` route) unrelated to
+  the rejected live-fetch scripts; only their `/en/`-prefixed URLs (§16.1) and the
+  now-deleted `/i` route's own test (`image-route.spec.ts`, rewritten to cover
+  the static-image replacement instead) need updating, not removal.
+
+### 16.3 Flat `#F2F1EF` background, `#e4e0db` stays for lines only
+
+Supersedes the background-colour applications of §3, §8.1 and §8.3 (only where
+they are backgrounds, not borders). Every `#e4e0db` **fill** becomes `#F2F1EF`:
+- `body` and the scrolled header bar (`body.scrolled`), §8.1.
+- The Break section wrapper background and PartnerMarquee's section background,
+  §9.6/§9.9.
+- `.ht-button` hover background, §7.
+- `header .menu`'s slide-down panel background (`Header.css:102`), §8.3.
+- The mobile header's beige SVG blob background (`Header.css:252`) — this one is
+  **not** a plain CSS colour swap: the colour is baked into a data-URI SVG's
+  `fill='%23E4E0DB'`. Re-export the same SVG shape with `fill='%23F2F1EF'` (or
+  reference it as a static asset with the fill parameterised) rather than trying
+  to override it via CSS.
+- §9.15's `filter-hover` background (`background-color:#e4e0db!important`, in
+  `docs/reference/css-clean/pagefilter.css`/`rooms.css`) — not yet built (Rooms/
+  PageFilter are a later phase per §13), but binding once it is, per this item's
+  scope line.
+
+`public/HG.jpg` (the paper texture) stays layered over the new colour exactly as
+before — only the flat colour under it changes. Text colour `#211d1d` and the dark
+`#211d1db3` menu overlay are unchanged. `#e4e0db` is **kept** everywhere it is a
+border/line/underline/hr rather than a fill — every `border-top: 2px solid
+#e4e0db` in §8.4, §9.12, §9.13, §9.14, §9.15, and the header's scrolled-state
+border-adjacent uses are unaffected by this item. The unused `--color-beige:
+#e4e0db` token in the Tailwind `@theme` block is joined by a new
+`--color-canvas: #F2F1EF` token (or renamed/repurposed, implementer's call) so the
+fill colour has a semantic name distinct from the border colour, rather than
+seven-plus raw hex sites edited independently with no shared token.
+
+### 16.4 Direct composition — no SectionRenderer, no Mask, Tailwind utilities in JSX
+
+Verbatim: *"why are you using sectionrenderer? ... Can't you make the code simple?
+so that i can understand and even the new developer understands it when i hand it
+over? Why so complex? And like i had asked you to use tailwind css, so why so many
+css files and classes? Very irritating and confusing!!"* Supersedes §5's
+`components/sections/SectionRenderer.tsx`/`Mask.tsx` entries, §5's "Component CSS
+... lives in a CSS module next to the component" rule, §7's implicit reliance on
+copied verbatim class-name selectors, the "every section wrapped by `Mask`"
+sentence opening §9 (the twenty-six section subsections after it, §9.1–9.26, are
+**not** superseded — they remain the authoritative behaviour/measurement spec for
+each section; only the *implementation shape* changes), and **§8's layout
+components** (Header, Footer — already-built `.css` files, not just the section
+components §9 covers).
+
+- `SectionRenderer` (a `Section['type']` → component type-union dispatch) and
+  `Mask` (the shared wrapper that applied `mask mask_{type} space-before-{X}`
+  classes) are deleted entirely. `app/page.tsx` imports and composes every section
+  component directly, in page order, passing explicit typed props — no generic
+  renderer, no dispatch table.
+- Styling moves to **Tailwind v4 utility classes written directly in JSX**, using
+  the original stylesheet's exact numeric values as arbitrary values (e.g.
+  `mt-[-22.5rem]`, `pt-[43rem]`), `lg:` as the 1024px breakpoint prefix matching
+  §11's single breakpoint. The 13 existing per-component `.css` files
+  (`Header.css`, `Footer.css`, `Break.css`, `Hero.css`, `Img.css`, `ImgText.css`,
+  `PartnerMarquee.css`, `Quote.css`, `RoomSlider.css`, `TeaserSlider.css`,
+  `Video.css`, `Picture.css`, `app/not-found.css`) are deleted. The `styles/`
+  directory's existing split into `base.css`, `fonts.css`, `globals.css`,
+  `links.css`, `swiper.css` is **not** required to collapse into one literal file
+  — "one short globals.css" means the total surviving hand-written CSS stays small
+  and non-component-scoped, not that today's five top-level files must merge.
+  What they keep, across all of them: `@font-face`, the `vw`-based root font-size
+  rules, Swiper's own base CSS import, and any rule Tailwind genuinely cannot
+  express (documented inline with a comment saying why) — everything else
+  Tailwind can express does not get a CSS-file escape hatch just for convenience.
+  Confirmed escape-hatch cases, beyond the `nth-child` gallery placement (§9.11)
+  and horizontal-loop marquee mechanics (§9.9/§9.10) already named: **cross-sibling
+  hover cascades**, e.g. §8.3's `header .nav-main:hover .level-0:hover a` /
+  `:not(:hover).fadeOut` rule (dim every nav link except the hovered one) — this
+  needs Tailwind's `group`/`peer` variants restructuring the JSX around a shared
+  hover-owner element, not an arbitrary-value utility on one element in isolation;
+  it is not a plain CSS-file holdout, but it is a harder rewrite than the rest of
+  this item and should be budgeted as such in the task brief.
+- The visual result is contractually unchanged — §1's "1:1" definition still holds
+  in full. This item is a code-organisation/readability rewrite, not a design
+  change; any pixel difference it introduces is a bug, not an accepted trade-off.
+
+### 16.5 Sitewide newsletter popup (new §8.7 layout component)
+
+Verbatim: *"i think the popup is missing as well right? Please add it as well. just
+like it is in that website."* This is additive to §8 (Layout components), not a
+supersession — the popup is sitewide (mounted once in `app/layout.tsx` alongside
+Header, Footer, SmoothScroll and CookieConsent, §8.2–8.6), not a per-page
+`Section`, so it belongs as a new **§8.7** rather than floating unowned relative
+to §9's per-page sections. Facts recovered before the capture
+assets were lost (ledgered, solid) and preserved in HANDOFF.md §2 item 6: ADDITIVE
+`OnPageLeadCampaign` id `10625`; plain `div#10625.aa-popup-modal-wrapper`
+`z-index: 9999999`; fires 5s after page view; closes only via ✕ (no Esc, no
+backdrop click); no exit animation; open animation is backdrop
+`rgba(0,0,0,0→.5)` 0.3s linear + card `scale(.9→1)` 0.5s
+`cubic-bezier(.85,1.5,.5,1)`; mobile variant slides up as a bottom sheet; scroll
+lock via inline `overflow:hidden` on `<html>`; dismissal per-session via a cookie
+with a ~4h sliding expiry. Built as a hand-coded React component — no third-party
+script is loaded, consistent with §2's "analytics and trackers ... not cloned" (that
+non-goal is about not loading the vendor's own JS/tracking, not about the visual/
+behavioural clone, which this item explicitly asks for). The two-step form's second
+step layout was never captured (only its i18n strings survived) — see §16.7 open
+point (c). A separate, unrelated cookie-consent bar (`vanilla-cookieconsent`,
+`#cc-main`, already spec'd at §8.6) is explicitly out of scope for this item.
+
+### 16.6 Known bugs folded into this rework
+
+- `SmoothScroll`'s kill/recreate cycle at the 1024px breakpoint (§8.5) orphans the
+  `SplitWords` (§9.25) and logo (§8.2) `ScrollTrigger` instances it doesn't own,
+  freezing affected headings at 20% opacity mid-transition. Root cause identified,
+  not yet fixed; fix as part of this rework since §16.4 touches every affected
+  component anyway.
+  Favicon is still missing (`app/favicon.ico`/`icon.svg` never added despite §10's
+  "favicon set" line) — add it.
+
+### 16.7 Open points — all resolved (user, 2026-09-04)
+
+- (a) **Image derivative generation — resolved: pre-crop + `next/image`.** Per the
+  user: match the original site's own architecture. The original uses Nuxt's
+  `_ipx` (a framework-native on-demand resize/format service — the Nuxt equivalent
+  of `next/image`); the only thing `_ipx` does that `next/image` can't is
+  arbitrary-rectangle cropping. So the crop step is pre-baked once, offline (see
+  §16.2's Images bullet), and `next/image`'s built-in optimizer handles resizing/
+  format/lazy-loading from those cropped files live — the same shape as the
+  original, not a hand-rolled substitute for it.
+- (b) **QA replacement mechanics — resolved.** Checked: `docs/reference/screenshots/`
+  holds 18 files with opaque timestamp names (`screenshot-1788498756234-0.jpg`
+  etc.), no page/breakpoint encoded in the filename or verified coverage. Not
+  reusable as-is. Resolution: as part of the QA task, do **one** fresh reference
+  capture against the live site (a one-time static-reference capture is allowed
+  under §16.2 — it is captured once and committed, not fetched live at QA-run
+  time), scoped to the homepage only (Phase 1b's actual scope), at the three
+  breakpoints from §12 item 1, with descriptive filenames
+  (`home-1920-{scroll step}.jpg` etc.) replacing the opaque ones.
+- (c) **Popup two-step form — resolved: fresh capture pass first.** Per the user:
+  do a fresh capture pass against the live site (triggering the popup through to
+  its second step) before building, for pixel fidelity, rather than guessing the
+  layout from the recovered i18n strings alone or shipping step 1 only. This
+  capture is scoped narrowly to the popup (not a repeat of the full Task-15-style
+  crawl) and is itself a one-time static-reference capture, consistent with §16.2.
+- (d) **Perf diagnosis — resolved.** Fix only the confirmed SmoothScroll bug
+  (§16.6) as part of this rework, then re-measure after it lands — the CSS-file
+  deletion and Tailwind conversion change enough of the runtime that a pre-rework
+  full diagnosis would partly be measuring code this rework deletes anyway. Only
+  redo the full diagnosis workflow if the site still feels laggy once Phase 1b is
+  in, per (7) in the Phase 1b task order.
