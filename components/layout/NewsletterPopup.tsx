@@ -504,7 +504,7 @@ export function NewsletterPopup() {
 
         {step === 1 && (
           <div className="relative h-[32rem] w-full shrink-0 max-lg:h-[18.7rem]">
-            <Image src="/images/eriro-alpine-hide-oesterreich-ehrwald-luxus-08.jpg" alt="" fill sizes="84rem" className="object-cover" quality={80} />
+            <Image src="/images/eriro-alpine-hide-oesterreich-ehrwald-luxus-08.jpg" alt="" fill sizes="(max-width: 1023px) 100vw, 840px" className="object-cover" quality={80} />
             <div className="absolute inset-0 bg-ink/20" />
           </div>
         )}

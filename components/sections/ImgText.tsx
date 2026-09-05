@@ -10,7 +10,7 @@ import { useIsWinter } from '@/lib/season';
 // mask_imgtext .image-left{grid-column-end:span 4;grid-column-start:1;grid-row-end:
 // span 2;grid-row-start:2;margin-top:-22.5rem} + mobile{grid-column-end:span 5;
 // grid-column-start:1 (unchanged, not restated below);margin-top:-5.5rem}
-const imageLeftCls = 'image-left col-start-1 col-span-4 row-start-2 row-span-2 mt-[-22.5rem] max-lg:col-span-5 max-lg:mt-[-5.5rem]';
+const imageLeftCls = 'image-left col-start-1 col-span-4 row-start-2 row-span-2 mt-[-22.5rem] max-lg:col-start-1 max-lg:col-span-5 max-lg:mt-[-5.5rem]';
 
 // mask_imgtext .image-right{grid-column-start:10;margin-bottom:7.5rem} + shared
 // (with .content) grid-column-end:span 4 + mobile{grid-column-end:span 8;
