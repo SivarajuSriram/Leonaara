@@ -20,7 +20,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {FONTS.map((f) => (
           <link key={f} rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" href={`/fonts/${f}.woff2`} />
         ))}
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x3201.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x1601.png" />
+        <link rel="mask-icon" href="/images/favicon/safari-pinned-tab01.svg" color="#211D1D" />
+        <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
         <meta name="format-detection" content="telephone=no" />
       </head>
       <body className="pid-1 layout-layout-0">
