@@ -235,6 +235,17 @@ function Step1({ fields, onSubmit }: { fields: FieldState; onSubmit: (e: FormEve
 function Step2({ fields, barRef, onBack, onSubmit }: { fields: FieldState; barRef: React.RefObject<HTMLDivElement | null>; onBack: () => void; onSubmit: (e: FormEvent) => void }) {
   return (
     <div>
+      {/* Step 2's capture has no visible on-screen heading (unlike step 1's
+          <h2> and the success state's "Almost done!"), but the dialog's
+          aria-labelledby (see the card div below) needs an element with id
+          "newsletter-popup-heading" to exist in every step, or assistive
+          tech gets a dangling reference and the dialog reads as unlabeled.
+          A visually hidden heading keeps the same accessible name across
+          steps 1 and 2 (same offer/form) without adding anything to the
+          capture's visible DOM. */}
+      <h2 id="newsletter-popup-heading" className="sr-only">
+        €150 Towards Your First Escape at eriro
+      </h2>
       <div className="mb-[2.4rem]">
         <button type="button" onClick={onBack} className="inline-flex cursor-pointer items-center gap-[0.4rem] border-0 border-b border-ink pb-[0.4rem] text-[1.4rem] leading-[1.6rem] tracking-[0.025em] font-bold text-ink">
           <BackIcon />
@@ -343,7 +354,11 @@ function SuccessState() {
   return (
     <div className="flex flex-col items-center gap-[1.6rem] py-[4rem] text-center">
       <EnvelopeIcon className="h-[4.8rem] w-[4.8rem] fill-ink" />
-      <h2 className="text-[2.4rem] leading-[2.8rem] font-light tracking-[0.025em] text-ink">Almost done!</h2>
+      {/* Same id as Step1's and Step2's heading -- see the card div's
+          aria-labelledby below -- so the dialog gets an updated, still-valid
+          accessible name once it reaches this state, instead of a dangling
+          reference. */}
+      <h2 id="newsletter-popup-heading" className="text-[2.4rem] leading-[2.8rem] font-light tracking-[0.025em] text-ink">Almost done!</h2>
       <p className="max-w-[42rem] text-[1.6rem] leading-[2.2rem] tracking-[0.025em] text-ink">
         Thank you for your registration. To complete your sign-up, please check your email inbox and click the confirmation
         link in the email we sent you.
@@ -455,6 +470,10 @@ export function NewsletterPopup() {
         ref={cardRef}
         role="dialog"
         aria-modal="true"
+        // Every step's body (Step1's <h2>, Step2's sr-only <h2>,
+        // SuccessState's <h2>) renders an element with this same id, so the
+        // dialog always has a valid, non-dangling accessible name -- not
+        // just on step 1.
         aria-labelledby="newsletter-popup-heading"
         className="relative m-[4rem] flex max-h-[85%] min-h-[36rem] w-[84rem] max-w-[calc(100%-8rem)] flex-col overflow-hidden rounded-[0.2rem] bg-[#F4F2F1] shadow-[0_0.4rem_1.2rem_rgba(0,0,0,0.2),0_0_0_0.1rem_rgba(0,0,0,0.05)] max-lg:absolute max-lg:inset-x-0 max-lg:top-[5.1rem] max-lg:m-0 max-lg:max-h-[calc(100%-5.1rem)] max-lg:min-h-0 max-lg:w-full max-lg:max-w-full max-lg:rounded-b-none"
       >

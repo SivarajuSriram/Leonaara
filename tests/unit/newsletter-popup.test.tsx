@@ -93,4 +93,32 @@ describe('NewsletterPopup', () => {
     expect(screen.queryByRole('dialog')).toBeNull();
     expect(document.cookie).toContain('eriro_popup_dismissed=1');
   });
+
+  // Regression test: the dialog's aria-labelledby="newsletter-popup-heading"
+  // is hardcoded once in the card div, but each step renders its own body.
+  // Querying with a `name` filter forces Testing Library to resolve the
+  // accessible name via aria-labelledby -- if the id doesn't match a
+  // rendered element in a given step, this throws (no match), unlike the
+  // other tests above which query getByRole('dialog') with no name filter
+  // and would pass even with a dangling reference.
+  it('has a valid accessible name (aria-labelledby resolves) in all three states', () => {
+    render(<NewsletterPopup />);
+    advance5s();
+
+    // Step 1: labelled by its visible offer heading.
+    expect(screen.getByRole('dialog', { name: '€150 Towards Your First Escape at eriro' })).not.toBeNull();
+
+    fireEvent.change(screen.getByLabelText('Email'), { target: { value: 'popup-capture-test@example.com' } });
+    fireEvent.click(screen.getByRole('button', { name: /claim your €150 welcome gift/i }));
+
+    // Step 2: labelled by a visually hidden heading with the same id --
+    // there is no visible on-screen heading on this step.
+    expect(screen.getByRole('dialog', { name: '€150 Towards Your First Escape at eriro' })).not.toBeNull();
+
+    fireEvent.click(screen.getByLabelText(/data protection regulations/i));
+    fireEvent.click(screen.getByRole('button', { name: /claim your €150 welcome gift/i }));
+
+    // Success state: labelled by its own visible "Almost done!" heading.
+    expect(screen.getByRole('dialog', { name: 'Almost done!' })).not.toBeNull();
+  });
 });
