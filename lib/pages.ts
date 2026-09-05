@@ -19,7 +19,9 @@ export function metadataFor(page: PageContent): Metadata {
     title: m.title,
     description: m.description,
     robots: { index: !m.robots.noIndex, follow: !m.robots.noFollow, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
-    alternates: { canonical: path, languages: { en: path } },
+    // spec §16.1: the German mirror is cancelled (not deferred) -- there is
+    // exactly one language, so `hreflang` stays omitted, permanently.
+    alternates: { canonical: path },
     openGraph: { title: m.ogTitle, description: m.ogDescription, type: 'website', images: m.ogImage ? [{ url: m.ogImage.src }] : [] },
     twitter: { card: 'summary', title: m.twitterTitle, description: m.twitterDescription, images: m.twitterImage ? [m.twitterImage.src] : [] },
   };

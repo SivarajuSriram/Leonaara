@@ -26,8 +26,11 @@ export const site = {
     { uid: 6, title: 'Privacy', link: '/privacy/' },
     { uid: 7, title: 'Cookies', link: '/cookies/' },
   ] as NavItem[],
+  // spec §16.1: the German mirror is cancelled -- there is no language layer
+  // at all, so this holds only the one real language (English). A "Deutsch"
+  // entry used to sit here pointing at '/' (the English homepage), which was
+  // a false promise to users; removed rather than left dangling.
   languages: [
-    { code: 'de', title: 'Deutsch', link: '/' },
     { code: 'en', title: 'English', link: '/' },
   ],
   pageLinks: { home: '/', request: '/request/', contact: '/contact-and-arrival/', voucher: '/voucher/', gallery: '/gallery/' },

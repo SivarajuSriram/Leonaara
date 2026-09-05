@@ -15,8 +15,9 @@ describe('Footer', () => {
     expect(container.querySelector('.partner a[href="https://www.laposch.com/en/"]')).not.toBeNull();
     const extra = Array.from(container.querySelectorAll('nav.nav-extra a')).map((a) => a.textContent);
     expect(extra).toEqual(['Booking conditions', 'eriro exclusive', 'Contact and arrival', 'Voucher', 'Newsletter', 'Jobs', 'Press']);
+    // spec §16.1: the German mirror is cancelled, so only English remains here.
     const lang = Array.from(container.querySelectorAll('nav.nav-lang a')).map((a) => [a.textContent, a.className]);
-    expect(lang).toEqual([['Deutsch', ''], ['English', 'router-link-active']]);
+    expect(lang).toEqual([['English', 'router-link-active']]);
     expect(Array.from(container.querySelectorAll('nav.nav-footer a')).map((a) => a.textContent)).toEqual(['Imprint', 'Privacy', 'Cookies']);
     expect(container.querySelector('.luxury-hotels-logo img')?.getAttribute('alt')).toBe('Small Luxury Hotels of the World');
     expect(container.querySelector('.unikateur-signet a')?.getAttribute('href')).toBe('https://www.unikateur.com/');
