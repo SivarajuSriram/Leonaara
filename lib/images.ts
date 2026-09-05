@@ -50,8 +50,10 @@ export function aspectRatios(image: ImageRef, preset: SizePreset): [number, numb
 // there is no need to enumerate breakpoints by hand any more.
 export function renderSize(image: ImageRef, preset: SizePreset, which: 'default' | 'mobile'): { width: number; height: number } {
   const { width, height } = dims(preset, which);
-  if (width && height) return { width, height };
-  const base = which === 'default' ? 1920 : 360;
   const ar = aspectRatios(image, preset)[which === 'default' ? 0 : 1];
+  if (width && height) return { width, height };
+  if (width) return { width, height: Math.round(width / ar) };
+  if (height) return { width: Math.round(height * ar), height };
+  const base = which === 'default' ? 1920 : 360;
   return { width: base, height: Math.round(base / ar) };
 }

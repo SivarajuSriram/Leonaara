@@ -33,4 +33,14 @@ describe('renderSize', () => {
     const [arD] = aspectRatios(identityImage, {});
     expect(renderSize(identityImage, {}, 'default')).toEqual({ width: 1920, height: Math.round(1920 / arD) });
   });
+  it('derives width from the natural aspect ratio when only heightD is given', () => {
+    // PartnerMarquee.tsx's Logo only passes heightD/heightM (no width) — renderSize must not
+    // silently discard that height and fall back to the 1920px hero-image base render size.
+    const [arD] = aspectRatios(identityImage, {});
+    expect(renderSize(identityImage, { heightD: 180 }, 'default')).toEqual({ width: Math.round(180 * arD), height: 180 });
+  });
+  it('derives height from the natural aspect ratio when only widthD is given', () => {
+    const [arD] = aspectRatios(identityImage, {});
+    expect(renderSize(identityImage, { widthD: 180 }, 'default')).toEqual({ width: 180, height: Math.round(180 / arD) });
+  });
 });
