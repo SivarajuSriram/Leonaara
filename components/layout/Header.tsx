@@ -74,7 +74,7 @@ export function Header() {
   const upperClass = [
     'upper grid-container fixed top-0 z-[100] w-full pt-[12.5rem]',
     '[transition:padding_.5s_ease,background-color_.5s_ease]',
-    "lg:[body.scrolled_&:not(.menu-open)]:bg-beige! lg:[body.scrolled_&:not(.menu-open)]:pb-[2rem] lg:[body.scrolled_&:not(.menu-open)]:pt-[4rem]",
+    "lg:[body.scrolled_&:not(.menu-open)]:bg-canvas! lg:[body.scrolled_&:not(.menu-open)]:pb-[2rem] lg:[body.scrolled_&:not(.menu-open)]:pt-[4rem]",
     "max-lg:pt-[1.6rem] max-lg:pb-[1.6rem] max-lg:bg-[url('/images/header-mobile-blob.svg')] max-lg:bg-[100%_100%] max-lg:bg-no-repeat max-lg:bg-cover",
     isOpen ? 'menu-open' : '',
     isHovered ? 'header-hover' : '',

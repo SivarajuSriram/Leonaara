@@ -37,7 +37,7 @@ test.describe('header', () => {
     await page.mouse.wheel(0, 300);
     await page.waitForTimeout(600);
     await expect(page.locator('body')).toHaveClass(/scrolled/);
-    await expect(page.locator('header .upper')).toHaveCSS('background-color', 'rgb(228, 224, 219)');
+    await expect(page.locator('header .upper')).toHaveCSS('background-color', 'rgb(242, 241, 239)');
     await page.mouse.wheel(0, 1500);
     await page.waitForTimeout(800);
     const opacity = await logo.evaluate((el) => parseFloat(getComputedStyle(el).opacity));
