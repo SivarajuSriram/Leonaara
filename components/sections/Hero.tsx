@@ -24,14 +24,20 @@ export function Hero({ section }: { section: HeroSection }) {
 
   // padding-top: rule 1 (.space-before-.), overridden per layout by rules 46/61
   // (hero-subpage) below it in source order — CSS cascade means the LAST rule
-  // wins, so subpage's 61.1rem (not 50rem) is what actually applies; mobile
-  // (max-width:1023px) always uses 22.5rem regardless of layout except
-  // hero-subpage (24.4rem) and hero-only-text (24.4rem, "scpae-before-" typo
-  // in the original never matched anything — dead rule, correctly omitted here).
+  // wins, so subpage's 61.1rem (not 50rem) is what actually applies. only-text
+  // has no `.mask_hero.hero-only-text.space-before-` override at all (desktop
+  // or mobile) — the one mobile rule that looks like it should be one,
+  // `.mask_hero.hero-only-text.scpae-before-{padding-top:24.4rem}`, has a typo
+  // ("scpae-before-") that never matches any real class name, so it's dead CSS
+  // and the live site's only-text hero actually just falls through to the
+  // shared base rule at both widths: 43rem desktop / 22.5rem mobile, same as
+  // hero-default (confirmed against both docs/reference/css-clean/hero.css and
+  // the raw docs/reference/css/css_Hero.DSP0mrCX.css, which agree). hero-subpage
+  // mobile genuinely is 24.4rem via its own untypo'd override.
   const paddingTop =
     layout === 'default' ? 'pt-[43rem] max-lg:pt-[22.5rem]'
     : layout === 'subpage' ? 'pt-[61.1rem] max-lg:pt-[24.4rem]'
-    : 'max-lg:pt-[24.4rem]'; // only-text has no explicit desktop padding-top rule in Hero.css
+    : 'pt-[43rem] max-lg:pt-[22.5rem]'; // only-text: dead typo'd override, falls through to the shared base rule
 
   const imageWrapperCls = [
     onlyText
@@ -44,6 +50,12 @@ export function Hero({ section }: { section: HeroSection }) {
     layout === 'subpage' ? 'max-lg:[grid-row-end:span_3]' : '',
   ].filter(Boolean).join(' ');
 
+  // Tailwind v4's scanner only picks up literal class strings, so the two
+  // pt- values below must be two complete literal strings, not one string
+  // built by interpolating the value into a shared template (which would
+  // leave whichever branch's exact resulting string doesn't appear
+  // elsewhere in the codebase uncompiled) -- same rule paddingTop above
+  // already follows.
   const titleCls = onlyText
     ? '[grid-column:1/span_3] max-lg:[grid-column:1/span_12] max-lg:mt-[6rem]'
     // hero-subpage's mobile .title rule (Hero.css, .mask_hero.hero-subpage
@@ -51,7 +63,9 @@ export function Hero({ section }: { section: HeroSection }) {
     // which — appearing after the shared :not(.hero-only-text) .title rule
     // at the same specificity — wins and drops padding-top from 12rem to
     // 4rem for subpage only; hero-default keeps the shared rule's 12rem.
-    : `flex items-end h-fit pb-[14rem] [writing-mode:vertical-rl] [text-orientation:mixed] rotate-180 origin-center [grid-column:1/span_1] max-lg:[grid-column:12/span_1] max-lg:h-fit max-lg:pb-0 max-lg:pt-[${layout === 'subpage' ? '4' : '12'}rem]`;
+    : layout === 'subpage'
+    ? 'flex items-end h-fit pb-[14rem] [writing-mode:vertical-rl] [text-orientation:mixed] rotate-180 origin-center [grid-column:1/span_1] max-lg:[grid-column:12/span_1] max-lg:h-fit max-lg:pb-0 max-lg:pt-[4rem]'
+    : 'flex items-end h-fit pb-[14rem] [writing-mode:vertical-rl] [text-orientation:mixed] rotate-180 origin-center [grid-column:1/span_1] max-lg:[grid-column:12/span_1] max-lg:h-fit max-lg:pb-0 max-lg:pt-[12rem]';
 
   const titleimgCls = '[grid-column:9/span_5] pt-[6rem] max-lg:[grid-column:8/span_6] max-lg:[grid-row-start:2] max-lg:pt-[1.5rem]';
 
