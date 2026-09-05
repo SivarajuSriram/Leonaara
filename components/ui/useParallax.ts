@@ -7,9 +7,19 @@ import type { ScrollTrigger } from '@/lib/gsap';
 export function useParallax(ref: RefObject<HTMLElement | null>, speed: number) {
   useEffect(() => {
     let triggers: ScrollTrigger[] = [];
+    const clear = () => {
+      triggers.forEach((t) => t.kill());
+      triggers = [];
+    };
+    // onSmoother is a persistent subscription (lib/smoother.ts): it fires
+    // immediately, and again every time SmoothScroll kills/recreates its
+    // ScrollSmoother instance across the 1024px breakpoint. Always drop
+    // whatever the previous instance registered before registering fresh --
+    // the old triggers point at an instance that may already be dead.
     const off = onSmoother((s) => {
+      clear();
       // original: parallax effects only on desktop (>= 1024px)
-      if (!ref.current || window.innerWidth < 1024) return;
+      if (!s || !ref.current || window.innerWidth < 1024) return;
       // The original queries container.querySelectorAll('picture') and passes the
       // <picture> element itself to smoother.effects(), never the wrapping
       // .image-left/.image-right/.image div that `ref` points at. Those wrappers
@@ -23,7 +33,7 @@ export function useParallax(ref: RefObject<HTMLElement | null>, speed: number) {
     });
     return () => {
       off();
-      triggers.forEach((t) => t.kill());
+      clear();
     };
   }, [ref, speed]);
 }

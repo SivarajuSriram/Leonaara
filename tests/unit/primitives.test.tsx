@@ -15,16 +15,40 @@ describe('isWinter', () => {
 });
 
 describe('smoother store', () => {
-  it('runs queued callbacks once a smoother is set', () => {
-    const cb = vi.fn();
+  it('notifies a subscriber immediately with the current value, even when null', () => {
     setSmoother(null);
-    onSmoother(cb);
+    const cb = vi.fn();
+    const off = onSmoother(cb);
+    expect(cb).toHaveBeenCalledWith(null);
+    off();
+  });
+
+  it('is a persistent subscription: fires again on every later setSmoother call, not just once', () => {
+    // Mirrors SmoothScroll.tsx's resize-driven kill()/create() cycle at the
+    // 1024px breakpoint: a real caller (useParallax) needs to hear about the
+    // smoother dying (null) and the replacement instance, not just the first one.
+    setSmoother(null);
+    const cb = vi.fn();
+    const off = onSmoother(cb);
+    const instanceA = {} as never;
+    setSmoother(instanceA); // create() at desktop width
+    expect(cb).toHaveBeenCalledWith(instanceA);
+    setSmoother(null); // kill() crossing below 1024px
+    expect(cb).toHaveBeenCalledWith(null);
+    const instanceB = {} as never;
+    setSmoother(instanceB); // create() crossing back above 1024px -- a NEW instance
+    expect(cb).toHaveBeenCalledWith(instanceB);
+    expect(cb).toHaveBeenCalledTimes(4); // initial null, instanceA, null, instanceB
+    off();
+  });
+
+  it('stops notifying once the returned unsubscribe function is called', () => {
+    setSmoother(null);
+    const cb = vi.fn();
+    const off = onSmoother(cb);
+    off();
+    cb.mockClear();
+    setSmoother({} as never);
     expect(cb).not.toHaveBeenCalled();
-    const fake = {} as never;
-    setSmoother(fake);
-    expect(cb).toHaveBeenCalledWith(fake);
-    const cb2 = vi.fn();
-    onSmoother(cb2);
-    expect(cb2).toHaveBeenCalledWith(fake);
   });
 });
