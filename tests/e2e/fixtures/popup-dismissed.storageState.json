@@ -1,0 +1,15 @@
+{
+  "cookies": [
+    {
+      "name": "eriro_popup_dismissed",
+      "value": "1",
+      "domain": "localhost",
+      "path": "/",
+      "expires": 4102444800,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}
