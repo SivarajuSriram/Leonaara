@@ -1,6 +1,9 @@
 /* Global stylesheet: Tailwind (theme + utilities only, no preflight), design tokens,
    self-hosted fonts, and the original site's reset/typography/grid/link CSS.
-   Nothing else is ever added here — component CSS lives next to its component. */
+   Components style themselves with Tailwind utility classes directly in their JSX —
+   there are no per-component CSS files. The one exception is Swiper's own untouched
+   third-party stylesheet (swiper.css, imported below), which stays a separate file
+   because it isn't ours to convert to utility classes. */
 /* Explicit layer order: CSS Cascade Layers give ANY unlayered style highest
    priority over ANY layered style, regardless of selector specificity. Only
    base.css's reset (`* { padding:0; margin:0 }` and the type-selector list)
@@ -23,7 +26,7 @@
   --font-sans: karol-sans, sans-serif;
 }
 
-/* Global only: fonts, the original reset/typography/grid, shared link classes. Component CSS is imported by each component. */
+/* Global only: fonts, the original reset/typography/grid, shared link classes, and Swiper's own CSS. */
 @import "./fonts.css";
 @import "./base.css" layer(base);
 @import "./links.css";
