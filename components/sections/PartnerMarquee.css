@@ -56,13 +56,14 @@
 }
 .mask_partnermarquee .marquee-item {
   margin-right:calc(var(--grid-gap)*5);
-  max-height:35rem;
-  max-width:35rem;
+  height:35rem;
+  width:35rem;
   mix-blend-mode:multiply;
 }
 .mask_partnermarquee .marquee-item img {
   height:100%;
-  width:auto;
+  width:100%;
+  object-fit:contain;
 }
 .mask_partnermarquee .marquee-item picture {
   align-items:center;
@@ -98,8 +99,8 @@
   }
   .mask_partnermarquee .marquee-item {
     margin-right:calc(var(--grid-gap)*3);
-    max-height:10rem;
-    max-width:20rem;
+    height:10rem;
+    width:20rem;
     mix-blend-mode:multiply;
   }
   .mask_partnermarquee .marquee-teaser {
