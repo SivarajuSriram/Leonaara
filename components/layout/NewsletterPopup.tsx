@@ -390,6 +390,22 @@ export function NewsletterPopup() {
     return () => clearTimeout(t);
   }, []);
 
+  // Scroll lock: a plain useEffect, not useGSAP -- useGSAP defers its
+  // returned cleanup to actual unmount when `dependencies` is non-empty
+  // (see @gsap/react's deferCleanup behaviour), but this component never
+  // unmounts (it lives in app/layout.tsx and just returns null when closed),
+  // so a cleanup registered inside useGSAP would never run and the lock
+  // would never release. A plain useEffect's cleanup runs on every
+  // dependency change, which is what's needed here: lock while open,
+  // unlock the instant `open` goes false.
+  useEffect(() => {
+    if (!open) return;
+    document.documentElement.style.overflow = 'hidden';
+    return () => {
+      document.documentElement.style.overflow = '';
+    };
+  }, [open]);
+
   // Open animation: backdrop fades 0->.5 opacity over 0.3s linear. The card's
   // entrance uses the same 0.5s cubic-bezier(.85,1.5,.5,1) overshoot curve on
   // both viewports, but a different property per the capture: desktop scales
@@ -402,7 +418,6 @@ export function NewsletterPopup() {
   // that name here instead.
   useGSAP(() => {
     if (!open || !backdropRef.current || !cardRef.current) return;
-    document.documentElement.style.overflow = 'hidden';
     gsap.fromTo(backdropRef.current, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: 'linear' });
     const isMobile = window.innerWidth < 1024;
     gsap.fromTo(
@@ -410,9 +425,6 @@ export function NewsletterPopup() {
       isMobile ? { y: '20%' } : { scale: 0.9 },
       { y: '0%', scale: 1, duration: 0.5, ease: 'popupCard' },
     );
-    return () => {
-      document.documentElement.style.overflow = '';
-    };
   }, { dependencies: [open] });
 
   // Step-2 progress bar: the 2nd segment fills in on mount (NEW finding in

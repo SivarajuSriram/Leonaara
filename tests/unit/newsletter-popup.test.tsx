@@ -94,6 +94,24 @@ describe('NewsletterPopup', () => {
     expect(document.cookie).toContain('eriro_popup_dismissed=1');
   });
 
+  // Regression: the scroll lock used to be set from inside a useGSAP callback
+  // whose cleanup only runs on unmount, not when `open` flips back to false --
+  // since this component never unmounts (app/layout.tsx keeps it mounted and
+  // it just returns null while closed), the lock was never released. It now
+  // lives in a plain useEffect, whose cleanup DOES run on every dependency
+  // change, so closing the popup must clear the inline style.
+  it('locks scroll while open and releases it on close', () => {
+    document.documentElement.style.overflow = '';
+    render(<NewsletterPopup />);
+    expect(document.documentElement.style.overflow).toBe('');
+
+    advance5s();
+    expect(document.documentElement.style.overflow).toBe('hidden');
+
+    fireEvent.click(screen.getByRole('button', { name: 'Close' }));
+    expect(document.documentElement.style.overflow).toBe('');
+  });
+
   // Regression test: the dialog's aria-labelledby="newsletter-popup-heading"
   // is hardcoded once in the card div, but each step renders its own body.
   // Querying with a `name` filter forces Testing Library to resolve the

@@ -23,6 +23,19 @@ test('popup opens after ~5s, closes only via the X button, and the dismissal per
   await page.getByRole('button', { name: 'Close' }).click();
   await expect(dialog).toBeHidden();
 
+  // Regression for the scroll-lock leak: NewsletterPopup used to set
+  // `document.documentElement.style.overflow = 'hidden'` from inside a
+  // useGSAP callback whose cleanup only ever runs on unmount (never on the
+  // `open` dependency flipping to false), so the lock was never released and
+  // the page could never scroll again after the popup closed. Confirm both
+  // the inline style is cleared and the page can actually scroll.
+  const htmlOverflow = await page.evaluate(() => document.documentElement.style.overflow);
+  expect(htmlOverflow).toBe('');
+  await page.mouse.wheel(0, 800); // the homepage is naturally taller than the viewport
+  await page.waitForTimeout(300);
+  const scrollY = await page.evaluate(() => window.scrollY);
+  expect(scrollY).toBeGreaterThan(0);
+
   await page.reload();
   await page.waitForTimeout(7000); // long enough for the 5s trigger to have fired, if it were going to
   await expect(dialog).toBeHidden(); // dismissal cookie persists across reload
