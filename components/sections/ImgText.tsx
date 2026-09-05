@@ -6,7 +6,36 @@ import { SplitWords } from '@/components/ui/SplitWords';
 import { RichText } from '@/components/ui/RichText';
 import { useParallax } from '@/components/ui/useParallax';
 import { useIsWinter } from '@/lib/season';
-import './ImgText.css';
+
+// mask_imgtext .image-left{grid-column-end:span 4;grid-column-start:1;grid-row-end:
+// span 2;grid-row-start:2;margin-top:-22.5rem} + mobile{grid-column-end:span 5;
+// grid-column-start:1 (unchanged, not restated below);margin-top:-5.5rem}
+const imageLeftCls = 'image-left col-start-1 col-span-4 row-start-2 row-span-2 mt-[-22.5rem] max-lg:col-span-5 max-lg:mt-[-5.5rem]';
+
+// mask_imgtext .image-right{grid-column-start:10;margin-bottom:7.5rem} + shared
+// (with .content) grid-column-end:span 4 + mobile{grid-column-end:span 8;
+// grid-column-start:6;margin-bottom:0}
+const imageRightCls = 'image-right col-start-10 col-span-4 mb-[7.5rem] max-lg:col-start-6 max-lg:col-span-8 max-lg:mb-0';
+
+// mask_imgtext .content{grid-column-start:6} + shared grid-column-end:span 4 +
+// mobile{grid-column-end:span 11;grid-column-start:2;margin-top:4.5rem}
+const contentCls = 'content col-start-6 col-span-4 max-lg:col-start-2 max-lg:col-span-11 max-lg:mt-[4.5rem]';
+
+// mask_imgtext .title{margin-bottom:3rem} + mobile{margin-bottom:1.5rem}
+const titleCls = 'title mb-[3rem] max-lg:mb-[1.5rem]';
+
+// mask_imgtext .text{margin-left:9rem} + mobile{margin-left:5.8rem}, plus
+// mask_imgtext .linkdetail{margin-top:4.5rem} (identical at mobile, never
+// restated with a different value) — .linkdetail is not dead: it's the "TO
+// THE ..." anchor RichText injects as raw HTML from the CMS text field (see
+// content/en/home.ts, `class="linkdetail"`), so it can't carry its own
+// className and is targeted here as a descendant of .text instead, same
+// approach as Footer.tsx's RichText-injected anchors.
+const textCls = 'text ml-[9rem] max-lg:ml-[5.8rem] [&_a.linkdetail]:mt-[4.5rem]';
+
+// mask_imgtext img{height:auto;width:100%} needs no class here: every <img> in
+// this component renders through Picture, whose own imgClass already carries
+// h-auto w-full (components/ui/Picture.tsx) — same values, already covered.
 
 export function ImgText({ section }: { section: ImgTextSection }) {
   const c = section.content;
@@ -23,20 +52,20 @@ export function ImgText({ section }: { section: ImgTextSection }) {
     <div className={cls} {...{ uid: `c${section.id}` }}>
       <div className="grid-container">
         {left.map((img, i) => (
-          <div className="image-left" key={i} ref={i === 0 ? leftRef : undefined}>
+          <div className={imageLeftCls} key={i} ref={i === 0 ? leftRef : undefined}>
             {/* original: widthD 501, heightD 390, widthM 117, heightM 105 */}
             <Picture image={img} widthD={501} heightD={390} widthM={117} heightM={105} />
           </div>
         ))}
         {right.map((img, i) => (
-          <div className="image-right" key={i} ref={i === 0 ? rightRef : undefined}>
+          <div className={imageRightCls} key={i} ref={i === 0 ? rightRef : undefined}>
             {/* original: widthD 570, heightD 510, widthM 223, heightM 180 */}
             <Picture image={img} widthD={570} heightD={510} widthM={223} heightM={180} />
           </div>
         ))}
-        <div className="content">
-          {c.title ? <SplitWords as="h2" className="title" html={c.title} /> : null}
-          {c.text ? <RichText className="text" html={c.text} /> : null}
+        <div className={contentCls}>
+          {c.title ? <SplitWords as="h2" className={titleCls} html={c.title} /> : null}
+          {c.text ? <RichText className={textCls} html={c.text} /> : null}
         </div>
       </div>
     </div>

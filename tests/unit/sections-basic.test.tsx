@@ -6,6 +6,7 @@ import { Video } from '@/components/sections/Video';
 import { Quote } from '@/components/sections/Quote';
 import { Break } from '@/components/sections/Break';
 import { home } from '@/content/en/home';
+import type { VideoSection } from '@/lib/content';
 
 vi.mock('@/lib/gsap', () => ({
   gsap: { from: vi.fn(), to: vi.fn(), timeline: vi.fn(() => ({ to: vi.fn() })) },
@@ -14,6 +15,24 @@ vi.mock('@/lib/gsap', () => ({
   useGSAP: vi.fn(),
 }));
 vi.mock('next/navigation', () => ({ useRouter: () => ({ push: vi.fn() }), usePathname: () => '/' }));
+
+// Video's Player subscribes to IntersectionObserver once it has real content (the
+// homepage's own mask_video instance currently has none — see the "empty wrapper"
+// test below — so this is only exercised by the Tailwind-classes test further
+// down). jsdom has no implementation; a no-op stub is enough since we never need
+// the callback to fire (we're only asserting the rendered className, not playback).
+if (typeof window !== 'undefined' && !window.IntersectionObserver) {
+  class MockIntersectionObserver implements IntersectionObserver {
+    readonly root = null;
+    readonly rootMargin = '';
+    readonly thresholds: ReadonlyArray<number> = [];
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+    takeRecords(): IntersectionObserverEntry[] { return []; }
+  }
+  window.IntersectionObserver = MockIntersectionObserver;
+}
 
 const sec = <T extends string>(i: number, type: T) => {
   const s = home.columns.colPos0[i];
@@ -46,6 +65,21 @@ describe('basic sections', () => {
     const { container } = render(<Video section={sec(2, 'mask_video')} />);
     expect(container.firstElementChild?.className).toBe('default space-before- mask mask_video grid-container');
     expect(container.querySelector('video')).toBeNull();
+  });
+  it('Video applies its Tailwind grid/aspect classes to the <video> element when content exists', () => {
+    // The homepage's real mask_video instance (originsVideo) has no video source
+    // configured yet, so the case above never renders a <video> at all — this is
+    // the only place that actually exercises Video.css's conversion.
+    const section: VideoSection = {
+      id: 999,
+      type: 'mask_video',
+      appearance: { layout: 'default', frameClass: 'default', spaceBefore: '', spaceAfter: '' },
+      content: { video: [{ src: '/test.mp4', mime: 'video/mp4' }], videosummer: [] },
+    };
+    const { container } = render(<Video section={section} />);
+    expect(container.querySelector('video')?.className).toBe(
+      'aspect-[16/9] col-start-2 col-span-12 w-full max-lg:aspect-[16/10] max-lg:object-cover',
+    );
   });
   it('Quote renders text and author', () => {
     const { container } = render(<Quote section={sec(3, 'mask_quote')} />);

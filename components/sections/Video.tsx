@@ -4,7 +4,11 @@
 import { useEffect, useRef } from 'react';
 import type { VideoRef, VideoSection } from '@/lib/content';
 import { useIsWinter } from '@/lib/season';
-import './Video.css';
+
+// mask_video video{aspect-ratio:16/9;grid-column-end:span 12;grid-column-start:2;
+// width:100%} + mobile{aspect-ratio:16/10;object-fit:cover} (the -o-object-fit
+// vendor prefix has no modern equivalent to carry over)
+const videoCls = 'aspect-[16/9] col-start-2 col-span-12 w-full max-lg:aspect-[16/10] max-lg:object-cover';
 
 function Player({ src }: { src: string }) {
   const ref = useRef<HTMLVideoElement>(null);
@@ -30,7 +34,7 @@ function Player({ src }: { src: string }) {
     return () => io.disconnect();
   }, []);
   return (
-    <video preload="metadata" playsInline loop muted ref={ref}>
+    <video className={videoCls} preload="metadata" playsInline loop muted ref={ref}>
       <source src={src} type="video/mp4" />
     </video>
   );
