@@ -3,6 +3,7 @@ import '@/styles/globals.css';
 import { Header } from '@/components/layout/Header';
 import { SmoothScroll } from '@/components/layout/SmoothScroll';
 import { Footer } from '@/components/layout/Footer';
+import { NewsletterPopup } from '@/components/layout/NewsletterPopup';
 
 export const viewport = { width: 'device-width', initialScale: 1 };
 
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </SmoothScroll>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img className="eriro-bg-attach" src="/HG.jpg" alt="" />
+          <NewsletterPopup />
         </div>
       </body>
     </html>
