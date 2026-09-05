@@ -2,7 +2,10 @@ import { test, expect } from '@playwright/test';
 
 test('Picture renders through next/image, not a custom resize route', async ({ page }) => {
   await page.goto('/');
-  const picture = page.locator('.mask_hero .image-big picture').first();
+  // Phase 1b (spec §16.4): Hero's Tailwind conversion dropped the `.image-big`
+  // class name in favor of inline utility strings; the big image is still the
+  // first <picture> rendered inside .mask_hero.
+  const picture = page.locator('.mask_hero picture').first();
   const img = picture.locator('img');
   // trailingSlash: true (next.config.ts) makes next/image's own optimizer route
   // render as /_next/image/?url=... (slash before the query string) rather than

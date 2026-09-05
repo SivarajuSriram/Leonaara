@@ -1,6 +1,18 @@
 /* Global stylesheet: Tailwind (theme + utilities only, no preflight), design tokens,
    self-hosted fonts, and the original site's reset/typography/grid/link CSS.
    Nothing else is ever added here — component CSS lives next to its component. */
+/* Explicit layer order: CSS Cascade Layers give ANY unlayered style highest
+   priority over ANY layered style, regardless of selector specificity. Only
+   base.css's reset (`* { padding:0; margin:0 }` and the type-selector list)
+   needs to sit below "utilities" — otherwise it silently discards Tailwind
+   utility classes on the same property (e.g. Hero.tsx's `pt-[43rem]`) even
+   though they'd win on specificity alone. fonts.css/links.css/swiper.css stay
+   unlayered: their shared classes (e.g. `.ht-biglink`'s underline) are meant
+   to win or lose against component CSS files (Header.css etc.) by ordinary
+   specificity, same as before — layering them too would make them always
+   lose to any unlayered component CSS regardless of specificity, which is
+   not what the original cascade did. */
+@layer theme, base, utilities;
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
 
@@ -13,6 +25,6 @@
 
 /* Global only: fonts, the original reset/typography/grid, shared link classes. Component CSS is imported by each component. */
 @import "./fonts.css";
-@import "./base.css";
+@import "./base.css" layer(base);
 @import "./links.css";
 @import "./swiper.css";

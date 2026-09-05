@@ -5,7 +5,9 @@ test('homepage renders all 15 sections with the original text', async ({ page })
   await expect(page).toHaveTitle('eriro - Experience alpine originality');
   const masks = page.locator('main .mask');
   await expect(masks).toHaveCount(15);
-  await expect(page.locator('.mask_hero h2.titleh2')).toContainText('Rooted');
+  // Phase 1b (spec §16.4): Hero's Tailwind conversion dropped the `.titleh2`
+  // class name in favor of inline utility strings; `.mask_hero` has exactly one h2.
+  await expect(page.locator('.mask_hero h2')).toContainText('Rooted');
   await expect(page.locator('.mask_quote .quote')).toHaveText('eriro – One of the "World’s Greatest Places 2025"');
   await expect(page.locator('.mask_break h2.title')).toContainText('Experience');
   await expect(page.locator('.mask_partnermarquee h2.title')).toHaveText('Recommended by');
