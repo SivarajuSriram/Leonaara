@@ -48,7 +48,7 @@ a.ht-button {
   }
 }
 a.ht-button:hover {
-  background-color:#e4e0db;
+  background-color: var(--color-canvas);
 }
 @media (max-width:1023px) {
   a.ht-button {
