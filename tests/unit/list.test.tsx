@@ -33,6 +33,7 @@ describe('List', () => {
     expect(items[0].querySelector('.list-title')?.tagName).toBe('H4');
     expect(items[0].querySelector('.list-title')?.textContent).toBe('General');
     expect(items[0].className).not.toContain('last:pb-0');
+    expect(items[items.length - 1].className).toContain('last:pb-0');
     expect(container.textContent).toContain('breakfast');
   });
 });
