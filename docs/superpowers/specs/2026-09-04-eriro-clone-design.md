@@ -712,3 +712,121 @@ simply stop 404ing.
   preferences modal via `showPreferences()`; footer nav links to imprint/
   privacy/cookies resolve instead of 404ing; `npm run typecheck` / `npx vitest
   run` / `npm run build` all clean.
+
+## 18. Phase 3 — content pages reusing List/Accordions/Gallery (2026-09-06)
+
+Phase 3 of the "rest of site" decomposition (§17's intro), following Phase 2
+(legal pages + cookie-consent banner). Covers the remaining routes from
+§13.2's "shared subpage sections" grouping, minus `imprint`/`privacy`/
+`cookies` (Phase 2 already built those): `alpine-hide`, `all-in-service`,
+`culinary`, `origin`, `spa`, `summer`, `winter`, `eriro-exclusive`,
+`booking-conditions`, `press`, `gallery`, `newsletter`, `voucher` — 13 routes.
+The generic thank-you page (also named in §13.2) is explicitly OUT of scope
+here — it's form-flow infrastructure with no real content until the forms
+phase (§13.4) exists to redirect to it; building it now would mean guessing
+at integration details that phase will actually decide.
+
+Content sourcing needs no new crawl (true for the whole rest-of-site effort,
+not just this phase — `docs/reference/pages/en__*.json` already holds every
+route's verbatim payload). Nav/footer links for all 13 routes are already
+correct in `content/site.ts` (no `/en/` prefix) — building these pages simply
+stops them 404ing, same as Phase 2.
+
+Behavior/measurement detail for every component below was already written
+during Phase 1 planning (§9.10 GallerySlider, §9.11 Gallery, §9.12 List,
+§9.13 Accordions, §9.20 Newsletter/Voucher widgets) and is unaffected by
+Phase 1b's §16 amendments — those changed implementation *shape*
+(Tailwind-in-JSX, no SectionRenderer) not component *behavior*. This section
+declares the six new `Section` types and confirms how each component reuses
+infrastructure Phase 1 already built, rather than re-deriving §9.x's numbers.
+
+### 18.1 Six new Section types
+
+`lib/content.ts`'s `UnknownSection` union already names all six
+(`mask_accordions`, `mask_list`, `mask_galleryslider`, `mask_gallery`,
+`mask_widget_newsletter`, `mask_widget_voucher`); this phase gives each a
+real typed variant, confirmed against the crawled JSON:
+
+- `AccordionItem`: `{ uid: string; title: Html; info: Html; text: Html; linktext: string; link: LinkRef | '' }`
+  (matches §9.13's optional `.ht-biglink`). `AccordionsSection`:
+  `Base<'mask_accordions', { title: Html; text: Html; accordion: AccordionItem[] }>`.
+- `ListItem`: `{ uid: string; title: Html; text: Html }` (no link field —
+  confirmed absent from the crawled `listitems` payload, and §9.12 never
+  mentions one). `ListSection`:
+  `Base<'mask_list', { title: Html; text: Html; listitems: ListItem[] }>`.
+- `GallerySliderSection`: `Base<'mask_galleryslider', { images: ImageRef[] }>`
+  — plain image list, same `ImageRef` type every other section already uses.
+- `GallerySection`: `Base<'mask_gallery', { images: ImageRef[] }>` — same
+  shape as GallerySlider's content, different component/behavior (§18.2).
+- `NewsletterWidgetSection`: `Base<'mask_widget_newsletter', Record<string, never>>`.
+- `VoucherWidgetSection`: `Base<'mask_widget_voucher', Record<string, never>>`.
+  Both empty on purpose (§9.20, already-settled user decision: no
+  third-party script, literal empty placeholder div only) — the original
+  widget script URLs are kept as a comment in the content file, not a typed
+  field, per §9.20's own instruction ("stay in the content files as
+  comments for later").
+
+Every crawled content element also carries `header`/`subheader`/
+`headerLayout`/`headerPosition`/`headerLink` CMS-internal fields (confirmed:
+these never appear as rendered DOM text — a matching string like
+`mask_accordions`'s `header:"Architektur"` only shows up inside the page's
+serialized hydration payload, not in visible markup). Every existing Section
+type already omits these; the six new ones follow the same precedent.
+
+### 18.2 Component behavior — every component reuses an existing Phase 1 primitive
+
+No new library, no new animation primitive, no new CSS escape hatch:
+
+- **GallerySlider**: the exact `horizontalLoop` + `interleave()` marquee
+  `PartnerMarquee.tsx` already built, same 5-bucket ×3 ordering (§9.10) —
+  only `speed: .5` (`.3` mobile) and `draggable: false` differ from
+  PartnerMarquee's `speed: 1`/`draggable: true`. The `4n+k` size/margin
+  cycle (§9.10) is a per-item-index Tailwind class computed in the `.map()`,
+  the same technique `PartnerMarquee`'s bucketed `marqueeItemCls` already
+  uses — no new CSS file.
+- **Gallery**: the `8n+k` grid positions and per-position parallax speeds
+  (§9.11) are both computed per-image-index in JS using the existing
+  `useParallax` hook (`components/ui/useParallax.ts`, already used by
+  `Quote`/`ImgText`/`Break`) — same "compute the exact Tailwind classes for
+  this index" technique as GallerySlider above, not a `.legal-content`-style
+  escape-hatch CSS file (a real descendant-selector escape hatch isn't
+  needed here since every position's rule is a fixed, known set of classes
+  applied directly, not raw injected HTML).
+- **Accordions**: the open/close + icon-morph toggle (§9.13) reuses the
+  exact `morphSVG` GSAP technique already live in
+  `components/layout/menuAnimations.ts` for the hamburger icon (`.a1`/`.a2`
+  path targets, same plugin). Four accordion-icon path variants
+  (`i-accordionIcon{1-4}`) need extracting from the reference JS bundle
+  during implementation — a mechanical extraction, same category of work as
+  the hamburger's own three paths, not a new technique.
+- **List**: pure Tailwind grid + the existing `SplitWords` component for
+  `.list-title` — no JS behavior at all.
+- **NewsletterWidget / VoucherWidget**: render the literal empty placeholder
+  `<div>` at the original's exact id/class (§9.20: `#additive-newsletter-
+  664458cf61093` inside `.aa-newsletter-widget`; `#internetseite.aa-voucher-
+  widget`) — grid spacing preserved, nothing else rendered, no script
+  injected.
+
+### 18.3 Pages
+
+Three new files per route (`app/{route}/page.tsx`), same direct-composition
+shape as every other page (no generic renderer, per §16.4), backed by
+hand-written `content/en/{route}.ts` object literals sourced verbatim from
+the crawled JSON per §16.2. `lib/pages.ts`'s `pages` registry gains 13
+entries. No changes needed to `content/site.ts` (nav already correct) or to
+any existing homepage section component — every section type these 13 pages
+reuse besides the six new ones (`hero`, `imgtext`, `img`, `video`, `quote`,
+`break`, `teaserslider`) is already built and untouched by this phase.
+
+### 18.4 Verification
+
+Same pipeline as Phase 2, not a lighter one — Phase 2's final whole-branch
+review caught two real Critical bugs that every individual task review had
+missed, so this phase keeps the full sequence rather than treating that as a
+one-off: per-task spec+quality review, a mandatory final whole-branch
+review, one fix wave with one scoped re-review if it surfaces anything.
+Content text-diffed against the crawled JSON verbatim (§16.2's QA
+replacement, same as every phase). One fresh live-site reference screenshot
+per route at the three breakpoints (§12 item 1) — captured and eyeballed
+BEFORE the final whole-branch review this time, not deferred as optional,
+per the lesson Phase 2 surfaced (HANDOFF.md §6).
