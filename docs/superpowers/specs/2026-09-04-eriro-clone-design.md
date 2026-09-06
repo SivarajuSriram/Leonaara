@@ -590,3 +590,120 @@ point (c). A separate, unrelated cookie-consent bar (`vanilla-cookieconsent`,
   full diagnosis would partly be measuring code this rework deletes anyway. Only
   redo the full diagnosis workflow if the site still feels laggy once Phase 1b is
   in, per (7) in the Phase 1b task order.
+
+## 17. Phase 2 — legal/info pages and the cookie-consent banner (user, 2026-09-06)
+
+Status: drafted and design-approved 2026-09-06; scope is the first sub-project of
+the "rest of site" work (the remaining ~25 routes beyond the homepage). Later
+phases (content pages, filter/suites, forms/jobs, final verification) are ordered
+but not designed yet — each gets its own brainstorming pass when picked up, per
+the sub-project decomposition this phase follows.
+
+This phase covers three routes this spec's §4 route table already scoped
+(`/imprint/`, `/privacy/`, `/cookies/`, backend layout `8`) plus one component
+§8.6 already specified but never actually built: the `vanilla-cookieconsent`
+banner. Content sourcing needs no new crawl — `docs/reference/pages/en__
+{imprint,privacy,cookies}.json` already hold the verbatim payload for all three
+pages.
+
+### 17.1 Three new Section types
+
+`lib/content.ts`'s `UnknownSection` union already names these three
+content-types (`mask_footerpagetext`, `hanthaincludepage_includepage`,
+`mask_cookieconsentbutton`); this phase gives each a real typed variant
+alongside the existing `HeroSection`/`ImgSection`/etc. pattern, plus a matching
+component in `components/sections/`:
+
+- `FooterPageTextSection`: `{ title: Html; text: Html }` — `FooterPageText.tsx`
+  renders `title` as an `h1` and `text` via `RichText`.
+- `IncludePageSection`: `{ html: Html }` — `IncludePage.tsx` renders the raw
+  `loadcontent` HTML via `RichText`.
+- `CookieConsentButtonSection`: `{ buttontext: string }` —
+  `CookieConsentButton.tsx` renders a button that calls vanilla-cookieconsent's
+  own exported `showPreferences()`.
+
+Confirmed from `docs/reference/pages/en__{imprint,privacy,cookies}.json`:
+`/imprint/` is one `FooterPageText`; `/privacy/` is `FooterPageText`,
+`IncludePage`, `FooterPageText` (the trailing one holds a short " ADDITIVE+"
+credit line); `/cookies/` is `FooterPageText` (an empty CMS placeholder
+element, renders nothing visible), `IncludePage`, `CookieConsentButton`.
+
+### 17.2 Layout-8 typography — a new scoped escape hatch, not Tailwind-in-JSX
+
+`FooterPageText`'s `text` and `IncludePage`'s `html` are raw strings rendered
+via `dangerouslySetInnerHTML` (through the existing `RichText` component, which
+needs no changes) — bare, unclassed `<h1>/h2>/<p>/<ul>/<a>` tags from the
+crawled payload. There is no JSX to attach Tailwind utility classes to inside
+that string, so this is the same class of exception §16.4 already carves out
+for the gallery's `nth-child` rules and the marquee, not a Tailwind-in-JSX
+violation. One new small scoped CSS file, `app/legal-content.css` (imported
+from `app/globals.css`, same pattern as `swiper.css`), holds a single
+`.legal-content` block reproducing `docs/reference/css-clean/
+footerpagetext.css`'s exact numbers verbatim:
+
+- Desktop: `h1` 4rem/125%/uppercase; `h2` 3rem/133%, `margin: 3rem 0 1.5rem`;
+  `h3` 2rem/700/150%, `margin: 2rem 0`; `p/ul/ol` 1.8rem/156%, `margin-bottom:
+  1.5rem`; `li` `margin-bottom: 1.5rem`; `a` underlined, `hyphens: auto;
+  word-break: break-all`.
+- Mobile (`≤1023px`): `h1` 3rem/133%; `h2` 2rem/150%, `margin: 1rem 0`; `h3`
+  1.5rem/167%; `p/ul/ol` 1.3rem/177%.
+- Both `FooterPageText` and `IncludePage` wrap their rendered content in
+  `.legal-content`; the wrapping section element itself gets
+  `pt-[45rem] max-lg:pt-[25rem]` directly as a Tailwind utility (real JSX, no
+  escape hatch needed there) — only on each page's first section, matching
+  `footerpagetext.css`'s `main>div:first-child`. `BodyClass` (already generic,
+  no changes needed) still gets called with `layout="layout-8"`, consistent
+  with every other page calling it — but no CSS actually selects on
+  `pid-N`/`layout-N` under this architecture; the original's
+  `[page-id="N"]`-scoped selectors are superseded by the `.legal-content`
+  class scope instead.
+
+### 17.3 Cookie-consent banner (§8.6 — specified in Phase 1, never built)
+
+Add `vanilla-cookieconsent` (v3) as a dependency. Initialize once in
+`app/layout.tsx` (`CookieConsent.run({...})`) with: categories necessary
+(read-only), functionality, marketing, analytics (auto-clear `_ga`/`_gid`),
+ads; the English consent-modal and preferences-modal texts copied verbatim
+from the crawled bundle (§8.6); cookie name `cc_cookie`, 182-day expiry.
+`CookieConsentButton` imports and calls the library's own exported
+`showPreferences()` directly — a real public API, not a `window` hack like
+the ScrollSmoother test-only bridge.
+
+Styling: the live site never customized vanilla-cookieconsent's theme at all
+(confirmed — `docs/reference/css-clean/cookieconsent.css` contains only the
+library's own stock `--cc-*` default tokens, no eriro brand color or
+`karol-sans` anywhere in the file), so this phase imports the library's own
+default CSS (`vanilla-cookieconsent/dist/cookieconsent.css`) unmodified rather
+than hand-authoring a theme file — genuine 1:1 fidelity here is the *absence*
+of brand styling, not a reason to add it. The shared root-font-size/grid-gap
+rules duplicated at the top of the captured reference file are already in
+`app/globals.css` and are not re-added.
+
+`CookieConsentButton`'s own layout (`.mask_cookieconsentbutton .wrapper`,
+`grid-column: 2 / span 12`) is plain Tailwind-in-JSX, no escape hatch needed.
+
+### 17.4 Routing and registry
+
+Three new files: `app/imprint/page.tsx`, `app/privacy/page.tsx`,
+`app/cookies/page.tsx` — same direct-composition shape as `app/page.tsx` (no
+generic renderer), backed by hand-written `content/en/{imprint,privacy,
+cookies}.ts` (object literals using the real `Section` union, text copied
+verbatim from the crawled JSON including typos, per §16.2). `lib/pages.ts`'s
+`pages` registry gains three entries; `metadataFor` needs no changes. No nav
+changes needed — `content/site.ts`'s `privacyNav` already points at
+`/imprint/`, `/privacy/`, `/cookies/` with no `/en/` prefix; these links
+simply stop 404ing.
+
+### 17.5 Verification
+
+- Text-diff against the crawled HTML for all three pages (still valid per
+  §16.2's QA replacement).
+- One fresh reference-screenshot capture for the three routes at the three
+  breakpoints from §12 item 1, descriptive filenames matching the
+  `home-{width}-{step}.jpg` precedent already established for the homepage.
+- Behaviour checklist: banner appears on first visit (no pre-existing
+  `cc_cookie`); Accept all / Reject all / Manage preferences all work and
+  persist for 182 days; `/cookies/`'s "Cookies settings" button opens the
+  preferences modal via `showPreferences()`; footer nav links to imprint/
+  privacy/cookies resolve instead of 404ing; `npm run typecheck` / `npx vitest
+  run` / `npm run build` all clean.

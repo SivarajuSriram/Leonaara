@@ -15,7 +15,7 @@ test('root scale and body tokens match the original', async ({ page }) => {
   const body = page.locator('body');
   await expect(body).toHaveCSS('color', 'rgb(33, 29, 29)');
   // spec §16.3: body's fill is the canvas token (--color-canvas #F2F1EF), not the
-  // old beige #e4e0db — beige survives only on borders/rules. styles/base.css sets
+  // old beige #e4e0db — beige survives only on borders/rules. app/globals.css sets
   // `background-color: var(--color-canvas)` since the colour sweep (commit b77f9aa).
   await expect(body).toHaveCSS('background-color', 'rgb(242, 241, 239)');
   await expect(body).toHaveCSS('font-family', 'karol-sans, sans-serif');

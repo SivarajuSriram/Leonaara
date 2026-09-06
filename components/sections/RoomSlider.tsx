@@ -49,7 +49,7 @@ const roomImageLeftCls = 'room-image-left w-full col-start-1 col-span-6 row-star
 // -1} + mobile{align-self:flex-start;grid-column-end:span 5;grid-column-
 // start:7;grid-row-start:1 (unchanged — no row-span at this breakpoint, so
 // no hazard);margin-bottom:2rem}. The z-index utility needs `!`: swiper.css
-// is deliberately unlayered (see styles/globals.css's own comment) and sets
+// is deliberately unlayered (see app/globals.css's own comment) and sets
 // `.swiper{position:relative;z-index:1}` on every Swiper root — including
 // this one — so an UNLAYERED swiper.css z-index:1 always beats a LAYERED
 // Tailwind z-[-1] utility regardless of specificity (CSS Cascade Layers:

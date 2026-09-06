@@ -44,7 +44,7 @@ const teaserContentCls = `${swiperWCls} teaser-content col-start-1 row-start-1 c
 // template-rows:1fr 1fr} + mobile{grid-template-rows:auto;grid-column-gap:
 // var(--grid-gap);grid-template-columns:repeat(12,1fr)} (display:grid
 // unchanged, not restated) + .swiper-slide:not(.swiper-slide-active){
-// opacity:0!important}. The `display` utility needs `!` here: styles/
+// opacity:0!important}. The `display` utility needs `!` here: app/
 // globals.css deliberately keeps swiper.css unlayered (see its own comment)
 // so that component CSS can out-cascade Swiper's library defaults by
 // ordinary specificity — but that also means an UNLAYERED swiper.css rule

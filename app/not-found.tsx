@@ -17,7 +17,7 @@ const wrapperCls = 'default mask mask_errorpage flex items-center justify-center
 // mask_errorpage .grid-container-error{display:grid;width:100%;grid-column-gap:
 // var(--grid-gap);grid-template-columns:var(--grid-margin) 1fr(x12) var(--grid-margin);
 // --grid-gap:8rem;--grid-margin:0rem} + mobile{--grid-gap:1rem;--grid-margin:3rem}.
-// Reuses the shared `grid-container` class (styles/base.css) for the identical
+// Reuses the shared `grid-container` class (app/globals.css) for the identical
 // 14-column shape instead of restating grid-template-columns, overriding only
 // its two custom properties locally via Tailwind arbitrary-property utilities.
 // w-full (-> the original's width:100%) matters here specifically because
@@ -83,8 +83,8 @@ const loadingBarCls = 'loadingBar relative col-start-1 col-span-14 h-[.2rem] mt-
 // to{transform:translate(0)}) is a real Protocol escape-hatch case — a
 // @keyframes block can't be expressed as a Tailwind utility — but it needs no
 // new residual CSS file here: it already exists, untouched by this sweep, at
-// styles/base.css:438-445, which styles/globals.css:28 imports globally
-// (`@import "./base.css" layer(base)`) regardless of this file's existence.
+// app/globals.css:475-480, inside that file's `@layer base { ... }` block,
+// regardless of this file's existence.
 // Tailwind's arbitrary `animate-[...]` utility below just references that
 // existing global keyframe by name.
 //

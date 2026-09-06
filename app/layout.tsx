@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import '@/styles/globals.css';
+import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { SmoothScroll } from '@/components/layout/SmoothScroll';
 import { Footer } from '@/components/layout/Footer';
