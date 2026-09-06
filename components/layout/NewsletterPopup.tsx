@@ -44,8 +44,11 @@ const inputCls =
 
 const labelCls = 'block pb-[0.4rem] text-[1.4rem] leading-[1.6rem] tracking-[0.025em] text-ink/62';
 
+// text-[20px]/leading-[25px], not rem: matches the ADDITIVE widget's own
+// fixed-size text (see the heading comment in Step1 below) -- identical on
+// both captured breakpoints, so no max-lg override is needed here.
 const submitCls =
-  'flex h-[4.8rem] w-full cursor-pointer items-center justify-center rounded-[0.2rem] border-0 bg-ink px-[2.8rem] text-[2rem] leading-[2.5rem] tracking-[0.03em] text-[#F5F4F2] uppercase shadow-[0_1px_2px_rgba(0,0,0,0.2)] transition-[filter] duration-100 outline-none hover:brightness-110 active:brightness-95';
+  'flex h-[4.8rem] w-full cursor-pointer items-center justify-center rounded-[0.2rem] border-0 bg-ink px-[2.8rem] text-[20px] leading-[25px] tracking-[0.03em] text-[#F5F4F2] uppercase shadow-[0_1px_2px_rgba(0,0,0,0.2)] transition-[filter] duration-100 outline-none hover:brightness-110 active:brightness-95';
 
 // --- icons, paths taken verbatim from the captured markup (docs/reference/popup) ---
 
@@ -195,9 +198,16 @@ function Step1({ fields, onSubmit }: { fields: FieldState; onSubmit: (e: FormEve
   return (
     <div className="grid grid-cols-2 gap-x-[4.8rem] max-lg:grid-cols-1 max-lg:gap-y-[2.4rem]">
       <div>
+        {/* px, not rem, deliberately: on the live site this heading is the
+            fixed-size ADDITIVE widget's own text, unaffected by the host
+            page's fluid vw-scaled root font-size. rem here would grow past
+            the captured 42px/24px reference on any viewport wider than
+            1920px (the root font-size keeps scaling up to the 2550px
+            body-inner cap), making the text visibly oversized on common
+            wide monitors. */}
         <h2
           id="newsletter-popup-heading"
-          className="pb-[1.6rem] text-[4.2rem] leading-[3.94rem] font-light tracking-[0.025em] text-ink max-lg:pb-[0.8rem] max-lg:text-[2.4rem] max-lg:leading-[2.8rem] max-lg:tracking-[0.1em] max-lg:uppercase"
+          className="pb-[1.6rem] text-[42px] leading-[39.4px] font-light tracking-[0.025em] text-ink max-lg:pb-[0.8rem] max-lg:text-[24px] max-lg:leading-[28px] max-lg:tracking-[0.1em] max-lg:uppercase"
         >
           €150 Towards Your First Escape at eriro
         </h2>
