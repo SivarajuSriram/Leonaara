@@ -9,6 +9,16 @@
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
+    },
+    {
+      "name": "cc_cookie",
+      "value": "%7B%22categories%22%3A%5B%22necessary%22%2C%22functionality%22%2C%22marketing%22%2C%22analytics%22%2C%22ads%22%5D%2C%22revision%22%3A0%2C%22data%22%3Anull%2C%22consentTimestamp%22%3A%222026-09-06T14%3A48%3A28.480Z%22%2C%22consentId%22%3A%22cb48444e-482e-45af-942c-a012ad23a0d1%22%2C%22services%22%3A%7B%22necessary%22%3A%5B%5D%2C%22functionality%22%3A%5B%5D%2C%22marketing%22%3A%5B%5D%2C%22analytics%22%3A%5B%5D%2C%22ads%22%3A%5B%5D%7D%2C%22languageCode%22%3A%22en%22%2C%22lastConsentTimestamp%22%3A%222026-09-06T14%3A48%3A28.480Z%22%2C%22expirationTime%22%3A1804430908488%7D",
+      "domain": "localhost",
+      "path": "/",
+      "expires": 1804430908,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
     }
   ],
   "origins": []

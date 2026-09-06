@@ -4,6 +4,7 @@ import { Header } from '@/components/layout/Header';
 import { SmoothScroll } from '@/components/layout/SmoothScroll';
 import { Footer } from '@/components/layout/Footer';
 import { NewsletterPopup } from '@/components/layout/NewsletterPopup';
+import { CookieConsentBanner } from '@/components/layout/CookieConsentBanner';
 
 export const viewport = { width: 'device-width', initialScale: 1 };
 
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img className="eriro-bg-attach" src="/HG.jpg" alt="" />
           <NewsletterPopup />
+          <CookieConsentBanner />
         </div>
       </body>
     </html>
