@@ -546,3 +546,4 @@ a.ht-button:hover {
 
 /* Swiper's own third-party stylesheet -- untouched, not ours to convert to utilities. */
 @import "./swiper.css";
+@import "./legal-content.css";

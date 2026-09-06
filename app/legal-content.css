@@ -1,0 +1,80 @@
+/* The one CSS escape hatch for this phase (spec §17.2): FooterPageText's `text`
+   and IncludePage's `html` are raw strings rendered via dangerouslySetInnerHTML
+   (through RichText) -- bare, unclassed <h1>/<h2>/<p>/<ul>/<a> tags from the
+   crawled payload, with no JSX to attach Tailwind utility classes to. Numbers
+   copied verbatim from docs/reference/css-clean/footerpagetext.css. */
+.legal-content h1 {
+  font-family: karol-sans, sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+.legal-content h2 {
+  font-family: karol-sans, sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0;
+  line-height: 133%;
+  margin: 3rem 0 1.5rem;
+}
+.legal-content h3 {
+  font-family: karol-sans, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 150%;
+  margin: 2rem 0;
+}
+.legal-content p,
+.legal-content ol,
+.legal-content ul {
+  font-family: karol-sans, sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0;
+  line-height: 156%;
+  margin-bottom: 1.5rem;
+}
+.legal-content ol li,
+.legal-content ul li {
+  margin-bottom: 1.5rem;
+}
+.legal-content ol + p,
+.legal-content ul + p {
+  margin-top: 0;
+}
+.legal-content a {
+  hyphens: auto;
+  text-decoration: underline;
+  word-break: break-all;
+}
+.legal-content a:hover {
+  color: #211d1d;
+}
+.legal-content ul.abcList li:before {
+  background: none;
+}
+@media (max-width: 1023px) {
+  .legal-content h1 {
+    font-size: 3rem;
+    letter-spacing: 0;
+    line-height: 133%;
+  }
+  .legal-content h2 {
+    font-size: 2rem;
+    letter-spacing: 0;
+    line-height: 150%;
+    margin: 1rem 0;
+  }
+  .legal-content h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    line-height: 167%;
+  }
+  .legal-content p,
+  .legal-content ol,
+  .legal-content ul {
+    font-size: 1.3rem;
+    letter-spacing: 0;
+    line-height: 177%;
+  }
+}
