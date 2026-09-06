@@ -43,6 +43,14 @@ export type PartnerMarqueeSection = Base<'mask_partnermarquee', { title: Html; t
 export type FooterPageTextSection = Base<'mask_footerpagetext', { title: Html; text: Html }>;
 export type IncludePageSection = Base<'hanthaincludepage_includepage', { html: Html }>;
 export type CookieConsentButtonSection = Base<'mask_cookieconsentbutton', { buttontext: string }>;
+export type AccordionItem = { uid: string; title: Html; info: Html; text: Html; linktext: string; link: LinkRef | '' };
+export type AccordionsSection = Base<'mask_accordions', { title: Html; text: Html; accordion: AccordionItem[] }>;
+export type ListItem = { uid: string; title: Html; text: Html };
+export type ListSection = Base<'mask_list', { title: Html; text: Html; listitems: ListItem[] }>;
+export type GallerySliderSection = Base<'mask_galleryslider', { images: ImageRef[] }>;
+export type GallerySection = Base<'mask_gallery', { images: ImageRef[] }>;
+export type NewsletterWidgetSection = Base<'mask_widget_newsletter', Record<string, never>>;
+export type VoucherWidgetSection = Base<'mask_widget_voucher', Record<string, never>>;
 // `type: string` here would defeat literal narrowing on `Section.type` for
 // every other member (a bare string catch-all can't be excluded when a caller
 // checks `section.type !== 'mask_hero'`), so this lists the content-element
@@ -51,9 +59,8 @@ export type CookieConsentButtonSection = Base<'mask_cookieconsentbutton', { butt
 export type UnknownSection = {
   id: number;
   type:
-    | 'mask_accordions' | 'mask_gallery' | 'mask_galleryslider' | 'mask_imgslider' | 'mask_jobs'
-    | 'mask_list' | 'mask_maps' | 'mask_pagefilter' | 'mask_roomcta' | 'mask_roomdetail' | 'mask_rooms'
-    | 'mask_widget_newsletter' | 'mask_widget_voucher' | 'powermail_pi1' | 'room';
+    | 'mask_imgslider' | 'mask_jobs' | 'mask_maps' | 'mask_pagefilter' | 'mask_roomcta'
+    | 'mask_roomdetail' | 'mask_rooms' | 'powermail_pi1' | 'room';
   appearance: Appearance;
   content: Record<string, unknown>;
 };
@@ -61,7 +68,9 @@ export type UnknownSection = {
 export type Section =
   | HeroSection | ImgTextSection | ImgSection | VideoSection | QuoteSection | BreakSection
   | RoomSliderSection | TeaserSliderSection | PartnerMarqueeSection
-  | FooterPageTextSection | IncludePageSection | CookieConsentButtonSection | UnknownSection;
+  | FooterPageTextSection | IncludePageSection | CookieConsentButtonSection
+  | AccordionsSection | ListSection | GallerySliderSection | GallerySection
+  | NewsletterWidgetSection | VoucherWidgetSection | UnknownSection;
 
 export type PageMeta = {
   title: string; description: string; ogTitle: string; ogDescription: string; ogImage: ImageRef | null;
