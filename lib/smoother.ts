@@ -11,8 +11,27 @@ type Cb = (s: ScrollSmoother | null) => void;
 let current: ScrollSmoother | null = null;
 const subscribers = new Set<Cb>();
 
+// Test-only escape hatch (never shipped: dead-code-eliminated in production
+// builds since NODE_ENV is statically known at bundle time). Playwright's
+// visual-regression specs need to position scroll-scrubbed content at an
+// *exact*, reproducible offset -- driving GSAP's ScrollSmoother via simulated
+// wheel events lets its own inertia settle at a slightly different sub-pixel
+// resting position every run (confirmed empirically: tests/e2e/break-visual.spec.ts's
+// history), which is fine for real users but not for pixel-diffing. Calling
+// window.__scrollSmoother.scrollTo(target, false, position) jumps instantly
+// to an exact offset with no physics involved, eliminating that noise at the
+// source instead of trying to poll for "settled enough".
+declare global {
+  interface Window {
+    __scrollSmoother?: ScrollSmoother | null;
+  }
+}
+
 export function setSmoother(s: ScrollSmoother | null) {
   current = s;
+  if (process.env.NODE_ENV !== 'production' && typeof window !== 'undefined') {
+    window.__scrollSmoother = s;
+  }
   subscribers.forEach((cb) => cb(s));
 }
 
