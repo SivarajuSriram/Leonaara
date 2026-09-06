@@ -343,6 +343,7 @@ git commit -m "feat: add FooterPageText/IncludePage/CookieConsentButton section 
 ## Task 2: Section components and the legal-content CSS escape hatch
 
 **Files:**
+- Modify: `package.json` (via `npm install vanilla-cookieconsent@3.1.0`)
 - Create: `components/sections/FooterPageText.tsx`
 - Create: `components/sections/IncludePage.tsx`
 - Create: `components/sections/CookieConsentButton.tsx`
@@ -352,7 +353,12 @@ git commit -m "feat: add FooterPageText/IncludePage/CookieConsentButton section 
 
 **Interfaces:**
 - Consumes: `FooterPageTextSection`, `IncludePageSection`, `CookieConsentButtonSection` from `lib/content.ts` (Task 1). `RichText` from `components/ui/RichText.tsx` (existing, no changes).
-- Produces: `FooterPageText({ section, first? })`, `IncludePage({ section })`, `CookieConsentButton({ section })` — all consumed directly by Task 3's page files.
+- Produces: `FooterPageText({ section, first? })`, `IncludePage({ section })`, `CookieConsentButton({ section })` — all consumed directly by Task 3's page files. Also produces the `vanilla-cookieconsent` dependency itself, installed here (not in Task 4) because `CookieConsentButton.tsx` below is the first file in this plan that imports it — Task 4's own `CookieConsentBanner` reuses the same already-installed package.
+
+- [ ] **Step 0: Install `vanilla-cookieconsent`**
+
+Run: `npm install vanilla-cookieconsent@3.1.0`
+Expected: `package.json`'s `dependencies` gains `"vanilla-cookieconsent": "^3.1.0"` (or similar, whatever `npm install` pins). This has to happen before Step 7 below writes a file that imports it, and before this task's own typecheck in Step 9 can pass.
 
 - [ ] **Step 1: Write `app/legal-content.css`**
 
@@ -623,7 +629,7 @@ Expected: both clean — confirms Task 1's content files satisfy the new compone
 - [ ] **Step 10: Commit**
 
 ```bash
-git add components/sections/FooterPageText.tsx components/sections/IncludePage.tsx components/sections/CookieConsentButton.tsx app/legal-content.css app/globals.css tests/unit/legal-sections.test.tsx
+git add package.json package-lock.json components/sections/FooterPageText.tsx components/sections/IncludePage.tsx components/sections/CookieConsentButton.tsx app/legal-content.css app/globals.css tests/unit/legal-sections.test.tsx
 git commit -m "feat: add FooterPageText, IncludePage, CookieConsentButton components and the legal-content CSS"
 ```
 
@@ -837,7 +843,6 @@ git commit -m "feat: add /imprint/, /privacy/, /cookies/ routes"
 ## Task 4: Cookie-consent banner
 
 **Files:**
-- Modify: `package.json` (via `npm install vanilla-cookieconsent`)
 - Create: `components/layout/CookieConsentBanner.tsx`
 - Modify: `app/layout.tsx`
 - Modify: `tests/e2e/fixtures/popup-dismissed.storageState.json`
@@ -845,13 +850,8 @@ git commit -m "feat: add /imprint/, /privacy/, /cookies/ routes"
 - Test: `tests/e2e/cookie-consent.spec.ts`
 
 **Interfaces:**
-- Consumes: `vanilla-cookieconsent`'s `run`/`showPreferences` (also consumed directly by Task 2's `CookieConsentButton`, already built).
+- Consumes: `vanilla-cookieconsent`'s `run`/`showPreferences` — the dependency itself was already installed in Task 2 (it's the first task that needed it, for `CookieConsentButton`), so there's nothing to install here.
 - Produces: `<CookieConsentBanner />`, a client component with no props, mounted once in `app/layout.tsx`.
-
-- [ ] **Step 1: Install the dependency**
-
-Run: `npm install vanilla-cookieconsent@3.1.0`
-Expected: `package.json`'s `dependencies` gains `"vanilla-cookieconsent": "^3.1.0"` (or similar, whatever `npm install` pins).
 
 - [ ] **Step 2: Write the failing unit test**
 
