@@ -1,4 +1,51 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, type Page, type Locator } from '@playwright/test';
+
+// This section is taller than the viewport at 1920/1440 (confirmed live:
+// ~1233px at 1920x951, ~925px at 1440x900). expect(locator).toHaveScreenshot()
+// internally scrolls-and-stitches multiple captures to build a full image of
+// a locator taller than the viewport -- and that internal scroll ALSO fails
+// under this site's virtualized GSAP ScrollSmoother (same underlying conflict
+// as break-visual.spec.ts's scrollIntoViewIfNeeded() bug, different Playwright
+// trigger), corrupting the bottom band of the resulting image. Fix: grow the
+// viewport's HEIGHT (never width -- width drives the responsive breakpoints
+// under test, height gates no CSS here) to comfortably fit the whole section
+// before capturing, so Playwright never needs to stitch at all, then
+// reposition deterministically via ScrollSmoother's own scrollTo() exactly as
+// break-visual does (see its file for the full rationale on why wheel events/
+// scrollIntoViewIfNeeded() are unreliable here).
+async function jumpTo(page: Page, selector: string) {
+  await page.waitForFunction(() => !!window.__scrollSmoother);
+  const jump = () => page.evaluate((sel) => {
+    window.__scrollSmoother?.scrollTo(sel, false, 'top top');
+  }, selector);
+  await jump();
+  // A late-decoding image/font can still shift layout after the jump above --
+  // jump again after a short settle to correct for that.
+  await page.waitForTimeout(300);
+  await jump();
+  await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
+}
+
+// Shared by both tests below: grows the viewport height (if needed) and jumps
+// to the section deterministically at desktop widths, or falls back to plain
+// scrollIntoViewIfNeeded() below the 1024px breakpoint (no smoother exists
+// there). Returns the viewport actually in effect afterward (grown or not),
+// since the hover test below needs it to clamp its screenshot clip correctly.
+async function positionSection(page: Page, section: Locator, selector: string, viewport: { width: number; height: number }) {
+  if (viewport.width < 1024) {
+    await section.scrollIntoViewIfNeeded();
+    return viewport;
+  }
+  const height = await section.evaluate((el) => el.getBoundingClientRect().height);
+  let current = viewport;
+  if (height > viewport.height) {
+    current = { width: viewport.width, height: Math.ceil(height) + 100 };
+    await page.setViewportSize(current);
+    await page.waitForTimeout(200); // SmoothScroll's resize handler is debounced 150ms
+  }
+  await jumpTo(page, selector);
+  return current;
+}
 
 // Only one .mask_roomslider section on the homepage.
 test.describe('RoomSlider visual regression', () => {
@@ -7,7 +54,7 @@ test.describe('RoomSlider visual regression', () => {
       await page.setViewportSize(viewport);
       await page.goto('/');
       const section = page.locator('.mask_roomslider');
-      await section.scrollIntoViewIfNeeded();
+      await positionSection(page, section, '.mask_roomslider', viewport);
       await page.waitForTimeout(2000);
       await expect(section).toHaveScreenshot(`roomslider-${viewport.width}.png`, { maxDiffPixels: 50 });
     });
@@ -56,7 +103,7 @@ test.describe('RoomSlider visual regression', () => {
       await page.setViewportSize(viewport);
       await page.goto('/');
       const section = page.locator('.mask_roomslider');
-      await section.scrollIntoViewIfNeeded();
+      const activeViewport = await positionSection(page, section, '.mask_roomslider', viewport);
       await page.waitForTimeout(2000);
       const nextArrow = section.locator('.navigation .next');
       await nextArrow.evaluate((el) => el.scrollIntoView({ block: 'center', inline: 'center' }));
@@ -66,8 +113,8 @@ test.describe('RoomSlider visual regression', () => {
       const pad = 20;
       const x0 = Math.max(0, arrowBox.x - pad);
       const y0 = Math.max(0, arrowBox.y - pad);
-      const x1 = Math.min(viewport.width, arrowBox.x + arrowBox.width + pad);
-      const y1 = Math.min(viewport.height, arrowBox.y + arrowBox.height + pad);
+      const x1 = Math.min(activeViewport.width, arrowBox.x + arrowBox.width + pad);
+      const y1 = Math.min(activeViewport.height, arrowBox.y + arrowBox.height + pad);
       await expect(page).toHaveScreenshot(`roomslider-${viewport.width}-hover.png`, {
         clip: { x: x0, y: y0, width: x1 - x0, height: y1 - y0 },
         maxDiffPixels: 50,

@@ -1,4 +1,31 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, type Page } from '@playwright/test';
+
+// This section is taller than the viewport at 1920 (confirmed live: ~1196px
+// at 1920x951); it fits at 1440x900 (~897px), so no growth is needed there.
+// expect(locator).toHaveScreenshot() internally scrolls-and-stitches multiple
+// captures to build a full image of a locator taller than the viewport -- and
+// that internal scroll ALSO fails under this site's virtualized GSAP
+// ScrollSmoother (same underlying conflict as break-visual.spec.ts's
+// scrollIntoViewIfNeeded() bug, different Playwright trigger), corrupting the
+// bottom band of the resulting image. Fix: grow the viewport's HEIGHT (never
+// width -- width drives the responsive breakpoints under test, height gates
+// no CSS here) to comfortably fit the whole section before capturing, so
+// Playwright never needs to stitch at all, then reposition deterministically
+// via ScrollSmoother's own scrollTo() exactly as break-visual does (see its
+// file for the full rationale on why wheel events/scrollIntoViewIfNeeded()
+// are unreliable here).
+async function jumpTo(page: Page, selector: string) {
+  await page.waitForFunction(() => !!window.__scrollSmoother);
+  const jump = () => page.evaluate((sel) => {
+    window.__scrollSmoother?.scrollTo(sel, false, 'top top');
+  }, selector);
+  await jump();
+  // A late-decoding image/font can still shift layout after the jump above --
+  // jump again after a short settle to correct for that.
+  await page.waitForTimeout(300);
+  await jump();
+  await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
+}
 
 // Only one .mask_teaserslider section on the homepage.
 test.describe('TeaserSlider visual regression', () => {
@@ -7,7 +34,16 @@ test.describe('TeaserSlider visual regression', () => {
       await page.setViewportSize(viewport);
       await page.goto('/');
       const section = page.locator('.mask_teaserslider');
-      await section.scrollIntoViewIfNeeded();
+      if (viewport.width >= 1024) {
+        const height = await section.evaluate((el) => el.getBoundingClientRect().height);
+        if (height > viewport.height) {
+          await page.setViewportSize({ width: viewport.width, height: Math.ceil(height) + 100 });
+          await page.waitForTimeout(200); // SmoothScroll's resize handler is debounced 150ms
+        }
+        await jumpTo(page, '.mask_teaserslider');
+      } else {
+        await section.scrollIntoViewIfNeeded();
+      }
       await page.waitForTimeout(2000);
       await expect(section).toHaveScreenshot(`teaserslider-${viewport.width}.png`, { maxDiffPixels: 50 });
     });
