@@ -14,6 +14,11 @@ test('privacy renders all three sections and resolves from the footer', async ({
   await page.locator('footer').getByRole('link', { name: 'Privacy' }).click();
   await expect(page).toHaveURL(/\/privacy\/$/);
   await expect(page).toHaveTitle('eriro - Information on data privacy');
+  // .first() is required, not a shortcut: privacy genuinely renders two <h1>s --
+  // both its FooterPageText sections ("Privacy" and the trailing " ADDITIVE+"
+  // credit line) have non-empty titles, and FooterPageText renders any non-empty
+  // title as an <h1>. Confirmed faithful to the original site -- do not "simplify"
+  // this to a bare locator, it will break on the second <h1>.
   await expect(page.locator('main h1').first()).toHaveText('Privacy');
   await expect(page.locator('main')).toContainText('article 4, paragraph 7, GDPR');
   await expect(page.locator('main')).toContainText('ADDITIVE Srl');

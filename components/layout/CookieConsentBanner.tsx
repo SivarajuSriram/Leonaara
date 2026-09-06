@@ -13,8 +13,16 @@ import 'vanilla-cookieconsent/dist/cookieconsent.css';
 // cloned (spec §2: no analytics/tracker scripts). hrefs drop /en/ per §16.1.
 export function CookieConsentBanner() {
   useEffect(() => {
+    // vanilla-cookieconsent's run() defaults hideFromBots: true, which gates the
+    // entire init on navigator.webdriver (true under any Playwright/automation
+    // context) -- so the banner silently never renders under this project's own
+    // e2e tests without the test-layer spoof in tests/e2e/cookie-consent.spec.ts.
     CookieConsent.run({
       cookie: { name: 'cc_cookie', expiresAfterDays: 182 },
+      guiOptions: {
+        consentModal: { layout: 'bar', position: 'bottom', equalWeightButtons: false, flipButtons: true },
+        preferencesModal: { layout: 'box', position: 'right', equalWeightButtons: false, flipButtons: false },
+      },
       categories: {
         necessary: { readOnly: true, enabled: true },
         functionality: {},

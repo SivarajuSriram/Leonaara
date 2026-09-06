@@ -13,6 +13,10 @@ describe('CookieConsentBanner', () => {
     expect(runMock).toHaveBeenCalledTimes(1);
     const config = runMock.mock.calls[0][0];
     expect(config.cookie).toEqual({ name: 'cc_cookie', expiresAfterDays: 182 });
+    expect(config.guiOptions).toEqual({
+      consentModal: { layout: 'bar', position: 'bottom', equalWeightButtons: false, flipButtons: true },
+      preferencesModal: { layout: 'box', position: 'right', equalWeightButtons: false, flipButtons: false },
+    });
     expect(Object.keys(config.categories)).toEqual(['necessary', 'functionality', 'marketing', 'analytics', 'ads']);
     expect(config.categories.necessary).toEqual({ readOnly: true, enabled: true });
     expect(config.language.default).toBe('en');

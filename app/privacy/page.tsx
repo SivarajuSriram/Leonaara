@@ -14,7 +14,7 @@ export default function PrivacyPage() {
   if (last.type !== 'mask_footerpagetext') throw new Error('expected footerpagetext');
   return (
     <main>
-      <BodyClass pageId={privacy.id} layout="layout-8" />
+      <BodyClass pageId={privacy.id} layout="layout-0" />
       <FooterPageText section={first} first />
       <IncludePage section={include} />
       <FooterPageText section={last} />

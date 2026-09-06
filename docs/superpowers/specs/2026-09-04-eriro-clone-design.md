@@ -651,12 +651,17 @@ footerpagetext.css`'s exact numbers verbatim:
   `.legal-content`; the wrapping section element itself gets
   `pt-[45rem] max-lg:pt-[25rem]` directly as a Tailwind utility (real JSX, no
   escape hatch needed there) — only on each page's first section, matching
-  `footerpagetext.css`'s `main>div:first-child`. `BodyClass` (already generic,
-  no changes needed) still gets called with `layout="layout-8"`, consistent
-  with every other page calling it — but no CSS actually selects on
-  `pid-N`/`layout-N` under this architecture; the original's
-  `[page-id="N"]`-scoped selectors are superseded by the `.legal-content`
-  class scope instead.
+  `footerpagetext.css`'s `main>div:first-child`. Note that `FooterPageText`
+  renders its `title` prop as an `<h1>` tag itself, not wrapped by another
+  element — so `.legal-content` lands directly on that `<h1>`, and the CSS
+  selector needs the `h1.legal-content` form alongside the descendant
+  `.legal-content h1` form to actually match it (a future phase reusing this
+  pattern should keep both forms, or it will silently reintroduce this bug).
+  `BodyClass` (already generic, no changes needed) still gets called with
+  `layout="layout-0"`, consistent with every other page calling it — but no
+  CSS actually selects on `pid-N`/`layout-N` under this architecture; the
+  original's `[page-id="N"]`-scoped selectors are superseded by the
+  `.legal-content` class scope instead.
 
 ### 17.3 Cookie-consent banner (§8.6 — specified in Phase 1, never built)
 

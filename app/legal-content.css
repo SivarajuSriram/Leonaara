@@ -3,7 +3,8 @@
    (through RichText) -- bare, unclassed <h1>/<h2>/<p>/<ul>/<a> tags from the
    crawled payload, with no JSX to attach Tailwind utility classes to. Numbers
    copied verbatim from docs/reference/css-clean/footerpagetext.css. */
-.legal-content h1 {
+.legal-content h1,
+h1.legal-content {
   font-family: karol-sans, sans-serif;
   font-size: 4rem;
   letter-spacing: 0;
@@ -54,7 +55,8 @@
   background: none;
 }
 @media (max-width: 1023px) {
-  .legal-content h1 {
+  .legal-content h1,
+  h1.legal-content {
     font-size: 3rem;
     letter-spacing: 0;
     line-height: 133%;

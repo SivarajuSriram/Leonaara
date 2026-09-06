@@ -15,7 +15,7 @@ export default function CookiesPage() {
   if (button.type !== 'mask_cookieconsentbutton') throw new Error('expected cookieconsentbutton');
   return (
     <main>
-      <BodyClass pageId={cookies.id} layout="layout-8" />
+      <BodyClass pageId={cookies.id} layout="layout-0" />
       <FooterPageText section={placeholder} first />
       <IncludePage section={include} />
       <CookieConsentButton section={button} />

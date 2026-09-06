@@ -11,7 +11,7 @@ export default function ImprintPage() {
   if (section.type !== 'mask_footerpagetext') throw new Error('expected footerpagetext');
   return (
     <main>
-      <BodyClass pageId={imprint.id} layout="layout-8" />
+      <BodyClass pageId={imprint.id} layout="layout-0" />
       <FooterPageText section={section} first />
     </main>
   );
