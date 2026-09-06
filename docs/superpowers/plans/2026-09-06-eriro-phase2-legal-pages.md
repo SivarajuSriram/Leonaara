@@ -497,11 +497,12 @@ describe('FooterPageText', () => {
 });
 
 describe('IncludePage', () => {
-  it('renders the raw HTML inside .legal-content.t3-ce-rte', () => {
+  it('renders the raw HTML inside .legal-content.t3-ce-rte, with padding-top zeroed on the outer element', () => {
     const section = cookies.columns.colPos0[1];
     if (section.type !== 'hanthaincludepage_includepage') throw new Error('expected includepage');
     const { container } = render(<IncludePage section={section} />);
     expect(container.firstElementChild?.className).toContain('mask_hanthainclude');
+    expect(container.firstElementChild?.className).toContain('pt-0');
     const rte = container.querySelector('.t3-ce-rte.legal-content');
     expect(rte).not.toBeNull();
     expect(rte?.innerHTML.length).toBeGreaterThan(9000);
@@ -574,12 +575,18 @@ import { RichText } from '@/components/ui/RichText';
 // grid-column-start:2;text-align:left}
 const contentCls = 't3-ce-rte legal-content col-start-2 col-span-12 text-left';
 
+// `padding-top:0` above belongs to `.mask_hanthainclude` itself -- the OUTER
+// div, the one that also carries `space-before-${spaceBefore}` -- not the
+// inner `.grid-container`, which has no padding-top of its own to zero out.
+// It has to be a Tailwind utility on the outer div (not just omitting
+// `space-before-`) so it reliably wins via the utilities-over-base cascade
+// layer, the same mechanism FooterPageText's `first` prop already relies on.
 export function IncludePage({ section }: { section: IncludePageSection }) {
-  const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_hanthainclude']
+  const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_hanthainclude', 'pt-0']
     .filter(Boolean).join(' ');
   return (
     <div className={cls} {...{ uid: `c${section.id}` }}>
-      <div className="grid-container pt-0">
+      <div className="grid-container">
         <RichText className={contentCls} html={section.content.html} />
       </div>
     </div>
