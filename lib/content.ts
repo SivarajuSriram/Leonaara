@@ -40,6 +40,9 @@ export type TeaserSlide = {
 export type TeaserSliderSection = Base<'mask_teaserslider', { teaserslides: TeaserSlide[] }>;
 export type Partner = { uid: string; img: ImageRef[]; link: LinkRef | '' };
 export type PartnerMarqueeSection = Base<'mask_partnermarquee', { title: Html; text: Html; partners: Partner[] }>;
+export type FooterPageTextSection = Base<'mask_footerpagetext', { title: Html; text: Html }>;
+export type IncludePageSection = Base<'hanthaincludepage_includepage', { html: Html }>;
+export type CookieConsentButtonSection = Base<'mask_cookieconsentbutton', { buttontext: string }>;
 // `type: string` here would defeat literal narrowing on `Section.type` for
 // every other member (a bare string catch-all can't be excluded when a caller
 // checks `section.type !== 'mask_hero'`), so this lists the content-element
@@ -48,17 +51,17 @@ export type PartnerMarqueeSection = Base<'mask_partnermarquee', { title: Html; t
 export type UnknownSection = {
   id: number;
   type:
-    | 'hanthaincludepage_includepage' | 'mask_accordions' | 'mask_cookieconsentbutton' | 'mask_footerpagetext'
-    | 'mask_gallery' | 'mask_galleryslider' | 'mask_imgslider' | 'mask_jobs' | 'mask_list' | 'mask_maps'
-    | 'mask_pagefilter' | 'mask_roomcta' | 'mask_roomdetail' | 'mask_rooms' | 'mask_widget_newsletter'
-    | 'mask_widget_voucher' | 'powermail_pi1' | 'room';
+    | 'mask_accordions' | 'mask_gallery' | 'mask_galleryslider' | 'mask_imgslider' | 'mask_jobs'
+    | 'mask_list' | 'mask_maps' | 'mask_pagefilter' | 'mask_roomcta' | 'mask_roomdetail' | 'mask_rooms'
+    | 'mask_widget_newsletter' | 'mask_widget_voucher' | 'powermail_pi1' | 'room';
   appearance: Appearance;
   content: Record<string, unknown>;
 };
 
 export type Section =
   | HeroSection | ImgTextSection | ImgSection | VideoSection | QuoteSection | BreakSection
-  | RoomSliderSection | TeaserSliderSection | PartnerMarqueeSection | UnknownSection;
+  | RoomSliderSection | TeaserSliderSection | PartnerMarqueeSection
+  | FooterPageTextSection | IncludePageSection | CookieConsentButtonSection | UnknownSection;
 
 export type PageMeta = {
   title: string; description: string; ogTitle: string; ogDescription: string; ogImage: ImageRef | null;
