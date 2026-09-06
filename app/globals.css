@@ -1,3 +1,40 @@
+/* Global stylesheet: Tailwind (theme + utilities only, no preflight), design tokens,
+   self-hosted fonts, and the original site's reset/typography/grid/link CSS, all in
+   one file. Components style themselves with Tailwind utility classes directly in
+   their JSX -- there are no per-component CSS files. The one exception is Swiper's
+   own untouched third-party stylesheet (swiper.css, imported below), which stays a
+   separate file because it isn't ours to hand-maintain. */
+/* Explicit layer order: CSS Cascade Layers give ANY unlayered style highest
+   priority over ANY layered style, regardless of selector specificity. Only
+   the reset block below (`* { padding:0; margin:0 }` and the type-selector list)
+   needs to sit in the "base" layer -- otherwise it silently discards Tailwind
+   utility classes on the same property (e.g. Hero.tsx's `pt-[43rem]`) even
+   though they'd win on specificity alone. The font-face rules and the link/
+   button classes below stay unlayered: their shared classes (e.g. `.ht-biglink`'s
+   underline) are meant to win or lose against component CSS files (Header.css
+   etc.) by ordinary specificity, same as before -- layering them too would make
+   them always lose to any unlayered component CSS regardless of specificity,
+   which is not what the original cascade did. */
+@layer theme, base, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+  --color-ink: #211d1d;
+  --color-beige: #e4e0db;
+  --color-canvas: #F2F1EF;
+  --font-sans: karol-sans, sans-serif;
+}
+
+/* Self-hosted Karol Sans faces used across the site (weights 300/400, normal/italic). */
+@font-face { font-family: karol-sans; src: url("/fonts/karol-sans-300-normal.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: auto; }
+@font-face { font-family: karol-sans; src: url("/fonts/karol-sans-300-italic.woff2") format("woff2"); font-weight: 300; font-style: italic; font-display: auto; }
+@font-face { font-family: karol-sans; src: url("/fonts/karol-sans-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: auto; }
+@font-face { font-family: karol-sans; src: url("/fonts/karol-sans-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: auto; }
+
+/* Reset, typography, grid -- the original site's global rules, verbatim. Layered
+   as "base" so Tailwind utility classes always win on the same property. */
+@layer base {
 * {
   box-sizing:border-box;
   margin:0;
@@ -443,3 +480,69 @@ main #Bs-BookingWidget .Bs-Guest .Bs-Guest__PaymentMethod ul {
     transform:translate(0);
   }
 }
+} /* end @layer base */
+
+/* Shared link/button classes -- unlayered (see the comment at the top of this file). */
+.ht-biglink {
+  font-size:4.5rem;
+  font-weight:300;
+  letter-spacing:.08em;
+  line-height:111%;
+  text-decoration:underline;
+  text-transform:uppercase;
+}
+@media (max-width:1023px) {
+  .ht-biglink {
+    font-size:3.5rem;
+    letter-spacing:.05em;
+    line-height:114%;
+  }
+}
+.ht-biglink:hover {
+  text-decoration-color:transparent;
+}
+.small-font {
+  font-size:2rem;
+  font-weight:400;
+  letter-spacing:.08em;
+  line-height:125%;
+  text-transform:uppercase;
+}
+@media (max-width:1023px) {
+  .small-font {
+    font-size:1.7rem;
+    letter-spacing:.08em;
+    line-height:94%;
+  }
+}
+a.ht-button {
+  border:2px solid #e4e0db;
+  font-size:2rem;
+  font-weight:300;
+  letter-spacing:.08em;
+  line-height:125%;
+  padding:1.5rem 2rem;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+@media (max-width:1023px) {
+  a.ht-button {
+    font-size:1.3rem;
+    letter-spacing:.05em;
+    line-height:131%;
+  }
+}
+a.ht-button:hover {
+  background-color: var(--color-canvas);
+}
+@media (max-width:1023px) {
+  a.ht-button {
+    padding:1rem 2rem;
+  }
+}
+.filled,.filled * {
+  fill:currentColor;
+}
+
+/* Swiper's own third-party stylesheet -- untouched, not ours to convert to utilities. */
+@import "./swiper.css";

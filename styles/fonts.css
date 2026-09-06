@@ -1,5 +1,0 @@
-/* Self-hosted Karol Sans faces used across the site (weights 300/400, normal/italic). */
-@font-face { font-family: karol-sans; src: url("/fonts/karol-sans-300-normal.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: auto; }
-@font-face { font-family: karol-sans; src: url("/fonts/karol-sans-300-italic.woff2") format("woff2"); font-weight: 300; font-style: italic; font-display: auto; }
-@font-face { font-family: karol-sans; src: url("/fonts/karol-sans-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: auto; }
-@font-face { font-family: karol-sans; src: url("/fonts/karol-sans-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: auto; }
