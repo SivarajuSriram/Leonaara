@@ -1,10 +1,16 @@
 import type { Metadata } from 'next';
 import type { PageContent } from './content';
 import { home } from '@/content/en/home';
+import { imprint } from '@/content/en/imprint';
+import { privacy } from '@/content/en/privacy';
+import { cookies } from '@/content/en/cookies';
 
 // Every English page, keyed by its TYPO3 slug ('/' is the homepage). Later phases add one line per page.
 export const pages: Record<string, PageContent> = {
   '/': home,
+  '/imprint/': imprint,
+  '/privacy/': privacy,
+  '/cookies/': cookies,
 };
 
 export function getPage(slug: string): PageContent | undefined {
