@@ -42,6 +42,7 @@ describe('IncludePage', () => {
     if (section.type !== 'hanthaincludepage_includepage') throw new Error('expected includepage');
     const { container } = render(<IncludePage section={section} />);
     expect(container.firstElementChild?.className).toContain('mask_hanthainclude');
+    expect(container.firstElementChild?.className).toContain('pt-0');
     const rte = container.querySelector('.t3-ce-rte.legal-content');
     expect(rte).not.toBeNull();
     expect(rte?.innerHTML.length).toBeGreaterThan(9000);

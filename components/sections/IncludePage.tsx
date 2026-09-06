@@ -10,11 +10,11 @@ import { RichText } from '@/components/ui/RichText';
 const contentCls = 't3-ce-rte legal-content col-start-2 col-span-12 text-left';
 
 export function IncludePage({ section }: { section: IncludePageSection }) {
-  const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_hanthainclude']
+  const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_hanthainclude', 'pt-0']
     .filter(Boolean).join(' ');
   return (
     <div className={cls} {...{ uid: `c${section.id}` }}>
-      <div className="grid-container pt-0">
+      <div className="grid-container">
         <RichText className={contentCls} html={section.content.html} />
       </div>
     </div>
