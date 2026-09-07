@@ -8,6 +8,8 @@ import { allInService } from '@/content/en/all-in-service';
 import { eriroExclusive } from '@/content/en/eriro-exclusive';
 import { summer } from '@/content/en/summer';
 import { winter } from '@/content/en/winter';
+import { bookingConditions } from '@/content/en/booking-conditions';
+import { press } from '@/content/en/press';
 
 // Every English page, keyed by its TYPO3 slug ('/' is the homepage). Later phases add one line per page.
 export const pages: Record<string, PageContent> = {
@@ -19,6 +21,8 @@ export const pages: Record<string, PageContent> = {
   '/eriro-exclusive/': eriroExclusive,
   '/summer/': summer,
   '/winter/': winter,
+  '/booking-conditions/': bookingConditions,
+  '/press/': press,
 };
 
 export function getPage(slug: string): PageContent | undefined {
