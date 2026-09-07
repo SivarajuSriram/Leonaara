@@ -15,6 +15,8 @@ import { origin } from '@/content/en/origin';
 import { spa } from '@/content/en/spa';
 import { culinary } from '@/content/en/culinary';
 import { gallery } from '@/content/en/gallery';
+import { newsletter } from '@/content/en/newsletter';
+import { voucher } from '@/content/en/voucher';
 
 // Every English page, keyed by its TYPO3 slug ('/' is the homepage). Later phases add one line per page.
 export const pages: Record<string, PageContent> = {
@@ -33,6 +35,8 @@ export const pages: Record<string, PageContent> = {
   '/spa/': spa,
   '/culinary/': culinary,
   '/gallery/': gallery,
+  '/newsletter/': newsletter,
+  '/voucher/': voucher,
 };
 
 export function getPage(slug: string): PageContent | undefined {
