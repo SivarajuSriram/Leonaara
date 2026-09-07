@@ -4,6 +4,10 @@ import { home } from '@/content/en/home';
 import { imprint } from '@/content/en/imprint';
 import { privacy } from '@/content/en/privacy';
 import { cookies } from '@/content/en/cookies';
+import { allInService } from '@/content/en/all-in-service';
+import { eriroExclusive } from '@/content/en/eriro-exclusive';
+import { summer } from '@/content/en/summer';
+import { winter } from '@/content/en/winter';
 
 // Every English page, keyed by its TYPO3 slug ('/' is the homepage). Later phases add one line per page.
 export const pages: Record<string, PageContent> = {
@@ -11,6 +15,10 @@ export const pages: Record<string, PageContent> = {
   '/imprint/': imprint,
   '/privacy/': privacy,
   '/cookies/': cookies,
+  '/all-in-service/': allInService,
+  '/eriro-exclusive/': eriroExclusive,
+  '/summer/': summer,
+  '/winter/': winter,
 };
 
 export function getPage(slug: string): PageContent | undefined {
