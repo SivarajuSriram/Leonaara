@@ -3,10 +3,20 @@ import { render, fireEvent, screen, cleanup } from '@testing-library/react';
 import { FilterShell } from '@/components/sections/FilterShell';
 
 const scrollTriggerCreate = vi.fn();
+// contextSafe is a pass-through in tests -- real @gsap/react ties it to
+// component-unmount cleanup, which isn't under test here. useGSAP's real
+// signature calls the callback with (context, contextSafe) synchronously
+// (FilterShell.tsx relies on that second param, not the returned value,
+// inside its own useGSAP callback -- see the comment there for why), and
+// returns { context, contextSafe } once it completes.
+const contextSafe = (fn: (...args: unknown[]) => unknown) => fn;
 vi.mock('@/lib/gsap', () => ({
   gsap: { to: vi.fn() },
   ScrollTrigger: { create: (...args: unknown[]) => scrollTriggerCreate(...args), refresh: vi.fn() },
-  useGSAP: (cb: () => void) => cb(),
+  useGSAP: (cb: (context?: unknown, contextSafe?: (fn: (...args: unknown[]) => unknown) => unknown) => void) => {
+    cb(undefined, contextSafe);
+    return { contextSafe };
+  },
 }));
 
 const appearance = { layout: 'default', frameClass: 'default', spaceBefore: '' as const, spaceAfter: '' };

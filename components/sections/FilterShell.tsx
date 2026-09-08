@@ -71,26 +71,58 @@ export function FilterShell({ id, appearance, variant, items, nodes, activeIndex
 
   // spec §9.15: ScrollTrigger created 500ms after first content load; on
   // later switches, ScrollTrigger.refresh() after 100ms instead of recreating.
-  useGSAP(() => {
+  // contextSafe wraps the setTimeout callback below because @gsap/react's
+  // useGSAP context-tracking is only active for the synchronous duration of
+  // the callback passed to useGSAP -- anything GSAP-related created inside an
+  // async callback (like this setTimeout) runs after that window has closed
+  // and is never added to the component's GSAP context, so it would never be
+  // auto-reverted/killed on unmount. Same pattern and rationale as
+  // Header.tsx's own contextSafe usage (see the comment there): this app
+  // keeps Header/SmoothScroll mounted across client-side navigations, so an
+  // un-wrapped ScrollTrigger.create() here would leak a live, permanently
+  // pinned trigger every time this component unmounts after the 500ms delay
+  // has elapsed.
+  // The callback below takes `contextSafe` as its second parameter (rather
+  // than using the value destructured from useGSAP's return below) because
+  // useGSAP only returns that value once the call completes -- referencing
+  // the destructured `contextSafe` from inside this same synchronous
+  // callback would hit it in its temporal-dead-zone and throw. Taking it as
+  // a parameter is the documented @gsap/react way to get contextSafe inside
+  // the callback passed to useGSAP itself.
+  const { contextSafe } = useGSAP((_context, contextSafeInline) => {
     if (!filterOuterRef.current || !filterGridRef.current) return;
-    const timer = setTimeout(() => {
-      ScrollTrigger.create({
-        trigger: filterOuterRef.current!,
-        start: `-${headerHeight()} top`,
-        end: 'bottom top',
-        pin: filterGridRef.current!,
-        pinSpacing: false,
-        onEnter: () => setIsPinned(true),
-        onLeave: () => setIsPinned(false),
-        onEnterBack: () => setIsPinned(true),
-        onLeaveBack: () => setIsPinned(false),
-      });
-      hasCreatedTrigger.current = true;
-    }, 500);
+    const timer = setTimeout(
+      contextSafeInline!(() => {
+        ScrollTrigger.create({
+          trigger: filterOuterRef.current!,
+          start: `-${headerHeight()} top`,
+          end: 'bottom top',
+          pin: filterGridRef.current!,
+          pinSpacing: false,
+          onEnter: () => setIsPinned(true),
+          onLeave: () => setIsPinned(false),
+          onEnterBack: () => setIsPinned(true),
+          onLeaveBack: () => setIsPinned(false),
+        });
+        hasCreatedTrigger.current = true;
+      }),
+      500
+    );
     return () => clearTimeout(timer);
   }, { scope: filterOuterRef });
 
-  const handleClick = (index: number) => {
+  // Same contextSafe reasoning as above: this handler creates a GSAP tween
+  // (gsap.to) outside the synchronous useGSAP window (it runs from a click
+  // event), so it must be wrapped to be tracked and reverted on unmount.
+  // ScrollTrigger.refresh() is NOT wrapped -- it doesn't create or register
+  // any new GSAP object, it only re-measures triggers that are already
+  // tracked (or not) in the context, so there's nothing for contextSafe to
+  // add to the context here.
+  // contextSafe (the official @gsap/react pattern) only ever invokes this closure later, from the
+  // click handler; it never reads the refs during render -- same false positive Header.tsx already
+  // suppresses on its own contextSafe-wrapped closures (toggleMenu, closeIfOpen).
+  // eslint-disable-next-line react-hooks/refs
+  const handleClick = contextSafe((index: number) => {
     if (index === active) return;
     setActive(index);
     const meta = metaByIndex[index];
@@ -106,7 +138,7 @@ export function FilterShell({ id, appearance, variant, items, nodes, activeIndex
       setTimeout(() => ScrollTrigger.refresh(), 100);
     }
     gsap.to(window, { duration: 0.2, scrollTo: { y: filterOuterRef.current!.offsetTop, offsetY: 0 } });
-  };
+  });
 
   const maskType = variant === 'pagefilter' ? 'mask_pagefilter' : 'mask_rooms';
   const maskCls = [appearance.layout, `space-before-${appearance.spaceBefore}`, 'mask', maskType].filter(Boolean).join(' ');
