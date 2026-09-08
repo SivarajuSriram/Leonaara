@@ -9,10 +9,12 @@
 // layout-level way to exclude them for just this page without a broader routing refactor —
 // the useEffect below hides them directly as the minimal-blast-radius equivalent.
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { ErrorFaceIcon } from '@/components/ui/icons';
 import { site } from '@/content/site';
+import { gsap } from '@/lib/gsap';
+import { MOUTH_SMILE, EYES_NORMAL, EYES_WINK } from '@/lib/errorFaceIcon';
 
 // mask_errorpage{align-items:center;display:flex;height:100vh;justify-content:
 // center;padding-top:12rem} + mobile{padding-top:0}. grid-column-end:span 14;
@@ -80,15 +82,41 @@ const loadingBarCls = 'loadingBar relative col-start-1 col-span-14 h-[.2rem] mt-
 // animation-name:loader-6701ef9f;animation-duration:5s;animation-delay:1s;
 // animation-fill-mode:forwards}. Pulled directly from the live stylesheet and byte-identical
 // to the keyframe already committed at app/globals.css:475-480 — no change needed there.
-// -translate-x-full restates the keyframe's own 0% value as this element's static base
-// transform: animation-fill-mode:forwards only paints the keyframe's *end* state outside the
-// animation's active interval, not its start, so without this the bar would flash at
-// translateX(0) (full width, unfilled-looking) for the first second (the animation-delay)
-// before snapping to hidden when the animation actually begins.
-const innerLoaderCls = 'innerLoader absolute left-0 top-0 h-full w-full bg-ink -translate-x-full animate-[loader-6701ef9f_5s_1s_forwards]';
+// The static base state restates the keyframe's own 0% value (animation-fill-mode:forwards
+// only paints the keyframe's *end* state outside the animation's active interval, not its
+// start, so without this the bar would flash at translateX(0), full width, for the first
+// second before snapping to hidden when the animation begins) — but it MUST be set via the
+// `transform` property specifically, not Tailwind's `-translate-x-full` utility. That utility
+// writes the separate CSS `translate` property, and `translate`/`transform` compose
+// independently (CSS Transforms Level 2) rather than one overriding the other: with
+// `-translate-x-full` the element sits at a permanent translate:-100% that the transform
+// animation then stacks on top of instead of replacing, so the bar never becomes visible at
+// any point in the sequence (confirmed: computed `translate` stayed -100% and never got
+// touched by the animation, which only ever writes `transform`). An arbitrary-property
+// utility targeting `transform` directly avoids the second property entirely.
+const innerLoaderCls = 'innerLoader absolute left-0 top-0 h-full w-full bg-ink [transform:translateX(-100%)] animate-[loader-6701ef9f_5s_1s_forwards]';
 
 export default function NotFound() {
   const router = useRouter();
+  const svgWrapRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    // Live timing captured via a Playwright session with navigator.webdriver spoofed to
+    // false (automated sessions otherwise get a compressed/accelerated version of this
+    // whole sequence) — see lib/errorFaceIcon.ts. Frown is static for ~2.5s, morphs to a
+    // smile over ~0.5s, then ~0.17s later the bottom eye alone winks (squash to a sliver
+    // over ~0.13s, release over ~0.15s) — well before the 9s redirect below.
+    const wrap = svgWrapRef.current;
+    const mouth = wrap?.querySelector('.mouth');
+    const eyes = wrap?.querySelector('.eyes');
+    if (!mouth || !eyes) return;
+    const tl = gsap.timeline({ delay: 2.5 });
+    tl.to(mouth, { duration: 0.5, morphSVG: MOUTH_SMILE })
+      .to(eyes, { duration: 0.13, morphSVG: EYES_WINK }, '+=0.17')
+      .to(eyes, { duration: 0.15, morphSVG: EYES_NORMAL });
+    return () => {
+      tl.kill();
+    };
+  }, []);
   useEffect(() => {
     // The live page has no header/nav/footer (confirmed via a direct DOM query, not a
     // screenshot guess) — see the file-top comment for why this is done from here rather
@@ -103,17 +131,19 @@ export default function NotFound() {
     };
   }, []);
   useEffect(() => {
-    // Measured live redirect: ~9.07s (1s animation-delay + 5s bar fill + a further hold that
-    // isn't exposed in the compiled bundle's readable source — 9s is the closest round value
-    // to the measured 9073ms).
-    const t = setTimeout(() => router.push(site.pageLinks.home), 9000);
+    // Deliberate deviation from the live site by user request: the live page holds for a
+    // further ~3s after the loading bar visually finishes filling before redirecting
+    // (measured live redirect ~9.07s total: 1s animation-delay + 5s bar fill + that hold).
+    // Here the redirect fires the instant the bar completes instead, matching the bar's own
+    // 1s delay + 5s duration with no extra wait.
+    const t = setTimeout(() => router.push(site.pageLinks.home), 6000);
     return () => clearTimeout(t);
   }, [router]);
   return (
     <main>
       <div className={wrapperCls}>
         <div className={gridCls}>
-          <div className={svgWrapperCls}><ErrorFaceIcon /></div>
+          <div className={svgWrapperCls} ref={svgWrapRef}><ErrorFaceIcon /></div>
           <div className={textWrapperCls}>
             <div className={titleCls}>
               Ooops!

@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { SmoothScroll } from '@/components/layout/SmoothScroll';
+import { ScrollResetOnNavigate } from '@/components/layout/ScrollResetOnNavigate';
 import { Footer } from '@/components/layout/Footer';
 import { NewsletterPopup } from '@/components/layout/NewsletterPopup';
 import { CookieConsentBanner } from '@/components/layout/CookieConsentBanner';
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body className="pid-1 layout-layout-0">
         <div id="__app">
+          <ScrollResetOnNavigate />
           <Header />
           <SmoothScroll>
             {children}
