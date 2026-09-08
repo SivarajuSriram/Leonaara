@@ -1,0 +1,925 @@
+{
+  "id": 100,
+  "type": "Standard",
+  "slug": "/sneo",
+  "media": [],
+  "meta": {
+    "title": "sneo in the eriro - direct access to slopes and snowshoe hikes",
+    "subtitle": "",
+    "abstract": "",
+    "description": "sneo in the eriro: enjoy direct access to ski slopes and ski lifts or discover the untouched winter landscape on a snowshoe hike",
+    "keywords": "",
+    "canonical": "",
+    "robots": {
+      "noIndex": false,
+      "noFollow": false
+    },
+    "author": "",
+    "authorEmail": "",
+    "ogTitle": "SNEO",
+    "ogDescription": "sneo in the eriro: enjoy direct access to ski slopes and ski lifts or discover the untouched winter landscape on a snowshoe hike",
+    "ogImage": null,
+    "twitterTitle": "SNEO",
+    "twitterDescription": "sneo in the eriro: enjoy direct access to ski slopes and ski lifts or discover the untouched winter landscape on a snowshoe hike",
+    "twitterCard": "summary",
+    "twitterImage": null
+  },
+  "categories": "",
+  "breadcrumbs": [
+    {
+      "title": "Home",
+      "link": "/en/",
+      "target": "",
+      "active": 1,
+      "current": 0,
+      "spacer": 0,
+      "hasSubpages": 1,
+      "pid": 0
+    },
+    {
+      "title": "SNEO",
+      "link": "/en/sneo/",
+      "target": "",
+      "active": 1,
+      "current": 1,
+      "spacer": 0,
+      "hasSubpages": 0,
+      "pid": 107
+    }
+  ],
+  "appearance": {
+    "layout": "layout-0",
+    "backendLayout": "11"
+  },
+  "content": {
+    "colPos0": [
+      {
+        "id": 282,
+        "type": "shortcut",
+        "colPos": 0,
+        "categories": "",
+        "appearance": {
+          "layout": "default",
+          "frameClass": "default",
+          "spaceBefore": "",
+          "spaceAfter": ""
+        },
+        "content": {
+          "shortcut": [
+            {
+              "id": 184,
+              "type": "mask_hero",
+              "colPos": 0,
+              "categories": "",
+              "appearance": {
+                "layout": "default",
+                "frameClass": "default",
+                "spaceBefore": "",
+                "spaceAfter": ""
+              },
+              "content": {
+                "header": "Experiences",
+                "subheader": "",
+                "headerLayout": 0,
+                "headerPosition": "",
+                "headerLink": "",
+                "type": "mask_hero",
+                "title": "Memories that anchor in the heart",
+                "titleh2": "Touch what time<br>\r\nhas left <br>\r\nuntouched",
+                "titleimg": "",
+                "text": "<p>In the remote corners of the Tyrolean Alps, we become one with nature. A humbleness towards the magnificent mountains shapes all aspects of life. The seasons and their shifts in weather govern each day. Gracious and gentle, archaic and rugged, the mountain calls upon us to be alert and aware with all our senses – it sharpens the eye for the essentials. Experiences and traditions become lasting memories. Exploration, perception and connecting with yourself opens wide the dimension of being.&nbsp;</p>",
+                "img": [],
+                "sideimg": [],
+                "imgsummer": [],
+                "sideimgsummer": [],
+                "herolayout": "only-text"
+              }
+            },
+            {
+              "id": 213,
+              "type": "mask_pagefilter",
+              "colPos": 0,
+              "categories": "",
+              "appearance": {
+                "layout": "default",
+                "frameClass": "default",
+                "spaceBefore": "",
+                "spaceAfter": ""
+              },
+              "content": {
+                "header": "Seitenwechsel",
+                "subheader": "",
+                "headerLayout": 0,
+                "headerPosition": "",
+                "headerLink": "",
+                "type": "mask_pagefilter",
+                "pages": [
+                  {
+                    "uid": "1",
+                    "title": "Leiba",
+                    "slug": {
+                      "href": "/en/leiba/",
+                      "target": null,
+                      "class": null,
+                      "title": null,
+                      "linkText": "97",
+                      "additionalAttributes": []
+                    }
+                  },
+                  {
+                    "uid": "4",
+                    "title": "Sela",
+                    "slug": {
+                      "href": "/en/sela/",
+                      "target": null,
+                      "class": null,
+                      "title": null,
+                      "linkText": "t3://page?uid=98",
+                      "additionalAttributes": []
+                    }
+                  },
+                  {
+                    "uid": "5",
+                    "title": "Herchomen",
+                    "slug": {
+                      "href": "/en/herchomen/",
+                      "target": null,
+                      "class": null,
+                      "title": null,
+                      "linkText": "t3://page?uid=115",
+                      "additionalAttributes": []
+                    }
+                  },
+                  {
+                    "uid": "3",
+                    "title": "Hantwerc",
+                    "slug": {
+                      "href": "/en/hantwerc/",
+                      "target": null,
+                      "class": null,
+                      "title": null,
+                      "linkText": "t3://page?uid=99",
+                      "additionalAttributes": []
+                    }
+                  },
+                  {
+                    "uid": "2",
+                    "title": "Sneo",
+                    "slug": {
+                      "href": "/en/sneo/",
+                      "target": null,
+                      "class": null,
+                      "title": null,
+                      "linkText": "t3://page?uid=100",
+                      "additionalAttributes": []
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "colPos5": [
+      {
+        "id": 231,
+        "type": "mask_hero",
+        "colPos": 5,
+        "categories": "",
+        "appearance": {
+          "layout": "default",
+          "frameClass": "default",
+          "spaceBefore": "medium",
+          "spaceAfter": ""
+        },
+        "content": {
+          "header": "",
+          "subheader": "",
+          "headerLayout": 0,
+          "headerPosition": "",
+          "headerLink": "",
+          "type": "mask_hero",
+          "title": "Winter experiences",
+          "titleh2": "The many moods<br>\r\nof snow",
+          "titleimg": "",
+          "text": "",
+          "img": [
+            {
+              "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-06.jpg",
+              "properties": {
+                "title": null,
+                "alternative": "Guest in cream wool coat with fringed reversible scarf pulling wooden sled through deep snow, Wetterstein fog panorama at eriro Ehrwald",
+                "description": null,
+                "link": null,
+                "linkData": null,
+                "mimeType": "image/jpeg",
+                "type": "image",
+                "filename": "eriro-alpine-hide-oesterreich-ehrwald-luxus-06.jpg",
+                "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-06.jpg",
+                "uidLocal": 438,
+                "fileReferenceUid": 1818,
+                "size": "748 KB",
+                "dimensions": {
+                  "width": 1920,
+                  "height": 1480
+                },
+                "cropDimensions": {
+                  "width": 1920,
+                  "height": 1480
+                },
+                "crop": {
+                  "default": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  },
+                  "mobile": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  }
+                },
+                "autoplay": null,
+                "extension": "jpg"
+              },
+              "cropVariants": {
+                "default": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-06.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Guest in cream wool coat with fringed reversible scarf pulling wooden sled through deep snow, Wetterstein fog panorama at eriro Ehrwald",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "eriro-alpine-hide-oesterreich-ehrwald-luxus-06.jpg",
+                    "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-06.jpg",
+                    "uidLocal": 438,
+                    "fileReferenceUid": 1818,
+                    "size": "748 KB",
+                    "dimensions": {
+                      "width": 1920,
+                      "height": 1480
+                    },
+                    "cropDimensions": {
+                      "width": 1920,
+                      "height": 1480
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                },
+                "mobile": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-06.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Guest in cream wool coat with fringed reversible scarf pulling wooden sled through deep snow, Wetterstein fog panorama at eriro Ehrwald",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "eriro-alpine-hide-oesterreich-ehrwald-luxus-06.jpg",
+                    "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-06.jpg",
+                    "uidLocal": 438,
+                    "fileReferenceUid": 1818,
+                    "size": "748 KB",
+                    "dimensions": {
+                      "width": 1920,
+                      "height": 1480
+                    },
+                    "cropDimensions": {
+                      "width": 1920,
+                      "height": 1480
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                }
+              }
+            }
+          ],
+          "sideimg": [
+            {
+              "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-06.jpg",
+              "properties": {
+                "title": null,
+                "alternative": "Snow-covered Wetterstein limestone summit with dark rock walls and steep snow fields beneath hazy winter sky at Ehrwald",
+                "description": null,
+                "link": null,
+                "linkData": null,
+                "mimeType": "image/jpeg",
+                "type": "image",
+                "filename": "eriro-ehrwald-oesterreich-alpine-hide-06.jpg",
+                "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-06.jpg",
+                "uidLocal": 474,
+                "fileReferenceUid": 1891,
+                "size": "804 KB",
+                "dimensions": {
+                  "width": 1200,
+                  "height": 1600
+                },
+                "cropDimensions": {
+                  "width": 1200,
+                  "height": 1600
+                },
+                "crop": {
+                  "default": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  },
+                  "mobile": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  }
+                },
+                "autoplay": null,
+                "extension": "jpg"
+              },
+              "cropVariants": {
+                "default": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-06.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Snow-covered Wetterstein limestone summit with dark rock walls and steep snow fields beneath hazy winter sky at Ehrwald",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "eriro-ehrwald-oesterreich-alpine-hide-06.jpg",
+                    "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-06.jpg",
+                    "uidLocal": 474,
+                    "fileReferenceUid": 1891,
+                    "size": "804 KB",
+                    "dimensions": {
+                      "width": 1200,
+                      "height": 1600
+                    },
+                    "cropDimensions": {
+                      "width": 1200,
+                      "height": 1600
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                },
+                "mobile": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-06.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Snow-covered Wetterstein limestone summit with dark rock walls and steep snow fields beneath hazy winter sky at Ehrwald",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "eriro-ehrwald-oesterreich-alpine-hide-06.jpg",
+                    "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-06.jpg",
+                    "uidLocal": 474,
+                    "fileReferenceUid": 1891,
+                    "size": "804 KB",
+                    "dimensions": {
+                      "width": 1200,
+                      "height": 1600
+                    },
+                    "cropDimensions": {
+                      "width": 1200,
+                      "height": 1600
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                }
+              }
+            }
+          ],
+          "imgsummer": [],
+          "sideimgsummer": [],
+          "herolayout": "subpage"
+        }
+      },
+      {
+        "id": 232,
+        "type": "mask_imgtext",
+        "colPos": 5,
+        "categories": "",
+        "appearance": {
+          "layout": "default",
+          "frameClass": "default",
+          "spaceBefore": "",
+          "spaceAfter": ""
+        },
+        "content": {
+          "header": "Sneo",
+          "subheader": "",
+          "headerLayout": 0,
+          "headerPosition": "",
+          "headerLink": "",
+          "type": "mask_imgtext",
+          "title": "Sneo",
+          "text": "<p>Be the first on the deserted piste in the morning, let your gaze sink into the quiet expanse of the Alpine winter landscape at blue hour. Ski-in and Ski-out: eriro sits at the edge of the Ehrwalder Almen ski area and offers direct access to the slopes and lifts throughout the season.&nbsp;</p>\n<p>The mountain winter is quiet and peaceful on snowshoe hikes through a landscape often covered in deep snow, with stunning views of mountain peaks and frozen mountain lakes as your unwavering companions. Part of the winter experience is also learning vital knowledge about the many aspects of snow: as enchanting as the pasture and mountain landscapes of the winter months are, we are nonetheless small and vulnerable against the forces of nature.</p>",
+          "imgleft": [
+            {
+              "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/DR1A1272.jpg",
+              "properties": {
+                "title": null,
+                "alternative": "Ski pole in powder snow beside wooden edge – crystalline snow grains and patinated metal telling of eriro winter days in the Zugspitze region",
+                "description": null,
+                "link": null,
+                "linkData": null,
+                "mimeType": "image/jpeg",
+                "type": "image",
+                "filename": "DR1A1272.jpg",
+                "originalUrl": "/fileadmin/user_upload/DR1A1272.jpg",
+                "uidLocal": 175,
+                "fileReferenceUid": 1041,
+                "size": "3 MB",
+                "dimensions": {
+                  "width": 2560,
+                  "height": 3838
+                },
+                "cropDimensions": {
+                  "width": 2560,
+                  "height": 3838
+                },
+                "crop": {
+                  "default": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  },
+                  "mobile": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  }
+                },
+                "autoplay": null,
+                "extension": "jpg"
+              },
+              "cropVariants": {
+                "default": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/DR1A1272.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Ski pole in powder snow beside wooden edge – crystalline snow grains and patinated metal telling of eriro winter days in the Zugspitze region",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "DR1A1272.jpg",
+                    "originalUrl": "/fileadmin/user_upload/DR1A1272.jpg",
+                    "uidLocal": 175,
+                    "fileReferenceUid": 1041,
+                    "size": "3 MB",
+                    "dimensions": {
+                      "width": 2560,
+                      "height": 3838
+                    },
+                    "cropDimensions": {
+                      "width": 2560,
+                      "height": 3838
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                },
+                "mobile": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/DR1A1272.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Ski pole in powder snow beside wooden edge – crystalline snow grains and patinated metal telling of eriro winter days in the Zugspitze region",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "DR1A1272.jpg",
+                    "originalUrl": "/fileadmin/user_upload/DR1A1272.jpg",
+                    "uidLocal": 175,
+                    "fileReferenceUid": 1041,
+                    "size": "3 MB",
+                    "dimensions": {
+                      "width": 2560,
+                      "height": 3838
+                    },
+                    "cropDimensions": {
+                      "width": 2560,
+                      "height": 3838
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                }
+              }
+            }
+          ],
+          "imgright": [
+            {
+              "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-03.jpg",
+              "properties": {
+                "title": null,
+                "alternative": "Mountaineer in brown jacket on boulder gazing up at snow-covered Wetterstein north face, mountain pine foreground at eriro Ehrwald",
+                "description": null,
+                "link": null,
+                "linkData": null,
+                "mimeType": "image/jpeg",
+                "type": "image",
+                "filename": "eriro-ehrwald-spa-alpinehide-suite-03.jpg",
+                "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-03.jpg",
+                "uidLocal": 452,
+                "fileReferenceUid": 1859,
+                "size": "742 KB",
+                "dimensions": {
+                  "width": 1500,
+                  "height": 1350
+                },
+                "cropDimensions": {
+                  "width": 1500,
+                  "height": 1350
+                },
+                "crop": {
+                  "default": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  },
+                  "mobile": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  }
+                },
+                "autoplay": null,
+                "extension": "jpg"
+              },
+              "cropVariants": {
+                "default": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-03.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Mountaineer in brown jacket on boulder gazing up at snow-covered Wetterstein north face, mountain pine foreground at eriro Ehrwald",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "eriro-ehrwald-spa-alpinehide-suite-03.jpg",
+                    "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-03.jpg",
+                    "uidLocal": 452,
+                    "fileReferenceUid": 1859,
+                    "size": "742 KB",
+                    "dimensions": {
+                      "width": 1500,
+                      "height": 1350
+                    },
+                    "cropDimensions": {
+                      "width": 1500,
+                      "height": 1350
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                },
+                "mobile": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-03.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Mountaineer in brown jacket on boulder gazing up at snow-covered Wetterstein north face, mountain pine foreground at eriro Ehrwald",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "eriro-ehrwald-spa-alpinehide-suite-03.jpg",
+                    "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-03.jpg",
+                    "uidLocal": 452,
+                    "fileReferenceUid": 1859,
+                    "size": "742 KB",
+                    "dimensions": {
+                      "width": 1500,
+                      "height": 1350
+                    },
+                    "cropDimensions": {
+                      "width": 1500,
+                      "height": 1350
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                }
+              }
+            }
+          ],
+          "imgleftsummer": [],
+          "imgrightsummer": []
+        }
+      },
+      {
+        "id": 548,
+        "type": "mask_video",
+        "colPos": 5,
+        "categories": "",
+        "appearance": {
+          "layout": "default",
+          "frameClass": "default",
+          "spaceBefore": "",
+          "spaceAfter": ""
+        },
+        "content": {
+          "header": "",
+          "subheader": "",
+          "headerLayout": 0,
+          "headerPosition": "",
+          "headerLink": "",
+          "type": "mask_video",
+          "video": [
+            {
+              "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/unikateur_Video/Eriro_Video_Winter.mp4",
+              "properties": {
+                "title": null,
+                "alternative": null,
+                "description": null,
+                "link": null,
+                "linkData": null,
+                "mimeType": "video/mp4",
+                "type": "video",
+                "filename": "Eriro_Video_Winter.mp4",
+                "originalUrl": "/fileadmin/user_upload/unikateur_Video/Eriro_Video_Winter.mp4",
+                "uidLocal": 447,
+                "fileReferenceUid": 1835,
+                "size": "36 MB",
+                "dimensions": {
+                  "width": 0,
+                  "height": 0
+                },
+                "cropDimensions": {
+                  "width": 0,
+                  "height": 0
+                },
+                "crop": "",
+                "autoplay": 0,
+                "extension": "mp4"
+              }
+            }
+          ],
+          "videosummer": []
+        }
+      }
+    ]
+  },
+  "i18n": [
+    {
+      "languageId": 0,
+      "locale": "de_DE",
+      "title": "Deutsch",
+      "navigationTitle": "Deutsch",
+      "twoLetterIsoCode": "de",
+      "hreflang": "de",
+      "direction": "ltr",
+      "flag": "flags-multiple",
+      "link": "/de/erlebnisse/wintar/",
+      "active": 0,
+      "current": 0,
+      "available": 1
+    },
+    {
+      "languageId": 1,
+      "locale": "en_GB",
+      "title": "English",
+      "navigationTitle": "English",
+      "twoLetterIsoCode": "en",
+      "hreflang": "en",
+      "direction": "ltr",
+      "flag": "flags-en-us-gb",
+      "link": "/en/sneo/",
+      "active": 1,
+      "current": 0,
+      "available": 1
+    }
+  ],
+  "pid": 107,
+  "jsonld": ""
+}

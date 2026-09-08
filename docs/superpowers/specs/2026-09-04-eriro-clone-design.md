@@ -830,3 +830,143 @@ replacement, same as every phase). One fresh live-site reference screenshot
 per route at the three breakpoints (§12 item 1) — captured and eyeballed
 BEFORE the final whole-branch review this time, not deferred as optional,
 per the lesson Phase 2 surfaced (HANDOFF.md §6).
+
+## 19. Phase 4 — filter/suites subsystem (2026-09-08)
+
+Phase 4 of the "rest of site" decomposition (§17's intro), following Phase 3
+(§18). Covers §13.2's third grouping: PageFilter + Shortcut (the
+`/experiences/` hub and its 5 subpages) and Rooms + RoomDetail + RoomCta
+(the 4 suite pages) — 10 routes: `/experiences/`, `/{leiba,sela,herchomen,
+hantwerc,sneo}/`, `/suites/{boum,wisa,felisa,himil}/`. §9.15 already states
+the load-bearing fact this phase's architecture rests on: **PageFilter and
+Rooms are identical mechanics over different data** — one shared shell
+component serves both use cases, not two.
+
+### 19.1 Content sourcing — the one real gap in this rebuild's "no crawl
+needed" claim
+
+Unlike every phase so far, this one was NOT fully covered by
+`docs/reference/pages/`. `en__experiences.json` and the 4 suite pages'
+JSON existed; of the 5 experience subpages, `leiba`/`sela` had only raw
+HTML on disk (no `.json`) and `herchomen`/`hantwerc`/`sneo` had nothing at
+all. Fixed this session: live-extracted all 5 via a Playwright session with
+`navigator.webdriver` spoofed to `false` (same technique as
+`tests/e2e/cookie-consent.spec.ts`), reading `window.__NUXT__.data['t3:page']`
+— the client's own fully-resolved page state — rather than hand-parsing the
+raw HTML's `__NUXT_DATA__` script tag, which is Nuxt's "devalue"
+reference-graph serialization (numeric back-references into a flat array),
+not plain JSON, and not worth reverse-engineering by hand when the live
+page already resolves it for free. All 5 are now saved as
+`docs/reference/pages/en__{leiba,sela,herchomen,hantwerc,sneo}.json`,
+matching every other route's format exactly, content spot-checked against
+real prose (not TYPO3 error placeholders). §3's "no live re-crawl needed
+for any future phase" claim was wrong for this one case; it holds again now
+that the gap is closed.
+
+Each subpage's raw JSON confirms the mechanism directly, not just infers
+it from CSS: colPos0 contains a single `shortcut` content element (TYPO3's
+own "shortcut" element type — id 278–282, one per subpage) whose
+`content.shortcut` array is a **verbatim embedded copy** of the
+`/experiences/` hub's own colPos0 — the exact same `mask_hero` (id 184) and
+`mask_pagefilter` (id 213) nodes, byte-identical across all 5 subpages'
+crawls. This is content-authoring convenience, not a runtime concept: §19.3
+authors the shared hero+filter content once and imports it into all 6
+routes' `colPos0` arrays directly, rather than modeling `shortcut` as a
+`Section` variant that needs a component. Each subpage's own unique content
+(its `colPos5`-equivalent) is light — one more `mask_hero`, one
+`mask_imgtext`, and occasionally one `mask_video` or `mask_img` — confirmed
+route by route, not assumed uniform.
+
+### 19.2 Five new Section types
+
+`lib/content.ts`'s `UnknownSection` union already names four of these
+(`mask_imgslider`, `mask_pagefilter`, `mask_roomcta`, `mask_roomdetail`,
+`mask_rooms`); `'room'` (colPos 10 on every suite page) is a genuine dead
+TYPO3 artifact — its own crawled `content` is
+`{"error":"Content Element with uid ... has no rendering definition!"}` on
+every suite page — and gets no type and no component, same as if it
+weren't in the union at all.
+
+- `PageFilterSection`: `Base<'mask_pagefilter', { pages: { uid: string; title: string; href: string }[] }>`
+  — flattened from the crawled `pages[].slug.href` (the `slug.linkText`
+  TYPO3 `t3://page?uid=N` value is redundant with `href` once resolved and
+  isn't needed).
+- `RoomsSection`: `Base<'mask_rooms', { rooms: { uid: string; title: string; slug: string; pid: string }[] }>`
+  — the filter list only (title/slug per suite); the full `Room` object
+  (description/price/images/etc.) is a separate lookup, not duplicated here
+  — see 19.3's `SUITE_ROOMS` note.
+- `RoomDetailSection`: `Base<'mask_roomdetail', { room: Room; icons: ImageRef[] }>`
+  — reuses the existing `Room` type verbatim (`lib/content.ts`, already
+  built for the homepage's `RoomSliderSection`). `icons` is the crawled
+  node's own `content.images` field (amenity SVGs — `King-size bed`,
+  `Record player`, etc.; confirmed via the raw JSON, the field is
+  misleadingly named `images` but is icons, not gallery photos).
+- `ImgSliderSection`: `Base<'mask_imgslider', { images: ImageRef[] }>` — same
+  shape as `GallerySliderSection`/`GallerySection`, third distinct
+  component using it (§19.3's reuse note).
+- `RoomCtaSection`: `Base<'mask_roomcta', { room: { uid: string; title: string; asacode: string; bookingcode: string } }>`
+  — trivial, matches the crawled `content.room[0]` shape exactly.
+
+### 19.3 Component behavior
+
+- **FilterShell** (new, shared): owns the ScrollTrigger pin and swap
+  mechanics §9.15 specifies in full (pin created 500ms after first content
+  load, `filter-hover` background while pinned, header-hover-state toggle,
+  click → active class + colPos5 swap + `history.pushState` +
+  `document.title`/meta update + `.2s` `ScrollToPlugin` tween to the filter
+  top, `ScrollTrigger.refresh()` 100ms after later switches). Takes the
+  filter list (`PageFilterSection` or `RoomsSection` content) and a
+  same-length array of pre-rendered colPos5 React nodes, one per item, all
+  statically imported by the calling page — no fetch, no dynamic import.
+  Genuinely one component for both experiences and suites, per §9.15's own
+  "identical mechanics, different data" — do not build two.
+- **RoomDetail**: `.room-image-left` Swiper (§9.16) uses `room.images`
+  directly — the SAME array Task 12-era `RoomSliderSection` data in
+  `content/en/home.ts` already carries for `boum`/`wisa`/`felisa`/`himil`
+  (7+ images each, confirmed), not a separate crawl. A `SUITE_ROOMS` lookup
+  (keyed by suite slug, sourced from `home.ts`'s existing `rooms` array) is
+  the natural place to share this between the homepage's `RoomSlider` and
+  each suite page's `RoomDetail`, rather than re-authoring four `Room`
+  objects a second time.
+- **ImgSlider**: FreeMode Swiper per §9.17 (`momentum: true,
+  momentumRatio: .09, momentumBounce: false, sticky: true`,
+  `centeredSlides: true` only below 1024px, `loop`, `speed: 650`,
+  `slidesPerView: 'auto'`) — a new Swiper configuration, not a reuse of
+  `RoomSlider`'s or `RoomDetail`'s (different momentum/centering/sizing
+  behavior each), but the same `swiper.css`/unlayered-CSS handling already
+  established (HANDOFF.md §6).
+- **RoomCta**: two `BigLink`s, no new behavior — `Request` to
+  `/request/?room={asacode}`, `Book` to the booking link + `&room={bookingcode}`.
+- **Rooms/PageFilter content composition**: `Shortcut` is never modeled as
+  a `Section` or component (§19.1) — the 6 experience routes' `colPos0`
+  literally import and reuse the same two `Section` objects
+  (`content/en/experiencesShared.ts`, new); the 4 suite routes' `colPos0`
+  literally import and reuse one `RoomsSection` object
+  (`content/en/suitesShared.ts`, new) the same way.
+
+### 19.4 Pages
+
+Ten new files (`app/{route}/page.tsx`), same direct-composition shape as
+every prior phase (no generic renderer, §16.4) — each imports its own
+`colPos5` content plus the shared `colPos0` content from 19.3's shared
+files and renders both through `FilterShell`. `content/en/{route}.ts` per
+route for the unique content only (not the shared shell). `lib/pages.ts`
+gains 10 entries. `content/site.ts`'s `nav`: only `/suites/boum/` (as
+"Suites") and `/experiences/` are real nav entries (§4's route table) — the
+5 subpages and other 3 suites are reached exclusively through the
+in-page filter, never linked directly from header/footer nav; no
+`content/site.ts` changes needed for those 8.
+
+### 19.5 Verification
+
+Same pipeline as Phases 2–3: per-task spec+quality review, mandatory final
+whole-branch review, one fix wave with one scoped re-review if needed, a
+live-site reference screenshot per route at three breakpoints captured and
+eyeballed before the final review (not deferred). One behavior this phase
+adds to the checklist that prior phases didn't need: the filter swap itself
+— clicking every item in both the experiences and suites filters, on both a
+hub page and a direct subpage URL, confirming the URL/title/active-state/
+scroll-position all update correctly and the ScrollTrigger pin survives a
+switch (§9.15's `ScrollTrigger.refresh()` after 100ms is exactly the kind
+of easy-to-omit-and-not-notice detail Phase 2's lesson (HANDOFF.md §6) was
+about).

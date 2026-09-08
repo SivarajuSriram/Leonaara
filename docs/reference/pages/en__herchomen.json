@@ -1,0 +1,874 @@
+{
+  "id": 115,
+  "type": "Standard",
+  "slug": "/herchomen",
+  "media": [],
+  "meta": {
+    "title": "herchomen - Stories and knowledge of the Alps",
+    "subtitle": "",
+    "abstract": "",
+    "description": "Experience old knowledge anew - herchomen combines traditional myths, herbalism and life in the mountains for generations.",
+    "keywords": "",
+    "canonical": "",
+    "robots": {
+      "noIndex": false,
+      "noFollow": false
+    },
+    "author": "",
+    "authorEmail": "",
+    "ogTitle": "HERCHOMEN",
+    "ogDescription": "Experience old knowledge anew - herchomen combines traditional myths, herbalism and life in the mountains for generations.",
+    "ogImage": null,
+    "twitterTitle": "HERCHOMEN",
+    "twitterDescription": "Experience old knowledge anew - herchomen combines traditional myths, herbalism and life in the mountains for generations.",
+    "twitterCard": "summary",
+    "twitterImage": null
+  },
+  "categories": "",
+  "breadcrumbs": [
+    {
+      "title": "Home",
+      "link": "/en/",
+      "target": "",
+      "active": 1,
+      "current": 0,
+      "spacer": 0,
+      "hasSubpages": 1,
+      "pid": 0
+    },
+    {
+      "title": "HERCHOMEN",
+      "link": "/en/herchomen/",
+      "target": "",
+      "active": 1,
+      "current": 1,
+      "spacer": 0,
+      "hasSubpages": 0,
+      "pid": 107
+    }
+  ],
+  "appearance": {
+    "layout": "layout-0",
+    "backendLayout": "11"
+  },
+  "content": {
+    "colPos0": [
+      {
+        "id": 280,
+        "type": "shortcut",
+        "colPos": 0,
+        "categories": "",
+        "appearance": {
+          "layout": "default",
+          "frameClass": "default",
+          "spaceBefore": "",
+          "spaceAfter": ""
+        },
+        "content": {
+          "shortcut": [
+            {
+              "id": 184,
+              "type": "mask_hero",
+              "colPos": 0,
+              "categories": "",
+              "appearance": {
+                "layout": "default",
+                "frameClass": "default",
+                "spaceBefore": "",
+                "spaceAfter": ""
+              },
+              "content": {
+                "header": "Experiences",
+                "subheader": "",
+                "headerLayout": 0,
+                "headerPosition": "",
+                "headerLink": "",
+                "type": "mask_hero",
+                "title": "Memories that anchor in the heart",
+                "titleh2": "Touch what time<br>\r\nhas left <br>\r\nuntouched",
+                "titleimg": "",
+                "text": "<p>In the remote corners of the Tyrolean Alps, we become one with nature. A humbleness towards the magnificent mountains shapes all aspects of life. The seasons and their shifts in weather govern each day. Gracious and gentle, archaic and rugged, the mountain calls upon us to be alert and aware with all our senses – it sharpens the eye for the essentials. Experiences and traditions become lasting memories. Exploration, perception and connecting with yourself opens wide the dimension of being.&nbsp;</p>",
+                "img": [],
+                "sideimg": [],
+                "imgsummer": [],
+                "sideimgsummer": [],
+                "herolayout": "only-text"
+              }
+            },
+            {
+              "id": 213,
+              "type": "mask_pagefilter",
+              "colPos": 0,
+              "categories": "",
+              "appearance": {
+                "layout": "default",
+                "frameClass": "default",
+                "spaceBefore": "",
+                "spaceAfter": ""
+              },
+              "content": {
+                "header": "Seitenwechsel",
+                "subheader": "",
+                "headerLayout": 0,
+                "headerPosition": "",
+                "headerLink": "",
+                "type": "mask_pagefilter",
+                "pages": [
+                  {
+                    "uid": "1",
+                    "title": "Leiba",
+                    "slug": {
+                      "href": "/en/leiba/",
+                      "target": null,
+                      "class": null,
+                      "title": null,
+                      "linkText": "97",
+                      "additionalAttributes": []
+                    }
+                  },
+                  {
+                    "uid": "4",
+                    "title": "Sela",
+                    "slug": {
+                      "href": "/en/sela/",
+                      "target": null,
+                      "class": null,
+                      "title": null,
+                      "linkText": "t3://page?uid=98",
+                      "additionalAttributes": []
+                    }
+                  },
+                  {
+                    "uid": "5",
+                    "title": "Herchomen",
+                    "slug": {
+                      "href": "/en/herchomen/",
+                      "target": null,
+                      "class": null,
+                      "title": null,
+                      "linkText": "t3://page?uid=115",
+                      "additionalAttributes": []
+                    }
+                  },
+                  {
+                    "uid": "3",
+                    "title": "Hantwerc",
+                    "slug": {
+                      "href": "/en/hantwerc/",
+                      "target": null,
+                      "class": null,
+                      "title": null,
+                      "linkText": "t3://page?uid=99",
+                      "additionalAttributes": []
+                    }
+                  },
+                  {
+                    "uid": "2",
+                    "title": "Sneo",
+                    "slug": {
+                      "href": "/en/sneo/",
+                      "target": null,
+                      "class": null,
+                      "title": null,
+                      "linkText": "t3://page?uid=100",
+                      "additionalAttributes": []
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "colPos5": [
+      {
+        "id": 261,
+        "type": "mask_hero",
+        "colPos": 5,
+        "categories": "",
+        "appearance": {
+          "layout": "default",
+          "frameClass": "default",
+          "spaceBefore": "medium",
+          "spaceAfter": ""
+        },
+        "content": {
+          "header": "",
+          "subheader": "",
+          "headerLayout": 0,
+          "headerPosition": "",
+          "headerLink": "",
+          "type": "mask_hero",
+          "title": "Ancient traditions",
+          "titleh2": "Culture by the mountains",
+          "titleimg": "",
+          "text": "",
+          "img": [
+            {
+              "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-05.jpg",
+              "properties": {
+                "title": null,
+                "alternative": "Hand in wool sweater with leather bracelet and ring splitting spruce wood with rusted axe on tree stump, split logs in background",
+                "description": null,
+                "link": null,
+                "linkData": null,
+                "mimeType": "image/jpeg",
+                "type": "image",
+                "filename": "eriro-alpine-hide-oesterreich-ehrwald-luxus-05.jpg",
+                "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-05.jpg",
+                "uidLocal": 437,
+                "fileReferenceUid": 1816,
+                "size": "729 KB",
+                "dimensions": {
+                  "width": 1920,
+                  "height": 1480
+                },
+                "cropDimensions": {
+                  "width": 1920,
+                  "height": 1480
+                },
+                "crop": {
+                  "default": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  },
+                  "mobile": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  }
+                },
+                "autoplay": null,
+                "extension": "jpg"
+              },
+              "cropVariants": {
+                "default": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-05.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Hand in wool sweater with leather bracelet and ring splitting spruce wood with rusted axe on tree stump, split logs in background",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "eriro-alpine-hide-oesterreich-ehrwald-luxus-05.jpg",
+                    "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-05.jpg",
+                    "uidLocal": 437,
+                    "fileReferenceUid": 1816,
+                    "size": "729 KB",
+                    "dimensions": {
+                      "width": 1920,
+                      "height": 1480
+                    },
+                    "cropDimensions": {
+                      "width": 1920,
+                      "height": 1480
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                },
+                "mobile": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-05.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Hand in wool sweater with leather bracelet and ring splitting spruce wood with rusted axe on tree stump, split logs in background",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "eriro-alpine-hide-oesterreich-ehrwald-luxus-05.jpg",
+                    "originalUrl": "/fileadmin/user_upload/eriro-alpine-hide-oesterreich-ehrwald-luxus-05.jpg",
+                    "uidLocal": 437,
+                    "fileReferenceUid": 1816,
+                    "size": "729 KB",
+                    "dimensions": {
+                      "width": 1920,
+                      "height": 1480
+                    },
+                    "cropDimensions": {
+                      "width": 1920,
+                      "height": 1480
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                }
+              }
+            }
+          ],
+          "sideimg": [
+            {
+              "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-04.jpg",
+              "properties": {
+                "title": null,
+                "alternative": "Alpine farmer in loden wool coat with Nordic pattern gloves and knit cap before snow-covered Ehrwald winter landscape, eriro Alpine Hide",
+                "description": null,
+                "link": null,
+                "linkData": null,
+                "mimeType": "image/jpeg",
+                "type": "image",
+                "filename": "eriro-ehrwald-oesterreich-alpine-hide-04.jpg",
+                "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-04.jpg",
+                "uidLocal": 472,
+                "fileReferenceUid": 1887,
+                "size": "700 KB",
+                "dimensions": {
+                  "width": 1200,
+                  "height": 1600
+                },
+                "cropDimensions": {
+                  "width": 1200,
+                  "height": 1600
+                },
+                "crop": {
+                  "default": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  },
+                  "mobile": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  }
+                },
+                "autoplay": null,
+                "extension": "jpg"
+              },
+              "cropVariants": {
+                "default": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-04.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Alpine farmer in loden wool coat with Nordic pattern gloves and knit cap before snow-covered Ehrwald winter landscape, eriro Alpine Hide",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "eriro-ehrwald-oesterreich-alpine-hide-04.jpg",
+                    "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-04.jpg",
+                    "uidLocal": 472,
+                    "fileReferenceUid": 1887,
+                    "size": "700 KB",
+                    "dimensions": {
+                      "width": 1200,
+                      "height": 1600
+                    },
+                    "cropDimensions": {
+                      "width": 1200,
+                      "height": 1600
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                },
+                "mobile": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-04.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Alpine farmer in loden wool coat with Nordic pattern gloves and knit cap before snow-covered Ehrwald winter landscape, eriro Alpine Hide",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "eriro-ehrwald-oesterreich-alpine-hide-04.jpg",
+                    "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-oesterreich-alpine-hide-04.jpg",
+                    "uidLocal": 472,
+                    "fileReferenceUid": 1887,
+                    "size": "700 KB",
+                    "dimensions": {
+                      "width": 1200,
+                      "height": 1600
+                    },
+                    "cropDimensions": {
+                      "width": 1200,
+                      "height": 1600
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                }
+              }
+            }
+          ],
+          "imgsummer": [],
+          "sideimgsummer": [],
+          "herolayout": "subpage"
+        }
+      },
+      {
+        "id": 265,
+        "type": "mask_imgtext",
+        "colPos": 5,
+        "categories": "",
+        "appearance": {
+          "layout": "default",
+          "frameClass": "default",
+          "spaceBefore": "",
+          "spaceAfter": ""
+        },
+        "content": {
+          "header": "Herchomen",
+          "subheader": "",
+          "headerLayout": 0,
+          "headerPosition": "",
+          "headerLink": "",
+          "type": "mask_imgtext",
+          "title": "Herchomen",
+          "text": "<p>On cold winter days in the mountain,&nbsp;families passed time together in the <i>Stube</i>, the typical parlour of Tyrolean homes heated with a single tile stove. The elders would tell stories from earlier times. The legends and myths of the Alps came to life out of animated narratives that stemmed from some element of truth. An intimate knowledge of the mountains has been passed down through the generations, knowhow for living through summer and winter, the experiences of parents and grandparents have created infinite possibilities to learn: medicinal herbs, edible mushrooms and plants, the challenges and dangers of snow and ice, and much more.</p>",
+          "imgleft": [
+            {
+              "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/unikateur_Bilder/Winter/eriro_alpinehide_scheitel2.jpg",
+              "properties": {
+                "title": null,
+                "alternative": "Strong hand gripping freshly split spruce logs with visible annual rings before cream linen shirt – honest craftsmanship in mountain winter",
+                "description": null,
+                "link": null,
+                "linkData": null,
+                "mimeType": "image/jpeg",
+                "type": "image",
+                "filename": "eriro_alpinehide_scheitel2.jpg",
+                "originalUrl": "/fileadmin/user_upload/unikateur_Bilder/Winter/eriro_alpinehide_scheitel2.jpg",
+                "uidLocal": 229,
+                "fileReferenceUid": 1032,
+                "size": "5 MB",
+                "dimensions": {
+                  "width": 2560,
+                  "height": 3838
+                },
+                "cropDimensions": {
+                  "width": 2560,
+                  "height": 3838
+                },
+                "crop": {
+                  "default": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  },
+                  "mobile": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  }
+                },
+                "autoplay": null,
+                "extension": "jpg"
+              },
+              "cropVariants": {
+                "default": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/unikateur_Bilder/Winter/eriro_alpinehide_scheitel2.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Strong hand gripping freshly split spruce logs with visible annual rings before cream linen shirt – honest craftsmanship in mountain winter",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "eriro_alpinehide_scheitel2.jpg",
+                    "originalUrl": "/fileadmin/user_upload/unikateur_Bilder/Winter/eriro_alpinehide_scheitel2.jpg",
+                    "uidLocal": 229,
+                    "fileReferenceUid": 1032,
+                    "size": "5 MB",
+                    "dimensions": {
+                      "width": 2560,
+                      "height": 3838
+                    },
+                    "cropDimensions": {
+                      "width": 2560,
+                      "height": 3838
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                },
+                "mobile": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/unikateur_Bilder/Winter/eriro_alpinehide_scheitel2.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Strong hand gripping freshly split spruce logs with visible annual rings before cream linen shirt – honest craftsmanship in mountain winter",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "eriro_alpinehide_scheitel2.jpg",
+                    "originalUrl": "/fileadmin/user_upload/unikateur_Bilder/Winter/eriro_alpinehide_scheitel2.jpg",
+                    "uidLocal": 229,
+                    "fileReferenceUid": 1032,
+                    "size": "5 MB",
+                    "dimensions": {
+                      "width": 2560,
+                      "height": 3838
+                    },
+                    "cropDimensions": {
+                      "width": 2560,
+                      "height": 3838
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                }
+              }
+            }
+          ],
+          "imgright": [
+            {
+              "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-07.jpg",
+              "properties": {
+                "title": null,
+                "alternative": "Ehrwald alpine farmer with white beard holding young mountain sheep in arms, weathered hands, dark barn background, traditional alpine farming near eriro",
+                "description": null,
+                "link": null,
+                "linkData": null,
+                "mimeType": "image/jpeg",
+                "type": "image",
+                "filename": "eriro-ehrwald-spa-alpinehide-suite-07.jpg",
+                "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-07.jpg",
+                "uidLocal": 457,
+                "fileReferenceUid": 1855,
+                "size": "824 KB",
+                "dimensions": {
+                  "width": 1500,
+                  "height": 1350
+                },
+                "cropDimensions": {
+                  "width": 1500,
+                  "height": 1350
+                },
+                "crop": {
+                  "default": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  },
+                  "mobile": {
+                    "cropArea": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1,
+                      "height": 1
+                    },
+                    "selectedRatio": "NaN",
+                    "focusArea": null
+                  }
+                },
+                "autoplay": null,
+                "extension": "jpg"
+              },
+              "cropVariants": {
+                "default": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-07.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Ehrwald alpine farmer with white beard holding young mountain sheep in arms, weathered hands, dark barn background, traditional alpine farming near eriro",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "eriro-ehrwald-spa-alpinehide-suite-07.jpg",
+                    "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-07.jpg",
+                    "uidLocal": 457,
+                    "fileReferenceUid": 1855,
+                    "size": "824 KB",
+                    "dimensions": {
+                      "width": 1500,
+                      "height": 1350
+                    },
+                    "cropDimensions": {
+                      "width": 1500,
+                      "height": 1350
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                },
+                "mobile": {
+                  "publicUrl": "https://typo3.eriro.at/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-07.jpg",
+                  "properties": {
+                    "title": null,
+                    "alternative": "Ehrwald alpine farmer with white beard holding young mountain sheep in arms, weathered hands, dark barn background, traditional alpine farming near eriro",
+                    "description": null,
+                    "link": null,
+                    "linkData": null,
+                    "mimeType": "image/jpeg",
+                    "type": "image",
+                    "filename": "eriro-ehrwald-spa-alpinehide-suite-07.jpg",
+                    "originalUrl": "/fileadmin/user_upload/eriro-ehrwald-spa-alpinehide-suite-07.jpg",
+                    "uidLocal": 457,
+                    "fileReferenceUid": 1855,
+                    "size": "824 KB",
+                    "dimensions": {
+                      "width": 1500,
+                      "height": 1350
+                    },
+                    "cropDimensions": {
+                      "width": 1500,
+                      "height": 1350
+                    },
+                    "crop": {
+                      "default": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      },
+                      "mobile": {
+                        "cropArea": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 1,
+                          "height": 1
+                        },
+                        "selectedRatio": "NaN",
+                        "focusArea": null
+                      }
+                    },
+                    "autoplay": null,
+                    "extension": "jpg"
+                  }
+                }
+              }
+            }
+          ],
+          "imgleftsummer": [],
+          "imgrightsummer": []
+        }
+      }
+    ]
+  },
+  "i18n": [
+    {
+      "languageId": 0,
+      "locale": "de_DE",
+      "title": "Deutsch",
+      "navigationTitle": "Deutsch",
+      "twoLetterIsoCode": "de",
+      "hreflang": "de",
+      "direction": "ltr",
+      "flag": "flags-multiple",
+      "link": "/de/erlebnisse/wizzan/",
+      "active": 0,
+      "current": 0,
+      "available": 1
+    },
+    {
+      "languageId": 1,
+      "locale": "en_GB",
+      "title": "English",
+      "navigationTitle": "English",
+      "twoLetterIsoCode": "en",
+      "hreflang": "en",
+      "direction": "ltr",
+      "flag": "flags-en-us-gb",
+      "link": "/en/herchomen/",
+      "active": 1,
+      "current": 0,
+      "available": 1
+    }
+  ],
+  "pid": 107,
+  "jsonld": ""
+}
