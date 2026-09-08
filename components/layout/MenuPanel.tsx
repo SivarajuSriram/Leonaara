@@ -29,12 +29,23 @@ export function MenuPanel({ ref, isHome, pathname }: Props) {
       {/* header .menu{background-color:#e4e0db;bottom:0;height:100%;left:0;overflow:hidden;
           padding:27rem 6rem 6rem;pointer-events:auto;top:0;transform:translateY(-101%);
           width:54.2rem;will-change:transform;z-index:50} — background-color moves to the canvas
-          token per spec §16.3. Mobile overrides bottom/left/top (already 0 on desktop too) plus
-          padding and width; transform/will-change are then driven inline by GSAP
-          (menuAnimations.ts) once the menu opens/closes, which always wins over this CSS default
-          (the initial closed position, verified by header.spec.ts's transform assertion). */}
+          token per spec §16.3. Note this rule has NO `position` property (verified against the
+          raw crawled CSS, not just the cleaned copy) — top/bottom/left are dead declarations on
+          what is actually a plain flow (static) block. It's sized by `height:100%` of its
+          `.menu-outline` PARENT (position:fixed, inset 2rem — see the outer div below), and
+          being an in-flow child, that parent's overflow:hidden clips it correctly. Do NOT add
+          `fixed`/`top-0`/`left-0`/`bottom-0` here (an earlier version of this file did): making
+          this div itself position:fixed resolves height:100% against the real viewport (100vh,
+          not viewport-4rem) AND lets it escape the parent's overflow:hidden clipping entirely —
+          a real CSS quirk where overflow:hidden does not clip a position:fixed descendant unless
+          the ancestor itself carries a transform. That bug made the panel render edge-to-edge and
+          touch the bottom of the screen instead of stopping 2rem short on all sides like the live
+          site. Mobile overrides bottom/left/top (already dead there too) plus padding and width;
+          transform/will-change are then driven inline by GSAP (menuAnimations.ts) once the menu
+          opens/closes, which always wins over this CSS default (the initial closed position,
+          verified by header.spec.ts's transform assertion). */}
       <div
-        className="menu bg-canvas fixed top-0 left-0 bottom-0 h-full w-[54.2rem] overflow-hidden pointer-events-auto z-[50] [transform:translateY(-101%)] [will-change:transform] pt-[27rem] px-[6rem] pb-[6rem] max-lg:w-full max-lg:pt-[15rem] max-lg:pr-[1rem] max-lg:pb-[1.5rem] max-lg:pl-[6.8rem]"
+        className="menu bg-canvas h-full w-[54.2rem] overflow-hidden pointer-events-auto z-[50] [transform:translateY(-101%)] [will-change:transform] pt-[27rem] px-[6rem] pb-[6rem] max-lg:w-full max-lg:pt-[15rem] max-lg:pr-[1rem] max-lg:pb-[1.5rem] max-lg:pl-[6.8rem]"
         ref={ref}
       >
         <nav className="nav-info flex absolute right-[6rem] top-[10.5rem] max-lg:right-auto max-lg:top-auto max-lg:bottom-[7.5rem] max-lg:left-1/2 max-lg:-translate-x-1/2">

@@ -21,5 +21,7 @@ test('homepage renders all 15 sections with the original text', async ({ page })
 
 test('unknown routes show the error page', async ({ page }) => {
   await page.goto('/does-not-exist/');
-  await expect(page.locator('.mask_errorpage .errorTitle')).toHaveText('something went wrong');
+  // No space between lines: the two lines are joined only by a <br>, which contributes no
+  // text-content whitespace (confirmed against the actual rendered DOM, not assumed).
+  await expect(page.locator('.mask_errorpage .errorTitle')).toHaveText('Ooops!something went wrong');
 });

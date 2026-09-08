@@ -8,3 +8,4 @@ export { GalleryIcon } from './GalleryIcon';
 export { ArrowSliderIcon } from './ArrowSliderIcon';
 export { SubmenuIcon } from './SubmenuIcon';
 export { UnikateurIcon } from './UnikateurIcon';
+export { ErrorFaceIcon } from './ErrorFaceIcon';
