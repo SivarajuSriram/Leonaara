@@ -88,12 +88,11 @@ test.describe('Phase 3 pages visual regression', () => {
         // (lib/horizontalLoop.ts, `repeat: -1, paused: false`) -- same pattern as, and
         // masked the same way as, the homepage's PartnerMarquee
         // (tests/e2e/partnermarquee-visual.spec.ts): it never settles, so mask it out
-        // rather than chase an unreachable "stable" state. Video (newsletter's real,
-        // successfully-loading /videos/eriro_alpinehide_nebel.mp4) is masked for the
-        // same reason -- Video.tsx's Player autoplays once its IntersectionObserver
-        // sees it, so its frames keep changing regardless of wait time. (origin/spa's
-        // video never even starts, per the known broken-path issue, so masking it
-        // there is a no-op, not a workaround for anything.)
+        // rather than chase an unreachable "stable" state. Video (newsletter's
+        // /videos/eriro_alpinehide_nebel.mp4, origin's /videos/eriro_alpinehide_luft.mp4,
+        // spa's /videos/eriro_alpinehide_schwimmen2.MOV) is masked for the same reason --
+        // Video.tsx's Player autoplays once its IntersectionObserver sees it, so its
+        // frames keep changing regardless of wait time.
         await expect(main).toHaveScreenshot(`${name}-${viewport.width}.png`, {
           // 1000, not 50: verified (cropped both images, eyeballed side-by-side,
           // pixel-identical to the eye) against two separate cases -- origin-1440's

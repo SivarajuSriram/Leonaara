@@ -15,8 +15,14 @@ const titleCls = 'title mb-[3rem] last:mb-[9rem] max-lg:mb-[1.5rem] max-lg:last:
 const textCls = 'text mb-[12rem] translate-x-[9rem] max-lg:mb-[4rem] max-lg:translate-x-[5.8rem]';
 // .accordion-wrapper{grid-column-end:span 12;grid-column-start:2}
 const wrapperCls = 'accordion-wrapper col-start-2 col-span-12';
-// .accordion{margin-bottom:-2px;overflow:hidden}
-const accordionCls = 'accordion -mb-[2px] overflow-hidden';
+// .accordion{margin-bottom:-2px;overflow:hidden} -- the live markup also
+// carries `grid-container-inner` on this element (confirmed via
+// docs/reference/pages/en__spa.html: `class="accordion grid-container-inner"`),
+// giving it the same 12-column grid app/globals.css defines for that class
+// (display:grid;grid-template-columns:repeat(12,1fr);gap:var(--grid-gap)).
+// Without it an OPEN accordion's body (.accordion-body, grid-column-start:5)
+// renders across the full width instead of columns 5-12.
+const accordionCls = 'accordion grid grid-cols-12 gap-x-(--grid-gap) -mb-[2px] overflow-hidden';
 // .accordion-header{border-top:2px solid #e4e0db;cursor:pointer;display:flex;grid-column-end:span 12;
 // grid-column-start:1;justify-content:space-between;justify-self:flex-end;max-width:66.66%;
 // padding:3rem 0;width:100%} + mobile{align-items:center;flex-wrap:wrap;max-width:83.33%;padding:2rem 0}
@@ -25,17 +31,22 @@ const headerCls = 'accordion-header col-start-1 col-span-12 flex justify-between
 // + .accordion.open h4{transform:translate(14.5rem)} + .accordion.open:hover h4{transform:translate(12.5rem)}
 // (a DISTINCT rule from the hover-only shift, easy to miss -- verified against accordions.css:98-103)
 // + mobile: h4/:hover h4/.open h4/.open:hover h4 all collapse to translate(0) (accordions.css:154,178)
-// + mobile h4{margin-top:.5rem;width:100%}
 // Driven by a plain className swap (not GSAP) so the existing CSS `transition-transform duration-500`
 // handles the .5s animation AND real :hover still works on top of it -- GSAP inline styles would
 // permanently override the CSS :hover pseudo-class the moment they touch `transform` at all.
 function headerTitleCls(isOpen: boolean) {
   return [
-    'transition-transform duration-500 max-lg:mt-[.5rem] max-lg:w-full max-lg:translate-x-0 max-lg:hover:translate-x-0',
+    'transition-transform duration-500 max-lg:translate-x-0 max-lg:hover:translate-x-0',
     isOpen ? 'translate-x-[14.5rem] hover:translate-x-[12.5rem]' : 'translate-x-[9rem] hover:translate-x-[7.5rem]',
   ].join(' ');
 }
 const sideCls = 'accordion-side flex';
+// .accordion-header .h4{margin-top:.5rem;width:100%} (mobile only) -- this
+// targets the info label span (rendered below as `<span className="h4">`),
+// NOT the accordion title. Putting it on the title instead made the title
+// stretch to width:100% under max-lg:flex-wrap, pushing the +/- icon onto
+// its own line at mobile widths.
+const infoCls = 'h4 max-lg:mt-[.5rem] max-lg:w-full';
 // .accordion-icon{height:2rem;margin-left:12rem;margin-right:.5rem;width:2rem} + mobile{height:1.2rem;margin-left:1rem;margin-right:0;width:1.2rem}
 const iconCls = 'accordion-icon h-[2rem] w-[2rem] ml-[12rem] mr-[.5rem] max-lg:h-[1.2rem] max-lg:w-[1.2rem] max-lg:ml-[1rem] max-lg:mr-0';
 // .accordion-body{grid-column-end:span 8;grid-column-start:5;height:0;justify-self:flex-end;overflow:hidden;
@@ -87,7 +98,7 @@ export function Accordions({ section }: { section: AccordionsSection }) {
     <div className={cls} {...{ uid: `c${section.id}` }}>
       <div className="grid-container">
         <div className={contentCls}>
-          {c.title ? <SplitWords as="h4" className={titleCls} html={c.title} /> : null}
+          {c.title ? <SplitWords as="h2" className={titleCls} html={c.title} /> : null}
           {c.text ? <RichText className={textCls} html={c.text} /> : null}
         </div>
         <div className={wrapperCls} ref={wrapRef}>
@@ -96,7 +107,7 @@ export function Accordions({ section }: { section: AccordionsSection }) {
               <div className={headerCls} onClick={() => setOpenIndex(i === openIndex ? null : i)}>
                 <h4 className={headerTitleCls(i === openIndex)}>{item.title}</h4>
                 <div className={sideCls}>
-                  {item.info ? <span className="h4">{item.info}</span> : null}
+                  {item.info ? <span className={infoCls}>{item.info}</span> : null}
                   <svg viewBox="0 0 20 20" fill="none" className={iconCls}>
                     <path className="a1" fill="#211D1D" d={ICON_VARIANTS[i % ICON_VARIANTS.length].a1} />
                     <path className="a2" fill="#211D1D" d={ICON_VARIANTS[i % ICON_VARIANTS.length].a2} />
@@ -108,8 +119,8 @@ export function Accordions({ section }: { section: AccordionsSection }) {
                   <RichText className={accordionTextCls} html={item.text} />
                   {item.link !== '' ? <BigLink href={item.link.href} target={item.link.target ?? undefined} className={biglinkCls}>{item.linktext}</BigLink> : null}
                 </div>
-                <div className={hrCls} />
               </div>
+              <div className={hrCls} />
             </div>
           ))}
         </div>
