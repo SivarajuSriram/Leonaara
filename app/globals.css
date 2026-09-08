@@ -26,6 +26,17 @@
   --font-sans: karol-sans, sans-serif;
 }
 
+/* pagefilter.css/rooms.css, byte-identical in both: while the FilterShell bar
+   is pinned AND the header's slide-down menu is closed, the bar gets a solid
+   background. Raw value was #e4e0db!important; spec §16.3 explicitly names
+   this exact rule as binding for the beige->canvas fill swap once built.
+   Unlayered, matching this file's other component-CSS-derived rules (see the
+   "Shared link/button classes" block further down) -- there is no
+   `@layer utilities` in use anywhere in this file. */
+header:not(.header-menu-open) ~ div .filterGrid.filter-hover {
+  background-color: var(--color-canvas) !important;
+}
+
 /* Self-hosted Karol Sans faces used across the site (weights 300/400, normal/italic). */
 @font-face { font-family: karol-sans; src: url("/fonts/karol-sans-300-normal.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: auto; }
 @font-face { font-family: karol-sans; src: url("/fonts/karol-sans-300-italic.woff2") format("woff2"); font-weight: 300; font-style: italic; font-display: auto; }
