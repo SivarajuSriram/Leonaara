@@ -23,6 +23,10 @@ import { sela } from '@/content/en/sela';
 import { herchomen } from '@/content/en/herchomen';
 import { hantwerc } from '@/content/en/hantwerc';
 import { sneo } from '@/content/en/sneo';
+import { boum } from '@/content/en/boum';
+import { wisa } from '@/content/en/wisa';
+import { felisa } from '@/content/en/felisa';
+import { himil } from '@/content/en/himil';
 
 // Every English page, keyed by its TYPO3 slug ('/' is the homepage). Later phases add one line per page.
 export const pages: Record<string, PageContent> = {
@@ -49,6 +53,10 @@ export const pages: Record<string, PageContent> = {
   '/herchomen/': herchomen,
   '/hantwerc/': hantwerc,
   '/sneo/': sneo,
+  '/suites/boum/': boum,
+  '/suites/wisa/': wisa,
+  '/suites/felisa/': felisa,
+  '/suites/himil/': himil,
 };
 
 export function getPage(slug: string): PageContent | undefined {
