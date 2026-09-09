@@ -1,11 +1,9 @@
 'use client';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Keyboard, Navigation } from 'swiper/modules';
-import type { Swiper as SwiperType } from 'swiper';
 import type { RoomDetailSection } from '@/lib/content';
 import { Picture } from '@/components/ui/Picture';
-import { BigLink } from '@/components/ui/BigLink';
 import { RichText } from '@/components/ui/RichText';
 import { SplitWords } from '@/components/ui/SplitWords';
 import { ArrowSliderIcon } from '@/components/ui/icons';
@@ -52,7 +50,6 @@ const roomDescriptionCls = 'room-description ml-[9rem] mt-[3rem] max-lg:ml-[5.8r
 
 export function RoomDetail({ section }: { section: RoomDetailSection }) {
   const { room, icons } = section.content;
-  const [swiper, setSwiper] = useState<SwiperType | null>(null);
   const prevRef = useRef<HTMLDivElement>(null);
   const nextRef = useRef<HTMLDivElement>(null);
   const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_roomdetail', 'grid-container']
@@ -68,7 +65,6 @@ export function RoomDetail({ section }: { section: RoomDetailSection }) {
         keyboard
         grabCursor
         navigation={{ prevEl: null, nextEl: null }}
-        onSwiper={setSwiper}
         onBeforeInit={(s) => {
           const nav = s.params.navigation;
           if (nav && typeof nav === 'object') { nav.prevEl = prevRef.current; nav.nextEl = nextRef.current; }
