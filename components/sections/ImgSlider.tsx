@@ -1,10 +1,10 @@
 'use client';
-import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Autoplay, FreeMode, Keyboard, Navigation } from 'swiper/modules';
 import type { ImgSliderSection } from '@/lib/content';
 import { Picture } from '@/components/ui/Picture';
 import { ArrowSliderIcon } from '@/components/ui/icons';
+import { useSwiperExternalNav } from '@/components/ui/useSwiperExternalNav';
 
 // imgslider.css: .swiper-container{grid-column-end:span 14;grid-column-start:1;position:relative}
 const containerCls = 'swiper-container w-full col-start-1 col-span-14 relative';
@@ -36,8 +36,7 @@ const navPrevCls = `prev ${navArrowCls} rotate-180`;
 
 export function ImgSlider({ section }: { section: ImgSliderSection }) {
   const images = section.content.images;
-  const prevRef = useRef<HTMLDivElement>(null);
-  const nextRef = useRef<HTMLDivElement>(null);
+  const { prevRef, nextRef, onSwiper } = useSwiperExternalNav();
   const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_imgslider', 'grid-container', slideImgCls]
     .filter(Boolean).join(' ');
 
@@ -67,6 +66,7 @@ export function ImgSlider({ section }: { section: ImgSliderSection }) {
         a11y
         grabCursor
         navigation={{ prevEl: null, nextEl: null }}
+        onSwiper={onSwiper}
         onBeforeInit={(s) => {
           const nav = s.params.navigation;
           if (nav && typeof nav === 'object') { nav.prevEl = prevRef.current; nav.nextEl = nextRef.current; }

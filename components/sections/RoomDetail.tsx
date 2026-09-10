@@ -1,5 +1,4 @@
 'use client';
-import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Keyboard, Navigation } from 'swiper/modules';
 import type { RoomDetailSection } from '@/lib/content';
@@ -7,6 +6,7 @@ import { Picture } from '@/components/ui/Picture';
 import { RichText } from '@/components/ui/RichText';
 import { SplitWords } from '@/components/ui/SplitWords';
 import { ArrowSliderIcon } from '@/components/ui/icons';
+import { useSwiperExternalNav } from '@/components/ui/useSwiperExternalNav';
 
 // roomdetail.css: .room-image-left{grid-column-end:span 6;grid-column-start:2}
 // + mobile{grid-column-end:span 9;grid-column-start:2}
@@ -50,8 +50,7 @@ const roomDescriptionCls = 'room-description ml-[9rem] mt-[3rem] max-lg:ml-[5.8r
 
 export function RoomDetail({ section }: { section: RoomDetailSection }) {
   const { room, icons } = section.content;
-  const prevRef = useRef<HTMLDivElement>(null);
-  const nextRef = useRef<HTMLDivElement>(null);
+  const { prevRef, nextRef, onSwiper } = useSwiperExternalNav();
   const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_roomdetail', 'grid-container']
     .filter(Boolean).join(' ');
 
@@ -69,6 +68,7 @@ export function RoomDetail({ section }: { section: RoomDetailSection }) {
         a11y
         grabCursor
         navigation={{ prevEl: null, nextEl: null }}
+        onSwiper={onSwiper}
         onBeforeInit={(s) => {
           const nav = s.params.navigation;
           if (nav && typeof nav === 'object') { nav.prevEl = prevRef.current; nav.nextEl = nextRef.current; }

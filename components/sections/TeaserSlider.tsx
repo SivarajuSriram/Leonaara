@@ -1,5 +1,5 @@
 'use client';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Controller, EffectFade, Navigation } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
@@ -7,6 +7,7 @@ import type { TeaserSliderSection } from '@/lib/content';
 import { Picture } from '@/components/ui/Picture';
 import { Button } from '@/components/ui/Button';
 import { ArrowSliderIcon } from '@/components/ui/icons';
+import { useSwiperExternalNav } from '@/components/ui/useSwiperExternalNav';
 
 // mask_teaserslider .swiper{width:100%} — applies to all four Swiper roots
 // below via their merged "swiper" class (image-left, image-right, infotext,
@@ -156,8 +157,7 @@ export function TeaserSlider({ section }: { section: TeaserSliderSection }) {
   const [left, setLeft] = useState<SwiperType | null>(null);
   const [right, setRight] = useState<SwiperType | null>(null);
   const [info, setInfo] = useState<SwiperType | null>(null);
-  const prevRef = useRef<HTMLDivElement>(null);
-  const nextRef = useRef<HTMLDivElement>(null);
+  const { prevRef, nextRef, onSwiper: onNavSwiper } = useSwiperExternalNav();
   const multi = slides.length > 1;
   const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_teaserslider']
     .filter(Boolean).join(' ');
@@ -213,6 +213,7 @@ export function TeaserSlider({ section }: { section: TeaserSliderSection }) {
               // alongside the custom .navigation arrows below. Do not simplify this back to `true`.
               navigation={{ prevEl: null, nextEl: null }}
               controller={{ control: [right, left, info] }}
+              onSwiper={onNavSwiper}
               onBeforeInit={(s) => {
                 const nav = s.params.navigation;
                 if (nav && typeof nav === 'object') {
