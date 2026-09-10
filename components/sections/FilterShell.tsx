@@ -4,6 +4,7 @@ import type { Appearance } from '@/lib/content';
 import { gsap, ScrollTrigger, useGSAP } from '@/lib/gsap';
 import { setHeaderForceHover } from '@/lib/headerHover';
 import { getSmoother } from '@/lib/smoother';
+import { suppressNextScrollReset } from '@/lib/links';
 
 export type FilterShellItem = { uid: string; title: string; href: string };
 type FilterMeta = { title: string; description: string };
@@ -142,6 +143,12 @@ export function FilterShell({ id, appearance, variant, items, nodes, activeIndex
     // eslint-disable-next-line react-hooks/immutability
     document.title = meta.title;
     document.querySelector('meta[name="description"]')?.setAttribute('content', meta.description);
+    // ScrollResetOnNavigate.tsx reacts to this pushState too (Next's router
+    // surfaces it via usePathname() regardless of how the URL changed) --
+    // suppress its jumpToTop() for this one change, since the effect below
+    // already scrolls the page itself; see suppressNextScrollReset's own
+    // comment in lib/links.ts for the full explanation.
+    suppressNextScrollReset();
     window.history.pushState({}, '', items[index].href);
   };
 

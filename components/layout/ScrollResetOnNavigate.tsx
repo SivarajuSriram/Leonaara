@@ -10,7 +10,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
-import { jumpToTop } from '@/lib/links';
+import { consumeScrollResetSuppression, jumpToTop } from '@/lib/links';
 
 export function ScrollResetOnNavigate() {
   const pathname = usePathname();
@@ -30,6 +30,14 @@ export function ScrollResetOnNavigate() {
   useEffect(() => {
     if (lastPathname.current === pathname) return;
     lastPathname.current = pathname;
+    // FilterShell's in-place tab switches update the URL via a raw
+    // history.pushState() (see lib/links.ts's comment on
+    // suppressNextScrollReset for the full explanation) -- Next's router
+    // still surfaces that as a pathname change here, but FilterShell already
+    // scrolls the page itself immediately after, so jumping to the literal
+    // top here would instantly cancel that scroll instead of just being
+    // redundant with it.
+    if (consumeScrollResetSuppression()) return;
     jumpToTop();
   }, [pathname]);
   return null;
