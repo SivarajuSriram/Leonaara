@@ -14,6 +14,15 @@ export function useScrolledBody() {
     // already scrolled, so the very next scroll event compares against a
     // stale 0 instead of where the page actually is.
     let lastY = window.scrollY;
+    // Also reflect that seeded position immediately, not just silently: this
+    // effect's own attachment can itself lag behind real scrolling (dev-mode
+    // hydration delay, or a slow device/CPU-throttled session) long enough
+    // that the whole scroll-down burst finishes before any listener exists to
+    // see the delta -- with no further scroll event to trigger `onScroll`'s
+    // add-on-delta rule below, `scrolled` would otherwise never get applied
+    // even though the page is genuinely below the top. Below-the-top at
+    // (re)attach time is itself sufficient justification to apply it.
+    if (lastY > 0) document.body.classList.add('scrolled');
     const onScroll = () => {
       const y = window.scrollY;
       if (lastY > 0 && y > lastY) {
