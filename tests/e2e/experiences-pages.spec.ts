@@ -1,8 +1,10 @@
 import { test, expect } from '@playwright/test';
 
-test('experiences hub renders the filter with nothing active and the teaserslider', async ({ page }) => {
+test('experiences hub renders with leiba active by default and the teaserslider', async ({ page }) => {
   await page.goto('/experiences/');
-  await expect(page.locator('.mask_pagefilter .filter-item.active')).toHaveCount(0);
+  const active = page.locator('.mask_pagefilter .filter-item.active');
+  await expect(active).toHaveCount(1);
+  await expect(active).toHaveText(/leiba/i);
   await expect(page.locator('main .mask_teaserslider')).toBeVisible();
 });
 
