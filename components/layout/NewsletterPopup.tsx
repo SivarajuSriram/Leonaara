@@ -6,23 +6,26 @@
 // mechanism. Notably: the live site's dismissal is a side effect of its own
 // session-tracking cookie (`additivemc_session_information`) gaining a
 // `pausedCampaigns` field -- that's vendor plumbing, not behaviour, so this
-// component uses a small purpose-built cookie instead (see REPORT.md §6).
+// component uses a small purpose-built flag instead (see REPORT.md §6).
+//
+// Deliberate deviation from the live site's own ~4h dismissal window
+// (per user request): dismissal is tracked in sessionStorage, not a
+// cookie, so the popup reappears every new browser session (tab/window
+// close) instead of staying dismissed for hours.
 'use client';
 import { useEffect, useRef, useState, type FormEvent, type ReactNode } from 'react';
 import Image from 'next/image';
 import { gsap, useGSAP } from '@/lib/gsap';
 
-const COOKIE = 'eriro_popup_dismissed';
-const COOKIE_HOURS = 4; // sliding expiry, matching the capture's ~4h window
+const DISMISSED_KEY = 'eriro_popup_dismissed';
 
 function hasBeenDismissed() {
-  if (typeof document === 'undefined') return false;
-  return document.cookie.split('; ').some((c) => c.startsWith(`${COOKIE}=`));
+  if (typeof sessionStorage === 'undefined') return false;
+  return sessionStorage.getItem(DISMISSED_KEY) === '1';
 }
 
 function dismiss() {
-  const expires = new Date(Date.now() + COOKIE_HOURS * 3600 * 1000).toUTCString();
-  document.cookie = `${COOKIE}=1; expires=${expires}; path=/`;
+  sessionStorage.setItem(DISMISSED_KEY, '1');
 }
 
 const TERMS = [
@@ -44,11 +47,13 @@ const inputCls =
 
 const labelCls = 'block pb-[0.4rem] text-[1.4rem] leading-[1.6rem] tracking-[0.025em] text-ink/62';
 
-// text-[20px]/leading-[25px], not rem: matches the ADDITIVE widget's own
-// fixed-size text (see the heading comment in Step1 below) -- identical on
-// both captured breakpoints, so no max-lg override is needed here.
+// Originally text-[20px]/leading-[25px] (fixed px, not rem, to match the
+// ADDITIVE widget's own fixed-size text -- see the heading comment in
+// Step1 below). Sized down to text-[16px]/leading-[20px] once the label
+// was forced onto one line (whitespace-nowrap) -- at 20px the full copy
+// overflowed the button's width and became unreadable.
 const submitCls =
-  'flex h-[4.8rem] w-full cursor-pointer items-center justify-center rounded-[0.2rem] border-0 bg-ink px-[2.8rem] text-[20px] leading-[25px] tracking-[0.03em] text-[#F5F4F2] uppercase shadow-[0_1px_2px_rgba(0,0,0,0.2)] transition-[filter] duration-100 outline-none hover:brightness-110 active:brightness-95';
+  'flex h-[4.8rem] w-full cursor-pointer items-center justify-center whitespace-nowrap rounded-[0.2rem] border-0 bg-ink px-[2.8rem] text-[16px] leading-[20px] tracking-[0.03em] text-[#F5F4F2] uppercase shadow-[0_1px_2px_rgba(0,0,0,0.2)] transition-[filter] duration-100 outline-none hover:brightness-110 active:brightness-95';
 
 // --- icons, paths taken verbatim from the captured markup (docs/reference/popup) ---
 

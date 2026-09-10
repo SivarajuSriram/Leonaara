@@ -18,20 +18,16 @@ vi.mock('@/lib/gsap', () => ({
   useGSAP: vi.fn(),
 }));
 
-function clearDismissalCookie() {
-  document.cookie = 'eriro_popup_dismissed=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
-}
-
 describe('NewsletterPopup', () => {
   beforeEach(() => {
-    clearDismissalCookie();
+    sessionStorage.clear();
     vi.useFakeTimers();
   });
 
   afterEach(() => {
     cleanup();
     vi.useRealTimers();
-    clearDismissalCookie();
+    sessionStorage.clear();
   });
 
   it('does not render before 5 seconds have elapsed', () => {
@@ -45,8 +41,8 @@ describe('NewsletterPopup', () => {
     expect(screen.getByRole('dialog')).not.toBeNull();
   });
 
-  it('does not render if the dismissal cookie is set', () => {
-    document.cookie = 'eriro_popup_dismissed=1; path=/';
+  it('does not render if already dismissed this session', () => {
+    sessionStorage.setItem('eriro_popup_dismissed', '1');
     render(<NewsletterPopup />);
     advance5s();
     expect(screen.queryByRole('dialog')).toBeNull();
@@ -83,7 +79,7 @@ describe('NewsletterPopup', () => {
     expect(screen.getByText('The privacy policy must be accepted')).not.toBeNull();
   });
 
-  it('closes only via the close button and sets the dismissal cookie', () => {
+  it('closes only via the close button and sets the session dismissal flag', () => {
     render(<NewsletterPopup />);
     advance5s();
     expect(screen.getByRole('dialog')).not.toBeNull();
@@ -91,7 +87,7 @@ describe('NewsletterPopup', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Close' }));
 
     expect(screen.queryByRole('dialog')).toBeNull();
-    expect(document.cookie).toContain('eriro_popup_dismissed=1');
+    expect(sessionStorage.getItem('eriro_popup_dismissed')).toBe('1');
   });
 
   // Regression: the scroll lock used to be set from inside a useGSAP callback

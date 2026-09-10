@@ -38,7 +38,7 @@ test('popup opens after ~5s, closes only via the X button, and the dismissal per
 
   await page.reload();
   await page.waitForTimeout(7000); // long enough for the 5s trigger to have fired, if it were going to
-  await expect(dialog).toBeHidden(); // dismissal cookie persists across reload
+  await expect(dialog).toBeHidden(); // dismissal (sessionStorage) persists across a reload within the same session
 });
 
 test('step 1 submits to step 2 with the email carried over, and step 2 requires consent', async ({ page, context }) => {
