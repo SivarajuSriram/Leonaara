@@ -6,7 +6,14 @@ import { ScrollTrigger } from '@/lib/gsap';
 
 export function useScrolledBody() {
   useEffect(() => {
-    let lastY = 0;
+    // Seed from the real current position, not 0: effects (this one
+    // included) are expected to tolerate being stopped and restarted --
+    // React itself re-runs every effect once, synchronously, in dev -- and
+    // assuming "fresh page load, top of page" on every (re)start desyncs
+    // lastY from window.scrollY whenever that happens after the page is
+    // already scrolled, so the very next scroll event compares against a
+    // stale 0 instead of where the page actually is.
+    let lastY = window.scrollY;
     const onScroll = () => {
       const y = window.scrollY;
       if (lastY > 0 && y > lastY) {

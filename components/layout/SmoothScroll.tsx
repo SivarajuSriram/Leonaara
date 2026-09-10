@@ -11,8 +11,19 @@ const DESKTOP = 1024; // original: smoother only runs at desktop widths
 export function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
     let instance: ScrollSmoother | null = null;
+    // ScrollSmoother.create() unconditionally zeroes the scroll position as
+    // part of its own setup (it sets wrapper.scrollTop = 0 -- see GSAP's own
+    // source). kill()+create() is the normal way this effect toggles the
+    // smoother off and on across the 1024px breakpoint, and effects are
+    // expected to tolerate being stopped and restarted -- most visibly,
+    // React re-runs this exact effect once, synchronously, in dev, so
+    // restoring the position captured immediately beforehand isn't a
+    // resize-only nicety, it's what keeps a page load that's already
+    // scrolled (by the time this effect re-settles) from silently snapping
+    // back to the top.
     const create = () => {
       if (instance) return;
+      const restoreY = window.scrollY;
       instance = ScrollSmoother.create({
         wrapper: '#smooth-wrapper',
         content: '#smooth-content',
@@ -21,6 +32,7 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
         smoothTouch: 0.1, // original: smoothTouch
         normalizeScroll: false, // original: normalizeScroll
       });
+      if (restoreY) instance.scrollTop(restoreY);
       setSmoother(instance);
     };
     const kill = () => {
