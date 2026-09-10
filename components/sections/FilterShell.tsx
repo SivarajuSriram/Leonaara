@@ -1,5 +1,5 @@
 'use client';
-import { useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import type { Appearance } from '@/lib/content';
 import { gsap, ScrollTrigger, useGSAP } from '@/lib/gsap';
 import { setHeaderForceHover } from '@/lib/headerHover';
@@ -60,13 +60,19 @@ export function FilterShell({ id, appearance, variant, items, nodes, activeIndex
   const filterGridRef = useRef<HTMLDivElement>(null);
   const hasCreatedTrigger = useRef(false);
 
+  // If this component unmounts while hovered (or isPinned flips false under
+  // a stationary cursor), setHeaderForceHover(true) above would otherwise
+  // never be reset, leaving the header stuck in its hovered visual state for
+  // the rest of the session.
+  useEffect(() => () => setHeaderForceHover(false), []);
+
   const headerHeight = () => {
     if (typeof window === 'undefined') return 10;
     if (window.innerWidth < 1024) {
       const upper = document.querySelector<HTMLElement>('header .upper');
       return (upper?.clientHeight ?? 10) - 10;
     }
-    return 10;
+    return 10 * parseFloat(getComputedStyle(document.documentElement).fontSize);
   };
 
   // spec §9.15: ScrollTrigger created 500ms after first content load; on
@@ -150,7 +156,7 @@ export function FilterShell({ id, appearance, variant, items, nodes, activeIndex
         <div
           ref={filterGridRef}
           className={filterGridCls}
-          onMouseEnter={() => { if (isPinned) setHeaderForceHover(true); }}
+          onMouseEnter={() => { if (isPinned) setHeaderForceHover(true); else setHeaderForceHover(false); }}
           onMouseLeave={() => setHeaderForceHover(false)}
         >
           <div className={gridInnerCls}>

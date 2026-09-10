@@ -65,7 +65,7 @@ export type RoomCtaSection = Base<'mask_roomcta', { room: { uid: string; title: 
 // Add to this list, not back to `string`, when a newly crawled page needs one.
 export type UnknownSection = {
   id: number;
-  type: 'mask_jobs' | 'powermail_pi1' | 'room';
+  type: 'mask_jobs' | 'powermail_pi1' | 'room' | 'mask_maps';
   appearance: Appearance;
   content: Record<string, unknown>;
 };

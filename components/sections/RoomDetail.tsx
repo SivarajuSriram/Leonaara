@@ -1,7 +1,7 @@
 'use client';
 import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Keyboard, Navigation } from 'swiper/modules';
+import { A11y, Keyboard, Navigation } from 'swiper/modules';
 import type { RoomDetailSection } from '@/lib/content';
 import { Picture } from '@/components/ui/Picture';
 import { RichText } from '@/components/ui/RichText';
@@ -10,7 +10,7 @@ import { ArrowSliderIcon } from '@/components/ui/icons';
 
 // roomdetail.css: .room-image-left{grid-column-end:span 6;grid-column-start:2}
 // + mobile{grid-column-end:span 9;grid-column-start:2}
-const roomImageLeftCls = 'room-image-left col-start-2 col-span-6 max-lg:col-start-2 max-lg:col-span-9';
+const roomImageLeftCls = 'room-image-left w-full col-start-2 col-span-6 max-lg:col-start-2 max-lg:col-span-9';
 // .navigation{grid-column-end:span 2;grid-column-start:9;justify-self:flex-start;
 // margin-top:12rem;z-index:5} + mobile{grid-column-end:span 3;grid-column-start:11;margin-top:4rem}
 const navigationCls = 'navigation self-start justify-self-start col-start-9 col-span-2 mt-[12rem] z-[5] max-lg:col-start-11 max-lg:col-span-3 max-lg:mt-[4rem]';
@@ -59,10 +59,14 @@ export function RoomDetail({ section }: { section: RoomDetailSection }) {
     <div className={cls} {...{ uid: `c${section.id}` }}>
       <Swiper
         className={roomImageLeftCls}
-        modules={[Navigation, Keyboard]}
+        modules={[Navigation, Keyboard, A11y]}
+        spaceBetween={0}
+        loop
         speed={650}
         slidesPerView={1}
-        keyboard
+        keyboard={{ enabled: true }}
+        breakpoints={{ 1024: { centeredSlides: false } }}
+        a11y
         grabCursor
         navigation={{ prevEl: null, nextEl: null }}
         onBeforeInit={(s) => {
@@ -85,29 +89,36 @@ export function RoomDetail({ section }: { section: RoomDetailSection }) {
       ) : null}
       {room.images[0] ? (
         <div className={roomImageRightCls}>
-          {/* mobile size not restated in spec §9.16; matches RoomSlider's own
-              .room-image-right convention (136x180) -- verify against the
-              live reference screenshot in Task 9. */}
-          <Picture image={room.images[0]} widthD={273} heightD={317} widthM={136} heightM={180} />
+          {/* mobile size: 360x520 (ratio 0.6923077, matches live measurement
+              to 7 decimal places) -- confirmed via the original's literal
+              widthM/heightM props, not RoomSlider's own (different)
+              .room-image-right convention. */}
+          <Picture image={room.images[0]} widthD={273} heightD={317} widthM={360} heightM={520} />
         </div>
       ) : null}
-      <div className={roomContentCls}>
-        <SplitWords as="h1" className="h2" html={room.title} />
+      {/* .room-info is a direct grid child of .mask_roomdetail (sibling of
+          .room-content), matching the original's grid-child order:
+          room-image-left, navigation, room-image-right, room-info,
+          room-content. .room-icons nests inside .room-info (as its last
+          child) rather than inside .room-content -- this also restores
+          .room-info-spacer:nth-last-child(2) to a working selector: with
+          room-icons last, the 2nd-from-last child is room-info-price (not a
+          spacer), so the CSS rule simply doesn't match and both spacers
+          render normally, same as live. */}
+      <div className={roomInfoCls}>
+        <span className="room-info-size">{room.size}</span>
+        <span className={roomInfoSpacerCls} />
+        <span className="room-info-people">{room.people}</span>
+        <span className={roomInfoSpacerCls} />
+        <span className="room-info-price w-full">{room.minprice}</span>
         <div className={roomIconsCls}>
           {icons.map((icon, i) => (
             <Picture key={i} image={icon} widthD={120} heightD={120} widthM={120} heightM={120} className={roomIconPictureCls(i === icons.length - 1)} />
           ))}
         </div>
-        <div className={roomInfoCls}>
-          <span className="room-info-size">{room.size}</span>
-          <span className={roomInfoSpacerCls} />
-          <span className="room-info-people">{room.people}</span>
-          {/* .room-info-spacer:nth-last-child(2){display:none} in the original
-              hides this one unconditionally -- kept in the DOM for structural
-              parity, hidden the same way the source hides it. */}
-          <span className={`${roomInfoSpacerCls} hidden`} />
-          <span className="room-info-price w-full">{room.minprice}</span>
-        </div>
+      </div>
+      <div className={roomContentCls}>
+        <SplitWords as="h1" className="h2" html={room.title} />
         <RichText className={roomDescriptionCls} html={room.description} />
       </div>
     </div>
