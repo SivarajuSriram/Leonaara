@@ -3,6 +3,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import type { Appearance } from '@/lib/content';
 import { gsap, ScrollTrigger, useGSAP } from '@/lib/gsap';
 import { setHeaderForceHover } from '@/lib/headerHover';
+import { getSmoother } from '@/lib/smoother';
 
 export type FilterShellItem = { uid: string; title: string; href: string };
 type FilterMeta = { title: string; description: string };
@@ -59,6 +60,15 @@ export function FilterShell({ id, appearance, variant, items, nodes, activeIndex
   const filterOuterRef = useRef<HTMLDivElement>(null);
   const filterGridRef = useRef<HTMLDivElement>(null);
   const hasCreatedTrigger = useRef(false);
+  // Seeded from the current value at render time, not toggled inside the
+  // effect -- see ScrollResetOnNavigate.tsx's identical pattern and comment
+  // for why a naive "skip the first call" boolean flag doesn't survive
+  // React's dev-mode double-invoke: the second (delayed) synthetic
+  // invocation would see the flag already flipped and incorrectly proceed.
+  // Comparing against the last value actually processed instead means both
+  // synthetic invocations compare `active` to itself and skip; only a real
+  // click (a real change to `active`) fires the effect body.
+  const lastActive = useRef(active);
 
   // If this component unmounts while hovered (or isPinned flips false under
   // a stationary cursor), setHeaderForceHover(true) above would otherwise
@@ -117,18 +127,11 @@ export function FilterShell({ id, appearance, variant, items, nodes, activeIndex
     return () => clearTimeout(timer);
   }, { scope: filterOuterRef });
 
-  // Same contextSafe reasoning as above: this handler creates a GSAP tween
-  // (gsap.to) outside the synchronous useGSAP window (it runs from a click
-  // event), so it must be wrapped to be tracked and reverted on unmount.
-  // ScrollTrigger.refresh() is NOT wrapped -- it doesn't create or register
-  // any new GSAP object, it only re-measures triggers that are already
-  // tracked (or not) in the context, so there's nothing for contextSafe to
-  // add to the context here.
-  // contextSafe (the official @gsap/react pattern) only ever invokes this closure later, from the
-  // click handler; it never reads the refs during render -- same false positive Header.tsx already
-  // suppresses on its own contextSafe-wrapped closures (toggleMenu, closeIfOpen).
-  // eslint-disable-next-line react-hooks/refs
-  const handleClick = contextSafe((index: number) => {
+  // Handler stays synchronous-only: flip the active index, update the URL bar
+  // and document metadata. The actual scroll (below, in a useEffect keyed on
+  // `active`) has to wait until AFTER React has committed the newly active
+  // suite's content -- see that effect's own comment for why.
+  const handleClick = (index: number) => {
     if (index === active) return;
     setActive(index);
     const meta = metaByIndex[index];
@@ -140,11 +143,55 @@ export function FilterShell({ id, appearance, variant, items, nodes, activeIndex
     document.title = meta.title;
     document.querySelector('meta[name="description"]')?.setAttribute('content', meta.description);
     window.history.pushState({}, '', items[index].href);
-    if (hasCreatedTrigger.current) {
-      setTimeout(() => ScrollTrigger.refresh(), 100);
-    }
-    gsap.to(window, { duration: 0.2, scrollTo: { y: filterOuterRef.current!.offsetTop, offsetY: 0 } });
-  });
+  };
+
+  // Runs after React commits the newly active suite's content. Guarded with
+  // the lastActive-ref comparison above (not a plain "skip the first run"
+  // flag) so React's dev-mode double-invoke of this effect doesn't fire it a
+  // second, unwanted time on mount -- ScrollResetOnNavigate.tsx has the same
+  // pattern and the full explanation for why the naive version breaks.
+  // Two real bugs lived in the previous same-tick version of this logic:
+  // 1) Scrolling `window` via gsap.to(...) is what caused the switch to
+  //    visibly jump then glide down: GSAP's ScrollToPlugin auto-detects the
+  //    active ScrollSmoother and hands the animation off to it, but the
+  //    smoother then eases using its own `smooth: 1.5` config, not the
+  //    tween's `duration` -- so window.scrollY snapped to the target in a
+  //    single frame (the jump) while the smoother's separately-driven visual
+  //    transform only caught up afterward (the glide down), two systems
+  //    animating the same motion out of step. Calling the smoother's own
+  //    scrollTo() directly (same pattern as jumpToTop() in lib/links.ts)
+  //    keeps it to one coherent, smooth motion.
+  // 2) Even switched to smoother.scrollTo(), calling it synchronously --
+  //    including from this very effect, still in the same commit/paint cycle
+  //    as the newly active content landing -- silently did nothing: verified
+  //    empirically that only deferring the call past that same cycle (a
+  //    setTimeout, same as this effect's own sibling below for the initial
+  //    ScrollTrigger.create()) makes it actually animate. The effect above
+  //    still does the useful part (correctly gating on a real `active`
+  //    change); this timeout is what gets the timing right on top of that.
+  // contextSafe wraps the callback because it creates a GSAP tween outside
+  // the synchronous useGSAP window; ScrollTrigger.refresh() itself doesn't
+  // need wrapping since it only re-measures already-tracked triggers rather
+  // than creating a new one.
+  useEffect(() => {
+    if (lastActive.current === active) return;
+    lastActive.current = active;
+    const timer = setTimeout(
+      contextSafe(() => {
+        // Refresh before scrolling, not after: the previous 100ms-later
+        // refresh could land mid-tween and yank the position, another source
+        // of the same jump/glide glitch. Refreshing first means the scroll
+        // animates against already-correct bounds for the new content's height.
+        if (hasCreatedTrigger.current) ScrollTrigger.refresh();
+        const smoother = getSmoother();
+        if (smoother) smoother.scrollTo(filterOuterRef.current!, true);
+        else gsap.to(window, { duration: 0.2, scrollTo: { y: filterOuterRef.current!.offsetTop, offsetY: 0 } });
+      }),
+      0
+    );
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [active]);
 
   const maskType = variant === 'pagefilter' ? 'mask_pagefilter' : 'mask_rooms';
   const maskCls = [appearance.layout, `space-before-${appearance.spaceBefore}`, 'mask', maskType].filter(Boolean).join(' ');
