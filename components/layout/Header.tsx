@@ -10,12 +10,17 @@ import { MenuPanel } from './MenuPanel';
 import { Logo } from './Logo';
 import { openMenu, closeMenu, type MenuParts } from './menuAnimations';
 import { useScrolledBody } from './useScrolledBody';
+import { onHeaderForceHover } from '@/lib/headerHover';
 
 export function Header() {
   const pathname = usePathname();
   const isHome = pathname === '/';
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  // FilterShell (Task 2) forces the header's scrolled-state background while
+  // its pinned filter bar is hovered while pinned -- see lib/headerHover.ts.
+  const [forceHover, setForceHover] = useState(false);
+  useEffect(() => onHeaderForceHover(setForceHover), []);
   const headerRef = useRef<HTMLElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
@@ -77,7 +82,7 @@ export function Header() {
     "lg:[body.scrolled_&:not(.menu-open)]:bg-canvas! lg:[body.scrolled_&:not(.menu-open)]:pb-[2rem] lg:[body.scrolled_&:not(.menu-open)]:pt-[4rem]",
     "max-lg:pt-[1.6rem] max-lg:pb-[1.6rem] max-lg:bg-[url('/images/header-mobile-blob.svg')] max-lg:bg-[100%_100%] max-lg:bg-no-repeat max-lg:bg-cover",
     isOpen ? 'menu-open' : '',
-    isHovered ? 'header-hover' : '',
+    (isHovered || forceHover) ? 'header-hover' : '',
   ].filter(Boolean).join(' ');
 
   return (

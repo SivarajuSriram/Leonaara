@@ -51,6 +51,13 @@ export type GallerySliderSection = Base<'mask_galleryslider', { images: ImageRef
 export type GallerySection = Base<'mask_gallery', { images: ImageRef[] }>;
 export type NewsletterWidgetSection = Base<'mask_widget_newsletter', Record<string, never>>;
 export type VoucherWidgetSection = Base<'mask_widget_voucher', Record<string, never>>;
+export type PageFilterItem = { uid: string; title: string; href: string };
+export type PageFilterSection = Base<'mask_pagefilter', { pages: PageFilterItem[] }>;
+export type RoomsFilterItem = { uid: string; title: string; slug: string; pid: string };
+export type RoomsSection = Base<'mask_rooms', { rooms: RoomsFilterItem[] }>;
+export type RoomDetailSection = Base<'mask_roomdetail', { room: Room; icons: ImageRef[] }>;
+export type ImgSliderSection = Base<'mask_imgslider', { images: ImageRef[] }>;
+export type RoomCtaSection = Base<'mask_roomcta', { room: { uid: string; title: string; asacode: string; bookingcode: string } }>;
 // `type: string` here would defeat literal narrowing on `Section.type` for
 // every other member (a bare string catch-all can't be excluded when a caller
 // checks `section.type !== 'mask_hero'`), so this lists the content-element
@@ -58,9 +65,7 @@ export type VoucherWidgetSection = Base<'mask_widget_voucher', Record<string, ne
 // Add to this list, not back to `string`, when a newly crawled page needs one.
 export type UnknownSection = {
   id: number;
-  type:
-    | 'mask_imgslider' | 'mask_jobs' | 'mask_maps' | 'mask_pagefilter' | 'mask_roomcta'
-    | 'mask_roomdetail' | 'mask_rooms' | 'powermail_pi1' | 'room';
+  type: 'mask_jobs' | 'powermail_pi1' | 'room' | 'mask_maps';
   appearance: Appearance;
   content: Record<string, unknown>;
 };
@@ -70,7 +75,9 @@ export type Section =
   | RoomSliderSection | TeaserSliderSection | PartnerMarqueeSection
   | FooterPageTextSection | IncludePageSection | CookieConsentButtonSection
   | AccordionsSection | ListSection | GallerySliderSection | GallerySection
-  | NewsletterWidgetSection | VoucherWidgetSection | UnknownSection;
+  | NewsletterWidgetSection | VoucherWidgetSection
+  | PageFilterSection | RoomsSection | RoomDetailSection | ImgSliderSection | RoomCtaSection
+  | UnknownSection;
 
 export type PageMeta = {
   title: string; description: string; ogTitle: string; ogDescription: string; ogImage: ImageRef | null;
