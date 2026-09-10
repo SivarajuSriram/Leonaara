@@ -24,36 +24,21 @@ const routes = [
 const viewports = [{ width: 1920, height: 951 }, { width: 1440, height: 900 }, { width: 390, height: 844 }];
 
 // Suite routes render RoomDetail (components/sections/RoomDetail.tsx), whose
-// `.room-image-left` Swiper hits a genuine, deterministic layout bug: Swiper's
-// own ResizeObserver-driven `updateSize()` (swiper/shared/swiper-core.mjs)
-// reads `el.clientWidth`, and for this specific Swiper instance that value
-// grows on each successive resize callback (confirmed via an instrumented
-// clientWidth getter: 21700 -> 108500 -> 542500 -> ... a geometric runaway),
-// eventually saturating at Chromium's max representable Blink LayoutUnit,
-// 33554432px (2^25). This is NOT a test-timing artifact -- it reproduces on a
-// completely fresh navigation at a single fixed large viewport with zero
-// setViewportSize calls, so real visitors hit it too. Once it fires, `main`'s
-// own height inherits the runaway (everything after the hero gallery --
-// icons, description, ImgSlider, List, Img, RoomCta, TeaserSlider, Footer --
-// is pushed to a y-offset around 33 million px), which is both outside any
-// screenshot tool's renderable range and not a meaningful "baseline" to
-// encode even if it could be captured. This is a Critical, pre-existing
-// product defect (not introduced by this test), reported in Task 9's report
-// for the final whole-branch review's fix wave -- per this project's
-// established process, defects found during a QA/visual-regression task are
-// recorded, not silently patched mid-task. The 12 sub-tests below are marked
-// fixme (not silently skipped) so the gap stays visible in test output until
-// the bug is fixed and this annotation is removed.
-const suiteRoutesBlockedByRoomImageLeftBug = new Set(['suites-boum', 'suites-wisa', 'suites-felisa', 'suites-himil']);
-
+// `.room-image-left` Swiper root used to hit a genuine, deterministic layout
+// bug (C1 in the final whole-branch review's fix wave): the class list
+// carrying `.room-image-left` was missing `w-full`, so Swiper's own
+// ResizeObserver-driven `updateSize()` read a runaway `el.clientWidth` that
+// grew on each successive resize callback, eventually saturating at
+// Chromium's max representable Blink LayoutUnit, 33554432px (2^25) --
+// pushing everything after the hero gallery to a y-offset around 33 million
+// px. Fixed by adding `w-full` to `roomImageLeftCls`
+// (components/sections/RoomDetail.tsx); the 12 sub-tests below were
+// `test.fixme()`'d while that defect stood and are un-fixme'd now that C1
+// (and ImgSlider's matching C2/C3) are fixed and manually verified.
 test.describe('Phase 4 pages visual regression', () => {
   for (const { path, name } of routes) {
     for (const viewport of viewports) {
       test(`${name} matches at ${viewport.width}x${viewport.height}`, async ({ page }) => {
-        test.fixme(
-          suiteRoutesBlockedByRoomImageLeftBug.has(name),
-          'RoomDetail .room-image-left Swiper hits a deterministic ResizeObserver width runaway (clamps at 33554432px / 2^25) -- see comment above. Blocks full-main capture on all 4 suite routes. Tracked for the final whole-branch review fix wave.'
-        );
         await page.setViewportSize(viewport);
         await page.goto(path);
         const main = page.locator('main');
@@ -106,8 +91,36 @@ test.describe('Phase 4 pages visual regression', () => {
             ),
           { timeout: 30_000 }
         ).toBe(true);
-        // 800ms clear of the 0.5s overlay fade triggered by the last image's 'load' event.
-        await page.waitForTimeout(800);
+        // A flat 800ms wait here used to be "clear of the 0.5s overlay fade
+        // triggered by the last image's 'load' event" -- but on suites-felisa
+        // and suites-himil at 1440x900 that margin proved marginal (2/2 repro
+        // during this fix wave's stability check): both failures isolated to
+        // one single below-fold TeaserSlider photo with a uniform, sub-pixel
+        // diff spread across its whole bounding box -- the signature of a
+        // dark overlay (Picture.tsx's `bg-ink` div, GSAP-faded to opacity 0)
+        // not quite finished settling, not a real content difference (visual
+        // diff crop confirmed pixel-identical to the eye). Poll each *loaded*
+        // image's overlay opacity instead of guessing a fixed delay -- exact
+        // regardless of how loaded the machine happens to be when the suite
+        // runs. Only overlays whose own <img> is already `.complete` are
+        // checked (matches the img-load poll above): ImgSlider keeps
+        // off-screen carousel slides genuinely unloaded (and thus their
+        // overlay genuinely still opaque) by design, not a bug -- confirmed
+        // via a diagnostic dump showing several overlays permanently stuck at
+        // opacity 1 because their sibling <img> never loads until scrolled
+        // into the strip, which this test never does.
+        await expect.poll(
+          () =>
+            main.evaluate((el) =>
+              Array.from(el.querySelectorAll('picture')).every((pic) => {
+                const img = pic.querySelector('img');
+                const overlay = pic.querySelector<HTMLElement>(':scope > div');
+                if (!img || !overlay || !img.complete) return true;
+                return parseFloat(getComputedStyle(overlay).opacity) < 0.01;
+              })
+            ),
+          { timeout: 5_000 }
+        ).toBe(true);
         // sela and sneo each have a mask_video section (Video.tsx); its Player
         // autoplays once its IntersectionObserver sees it, so its frames keep
         // changing regardless of wait time -- masked the same way
