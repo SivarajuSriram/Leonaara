@@ -6,6 +6,7 @@ import { ScrollResetOnNavigate } from '@/components/layout/ScrollResetOnNavigate
 import { Footer } from '@/components/layout/Footer';
 import { NewsletterPopup } from '@/components/layout/NewsletterPopup';
 import { CookieConsentBanner } from '@/components/layout/CookieConsentBanner';
+import { SCROLLED_BODY_INLINE_SCRIPT } from '@/components/layout/useScrolledBody';
 
 export const viewport = { width: 'device-width', initialScale: 1 };
 
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="mask-icon" href="/images/favicon/safari-pinned-tab01.svg" color="#211D1D" />
         <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
         <meta name="format-detection" content="telephone=no" />
+        <script dangerouslySetInnerHTML={{ __html: SCROLLED_BODY_INLINE_SCRIPT }} />
       </head>
       <body className="pid-1 layout-layout-0">
         <div id="__app">

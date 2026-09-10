@@ -1,41 +1,53 @@
 // components/layout/useScrolledBody.ts
-// Original rule: add `scrolled` when scrolling down from a non-zero position; remove it only back at the top.
+// The `scrolled` class itself is toggled by an inline <script> in app/layout.tsx's
+// <head> (see ScrolledBodyInlineScript below), not from here -- see that script's
+// own comment for why. This hook only owns the GSAP-dependent half of the
+// original behavior, which can't run that early since it needs the GSAP module
+// loaded first.
 'use client';
 import { useEffect } from 'react';
 import { ScrollTrigger } from '@/lib/gsap';
 
 export function useScrolledBody() {
   useEffect(() => {
-    // Seed from the real current position, not 0: effects (this one
-    // included) are expected to tolerate being stopped and restarted --
-    // React itself re-runs every effect once, synchronously, in dev -- and
-    // assuming "fresh page load, top of page" on every (re)start desyncs
-    // lastY from window.scrollY whenever that happens after the page is
-    // already scrolled, so the very next scroll event compares against a
-    // stale 0 instead of where the page actually is.
-    let lastY = window.scrollY;
-    // Also reflect that seeded position immediately, not just silently: this
-    // effect's own attachment can itself lag behind real scrolling (dev-mode
-    // hydration delay, or a slow device/CPU-throttled session) long enough
-    // that the whole scroll-down burst finishes before any listener exists to
-    // see the delta -- with no further scroll event to trigger `onScroll`'s
-    // add-on-delta rule below, `scrolled` would otherwise never get applied
-    // even though the page is genuinely below the top. Below-the-top at
-    // (re)attach time is itself sufficient justification to apply it.
-    if (lastY > 0) document.body.classList.add('scrolled');
-    const onScroll = () => {
-      const y = window.scrollY;
-      if (lastY > 0 && y > lastY) {
-        if (y) document.body.classList.add('scrolled');
-      } else if (!y) {
-        document.body.classList.remove('scrolled');
-      }
-      lastY = y;
-    };
     // The original refreshes ScrollTrigger whenever the body changes height.
-    const observer = new ResizeObserver(() => { if (window.scrollY) ScrollTrigger.refresh(); });
+    // ResizeObserver invokes its callback once immediately on observe() with
+    // the current size, before any real resize has happened -- skip that
+    // first call. Otherwise, if this effect (re)mounts while already scrolled
+    // (e.g. a route change, or hydration finishing after a fast programmatic
+    // scroll on a content-heavy page), that spurious first refresh() can nudge
+    // ScrollSmoother's scroll position by a stray sub-pixel amount while
+    // recalculating -- enough to fire an extra native 'scroll' event that
+    // looks, to the delta rule above, like the user scrolled further.
+    let first = true;
+    const observer = new ResizeObserver(() => {
+      if (first) { first = false; return; }
+      if (window.scrollY) ScrollTrigger.refresh();
+    });
     observer.observe(document.body);
-    window.addEventListener('scroll', onScroll);
-    return () => { observer.disconnect(); window.removeEventListener('scroll', onScroll); };
+    return () => observer.disconnect();
   }, []);
 }
+
+// Original rule: add `scrolled` when scrolling down from a non-zero position;
+// remove it only back at the top -- byte-faithful to the live site's own Vue
+// implementation (a ref seeded at 0, the same two-step "was already below top,
+// and still going down" delta check). Living in a synchronous <head> script
+// instead of a React effect is what makes this reliable: a React effect (even
+// with useLayoutEffect) can't attach its listener until hydration reaches this
+// component, and on a content-heavy page hydration can easily take longer than
+// a fast wheel-scroll burst or a `scrollIntoViewIfNeeded()` jump takes to
+// resolve -- so the listener can lose the race and miss the whole delta with no
+// further event left to catch it on. A <head> script runs at parse time, before
+// the page has *any* interactive content for a user or test action to act on,
+// closing that race to nothing without changing the actual add/remove rule.
+export const SCROLLED_BODY_INLINE_SCRIPT = `(function(){
+  var lastY = window.scrollY;
+  function onScroll(){
+    var y = window.scrollY;
+    if (lastY > 0 && y > lastY) { if (y) document.body.classList.add('scrolled'); }
+    else if (!y) { document.body.classList.remove('scrolled'); }
+    lastY = y;
+  }
+  window.addEventListener('scroll', onScroll);
+})();`;
