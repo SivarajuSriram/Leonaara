@@ -1,9 +1,0 @@
-.mask_powermailform form {
-  grid-column-end:span 12;
-  grid-column-start:2;
-}
-@media (max-width:1023px) {
-  .mask_powermailform {
-    grid-column-gap:1rem;
-  }
-}

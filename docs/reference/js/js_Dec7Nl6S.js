@@ -1,1 +1,0 @@
-import{k as t}from"./gFJzZSaU.js";import{H as e,I as c}from"./BSNx7eCJ.js";const o={},s={class:"item"};function r(_,a){return e(),c("div",s," TEst ")}const d=t(o,[["render",r],["__scopeId","data-v-508bc698"]]);export{d as default};

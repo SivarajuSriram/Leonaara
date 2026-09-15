@@ -5,7 +5,7 @@ export const summer: PageContent = {
   slug: '/summer/',
   backendLayout: 'defaultLayout',
   meta: {
-    title: 'Experience untouched mountain worlds – the eriro summer',
+    title: 'Experience untouched mountain worlds – the Leonaara summer',
     description: 'Experience eriro amidst untouched nature. Immerse yourself in the archaic mountain experiences in the Tyrolean Alps that bring you back to the origin.',
     ogTitle: 'Summer',
     ogDescription: 'Experience eriro amidst untouched nature. Immerse yourself in the archaic mountain experiences in the Tyrolean Alps that bring you back to the origin.',

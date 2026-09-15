@@ -5,7 +5,7 @@ export const eriroExclusive: PageContent = {
   slug: '/eriro-exclusive/',
   backendLayout: 'defaultLayout',
   meta: {
-    title: 'Exclusive booking at eriro',
+    title: 'Exclusive booking at Leonaara',
     description: 'Your exclusive booking for unforgettable moments with personal service and a unique atmosphere in the Tyrolean Alps.',
     ogTitle: 'eriro exclusive',
     ogDescription: 'Your exclusive booking for unforgettable moments with personal service and a unique atmosphere in the Tyrolean Alps.',

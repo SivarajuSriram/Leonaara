@@ -5,7 +5,7 @@ export const gallery: PageContent = {
   slug: '/gallery/',
   backendLayout: 'defaultLayout',
   meta: {
-    title: 'Experience eriro in pictures',
+    title: 'Experience Leonaara in pictures',
     description: 'Alpine originality captured in pictures: Experience the unique atmosphere of eriro in pictures: Architecture, nature and unforgettable moments at 1,550 meters. ',
     ogTitle: 'Gallery',
     ogDescription: 'Alpine originality captured in pictures: Experience the unique atmosphere of eriro in pictures: Architecture, nature and unforgettable moments at 1,550 meters. ',

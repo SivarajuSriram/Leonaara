@@ -864,7 +864,7 @@ export const home: PageContent = {
   slug: '/',
   backendLayout: 'defaultLayout',
   meta: {
-    title: 'eriro - Experience alpine originality',
+    title: 'Leonaara - Experience alpine originality',
     description: 'Experience the power of nature that has dominated the mountain for millions of years: with just 9 suites, the smallest luxury hideaway is located at 1,550m in the middle of the alpine region of the Tyrolean Alps.',
     ogTitle: 'eriro Alpine Hide',
     ogDescription: 'Experience the power of nature that has dominated the mountain for millions of years: with just 9 suites, the smallest luxury hideaway is located at 1,550m in the middle of the alpine region of the Tyrolean Alps.',

@@ -1,1 +1,0 @@
-import{d as o,H as r,I as p,Q as n,O as c}from"./BSNx7eCJ.js";const t=["uid"],u=o({__name:"Mask",props:{appearance:{},uid:{}},setup(d){return(e,i)=>{var a,s;return r(),p("div",{class:c([(a=e.appearance)==null?void 0:a.layout,"space-before-"+((s=e.appearance)==null?void 0:s.spaceBefore),"mask"]),uid:"c"+e.uid},[n(e.$slots,"default")],10,t)}}});export{u as _};

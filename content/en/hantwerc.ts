@@ -6,7 +6,7 @@ export const hantwerc: PageContent = {
   slug: '/hantwerc/',
   backendLayout: '11',
   meta: {
-    title: "hantwerc in the eriro - art & crafts from the Alps", description: "Experience creativity in the hantwerc studio - traditional handicraft techniques with natural materials from the Alps. Create works of art that reflect nature.", ogTitle: "HANTWERC", ogDescription: "Experience creativity in the hantwerc studio - traditional handicraft techniques with natural materials from the Alps. Create works of art that reflect nature.", ogImage: null,
+    title: "hantwerc in the Leonaara - art & crafts from the Alps", description: "Experience creativity in the hantwerc studio - traditional handicraft techniques with natural materials from the Alps. Create works of art that reflect nature.", ogTitle: "HANTWERC", ogDescription: "Experience creativity in the hantwerc studio - traditional handicraft techniques with natural materials from the Alps. Create works of art that reflect nature.", ogImage: null,
     twitterTitle: "HANTWERC", twitterDescription: "Experience creativity in the hantwerc studio - traditional handicraft techniques with natural materials from the Alps. Create works of art that reflect nature.", twitterImage: null, twitterCard: 'summary',
     robots: { noIndex: false, noFollow: false },
   },

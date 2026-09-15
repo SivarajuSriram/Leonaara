@@ -6,7 +6,7 @@ export const felisa: PageContent = {
   slug: '/suites/felisa/',
   backendLayout: '2',
   meta: {
-    title: "felisa Suite in the eriro - feel the power of the mountain", description: "The felisa suite in the eriro - 84 square meters of space with a view of the Zugspitze, open fire & closeness to nature. A place of peace & strength.", ogTitle: "FELISA", ogDescription: "The felisa suite in the eriro - 84 square meters of space with a view of the Zugspitze, open fire & closeness to nature. A place of peace & strength.", ogImage: null,
+    title: "felisa Suite in the Leonaara - feel the power of the mountain", description: "The felisa suite in the eriro - 84 square meters of space with a view of the Zugspitze, open fire & closeness to nature. A place of peace & strength.", ogTitle: "FELISA", ogDescription: "The felisa suite in the eriro - 84 square meters of space with a view of the Zugspitze, open fire & closeness to nature. A place of peace & strength.", ogImage: null,
     twitterTitle: "FELISA", twitterDescription: "The felisa suite in the eriro - 84 square meters of space with a view of the Zugspitze, open fire & closeness to nature. A place of peace & strength.", twitterImage: null, twitterCard: 'summary',
     robots: { noIndex: false, noFollow: false },
   },

@@ -1,8 +1,0 @@
-.mask_img .image {
-  grid-column-end:span 14;
-  grid-column-start:1;
-}
-.mask_img img {
-  height:auto;
-  width:100%;
-}

@@ -5,7 +5,7 @@ export const bookingConditions: PageContent = {
   slug: '/booking-conditions/',
   backendLayout: 'defaultLayout',
   meta: {
-    title: 'Booking conditions at eriro - important information for your stay',
+    title: 'Booking conditions at Leonaara - important information for your stay',
     description: 'All the important information about booking, canceling and prices at eriro - for relaxed vacation planning in the Tyrolean Alps.',
     ogTitle: 'Booking conditions',
     ogDescription: 'All the important information about booking, canceling and prices at eriro - for relaxed vacation planning in the Tyrolean Alps.',

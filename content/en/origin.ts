@@ -5,7 +5,7 @@ export const origin: PageContent = {
   slug: '/origin/',
   backendLayout: 'defaultLayout',
   meta: {
-    title: 'eriro – a journey back to the origin',
+    title: 'Leonaara – a journey back to the origin',
     description: 'Experience the authentic and genuine alpine life at a place of retreat and originality in the Tyrolean Alps. A hotel opening in July 2024 in Austria.',
     ogTitle: 'Origin',
     ogDescription: 'Experience the authentic and genuine alpine life at a place of retreat and originality in the Tyrolean Alps. A hotel opening in July 2024 in Austria.',

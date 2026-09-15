@@ -5,7 +5,7 @@ export const press: PageContent = {
   slug: '/press/',
   backendLayout: 'defaultLayout',
   meta: {
-    title: 'eriro press area: News and stories at 1,550 m',
+    title: 'Leonaara press area: News and stories at 1,550 m',
     description: 'Discover the essence of our work in the eriro press area. The latest news and stories from the mountain world of the Tyrolean Alps at 1,550 m.',
     ogTitle: 'Press',
     ogDescription: 'Discover the essence of our work in the eriro press area. The latest news and stories from the mountain world of the Tyrolean Alps at 1,550 m.',

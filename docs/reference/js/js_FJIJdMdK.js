@@ -1,1 +1,0 @@
-import{u as n}from"./BeZH4lpK.js";import{d as o,H as a,U as t,M as r,a3 as s,u as m}from"./BSNx7eCJ.js";const l=o({__name:"T3BackendLayout",props:{name:{},content:{}},setup(c){return(e,p)=>(a(),t(s(m(n)(e.name)),r({content:e.content},e.$attrs),null,16,["content"]))}});export{l as _};

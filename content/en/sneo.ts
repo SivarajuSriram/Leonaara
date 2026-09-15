@@ -6,7 +6,7 @@ export const sneo: PageContent = {
   slug: '/sneo/',
   backendLayout: '11',
   meta: {
-    title: "sneo in the eriro - direct access to slopes and snowshoe hikes", description: "sneo in the eriro: enjoy direct access to ski slopes and ski lifts or discover the untouched winter landscape on a snowshoe hike", ogTitle: "SNEO", ogDescription: "sneo in the eriro: enjoy direct access to ski slopes and ski lifts or discover the untouched winter landscape on a snowshoe hike", ogImage: null,
+    title: "sneo in the Leonaara - direct access to slopes and snowshoe hikes", description: "sneo in the eriro: enjoy direct access to ski slopes and ski lifts or discover the untouched winter landscape on a snowshoe hike", ogTitle: "SNEO", ogDescription: "sneo in the eriro: enjoy direct access to ski slopes and ski lifts or discover the untouched winter landscape on a snowshoe hike", ogImage: null,
     twitterTitle: "SNEO", twitterDescription: "sneo in the eriro: enjoy direct access to ski slopes and ski lifts or discover the untouched winter landscape on a snowshoe hike", twitterImage: null, twitterCard: 'summary',
     robots: { noIndex: false, noFollow: false },
   },

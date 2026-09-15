@@ -5,7 +5,7 @@ export const winter: PageContent = {
   slug: '/winter/',
   backendLayout: 'defaultLayout',
   meta: {
-    title: 'Experience untouched mountain worlds – eriro',
+    title: 'Experience untouched mountain worlds – Leonaara',
     description: 'Close to winter. The cold clears the mind, every turn is made with intention. The mountain reveals itself vast and majestic. The ski pass is part of the all-inclusive service.',
     ogTitle: 'Winter',
     ogDescription: 'Close to winter. The cold clears the mind, every turn is made with intention. The mountain reveals itself vast and majestic. The ski pass is part of the all-inclusive service.',

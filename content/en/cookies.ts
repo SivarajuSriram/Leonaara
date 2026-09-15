@@ -5,7 +5,7 @@ export const cookies: PageContent = {
   slug: '/cookies/',
   backendLayout: '8',
   meta: {
-    title: 'Cookie policy of eriro',
+    title: 'Cookie policy of Leonaara',
     description: 'Learn how eriro uses cookies to improve your user experience.',
     ogTitle: 'Cookies',
     ogDescription: 'Learn how eriro uses cookies to improve your user experience.',

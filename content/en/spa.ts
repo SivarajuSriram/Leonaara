@@ -5,7 +5,7 @@ export const spa: PageContent = {
   slug: '/spa/',
   backendLayout: 'defaultLayout',
   meta: {
-    title: 'Experience moments of grounding and relaxation at the eriro Spa',
+    title: 'Experience moments of grounding and relaxation at the Leonaara Spa',
     description: 'Dive into the silence of eriro Spa. Inspired by nature, you experience a wellness retreat for body and soul amidst the mountain world, drawing from the wisdom of the ancients.',
     ogTitle: 'Spa',
     ogDescription: 'Dive into the silence of eriro Spa. Inspired by nature, you experience a wellness retreat for body and soul amidst the mountain world, drawing from the wisdom of the ancients.',

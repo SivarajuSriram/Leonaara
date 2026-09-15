@@ -6,7 +6,7 @@ export const experiences: PageContent = {
   slug: '/experiences/',
   backendLayout: 'defaultLayout',
   meta: {
-    title: 'Experience untouched mountain worlds – eriro experiences',
+    title: 'Experience untouched mountain worlds – Leonaara experiences',
     description: 'Experience eriro amidst untouched nature. Immerse yourself in the archaic mountain experiences in the Tyrolean Alps that bring you back to the origin.',
     ogTitle: 'Experiences',
     ogDescription: 'Experience eriro amidst untouched nature. Immerse yourself in the archaic mountain experiences in the Tyrolean Alps that bring you back to the origin.',

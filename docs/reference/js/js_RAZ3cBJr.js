@@ -1,1 +1,0 @@
-import{d as n,f as o}from"./BSNx7eCJ.js";const r=n({inheritAttrs:!1,setup(s,{attrs:e}){return()=>o("pre",{style:{overflowX:"scroll"}},[o("code",{style:{fontSize:"12px",fontFamily:"SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace"}},JSON.stringify(e,null,2))])}});export{r as default};

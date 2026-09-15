@@ -5,7 +5,7 @@ export const allInService: PageContent = {
   slug: '/all-in-service/',
   backendLayout: 'defaultLayout',
   meta: {
-    title: 'All-In-Service at eriro – luxury and nature in harmony',
+    title: 'All-In-Service at Leonaara – luxury and nature in harmony',
     description: 'Experience all-inclusive service at eriro, combining luxury and nature. Enjoy exclusive amenities, nature experiences, and culinary highlights at our luxury hotel at 1,550 meters in the Tyrolean Alps, Austria.',
     ogTitle: 'All-In-Service',
     ogDescription: 'Experience all-inclusive service at eriro, combining luxury and nature. Enjoy exclusive amenities, nature experiences, and culinary highlights at our luxury hotel at 1,550 meters in the Tyrolean Alps, Austria.',

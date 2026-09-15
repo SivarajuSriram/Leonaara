@@ -118,8 +118,8 @@ const navExtraCls = [
 // .logo's own mobile{grid-column-start:1;justify-self:flex-start} and
 // footer .lower-footer .logo svg{width:29.4rem} + mobile{width:13.7rem}
 const logoCls = [
-  'logo col-span-3 [&_svg]:w-[29.4rem]',
-  'max-lg:col-span-6 max-lg:col-start-1 max-lg:row-start-1 max-lg:text-right max-lg:justify-self-start max-lg:[&_svg]:w-[13.7rem]',
+  'logo col-span-3 [&_img]:w-[29.4rem] [&_img]:h-auto',
+  'max-lg:col-span-6 max-lg:col-start-1 max-lg:row-start-1 max-lg:text-right max-lg:justify-self-start max-lg:[&_img]:w-[13.7rem]',
 ].join(' ');
 
 // footer .lower-footer .luxury-hotels-logo{grid-column-start:9;grid-column-end:

@@ -5,7 +5,7 @@ export const voucher: PageContent = {
   slug: '/voucher/',
   backendLayout: 'defaultLayout',
   meta: {
-    title: 'Gifts that create memories: eriro vouchers',
+    title: 'Gifts that create memories: Leonaara vouchers',
     description: 'A gift full of nature and experiences at the foot of the majestic Zugspitze. Give a gift voucher for an eriro stay.',
     ogTitle: 'Voucher',
     ogDescription: 'A gift full of nature and experiences at the foot of the majestic Zugspitze. Give a gift voucher for an eriro stay.',

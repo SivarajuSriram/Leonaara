@@ -6,7 +6,7 @@ export const sela: PageContent = {
   slug: '/sela/',
   backendLayout: '11',
   meta: {
-    title: "sela in the eriro - feel nature with all your senses", description: "sela in the eriro - hike barefoot across alpine pastures, feel snowflakes on your skin & experience the true rhythm of nature ", ogTitle: "SELA", ogDescription: "sela in the eriro - hike barefoot across alpine pastures, feel snowflakes on your skin & experience the true rhythm of nature ", ogImage: null,
+    title: "sela in the Leonaara - feel nature with all your senses", description: "sela in the eriro - hike barefoot across alpine pastures, feel snowflakes on your skin & experience the true rhythm of nature ", ogTitle: "SELA", ogDescription: "sela in the eriro - hike barefoot across alpine pastures, feel snowflakes on your skin & experience the true rhythm of nature ", ogImage: null,
     twitterTitle: "SELA", twitterDescription: "sela in the eriro - hike barefoot across alpine pastures, feel snowflakes on your skin & experience the true rhythm of nature ", twitterImage: null, twitterCard: 'summary',
     robots: { noIndex: false, noFollow: false },
   },

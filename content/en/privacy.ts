@@ -5,7 +5,7 @@ export const privacy: PageContent = {
   slug: '/privacy/',
   backendLayout: '8',
   meta: {
-    title: 'eriro - Information on data privacy',
+    title: 'Leonaara - Information on data privacy',
     description: 'Our privacy policy shows how eriro protects and processes your personal data.',
     ogTitle: 'Privacy',
     ogDescription: 'Our privacy policy shows how eriro protects and processes your personal data.',

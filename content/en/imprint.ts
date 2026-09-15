@@ -5,7 +5,7 @@ export const imprint: PageContent = {
   slug: '/imprint/',
   backendLayout: '8',
   meta: {
-    title: 'eriro - our imprint',
+    title: 'Leonaara - our imprint',
     description: 'Imprint of eriro - all legal details about our company.',
     ogTitle: 'Imprint',
     ogDescription: 'Imprint of eriro - all legal details about our company.',
