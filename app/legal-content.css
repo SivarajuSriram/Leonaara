@@ -1,27 +1,41 @@
 /* The one CSS escape hatch for this phase (spec §17.2): FooterPageText's `text`
    and IncludePage's `html` are raw strings rendered via dangerouslySetInnerHTML
    (through RichText) -- bare, unclassed <h1>/<h2>/<p>/<ul>/<a> tags from the
-   crawled payload, with no JSX to attach Tailwind utility classes to. Numbers
-   copied verbatim from docs/reference/css-clean/footerpagetext.css. */
+   crawled payload, with no JSX to attach Tailwind utility classes to.
+
+   Privacy-page redesign (per the user's explicit request): headings moved
+   from karol-sans to the site's own Junge serif heading font (--font-serif,
+   set globally on h1-h6/.h1-.h4 in globals.css, but overridden back to
+   karol-sans here at higher specificity in the original crawl) so this page
+   reads as part of the same site instead of a generic legal-boilerplate
+   dump. Sizes trimmed down from the original px values to compensate --
+   Junge renders visibly larger than karol-sans at the same font-size
+   (bigger x-height/cap-height for a serif display face), the same
+   correction already applied to the site's .h2/.h3 globals. Link styling
+   softened (a plain ink underline instead of the default blue, no
+   hover-color no-op) and paragraph rhythm loosened slightly for a page
+   that's mostly dense body text. */
 .legal-content h1,
 h1.legal-content {
-  font-family: karol-sans, sans-serif;
-  font-size: 4rem;
+  font-family: var(--font-serif), serif;
+  font-size: 6.4rem;
+  font-weight: 300;
   letter-spacing: 0;
-  line-height: 125%;
+  line-height: 115%;
   text-transform: uppercase;
 }
 .legal-content h2 {
-  font-family: karol-sans, sans-serif;
-  font-size: 3rem;
+  font-family: var(--font-serif), serif;
+  font-size: 3.2rem;
+  font-weight: 300;
   letter-spacing: 0;
   line-height: 133%;
-  margin: 3rem 0 1.5rem;
+  margin: 4rem 0 1.5rem;
 }
 .legal-content h3 {
-  font-family: karol-sans, sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
+  font-family: var(--font-serif), serif;
+  font-size: 2.3rem;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 150%;
   margin: 2rem 0;
@@ -30,14 +44,17 @@ h1.legal-content {
 .legal-content ol,
 .legal-content ul {
   font-family: karol-sans, sans-serif;
-  font-size: 1.8rem;
+  /* Bumped from 1.6rem -- per the user's explicit "fonts look very small,
+     please update" feedback. */
+  font-size: 1.9rem;
   letter-spacing: 0;
-  line-height: 156%;
-  margin-bottom: 1.5rem;
+  line-height: 170%;
+  color: rgb(33 29 29 / 80%);
+  margin-bottom: 1.6rem;
 }
 .legal-content ol li,
 .legal-content ul li {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 .legal-content ol + p,
 .legal-content ul + p {
@@ -45,38 +62,48 @@ h1.legal-content {
 }
 .legal-content a {
   hyphens: auto;
+  color: var(--color-ink);
   text-decoration: underline;
+  text-decoration-color: rgb(33 29 29 / 40%);
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 0.3s ease;
   word-break: break-all;
 }
 .legal-content a:hover {
-  color: #211d1d;
+  text-decoration-color: var(--color-ink);
 }
 .legal-content ul.abcList li:before {
   background: none;
 }
+/* First heading right under the page title (FooterPageText renders title as
+   an <h1>, then the rest of that section's text as a sibling div, both
+   classed .legal-content) reads as its own opening line, not a mid-page
+   section break -- so it doesn't need h2's full top margin. */
+h1.legal-content + div.legal-content > h2:first-child {
+  margin-top: 0;
+}
 @media (max-width: 1023px) {
   .legal-content h1,
   h1.legal-content {
-    font-size: 3rem;
-    letter-spacing: 0;
-    line-height: 133%;
+    font-size: 4.2rem;
+    line-height: 120%;
   }
   .legal-content h2 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     letter-spacing: 0;
-    line-height: 150%;
-    margin: 1rem 0;
+    line-height: 140%;
+    margin: 2.5rem 0 1rem;
   }
   .legal-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     letter-spacing: 0;
-    line-height: 167%;
+    line-height: 160%;
   }
   .legal-content p,
   .legal-content ol,
   .legal-content ul {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     letter-spacing: 0;
-    line-height: 177%;
+    line-height: 175%;
   }
 }

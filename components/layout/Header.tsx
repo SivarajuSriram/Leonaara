@@ -92,6 +92,12 @@ export function Header() {
             grid-column-start:2;justify-content:flex-start} — mobile only shifts the column
             start/row and flips justify-content (the span itself isn't redeclared at mobile,
             so it stays span 4 from the desktop rule). */}
+        {/* A -translate-y-[6.5rem] here (while isOpen) was tried to swap this
+            button's line with nav-info's tel/mail icons, but it pushed the
+            button fully off-screen instead (the user reported it became
+            invisible) -- reverted. The button stays put; only nav-info moved
+            (still at top-[10.5rem] in MenuPanel.tsx, one line lower than its
+            original top-[4rem]). */}
         <div className="menu-wrapper flex items-center justify-start [grid-column:2/span_4] max-lg:justify-end max-lg:[grid-column-start:10] max-lg:[grid-row-start:1]">
           <MenuButton ref={buttonRef} onClick={toggleMenu} />
         </div>

@@ -106,7 +106,7 @@ export function ContactForm({ section, onSubmitted, compact = false }: { section
               <textarea name="message" placeholder="Message" rows={compact ? 2 : undefined} className={compact ? compactTextareaCls : textareaCls} />
             </fieldset>
             <p className={`text-right text-ink/50 ${compact ? 'mb-[0.8rem] text-[1.5rem]' : 'mb-[1rem] text-[1.6rem]'}`}>* Required fields</p>
-            <label className={`flex items-start gap-[1rem] cursor-pointer ${compact ? 'mb-[1.4rem] text-[1.5rem] leading-[1.5]' : 'mb-[2.5rem] text-[1.4rem] leading-[1.5]'}`}>
+            <label className={`flex items-start gap-[1rem] cursor-pointer ${compact ? 'mb-[1.4rem] text-[1.8rem] leading-[1.5]' : 'mb-[2.5rem] text-[1.7rem] leading-[1.5]'}`}>
               <span className="relative mt-[0.2rem] h-[1.8rem] w-[1.8rem] shrink-0">
                 <input
                   type="checkbox"

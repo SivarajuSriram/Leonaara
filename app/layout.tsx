@@ -9,7 +9,12 @@ import { Hero } from '@/components/sections/Hero';
 import { contactFormHero } from '@/content/en/contactFormShared';
 import { NewsletterPopup } from '@/components/layout/NewsletterPopup';
 import { CookieConsentBanner } from '@/components/layout/CookieConsentBanner';
-import { AmbientAudioToggle } from '@/components/layout/AmbientAudioToggle';
+// AmbientAudioToggle hidden for now (per the user's "hide the audio thing,
+// we can add it later" request) -- no real audio file exists yet anyway
+// (components/layout/AmbientAudioToggle.tsx's own NEEDS-AUDIO-FILE comment).
+// Component kept in place, just unmounted; re-add the import and the
+// <AmbientAudioToggle /> line below to bring it back.
+// import { AmbientAudioToggle } from '@/components/layout/AmbientAudioToggle';
 import { SCROLLED_BODY_INLINE_SCRIPT } from '@/components/layout/useScrolledBody';
 
 export const viewport = { width: 'device-width', initialScale: 1 };
@@ -56,7 +61,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <img className="eriro-bg-attach" src="/HG.jpg" alt="" />
           <NewsletterPopup />
           <CookieConsentBanner />
-          <AmbientAudioToggle />
+          {/* <AmbientAudioToggle /> -- hidden for now, see the import comment above */}
         </div>
       </body>
     </html>

@@ -102,8 +102,15 @@ const socialCls = [
 ].join(' ');
 
 // address is the last flex item in upperFooterRightCls, matching the
-// last item in lowerFooterRightCls (footer-bottom-right).
-const addressCls = 'address flex-1 justify-self-end text-right max-lg:col-span-6 max-lg:mt-0';
+// last item in lowerFooterRightCls (footer-bottom-right). flex-[1.7] (was
+// flex-1, splitting the row evenly with email/social) gives the address
+// noticeably more width than those two -- a street address routinely needs
+// more room than "info@leonaara.com" or "Instagram", and at an even 1/3
+// share each of its 3 lines (site.ts's contact.address) was wrapping onto a
+// 4th line instead of the 3 the user asked for.
+// text-left/justify-self-start (was text-right/justify-self-end) -- per the
+// user's explicit "align the address to left in that column" request.
+const addressCls = 'address flex-[1.7] justify-self-start text-left max-lg:col-span-6 max-lg:mt-0';
 
 // footer .lower-footer{align-items:flex-end;border-top:2px solid #e4e0db (border,
 // stays beige);grid-column-start:2;grid-column-end:span 12;padding-top:6rem;

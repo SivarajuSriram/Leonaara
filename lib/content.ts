@@ -58,11 +58,12 @@ export type RoomsSection = Base<'mask_rooms', { rooms: RoomsFilterItem[] }>;
 export type RoomDetailSection = Base<'mask_roomdetail', { room: Room; icons: ImageRef[] }>;
 export type ImgSliderSection = Base<'mask_imgslider', { images: ImageRef[] }>;
 export type RoomCtaSection = Base<'mask_roomcta', { room: { uid: string; title: string; asacode: string; bookingcode: string } }>;
-// Placeholder only -- no real address/coordinates exist yet for Leonaara, so
-// this just reserves the map's spot in the layout (see Maps.tsx) rather than
-// embedding a real Google Maps iframe. Fill in `title`/an address once real
-// location details exist.
-export type MapsSection = Base<'mask_maps', { title: Html }>;
+// `image` is an optional static location-map graphic (a designed illustration
+// of the surrounding roads/landmarks, e.g. Kadamba's, not a Google Maps
+// embed) -- when absent, Maps.tsx falls back to the original placeholder box.
+// No real address/coordinates exist for a live Google Maps embed yet, so this
+// still isn't a real map widget, just a nicer placeholder where one exists.
+export type MapsSection = Base<'mask_maps', { title: Html; image?: string }>;
 // Visual-only contact form: eriro's own contact page has no real backend
 // either (Powermail submits into TYPO3's own mail queue, which this project
 // has no equivalent of) -- ContactForm.tsx renders the fields but Submit is

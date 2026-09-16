@@ -17,7 +17,10 @@ export function RoomCta({ section }: { section: RoomCtaSection }) {
     <div className={cls} {...{ uid: `c${section.id}` }}>
       <div className={wrapperCls}>
         <BigLink className={linkCls} href={`${site.pageLinks.request}?room=${room.asacode}`}>{site.t.request}</BigLink>
-        <BigLink className={linkCls} target="_blank" rel="noopener nofollow" href={`${site.bookingLink}&room=${room.bookingcode}`}>{site.t.book}</BigLink>
+        {/* site.bookingLink (a hotel booking-engine URL) no longer exists --
+            there's no live booking system for a real-estate project, so this
+            now points at Contact instead of a dead/nonexistent link. */}
+        <BigLink className={linkCls} href={`${site.pageLinks.contact}?room=${room.bookingcode}`}>{site.t.book}</BigLink>
       </div>
     </div>
   );
