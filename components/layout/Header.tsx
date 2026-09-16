@@ -101,9 +101,7 @@ export function Header() {
           className="button-wrapper flex items-center justify-end [grid-column:10/span_4] pointer-events-auto max-lg:block! max-lg:justify-start max-lg:[grid-column:2/span_7] max-lg:[grid-row-start:1] max-lg:z-[5]"
           style={isOpen ? { display: 'none' } : undefined}
         >
-          <BigLink className="small-font text-ink no-underline" href={site.pageLinks.request}>{site.t.request}</BigLink>
-          {/* header .button-wrapper a:last-child{margin-left:3rem} */}
-          <BigLink className="small-font text-ink no-underline ml-[3rem]" target="_blank" rel="noopener nofollow" href={site.bookingLink}>{site.t.book}</BigLink>
+          <BigLink className="small-font text-ink no-underline" href={site.pageLinks.contact}>Contact us</BigLink>
         </div>
         {/* header .menu-bg{background-color:#211d1db3;height:100%;left:0;opacity:0;padding:2rem;
             pointer-events:auto;position:fixed;top:0;visibility:hidden;width:100%} — the mobile

@@ -1,5 +1,10 @@
 import type { HeroSection, RoomsSection } from '@/lib/content';
 
-export const suitesHero: HeroSection = { id: 104, type: 'mask_hero', appearance: { layout: "default", frameClass: "default", spaceBefore: "", spaceAfter: "" }, content: { herolayout: "only-text", title: "", titleh2: "Structure and <br>\r\nshelter", titleimg: "", text: "<p>Be at one with yourself, be present in the here and now. eriro has 9 suites to provide guests with an all-inclusive luxury stay with a personalised touch at a private retreat. Restrained in design and furnished with colours and materials that exude warmth, the suites provide structure and shelter: a protective place of comfort and refuge that brings nature directly into the room through its large windows.</p>", img: [], sideimg: [], imgsummer: [], sideimgsummer: [] } };
+// titleh2/text intentionally left empty: this Hero is kept only as the
+// scroll anchor the fixed site logo needs to fade against (see
+// app/projects/kadamba/page.tsx's comment) -- the "Structure and shelter"
+// heading/paragraph were removed from both project pages at the user's
+// request.
+export const suitesHero: HeroSection = { id: 104, type: 'mask_hero', appearance: { layout: "default", frameClass: "default", spaceBefore: "", spaceAfter: "" }, content: { herolayout: "only-text", title: "", titleh2: "", titleimg: "", text: "", img: [], sideimg: [], imgsummer: [], sideimgsummer: [] } };
 
-export const suitesRooms: RoomsSection = { id: 97, type: 'mask_rooms', appearance: { layout: "default", frameClass: "default", spaceBefore: "", spaceAfter: "" }, content: { rooms: [{ uid: "3", title: "boum", slug: "/suites/boum/", pid: "84" },{ uid: "4", title: "wisa", slug: "/suites/wisa/", pid: "85" },{ uid: "5", title: "felisa", slug: "/suites/felisa/", pid: "93" },{ uid: "6", title: "himil", slug: "/suites/himil/", pid: "94" }] } };
+export const suitesRooms: RoomsSection = { id: 97, type: 'mask_rooms', appearance: { layout: "default", frameClass: "default", spaceBefore: "", spaceAfter: "" }, content: { rooms: [{ uid: "3", title: "kadamba", slug: "/projects/kadamba/", pid: "84" },{ uid: "4", title: "anantha meadows", slug: "/projects/ananthameadows/", pid: "85" }] } };

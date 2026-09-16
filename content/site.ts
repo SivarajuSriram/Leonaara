@@ -2,12 +2,12 @@ export type NavItem = { uid: number; title: string; link: string; children?: Nav
 
 export const site = {
   nav: [
+    { uid: 9058, title: 'About', link: '/about/' },
     { uid: 58, title: 'Alpine Hide', link: '/alpine-hide/' },
-    { uid: 44, title: 'Suites', link: '/suites/boum/' },
+    { uid: 44, title: 'Projects', link: '/projects/' },
     { uid: 120, title: 'All-In-Service', link: '/all-in-service/' },
     { uid: 60, title: 'Experiences', link: '/experiences/' },
     { uid: 61, title: 'Culinary', link: '/culinary/' },
-    { uid: 108, title: 'Spa', link: '/spa/' },
     { uid: 86, title: 'Origin', link: '/origin/' },
     { uid: 179, title: 'Summer', link: '/summer/' },
     { uid: 181, title: 'Winter', link: '/winter/' },
@@ -15,7 +15,7 @@ export const site = {
   footerNav: [
     { uid: 162, title: 'Booking conditions', link: '/booking-conditions/' },
     { uid: 164, title: 'eriro exclusive', link: '/eriro-exclusive/' },
-    { uid: 95, title: 'Contact and arrival', link: '/contact-and-arrival/' },
+    { uid: 95, title: 'Contact', link: '/contact/' },
     { uid: 73, title: 'Voucher', link: '/voucher/' },
     { uid: 103, title: 'Newsletter', link: '/newsletter/' },
     { uid: 72, title: 'Jobs', link: '/jobs/' },
@@ -33,7 +33,7 @@ export const site = {
   languages: [
     { code: 'en', title: 'English', link: '/' },
   ],
-  pageLinks: { home: '/', request: '/request/', contact: '/contact-and-arrival/', voucher: '/voucher/', gallery: '/gallery/' },
+  pageLinks: { home: '/', request: '/request/', contact: '/contact/', voucher: '/voucher/', gallery: '/gallery/' },
   contact: { email: 'hide@eriro.at', tel: '0043 5673 40506', address: 'Ehrwalder Alm 4\r\n6632 Ehrwald, Austria' },
   // raw value (no <br>); the footer applies nl2br like the original
   socialHtml:
@@ -44,7 +44,7 @@ export const site = {
   unikateur: 'https://www.unikateur.com/',
   t: {
     menu: 'Menu', close: 'Close', email: 'Email', contact: 'Contact', partner: 'Partner', phone: 'Phone', address: 'Address',
-    social: 'Follow us', request: 'Request', book: 'Book', visitSuite: 'View Suite', year: 'y.', kidsage: 'Kids age',
+    social: 'Follow us', request: 'Request', book: 'Book', visitSuite: 'Explore', year: 'y.', kidsage: 'Kids age',
     removeRoom: 'Remove room', addRoom: 'Add room', all: 'All', unikSignet: 'unique hospitality concepts, by ',
   },
   season: { seasonswitchstart: 0, seasonswitchend: 1792999620 },

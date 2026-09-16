@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="format-detection" content="telephone=no" />
         <script dangerouslySetInnerHTML={{ __html: SCROLLED_BODY_INLINE_SCRIPT }} />
       </head>
-      <body className="pid-1 layout-layout-0">
+      <body className="pid-1 layout-layout-0" suppressHydrationWarning={true}>
         <div id="__app">
           <ScrollResetOnNavigate />
           <Header />

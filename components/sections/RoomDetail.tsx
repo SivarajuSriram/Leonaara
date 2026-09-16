@@ -7,6 +7,20 @@ import { RichText } from '@/components/ui/RichText';
 import { SplitWords } from '@/components/ui/SplitWords';
 import { ArrowSliderIcon } from '@/components/ui/icons';
 import { useSwiperExternalNav } from '@/components/ui/useSwiperExternalNav';
+import { IconBadge } from '@/components/ui/IconBadge';
+import { BellRing, Building2, Trees } from 'lucide-react';
+
+// No source SVG exists for real-estate concepts like "Concierge Service" --
+// the icon library here is all literal eriro hotel-suite amenities (bed,
+// shower, sauna...). IconBadge recreates the original icons' circular
+// curved-label treatment around a lucide-react glyph instead of leaving the
+// mismatched hotel icons in place. Keyed by caption text since the data
+// itself is still a generic ImageRef, not a lucide icon name.
+const lucideIconByCaption: Record<string, typeof BellRing> = {
+  'Concierge Service': BellRing,
+  'Fully Serviced Estates': Building2,
+  'Low-Density Living': Trees,
+};
 
 // roomdetail.css: .room-image-left{grid-column-end:span 6;grid-column-start:2}
 // + mobile{grid-column-end:span 9;grid-column-start:2}
@@ -34,17 +48,20 @@ const roomContentCls = 'room-content col-start-9 col-span-4 -mt-[6rem] max-lg:co
 // margin-bottom:.5rem;margin-left:5.8rem;margin-top:3rem} + mobile picture{margin-right:1.5rem}
 // + mobile img{height:6rem;width:6rem}
 const roomIconsCls = 'room-icons flex ml-0 mt-[6rem] max-lg:mb-[.5rem] max-lg:ml-[5.8rem] max-lg:mt-[3rem]';
-const roomIconPictureCls = (isLast: boolean) => `${isLast ? '' : 'mr-[4.5rem] max-lg:mr-[1.5rem]'} [&_img]:h-[9rem] [&_img]:w-[9rem] max-lg:[&_img]:h-[6rem] max-lg:[&_img]:w-[6rem]`;
+const roomIconPictureCls = '[&_img]:h-[9rem] [&_img]:w-[9rem] max-lg:[&_img]:h-[6rem] max-lg:[&_img]:w-[6rem]';
+// Visible caption under each icon, reusing the icon's own alt text as the
+// label (there's no separate caption field in the data) -- added at the
+// user's request so icons like "Concierge Service" read as text, not just
+// an unlabeled graphic.
+const roomIconCaptionCls = 'mt-[1rem] text-[1.4rem] tracking-[.05em] text-center max-lg:text-[1.1rem]';
+const roomIconWrapCls = (isLast: boolean) => `flex flex-col items-center ${isLast ? '' : 'mr-[4.5rem] max-lg:mr-[1.5rem]'}`;
 // .room-info{flex-wrap:wrap;font-size:2rem;font-weight:300;grid-column-end:span 5;
 // grid-column-start:3;letter-spacing:.08em;line-height:125%;margin-top:6rem;
 // text-align:left;text-transform:uppercase} + mobile{font-size:1.3rem;letter-spacing:
 // .05em;line-height:131%;justify-content:flex-start;margin-top:2rem;text-align:left}
 const roomInfoCls = 'room-info flex flex-wrap text-left col-start-3 col-span-5 font-light text-[2rem] tracking-[.08em] leading-[125%] uppercase mt-[6rem] max-lg:justify-start max-lg:text-[1.3rem] max-lg:tracking-[.05em] max-lg:leading-[131%] max-lg:mt-[2rem]';
-// .room-info .room-info-spacer{background-color:#211d1d;display:inline-block;
-// height:2px;margin:0 1rem;width:3rem} (later declarations in the source
-// restate height:1px;margin:0 .5rem -- source-order wins, so those are the
-// values that actually apply, not the earlier 2px/1rem ones)
-const roomInfoSpacerCls = 'inline-block bg-ink h-[1px] w-[3rem] mx-[.5rem]';
+// .room-info-size/.room-info-people/.room-info-spacer are now dead: those
+// two fields were removed at the user's request, keeping only the price line.
 // .room-description{margin-left:9rem;margin-top:3rem} + mobile{margin-left:5.8rem;margin-top:1.5rem}
 const roomDescriptionCls = 'room-description ml-[9rem] mt-[3rem] max-lg:ml-[5.8rem] max-lg:mt-[1.5rem]';
 
@@ -106,15 +123,23 @@ export function RoomDetail({ section }: { section: RoomDetailSection }) {
           spacer), so the CSS rule simply doesn't match and both spacers
           render normally, same as live. */}
       <div className={roomInfoCls}>
-        <span className="room-info-size">{room.size}</span>
-        <span className={roomInfoSpacerCls} />
-        <span className="room-info-people">{room.people}</span>
-        <span className={roomInfoSpacerCls} />
         <span className="room-info-price w-full">{room.minprice}</span>
         <div className={roomIconsCls}>
-          {icons.map((icon, i) => (
-            <Picture key={i} image={icon} widthD={120} heightD={120} widthM={120} heightM={120} className={roomIconPictureCls(i === icons.length - 1)} />
-          ))}
+          {icons.map((icon, i) => {
+            const LucideIcon = lucideIconByCaption[icon.alt];
+            return (
+              <div key={i} className={roomIconWrapCls(i === icons.length - 1)}>
+                {LucideIcon ? (
+                  <IconBadge id={`${section.id}-${i}`} label={icon.alt} icon={LucideIcon} />
+                ) : (
+                  <>
+                    <Picture image={icon} widthD={120} heightD={120} widthM={120} heightM={120} className={roomIconPictureCls} />
+                    {icon.alt ? <span className={roomIconCaptionCls}>{icon.alt}</span> : null}
+                  </>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className={roomContentCls}>

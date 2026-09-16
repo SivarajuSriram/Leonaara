@@ -58,6 +58,16 @@ export type RoomsSection = Base<'mask_rooms', { rooms: RoomsFilterItem[] }>;
 export type RoomDetailSection = Base<'mask_roomdetail', { room: Room; icons: ImageRef[] }>;
 export type ImgSliderSection = Base<'mask_imgslider', { images: ImageRef[] }>;
 export type RoomCtaSection = Base<'mask_roomcta', { room: { uid: string; title: string; asacode: string; bookingcode: string } }>;
+// Placeholder only -- no real address/coordinates exist yet for Leonaara, so
+// this just reserves the map's spot in the layout (see Maps.tsx) rather than
+// embedding a real Google Maps iframe. Fill in `title`/an address once real
+// location details exist.
+export type MapsSection = Base<'mask_maps', { title: Html }>;
+// Visual-only contact form: eriro's own contact page has no real backend
+// either (Powermail submits into TYPO3's own mail queue, which this project
+// has no equivalent of) -- ContactForm.tsx renders the fields but Submit is
+// inert until a real form backend exists.
+export type ContactFormSection = Base<'powermail_pi1', { title: Html; text: Html }>;
 // `type: string` here would defeat literal narrowing on `Section.type` for
 // every other member (a bare string catch-all can't be excluded when a caller
 // checks `section.type !== 'mask_hero'`), so this lists the content-element
@@ -65,7 +75,7 @@ export type RoomCtaSection = Base<'mask_roomcta', { room: { uid: string; title: 
 // Add to this list, not back to `string`, when a newly crawled page needs one.
 export type UnknownSection = {
   id: number;
-  type: 'mask_jobs' | 'powermail_pi1' | 'room' | 'mask_maps';
+  type: 'mask_jobs' | 'room';
   appearance: Appearance;
   content: Record<string, unknown>;
 };
@@ -77,6 +87,7 @@ export type Section =
   | AccordionsSection | ListSection | GallerySliderSection | GallerySection
   | NewsletterWidgetSection | VoucherWidgetSection
   | PageFilterSection | RoomsSection | RoomDetailSection | ImgSliderSection | RoomCtaSection
+  | MapsSection | ContactFormSection
   | UnknownSection;
 
 export type PageMeta = {

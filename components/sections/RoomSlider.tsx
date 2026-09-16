@@ -8,6 +8,7 @@ import { Picture } from '@/components/ui/Picture';
 import { Button } from '@/components/ui/Button';
 import { ArrowSliderIcon } from '@/components/ui/icons';
 import { site } from '@/content/site';
+import { suitesRooms } from '@/content/en/suitesShared';
 import { useSwiperExternalNav } from '@/components/ui/useSwiperExternalNav';
 
 // mask_roomslider .grid-container-inner{grid-column-end:span 12;grid-column-
@@ -85,7 +86,7 @@ const roomContentWrapperCls = 'max-lg:pt-[147%]';
 // and {grid-column-end:span 10;grid-column-start:3} (shared with room-info/
 // room-button below, second block, same media query — applies together
 // with the first block since the two set disjoint properties).
-const roomTitleCls = 'text-[6.7rem] font-light tracking-normal leading-[88%] pt-[12rem] uppercase col-start-8 col-span-3 max-lg:text-[3.5rem] max-lg:tracking-[.05em] max-lg:leading-[114%] max-lg:pt-[2rem] max-lg:col-start-3 max-lg:col-span-10';
+const roomTitleCls = 'text-[6.7rem] font-light tracking-normal leading-[88%] pt-[12rem] uppercase whitespace-nowrap col-start-8 col-span-3 max-lg:text-[3.5rem] max-lg:tracking-[.05em] max-lg:leading-[114%] max-lg:pt-[2rem] max-lg:col-start-3 max-lg:col-span-10';
 
 // mask_roomslider .room-content .room-button,.room-info{grid-column-end:
 // span 3;grid-column-start:8} + mobile (shared with h2 above){grid-column-
@@ -95,36 +96,17 @@ const roomGridColCls = 'col-start-8 col-span-3 max-lg:col-start-3 max-lg:col-spa
 // mask_roomslider .room-button{margin-top:9rem} + mobile{margin-top:3rem}
 const roomButtonCls = `room-button ${roomGridColCls} mt-[9rem] max-lg:mt-[3rem]`;
 
-// mask_roomslider .room-info{align-items:center;display:flex;flex-wrap:
-// wrap;font-size:2rem;font-weight:300;letter-spacing:.05em;line-height:150%;
-// margin-top:4rem}. Mobile has THREE separate rules touching .room-info
-// across the file (two `@media (max-width:1023px)` blocks, plus an oddly
-// doubled `@media (max-width:1023px) and (max-width:1023px)` block that is
-// functionally the same condition and comes last in source order): (1)
-// font-size:1.3rem;letter-spacing:.05em;line-height:131%, (2) font-size:
-// 2rem;font-weight:300;letter-spacing:.05em;line-height:150%;margin-top:
-// 2rem, (3) font-size:1.3rem;letter-spacing:.05em;line-height:131% again.
-// Same specificity + same effective media condition, so source order
-// decides: (3) is last and wins for font-size/letter-spacing/line-height,
-// but margin-top:2rem (only set once, in (2)) is never overridden and still
-// applies. Resolved mobile value: font-size:1.3rem;letter-spacing:.05em;
-// line-height:131%;margin-top:2rem (font-weight/align-items/display/flex-
-// wrap carry over from the desktop rule untouched by any mobile block).
-const roomInfoCls = `room-info ${roomGridColCls} flex flex-wrap items-center font-light text-[2rem] tracking-[.05em] leading-[150%] mt-[4rem] max-lg:text-[1.3rem] max-lg:tracking-[.05em] max-lg:leading-[131%] max-lg:mt-[2rem]`;
+// mask_roomslider .room-info / .room-info-price / .room-info-spacer rules
+// are now dead: the price/size/people info row was replaced with a
+// description (see roomDescriptionCls below) at the user's request.
 
-// mask_roomslider .room-info .room-info-price{width:100%}
-const roomInfoPriceCls = 'room-info-price w-full';
-
-// mask_roomslider .room-info .room-info-spacer{background-color:#211d1d;
-// display:inline-block;height:2px;margin:0 1rem;width:3rem} + mobile{
-// height:1px;width:2rem}
-const roomInfoSpacerCls = 'room-info-spacer inline-block bg-ink h-[2px] w-[3rem] mx-[1rem] max-lg:h-[1px] max-lg:w-[2rem]';
-
-// mask_roomslider .room-icons{...}, .room-icons picture{...}, .room-icons
-// picture:last-child{...} and .room-description{margin-left:9rem;margin-
-// top:3rem} are all dead: no element in this component carries "room-icons"
-// or "room-description" (confirmed via grep) — same bundled-shared-
-// stylesheet situation as .mask_roomdetail above.
+// mask_roomslider .room-icons{...} and .room-icons picture{...} /
+// picture:last-child{...} are dead: no element in this component carries
+// "room-icons" (confirmed via grep) — same bundled-shared-stylesheet
+// situation as .mask_roomdetail above. .room-description{margin-left:9rem;
+// margin-top:3rem} is used below, in place of the price/size/people info
+// row, to show each room's description text instead.
+const roomDescriptionCls = `room-description ${roomGridColCls} ml-[9rem] mt-[3rem] max-lg:ml-0`;
 
 // mask_roomslider .navigation{align-self:flex-end;grid-column-end:span 2;
 // grid-column-start:8;grid-row-start:1;z-index:5} + mobile{align-self:flex-
@@ -157,7 +139,11 @@ export function RoomSlider({ section }: { section: RoomSliderSection }) {
   const [left, setLeft] = useState<SwiperType | null>(null);
   const [right, setRight] = useState<SwiperType | null>(null);
   const { prevRef, nextRef, onSwiper: onNavSwiper } = useSwiperExternalNav();
-  const suiteHref = (title: string) => `/suites/${title}/`;
+  // Looked up by uid against the real suite routes (suitesShared.ts), rather
+  // than derived from the display title, so a room's title can read
+  // differently from the page it actually links to (e.g. "Kadamba" linking
+  // to the same-uid'd /projects/kadamba/ page).
+  const suiteHref = (uid: string) => suitesRooms.content.rooms.find((room) => room.uid === uid)?.slug ?? '/';
   const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_roomslider', 'grid-container', maskImgOverrideCls]
     .filter(Boolean).join(' ');
 
@@ -207,14 +193,9 @@ export function RoomSlider({ section }: { section: RoomSliderSection }) {
               <SwiperSlide key={r.uid} className="roomslide">
                 <div className={gridInnerCls}>
                   <h2 className={roomTitleCls}>{r.title}</h2>
-                  <div className={roomInfoCls}>
-                    <span className={roomInfoPriceCls}>{r.minprice}</span>
-                    <span className="room-info-size">{r.size}</span>
-                    <span className={roomInfoSpacerCls} />
-                    <span className="room-info-people">{r.people}</span>
-                  </div>
+                  <div className={roomDescriptionCls} dangerouslySetInnerHTML={{ __html: r.description }} />
                   <div className={roomButtonCls}>
-                    <Button href={suiteHref(r.title)}>{site.t.visitSuite}</Button>
+                    <Button href={suiteHref(r.uid)}>{site.t.visitSuite}</Button>
                   </div>
                 </div>
               </SwiperSlide>

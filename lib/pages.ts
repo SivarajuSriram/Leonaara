@@ -9,10 +9,11 @@ import { eriroExclusive } from '@/content/en/eriro-exclusive';
 import { summer } from '@/content/en/summer';
 import { winter } from '@/content/en/winter';
 import { bookingConditions } from '@/content/en/booking-conditions';
+import { contact } from '@/content/en/contact';
 import { press } from '@/content/en/press';
+import { about } from '@/content/en/about';
 import { alpineHide } from '@/content/en/alpine-hide';
 import { origin } from '@/content/en/origin';
-import { spa } from '@/content/en/spa';
 import { culinary } from '@/content/en/culinary';
 import { gallery } from '@/content/en/gallery';
 import { newsletter } from '@/content/en/newsletter';
@@ -23,10 +24,9 @@ import { sela } from '@/content/en/sela';
 import { herchomen } from '@/content/en/herchomen';
 import { hantwerc } from '@/content/en/hantwerc';
 import { sneo } from '@/content/en/sneo';
-import { boum } from '@/content/en/boum';
-import { wisa } from '@/content/en/wisa';
-import { felisa } from '@/content/en/felisa';
-import { himil } from '@/content/en/himil';
+import { kadamba } from '@/content/en/kadamba';
+import { ananthaMeadows } from '@/content/en/ananthameadows';
+import { projects } from '@/content/en/projects';
 
 // Every English page, keyed by its TYPO3 slug ('/' is the homepage). Later phases add one line per page.
 export const pages: Record<string, PageContent> = {
@@ -39,10 +39,11 @@ export const pages: Record<string, PageContent> = {
   '/summer/': summer,
   '/winter/': winter,
   '/booking-conditions/': bookingConditions,
+  '/contact/': contact,
   '/press/': press,
+  '/about/': about,
   '/alpine-hide/': alpineHide,
   '/origin/': origin,
-  '/spa/': spa,
   '/culinary/': culinary,
   '/gallery/': gallery,
   '/newsletter/': newsletter,
@@ -53,10 +54,9 @@ export const pages: Record<string, PageContent> = {
   '/herchomen/': herchomen,
   '/hantwerc/': hantwerc,
   '/sneo/': sneo,
-  '/suites/boum/': boum,
-  '/suites/wisa/': wisa,
-  '/suites/felisa/': felisa,
-  '/suites/himil/': himil,
+  '/projects/': projects,
+  '/projects/kadamba/': kadamba,
+  '/projects/ananthameadows/': ananthaMeadows,
 };
 
 export function getPage(slug: string): PageContent | undefined {

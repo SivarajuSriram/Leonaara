@@ -151,8 +151,19 @@ const navSpanCls = 'pointer-events-none max-lg:hidden';
 // none, shared with span above}
 const navSpacerCls = 'spacer mx-[.8rem] max-lg:hidden';
 
+// "icons-left" nav variant: same stacked-arrow-icon treatment as
+// RoomSlider's navigation (no PREV/NEXT text, icon visible at every
+// breakpoint), just repositioned to the left column instead of
+// TeaserSlider's own default right-aligned text nav. Opt-in via the
+// `navVariant` prop rather than changing the shared default, so every other
+// page still using TeaserSlider keeps its original nav untouched.
+const iconsLeftNavigationCls = 'navigation self-end col-start-1 col-span-2 row-start-3 z-[15] max-lg:self-start max-lg:col-start-1 max-lg:col-span-2 max-lg:row-start-1 max-lg:row-span-2 max-lg:justify-self-center max-lg:mt-[810%] max-lg:z-[5]';
+const iconsLeftArrowCls = 'cursor-pointer transition-all duration-500 w-fit hover:opacity-40 [&_svg]:h-[2.5rem] [&_svg]:w-[7rem] max-lg:[&_svg]:h-[1.7rem] max-lg:[&_svg]:w-[4.5rem] [&.swiper-button-disabled]:opacity-50';
+const iconsLeftNextCls = `next swiper-button-lock ${iconsLeftArrowCls}`;
+const iconsLeftPrevCls = `prev swiper-button-lock ${iconsLeftArrowCls} rotate-180`;
+
 // Mirrors Teaserslider.vue: four Swipers, the text slider drives the other three.
-export function TeaserSlider({ section }: { section: TeaserSliderSection }) {
+export function TeaserSlider({ section, navVariant = 'default' }: { section: TeaserSliderSection; navVariant?: 'default' | 'icons-left' }) {
   const slides = section.content.teaserslides;
   const [left, setLeft] = useState<SwiperType | null>(null);
   const [right, setRight] = useState<SwiperType | null>(null);
@@ -230,13 +241,26 @@ export function TeaserSlider({ section }: { section: TeaserSliderSection }) {
                       <Button href={s.link.href} target={s.link.target ?? undefined}>
                         {s.linktext}
                       </Button>
+                    ) : s.linktext ? (
+                      // No link set -- e.g. "Coming Soon" -- so render the
+                      // same button styling as a plain, unclickable label
+                      // instead of Button's <AppLink>.
+                      <span className="ht-button opacity-50 cursor-not-allowed" aria-disabled="true">
+                        {s.linktext}
+                      </span>
                     ) : null}
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
           ) : null}
-          {multi ? (
+          {multi && navVariant === 'icons-left' ? (
+            <div className={iconsLeftNavigationCls}>
+              <div className={iconsLeftNextCls} ref={nextRef}><ArrowSliderIcon /></div>
+              <div className={iconsLeftPrevCls} ref={prevRef}><ArrowSliderIcon /></div>
+            </div>
+          ) : null}
+          {multi && navVariant === 'default' ? (
             <div className={navigationCls}>
               <div className={navPrevCls} ref={prevRef}>
                 <ArrowSliderIcon />

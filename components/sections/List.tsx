@@ -49,7 +49,7 @@ export function List({ section }: { section: ListSection }) {
             const itemClasses = [itemClsBase, isLast ? itemClsLast : itemClsNonLast].filter(Boolean).join(' ');
             return (
               <div className={itemClasses} key={item.uid}>
-                <h4 className={titleItemCls}>{item.title}</h4>
+                {item.title ? <h4 className={titleItemCls}>{item.title}</h4> : null}
                 <RichText className={textItemCls} html={item.text} />
               </div>
             );
