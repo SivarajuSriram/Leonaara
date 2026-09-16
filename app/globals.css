@@ -24,6 +24,7 @@
   --color-beige: #e4e0db;
   --color-canvas: #F2F1EF;
   --font-sans: karol-sans, sans-serif;
+  --font-serif: 'Junge', serif;
 }
 
 /* pagefilter.css/rooms.css, byte-identical in both: while the FilterShell bar
@@ -262,6 +263,13 @@ body {
     height:100vh!important;
   }
 }
+/* Headings across the site use Junge (Google Fonts); body copy stays on
+   karol-sans. h5/h6 have no other rules of their own here (they're styled
+   per-instance inline, e.g. the amenity subheadings in kadamba.ts) but still
+   pick up the heading typeface through this shared rule. */
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4 {
+  font-family:var(--font-serif);
+}
 .h1,h1 {
   font-size:2rem;
   font-weight:300;
@@ -277,20 +285,25 @@ body {
   }
 }
 .h2,h2 {
-  font-size:10rem;
+  /* Reduced from the original karol-sans value of 10rem: Junge renders
+     visibly larger than karol-sans at the same font-size (bigger x-height/
+     cap-height for a serif display face), so the inherited rem value read
+     oversized once the heading typeface changed -- per user request. */
+  font-size:7.4rem;
   font-weight:300;
   letter-spacing:.03em;
   line-height:90%;
 }
 @media (max-width:1023px) {
   .h2,h2 {
-    font-size:4.2rem;
+    font-size:3.2rem;
     letter-spacing:.05em;
     line-height:98%;
   }
 }
 .h3,h3 {
-  font-size:6.7rem;
+  /* Reduced from 6.7rem -- same Junge-vs-karol-sans sizing correction as .h2 above. */
+  font-size:5rem;
   font-weight:300;
   letter-spacing:0;
   line-height:88%;
@@ -298,7 +311,7 @@ body {
 }
 @media (max-width:1023px) {
   .h3,h3 {
-    font-size:3.5rem;
+    font-size:2.7rem;
     letter-spacing:.05em;
     line-height:114%;
   }
@@ -553,6 +566,59 @@ a.ht-button:hover {
 }
 .filled,.filled * {
   fill:currentColor;
+}
+
+/* Falling-leaf decoration over the footer's birch branch (Footer.tsx) -- each
+   leaf drifts down and sideways while rotating and fading out, then the
+   animation loops. Per-leaf randomness (start position, size, speed, sway
+   distance, rotation direction) comes from inline custom properties set on
+   each element, not from separate keyframe rules.
+   Path is a wind "swoosh", not a straight drop: it barely falls at all for
+   the first ~20% (hangs/drifts sideways, as if caught by a gust before it
+   actually lets go -- the user's "falls a bit late"), then the horizontal
+   drift REVERSES direction partway down (a second gust from the other side)
+   before settling back near-center at the bottom, rather than one symmetric
+   sway back to 0. ease-in-out (not linear) gives the drift itself variable
+   speed within each leg, instead of a mechanical constant-speed slide. */
+@keyframes leaf-fall {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: var(--leaf-opacity, 0.85);
+  }
+  22% {
+    /* hangs sideways, barely dropping yet */
+    transform: translate(calc(var(--leaf-sway, 3rem) * 0.7), calc(var(--leaf-fall, 40rem) * 0.06)) rotate(calc(var(--leaf-spin, 1) * 55deg));
+  }
+  46% {
+    /* first gust continues, now actually falling */
+    transform: translate(var(--leaf-sway, 3rem), calc(var(--leaf-fall, 40rem) * 0.38)) rotate(calc(var(--leaf-spin, 1) * 150deg));
+  }
+  68% {
+    /* second gust: direction reverses */
+    transform: translate(calc(var(--leaf-sway, 3rem) * -0.55), calc(var(--leaf-fall, 40rem) * 0.66)) rotate(calc(var(--leaf-spin, 1) * 245deg));
+  }
+  85% {
+    opacity: var(--leaf-opacity, 0.85);
+    transform: translate(calc(var(--leaf-sway, 3rem) * -0.2), calc(var(--leaf-fall, 40rem) * 0.87)) rotate(calc(var(--leaf-spin, 1) * 320deg));
+  }
+  100% {
+    transform: translate(0, var(--leaf-fall, 40rem)) rotate(calc(var(--leaf-spin, 1) * 360deg));
+    opacity: 0;
+  }
+}
+.leaf-fall {
+  animation: leaf-fall ease-in-out infinite;
+  animation-duration: var(--leaf-duration, 12s);
+  animation-delay: var(--leaf-delay, 0s);
+}
+@media (prefers-reduced-motion: reduce) {
+  .leaf-fall {
+    animation: none;
+    opacity: 0;
+  }
 }
 
 /* Swiper's own third-party stylesheet -- untouched, not ours to convert to utilities. */

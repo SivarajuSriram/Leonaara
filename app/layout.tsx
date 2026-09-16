@@ -4,8 +4,12 @@ import { Header } from '@/components/layout/Header';
 import { SmoothScroll } from '@/components/layout/SmoothScroll';
 import { ScrollResetOnNavigate } from '@/components/layout/ScrollResetOnNavigate';
 import { Footer } from '@/components/layout/Footer';
+import { ContactForm, globalContactFormSection } from '@/components/sections/ContactForm';
+import { Hero } from '@/components/sections/Hero';
+import { contactFormHero } from '@/content/en/contactFormShared';
 import { NewsletterPopup } from '@/components/layout/NewsletterPopup';
 import { CookieConsentBanner } from '@/components/layout/CookieConsentBanner';
+import { AmbientAudioToggle } from '@/components/layout/AmbientAudioToggle';
 import { SCROLLED_BODY_INLINE_SCRIPT } from '@/components/layout/useScrolledBody';
 
 export const viewport = { width: 'device-width', initialScale: 1 };
@@ -24,6 +28,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {FONTS.map((f) => (
           <link key={f} rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" href={`/fonts/${f}.woff2`} />
         ))}
+        {/* Junge (Google Fonts): the heading typeface across the site, set via
+            --font-serif in globals.css. Body copy stays on the self-hosted
+            karol-sans above. */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Junge&display=swap" />
         <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x3201.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x1601.png" />
@@ -38,12 +48,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Header />
           <SmoothScroll>
             {children}
+            <Hero section={contactFormHero} />
+            <ContactForm section={globalContactFormSection} />
             <Footer />
           </SmoothScroll>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img className="eriro-bg-attach" src="/HG.jpg" alt="" />
           <NewsletterPopup />
           <CookieConsentBanner />
+          <AmbientAudioToggle />
         </div>
       </body>
     </html>

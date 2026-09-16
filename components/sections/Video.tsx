@@ -44,6 +44,11 @@ export function Video({ section }: { section: VideoSection }) {
   const c = section.content;
   const winter = useIsWinter();
   const list: VideoRef[] = !winter && c.videosummer.length ? c.videosummer : c.video;
+  // A section with no video (e.g. About page's trailing mask_video, id 300 in
+  // content/en/about.ts) used to still render this div with its layout's
+  // space-before- padding (19rem desktop) applied to nothing -- a large
+  // blank gap before whatever follows, with no video to show for it.
+  if (list.length === 0) return null;
   const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_video', 'grid-container']
     .filter(Boolean).join(' ');
   return (

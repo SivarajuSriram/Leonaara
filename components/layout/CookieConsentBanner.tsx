@@ -41,7 +41,7 @@ export function CookieConsentBanner() {
               acceptAllBtn: 'Accept all',
               acceptNecessaryBtn: 'Reject all',
               showPreferencesBtn: 'Manage preferences',
-              footer: '<a href="/cookies/">Cookie Policy information</a>\n<a href="/privacy/">Privacy</a>',
+              footer: '<a href="/privacy/">Privacy</a>',
             },
             preferencesModal: {
               title: 'Consent Preferences Center',
@@ -83,7 +83,7 @@ export function CookieConsentBanner() {
                 {
                   title: 'More information',
                   description:
-                    'For any queries in relation to our policy on cookies and your choices, please contact us.<br/>To find out more, please visit our<a class="cc__link" href="/cookies/">Cookies Policy</a>.',
+                    'For any queries in relation to our policy on cookies and your choices, please contact us.',
                 },
               ],
             },

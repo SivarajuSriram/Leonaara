@@ -1,29 +1,9 @@
 import type { Metadata } from 'next';
 import type { PageContent } from './content';
 import { home } from '@/content/en/home';
-import { imprint } from '@/content/en/imprint';
 import { privacy } from '@/content/en/privacy';
-import { cookies } from '@/content/en/cookies';
-import { allInService } from '@/content/en/all-in-service';
-import { eriroExclusive } from '@/content/en/eriro-exclusive';
-import { summer } from '@/content/en/summer';
-import { winter } from '@/content/en/winter';
-import { bookingConditions } from '@/content/en/booking-conditions';
 import { contact } from '@/content/en/contact';
-import { press } from '@/content/en/press';
 import { about } from '@/content/en/about';
-import { alpineHide } from '@/content/en/alpine-hide';
-import { origin } from '@/content/en/origin';
-import { culinary } from '@/content/en/culinary';
-import { gallery } from '@/content/en/gallery';
-import { newsletter } from '@/content/en/newsletter';
-import { voucher } from '@/content/en/voucher';
-import { experiences } from '@/content/en/experiences';
-import { leiba } from '@/content/en/leiba';
-import { sela } from '@/content/en/sela';
-import { herchomen } from '@/content/en/herchomen';
-import { hantwerc } from '@/content/en/hantwerc';
-import { sneo } from '@/content/en/sneo';
 import { kadamba } from '@/content/en/kadamba';
 import { ananthaMeadows } from '@/content/en/ananthameadows';
 import { projects } from '@/content/en/projects';
@@ -31,29 +11,9 @@ import { projects } from '@/content/en/projects';
 // Every English page, keyed by its TYPO3 slug ('/' is the homepage). Later phases add one line per page.
 export const pages: Record<string, PageContent> = {
   '/': home,
-  '/imprint/': imprint,
   '/privacy/': privacy,
-  '/cookies/': cookies,
-  '/all-in-service/': allInService,
-  '/eriro-exclusive/': eriroExclusive,
-  '/summer/': summer,
-  '/winter/': winter,
-  '/booking-conditions/': bookingConditions,
   '/contact/': contact,
-  '/press/': press,
   '/about/': about,
-  '/alpine-hide/': alpineHide,
-  '/origin/': origin,
-  '/culinary/': culinary,
-  '/gallery/': gallery,
-  '/newsletter/': newsletter,
-  '/voucher/': voucher,
-  '/experiences/': experiences,
-  '/leiba/': leiba,
-  '/sela/': sela,
-  '/herchomen/': herchomen,
-  '/hantwerc/': hantwerc,
-  '/sneo/': sneo,
   '/projects/': projects,
   '/projects/kadamba/': kadamba,
   '/projects/ananthameadows/': ananthaMeadows,

@@ -11,9 +11,8 @@ import { RichText } from '@/components/ui/RichText';
 //
 // Styling matches eriro.at's own contact-and-arrival form closely: a white
 // card, sharp-cornered outlined fields (no fill, no border-radius) with
-// plain placeholder text (no separate label) except Title/Tel, which get a
-// small label + underline rule above the field like the reference does, and
-// an outlined (not solid) Submit button sized to its content, not full-width.
+// plain placeholder text (no separate label), and an outlined (not solid)
+// Submit button sized to its content, not full-width.
 const wrapperCls = 'grid-container mask mask_powermail';
 // `[grid-column:1/span_14]` spans all 14 outer grid tracks (incl. margins)
 // for the full-bleed white background -- same technique Img.tsx uses. But
@@ -21,103 +20,113 @@ const wrapperCls = 'grid-container mask mask_powermail';
 // use col-start/col-span to line back up with the site's usual margins --
 // hence nesting a second `grid-container` inside it, which recreates those
 // same margin/content columns relative to this (now full-width) box.
-const cardCls = '[grid-column:1/span_14] bg-white grid-container py-[6rem] max-lg:py-[3rem]';
+const cardCls = '[grid-column:1/span_14] grid-container py-[6rem] max-lg:py-[3rem]';
 // Matches the col-start-2/col-span-12 content width used everywhere else on
 // the site (List, Accordions, etc.) -- the earlier max-w-[64rem] cap made
 // the form much narrower than the reference's, which fills that same width.
 const innerCls = 'col-start-2 col-span-12';
+// `compact` (used when this form is embedded in the newsletter popup, a
+// fixed-height dialog rather than a full page) trims the padding/spacing
+// below that was sized for a full-width page section, so the whole form
+// fits the popup's column without needing its own internal scroll.
+const compactCardCls = '[grid-column:1/span_14] grid-container py-[2rem]';
 const fieldsetCls = 'mb-[3rem]';
+const compactFieldsetCls = 'mb-[1.2rem]';
 const legendCls = 'mb-[1.6rem] block text-[2.4rem] font-light';
-// The small label + underline rule sitting above Title/Tel, echoing the
-// reference's own floating-label-on-the-border treatment.
-const smallLabelRowCls = 'mb-[0.8rem] flex items-center gap-[1rem]';
-const smallLabelCls = 'text-[1.4rem] text-ink/60 whitespace-nowrap';
-const smallLabelRuleCls = 'h-px flex-1 bg-ink/20';
+const compactLegendCls = 'mb-[1rem] block text-[2.2rem] font-light';
 const inputCls =
   'block h-[6rem] w-full border border-ink/25 bg-transparent px-[1.6rem] text-[1.6rem] tracking-[0.02em] text-ink outline-none placeholder:text-ink/70 focus:border-ink';
+const compactInputCls =
+  'block h-[5.2rem] w-full border border-ink/25 bg-transparent px-[1.6rem] text-[1.8rem] tracking-[0.02em] text-ink outline-none placeholder:text-ink/70 focus:border-ink';
 const textareaCls = `${inputCls} h-[12rem] py-[1.2rem] resize-y`;
-const titleGroupCls = 'flex h-[6rem] w-full max-w-[32rem] border border-ink/25';
-// app/globals.css forces `border:1px solid #211d1d` on every button/input/
-// textarea site-wide -- without `border-0` here, each pill got its own
-// unwanted individual border on top of titleGroupCls's shared outer one.
-// Selected state is a light background fill (matching the reference),
-// not a border or bg-ink/text-color inversion.
-const titlePillCls = (active: boolean) =>
-  // `bg-transparent` is required even on the inactive branch -- without it
-  // the browser's own default <button> background (a light gray) showed
-  // through on BOTH pills, not just a difference on the active one.
-  // Hovering an unselected pill previews a plain gray fill; clicking commits
-  // it to the beige "selected" fill, which then persists regardless of
-  // hover (an active pill doesn't need its own hover state -- it's already
-  // filled in).
-  `flex-1 flex items-center justify-center border-0 text-[1.6rem] cursor-pointer transition-colors ${active ? 'bg-beige text-ink' : 'bg-transparent hover:bg-ink/10 text-ink/60'}`;
+const compactTextareaCls = `${compactInputCls} h-[7rem] py-[1.2rem] resize-y`;
 const fieldRowCls = 'grid grid-cols-2 gap-[2rem] mb-[2rem] max-lg:grid-cols-1 max-lg:gap-[1.5rem]';
+const compactFieldRowCls = 'grid grid-cols-2 gap-[1.4rem] mb-[1.4rem] max-lg:grid-cols-1 max-lg:gap-[1rem]';
+const selectCls = `${inputCls} appearance-none bg-no-repeat pr-[4rem]`;
+const compactSelectCls = `${compactInputCls} appearance-none bg-no-repeat pr-[3.6rem]`;
+// Inline style, not a Tailwind arbitrary background-image utility: the
+// data-URI's nested quotes/spaces don't survive Tailwind's arbitrary-value
+// parsing reliably, which silently dropped the chevron entirely.
+const selectChevronStyle = {
+  backgroundImage:
+    "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23211D1D' stroke-width='1.4'/%3E%3C/svg%3E\")",
+  backgroundPosition: 'right 1.6rem center',
+  backgroundSize: '1.2rem',
+};
 const submitCls =
   'inline-flex h-[5.6rem] items-center justify-center whitespace-nowrap border border-ink bg-transparent px-[3.5rem] text-[1.5rem] tracking-[0.03em] text-ink uppercase transition-colors outline-none hover:bg-ink hover:text-[#F5F4F2] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-ink';
+const compactSubmitCls =
+  'inline-flex h-[5rem] items-center justify-center whitespace-nowrap border border-ink bg-transparent px-[3.2rem] text-[1.5rem] tracking-[0.03em] text-ink uppercase transition-colors outline-none hover:bg-ink hover:text-[#F5F4F2] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-ink';
 
-const TITLES = ['Mr.', 'Mrs.'] as const;
+export const VISIT_PURPOSES = ['Site Visit', 'Brochure Download', 'Other'] as const;
 
-export function ContactForm({ section }: { section: ContactFormSection }) {
+// Default section content for the site-wide instance mounted once in the
+// root layout (below every page's own content, above the Footer) -- see
+// app/layout.tsx. Pages that already define their own powermail_pi1 block
+// (e.g. contact.ts) keep rendering that one too via the normal content
+// pipeline; this constant only covers the global, page-content-independent
+// mount point.
+export const globalContactFormSection: ContactFormSection = {
+  id: 0,
+  type: 'powermail_pi1',
+  appearance: { layout: 'default', frameClass: 'default', spaceBefore: '', spaceAfter: '' },
+  content: { title: '', text: '' },
+};
+
+export function ContactForm({ section, onSubmitted, compact = false }: { section: ContactFormSection; onSubmitted?: () => void; compact?: boolean }) {
   const c = section.content;
-  const [title, setTitle] = useState<(typeof TITLES)[number] | null>(null);
   const [consent, setConsent] = useState(false);
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
     // No backend wired up yet -- see file header comment.
+    onSubmitted?.();
   };
 
   return (
     <div className={wrapperCls} {...{ uid: `c${section.id}` }}>
-      <div className={cardCls}>
+      <div className={compact ? compactCardCls : cardCls}>
         <div className={innerCls}>
           {c.title ? <h2 className="mb-[1rem] text-[3rem] font-light max-lg:text-[2.4rem]">{c.title}</h2> : null}
           {c.text ? <RichText className="mb-[3rem] text-ink/70" html={c.text} /> : null}
           <form onSubmit={onSubmit}>
-            <fieldset className={fieldsetCls}>
-              <legend className={legendCls}>Personal data</legend>
-              <div className="mb-[2rem]">
-                <div className={smallLabelRowCls}>
-                  <span className={smallLabelCls}>Title*</span>
-                  <span className={smallLabelRuleCls} />
-                </div>
-                <div className={titleGroupCls}>
-                  {TITLES.map((t) => (
-                    <button key={t} type="button" className={titlePillCls(title === t)} onClick={() => setTitle(t)}>
-                      {t}
-                    </button>
-                  ))}
-                </div>
+            <fieldset className={compact ? compactFieldsetCls : fieldsetCls}>
+              <legend className={compact ? compactLegendCls : legendCls}>Personal data</legend>
+              <div className={compact ? compactFieldRowCls : fieldRowCls}>
+                <input name="name" type="text" required placeholder="Name*" className={compact ? compactInputCls : inputCls} />
+                <input name="phone" type="tel" required placeholder="Phone*" className={compact ? compactInputCls : inputCls} />
               </div>
-              <div className={fieldRowCls}>
-                <input name="name" type="text" required placeholder="Name*" className={inputCls} />
-                <input name="surname" type="text" required placeholder="Surname*" className={inputCls} />
+              <div className={compact ? compactFieldRowCls : fieldRowCls}>
+                <input name="email" type="email" required placeholder="E-Mail*" className={compact ? compactInputCls : inputCls} />
+                <select name="purpose" required defaultValue="" className={compact ? compactSelectCls : selectCls} style={selectChevronStyle}>
+                  <option value="" disabled>Purpose of Visit*</option>
+                  {VISIT_PURPOSES.map((p) => <option key={p} value={p}>{p}</option>)}
+                </select>
               </div>
-              <div className={fieldRowCls}>
-                <div>
-                  <div className={smallLabelRowCls}>
-                    <span className={smallLabelCls}>Tel.</span>
-                    <span className={smallLabelRuleCls} />
-                  </div>
-                  <input name="tel" type="tel" className={inputCls} />
-                </div>
-                <input name="email" type="email" required placeholder="E-Mail*" className={`${inputCls} self-end`} />
-              </div>
-              <textarea name="message" placeholder="Message" className={textareaCls} />
+              <textarea name="message" placeholder="Message" rows={compact ? 2 : undefined} className={compact ? compactTextareaCls : textareaCls} />
             </fieldset>
-            <p className="mb-[1rem] text-right text-[1.3rem] text-ink/50">* Required fields</p>
-            <label className="mb-[2.5rem] flex items-start gap-[1rem] text-[1.4rem] leading-[1.5] cursor-pointer">
-              <input
-                type="checkbox"
-                name="consent"
-                required
-                checked={consent}
-                onChange={(e) => setConsent(e.target.checked)}
-                className="mt-[0.3rem] h-[1.8rem] w-[1.8rem] shrink-0 accent-transparent border border-ink/40"
-              />
+            <p className={`text-right text-ink/50 ${compact ? 'mb-[0.8rem] text-[1.5rem]' : 'mb-[1rem] text-[1.6rem]'}`}>* Required fields</p>
+            <label className={`flex items-start gap-[1rem] cursor-pointer ${compact ? 'mb-[1.4rem] text-[1.5rem] leading-[1.5]' : 'mb-[2.5rem] text-[1.4rem] leading-[1.5]'}`}>
+              <span className="relative mt-[0.2rem] h-[1.8rem] w-[1.8rem] shrink-0">
+                <input
+                  type="checkbox"
+                  name="consent"
+                  required
+                  checked={consent}
+                  onChange={(e) => setConsent(e.target.checked)}
+                  className="peer absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
+                />
+                <span className="pointer-events-none absolute inset-0 flex items-center justify-center border border-ink/40 peer-focus-visible:border-ink">
+                  {consent && (
+                    <svg viewBox="0 0 16 16" className="h-[1.2rem] w-[1.2rem] fill-none stroke-ink" aria-hidden="true">
+                      <path d="M3 8.5l3 3 7-7" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  )}
+                </span>
+              </span>
               I authorize Leonaara and its representatives to Call, SMS, Email, or WhatsApp me about its services and offers. This consent overrides any registration for DND / NDNC.
             </label>
-            <button type="submit" className={submitCls} disabled={!consent}>
+            <button type="submit" className={compact ? compactSubmitCls : submitCls} disabled={!consent}>
               Submit
             </button>
           </form>

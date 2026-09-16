@@ -2,29 +2,19 @@ export type NavItem = { uid: number; title: string; link: string; children?: Nav
 
 export const site = {
   nav: [
+    { uid: 9057, title: 'Home', link: '/' },
     { uid: 9058, title: 'About', link: '/about/' },
-    { uid: 58, title: 'Alpine Hide', link: '/alpine-hide/' },
     { uid: 44, title: 'Projects', link: '/projects/' },
-    { uid: 120, title: 'All-In-Service', link: '/all-in-service/' },
-    { uid: 60, title: 'Experiences', link: '/experiences/' },
-    { uid: 61, title: 'Culinary', link: '/culinary/' },
-    { uid: 86, title: 'Origin', link: '/origin/' },
-    { uid: 179, title: 'Summer', link: '/summer/' },
-    { uid: 181, title: 'Winter', link: '/winter/' },
+    { uid: 95, title: 'Contact', link: '/contact/' },
   ] as NavItem[],
   footerNav: [
-    { uid: 162, title: 'Booking conditions', link: '/booking-conditions/' },
-    { uid: 164, title: 'eriro exclusive', link: '/eriro-exclusive/' },
+    { uid: 9057, title: 'Home', link: '/' },
+    { uid: 9058, title: 'About', link: '/about/' },
+    { uid: 44, title: 'Projects', link: '/projects/' },
     { uid: 95, title: 'Contact', link: '/contact/' },
-    { uid: 73, title: 'Voucher', link: '/voucher/' },
-    { uid: 103, title: 'Newsletter', link: '/newsletter/' },
-    { uid: 72, title: 'Jobs', link: '/jobs/' },
-    { uid: 71, title: 'Press', link: '/press/' },
   ] as NavItem[],
   privacyNav: [
-    { uid: 5, title: 'Imprint', link: '/imprint/' },
     { uid: 6, title: 'Privacy', link: '/privacy/' },
-    { uid: 7, title: 'Cookies', link: '/cookies/' },
   ] as NavItem[],
   // spec §16.1: the German mirror is cancelled -- there is no language layer
   // at all, so this holds only the one real language (English). A "Deutsch"
@@ -33,7 +23,7 @@ export const site = {
   languages: [
     { code: 'en', title: 'English', link: '/' },
   ],
-  pageLinks: { home: '/', request: '/request/', contact: '/contact/', voucher: '/voucher/', gallery: '/gallery/' },
+  pageLinks: { home: '/', request: '/request/', contact: '/contact/' },
   contact: { email: 'hide@eriro.at', tel: '0043 5673 40506', address: 'Ehrwalder Alm 4\r\n6632 Ehrwald, Austria' },
   // raw value (no <br>); the footer applies nl2br like the original
   socialHtml:

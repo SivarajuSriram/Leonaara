@@ -70,7 +70,6 @@ export function RoomDetail({ section }: { section: RoomDetailSection }) {
   const { prevRef, nextRef, onSwiper } = useSwiperExternalNav();
   const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_roomdetail', 'grid-container']
     .filter(Boolean).join(' ');
-
   return (
     <div className={cls} {...{ uid: `c${section.id}` }}>
       <Swiper

@@ -52,6 +52,21 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
       t = setTimeout(sync, 150);
     };
     window.addEventListener('resize', onResize);
+    // Fixes the scroll-triggered word-fill text (SplitWords.tsx, used by
+    // Hero/Quote/Break/ImgText/etc.) intermittently glitching: every one of
+    // those ScrollTriggers has its start/end computed from the *current*
+    // rendered position and height of the split words at the moment it's
+    // created. Junge (the heading font, loaded via a Google Fonts <link> in
+    // app/layout.tsx, not preloaded like the self-hosted body font) can
+    // finish loading and swap in AFTER that -- it renders visibly larger
+    // than the fallback it swaps in for (see globals.css's own comment on
+    // reducing .h2/.h3 sizes for this), which reflows heading height and
+    // shifts every trigger below it out of sync with its own text until the
+    // next refresh. document.fonts.ready fires once every font actually in
+    // use has finished loading/swapping, so this refresh re-measures every
+    // trigger against final, settled layout instead of relying on whatever
+    // resize/scroll happens to trigger one next.
+    document.fonts?.ready?.then(() => ScrollTrigger.refresh()).catch(() => {});
     return () => {
       if (t) clearTimeout(t);
       window.removeEventListener('resize', onResize);

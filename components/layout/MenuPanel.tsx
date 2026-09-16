@@ -1,7 +1,7 @@
 import type { Ref } from 'react';
 import { site } from '@/content/site';
 import { AppLink } from './AppLink';
-import { TelIcon, MailIcon, MapIcon, VoucherIcon, GalleryIcon } from '@/components/ui/icons';
+import { TelIcon, MailIcon } from '@/components/ui/icons';
 
 type Props = { ref: Ref<HTMLDivElement>; isHome: boolean; pathname: string };
 
@@ -51,9 +51,6 @@ export function MenuPanel({ ref, isHome, pathname }: Props) {
         <nav className="nav-info flex absolute right-[6rem] top-[10.5rem] max-lg:right-auto max-lg:top-auto max-lg:bottom-[7.5rem] max-lg:left-1/2 max-lg:-translate-x-1/2">
           <div className={`tel-icon ${navInfoIconCls}`}><a className={navInfoLinkCls} href={`tel:${site.contact.tel}`}><TelIcon /></a></div>
           <div className={`mail-icon ${navInfoIconCls}`}><a className={navInfoLinkCls} href={`mailto:${site.contact.email}`}><MailIcon /></a></div>
-          <div className={`map-icon ${navInfoIconCls}`}><AppLink className={navInfoLinkCls} href={site.pageLinks.contact}><MapIcon /></AppLink></div>
-          <div className={`voucher-icon ${navInfoIconCls}`}><AppLink className={navInfoLinkCls} href={site.pageLinks.voucher}><VoucherIcon /></AppLink></div>
-          <div className={`gallery-icon ${navInfoIconCls}`}><AppLink className={navInfoLinkCls} href={site.pageLinks.gallery}><GalleryIcon /></AppLink></div>
         </nav>
         {/* header div.mobile-hr{...} lives entirely inside the max-width:1023px block in
             Header.css — at desktop it's an unstyled div (only header .menu>div{width:100%}
@@ -122,34 +119,6 @@ export function MenuPanel({ ref, isHome, pathname }: Props) {
                 </div>
               );
             })}
-          </nav>
-          {/* header .nav-lang a{...}; desktop has no rule on the .nav-lang container itself (a
-              plain block-level nav), so the two block-level anchors below stack vertically — the
-              mobile block adds display:flex + absolute positioning, turning them into a row. */}
-          <nav className="nav-lang max-lg:flex max-lg:absolute max-lg:bottom-[1rem] max-lg:right-[1rem]" aria-label="Language">
-            {site.languages.map((language) => (
-              <a
-                key={language.code}
-                className={[
-                  // header .nav-lang a{display:block;font-size:1.3rem;font-size:1.5rem;
-                  // font-weight:300;letter-spacing:.05em;line-height:131%;text-decoration:none;
-                  // text-transform:uppercase;width:-moz-fit-content;width:fit-content} — two
-                  // font-size declarations in the same rule; CSS keeps only the last (1.5rem), so
-                  // 1.3rem is a dead declaration and correctly dropped here. :hover{opacity:.5}.
-                  'block text-ink no-underline text-[1.5rem] font-light tracking-[.05em] leading-[131%] uppercase w-fit hover:opacity-50',
-                  // header .nav-lang a:first-child{margin-bottom:.5rem}, mobile adds
-                  // margin-right:1rem on top (it doesn't remove the margin-bottom).
-                  'first:mb-[.5rem] max-lg:first:mr-[1rem]',
-                  // header .nav-lang a.router-link-active{opacity:.5;pointer-events:none;
-                  // text-decoration:none} — text-decoration:none is already the base state, so
-                  // no-underline here is a no-op restated just for literal fidelity.
-                  language.code === 'en' ? 'router-link-active opacity-50 pointer-events-none no-underline' : '',
-                ].filter(Boolean).join(' ')}
-                href={language.link}
-              >
-                <span>{language.title}</span>
-              </a>
-            ))}
           </nav>
         </div>
       </div>

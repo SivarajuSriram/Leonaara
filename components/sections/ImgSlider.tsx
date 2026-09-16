@@ -1,10 +1,12 @@
 'use client';
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Autoplay, FreeMode, Keyboard, Navigation } from 'swiper/modules';
 import type { ImgSliderSection } from '@/lib/content';
 import { Picture } from '@/components/ui/Picture';
 import { ArrowSliderIcon } from '@/components/ui/icons';
 import { useSwiperExternalNav } from '@/components/ui/useSwiperExternalNav';
+import { Lightbox } from '@/components/ui/Lightbox';
 
 // imgslider.css: .swiper-container{grid-column-end:span 14;grid-column-start:1;position:relative}
 const containerCls = 'swiper-container w-full col-start-1 col-span-14 relative';
@@ -33,10 +35,15 @@ const navigationCls = 'navigation self-end justify-self-center col-start-9 col-s
 const navArrowCls = 'cursor-pointer transition-all duration-500 w-fit hover:opacity-40 [&_svg]:h-[2.5rem] [&_svg]:w-[7rem]';
 const navNextCls = `next ${navArrowCls}`;
 const navPrevCls = `prev ${navArrowCls} rotate-180`;
+// Added at the user's request: click any gallery slide to open it full-
+// screen (Lightbox.tsx), with its own prev/next -- not part of the original
+// reference extraction.
+const clickableSlideCls = 'cursor-pointer';
 
 export function ImgSlider({ section }: { section: ImgSliderSection }) {
   const images = section.content.images;
   const { prevRef, nextRef, onSwiper } = useSwiperExternalNav();
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_imgslider', 'grid-container', slideImgCls]
     .filter(Boolean).join(' ');
 
@@ -73,8 +80,8 @@ export function ImgSlider({ section }: { section: ImgSliderSection }) {
         }}
       >
         {images.map((img, i) => (
-          <SwiperSlide key={i} className={slideCls}>
-            <Picture image={img} heightD={600} heightM={300} lazy={i > 0} className={slidePictureCls} />
+          <SwiperSlide key={i} className={slideCls} onClick={() => setLightboxIndex(i)}>
+            <Picture image={img} heightD={600} heightM={300} lazy={i > 0} className={`${slidePictureCls} ${clickableSlideCls}`} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -84,6 +91,7 @@ export function ImgSlider({ section }: { section: ImgSliderSection }) {
           <div className={navPrevCls} ref={prevRef}><ArrowSliderIcon /></div>
         </div>
       ) : null}
+      <Lightbox images={images} index={lightboxIndex} onClose={() => setLightboxIndex(null)} onNavigate={setLightboxIndex} />
     </div>
   );
 }

@@ -26,7 +26,7 @@ export function Picture({ image, widthD, heightD, widthM, heightM, lazy = true, 
   }, { dependencies: [image.src] });
 
   const style = { '--ar-d': String(arD), '--ar-m': String(arM) } as CSSProperties;
-  const wrapperClass = ['relative block', className].filter(Boolean).join(' ');
+  const wrapperClass = ['relative block overflow-hidden rounded-[1.6rem]', className].filter(Boolean).join(' ');
   const imgClass = 'block h-auto w-full [aspect-ratio:var(--ar-d)] max-lg:[aspect-ratio:var(--ar-m)]';
   const overlayClass = 'pointer-events-none absolute inset-0 top-0 left-0 z-[5] h-full w-full bg-ink';
 

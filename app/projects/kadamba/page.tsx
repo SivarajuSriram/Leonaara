@@ -8,15 +8,17 @@ import { RoomDetail } from '@/components/sections/RoomDetail';
 import { ImgSlider } from '@/components/sections/ImgSlider';
 import { List } from '@/components/sections/List';
 import { Img } from '@/components/sections/Img';
+import { Maps } from '@/components/sections/Maps';
 
 export const metadata: Metadata = metadataFor(kadamba);
 
 export default function KadambaPage() {
-  const [roomdetail, imgslider, list, img] = kadamba.columns.colPos0;
+  const [roomdetail, imgslider, list, img, maps] = kadamba.columns.colPos0;
   if (roomdetail.type !== 'mask_roomdetail') throw new Error('expected roomdetail');
   if (imgslider.type !== 'mask_imgslider') throw new Error('expected imgslider');
   if (list.type !== 'mask_list') throw new Error('expected list');
   if (img.type !== 'mask_img') throw new Error('expected img');
+  if (maps.type !== 'mask_maps') throw new Error('expected maps');
   return (
     <main>
       <BodyClass pageId={kadamba.id} layout="layout-0" />
@@ -30,6 +32,7 @@ export default function KadambaPage() {
       <ImgSlider section={imgslider} />
       <List section={list} />
       <Img section={img} />
+      <Maps section={maps} />
     </main>
   );
 }

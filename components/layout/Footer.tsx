@@ -1,7 +1,8 @@
 // components/layout/Footer.tsx
+import type { CSSProperties } from 'react';
 import { site } from '@/content/site';
 import { AppLink } from './AppLink';
-import { LogoIcon, UnikateurIcon } from '@/components/ui/icons';
+import { LogoIcon } from '@/components/ui/icons';
 import { RichText } from '@/components/ui/RichText';
 
 const nl2br = (s: string) => s.replace(/\r?\n/g, '<br>');
@@ -38,7 +39,11 @@ const nl2br = (s: string) => s.replace(/\r?\n/g, '<br>');
 // against the pre-conversion baseline (the unikateur link renders 1px taller
 // without it). Transcribed in full rather than assumed away.
 const footerCls = [
-  'grid-container',
+  // overflow-x-clip (not overflow-hidden): the decorative branch below is
+  // deliberately allowed to bleed upward past the footer's own top edge
+  // into whatever section sits above it -- only horizontal overflow (which
+  // would add a page-wide scrollbar) needs containing.
+  'grid-container relative overflow-x-clip',
   'text-[2rem] font-normal tracking-[.08em] leading-[125%] mt-[19rem] uppercase',
   'max-lg:text-[1.3rem] max-lg:tracking-[.05em] max-lg:leading-[131%] max-lg:mt-[6rem]',
   '[&_a:not(.link-logo)]:text-ink [&_a:not(.link-logo)]:underline [&_a:not(.link-logo)]:decoration-transparent',
@@ -65,7 +70,7 @@ const titleCls = 'mb-[1rem] max-lg:mb-[.5rem]';
 // padding-bottom:4rem} (column placement is restated identically at mobile, so
 // it isn't repeated as a max-lg: variant)
 const upperFooterCls = [
-  'upper-footer grid-container-inner border-t-2 border-beige col-start-2 col-span-12',
+  'upper-footer relative z-10 grid-container-inner border-t-2 border-beige col-start-2 col-span-12',
   'pt-[6rem] pb-[6rem] max-lg:pt-[2rem] max-lg:pb-[4rem]',
 ].join(' ');
 
@@ -74,62 +79,129 @@ const upperFooterCls = [
 // .email; grepped the whole repo, no element ever carries class "tel"), so its
 // desktop span-3 and its mobile span-6/justify-end/text-right restatement are
 // both dead CSS and correctly dropped here.
-// .email itself: desktop span 3 (above) + mobile{grid-column-end:span 6}
-const emailCls = 'email col-span-3 max-lg:col-span-6';
+// The birch branch (branchWrapperCls below) is anchored bottom-left at full
+// size and its foliage/twigs reach roughly 55-58% across the footer's
+// width, so none of the three text groups below can start any earlier than
+// that without sitting over it. Rather than one 12-column grid spanning the
+// full footer, Contact/Follow Us/Address (and their lower-footer
+// counterparts nav-extra/logo/footer-bottom-right, sharing this same
+// wrapper) live in their own flex row confined to columns 8-12 (the
+// branch-clear right ~42%), tightly spaced with justify-between instead of
+// the wider even spacing they used across the full 12 columns.
+const upperFooterRightCls = 'col-start-8 col-span-5 flex items-start justify-between gap-x-[1.6rem] max-lg:contents';
 
-// footer .upper-footer .social{grid-column-end:span 3;justify-self:flex-start;
-// text-align:left} + mobile{grid-column-end:span 5;grid-column-start:8;
-// grid-row-start:2;justify-self:flex-end;margin-top:3rem;text-align:right}
+// .email itself: desktop span 3 (above) + mobile{grid-column-end:span 6}
+const emailCls = 'email flex-1 max-lg:col-start-1 max-lg:col-span-6';
+
+// social ("Follow Us") sits centered within its own flex-1 slot in
+// upperFooterRightCls, directly above logoCls below (same flex layout in
+// lowerFooterRightCls), so the two still stack exactly.
 const socialCls = [
-  'social col-span-3 justify-self-start text-left',
+  'social flex-1 justify-self-center text-center',
   'max-lg:col-span-5 max-lg:col-start-8 max-lg:row-start-2 max-lg:justify-self-end max-lg:text-right max-lg:mt-[3rem]',
 ].join(' ');
 
-// footer .upper-footer .address{grid-column-end:span 3;justify-self:flex-end;
-// text-align:right} + mobile{grid-column-end:span 6;margin-top:0}
-const addressCls = 'address col-span-3 justify-self-end text-right max-lg:col-span-6 max-lg:mt-0';
-
-// footer .upper-footer .partner{grid-column-end:span 3;justify-self:flex-end;
-// text-align:right} + mobile{grid-column-end:span 6;justify-self:flex-start;
-// margin-top:3rem;text-align:left}
-const partnerCls = [
-  'partner col-span-3 justify-self-end text-right',
-  'max-lg:col-span-6 max-lg:justify-self-start max-lg:mt-[3rem] max-lg:text-left',
-].join(' ');
+// address is the last flex item in upperFooterRightCls, matching the
+// last item in lowerFooterRightCls (footer-bottom-right).
+const addressCls = 'address flex-1 justify-self-end text-right max-lg:col-span-6 max-lg:mt-0';
 
 // footer .lower-footer{align-items:flex-end;border-top:2px solid #e4e0db (border,
 // stays beige);grid-column-start:2;grid-column-end:span 12;padding-top:6rem;
 // padding-bottom:2.5rem} + mobile{align-items:flex-start;padding-top:2rem;
 // padding-bottom:2rem} (column placement unchanged at mobile, not repeated)
 const lowerFooterCls = [
-  'lower-footer grid-container-inner items-end border-t-2 border-beige col-start-2 col-span-12',
-  'pt-[6rem] pb-[2.5rem] max-lg:items-start max-lg:pt-[2rem] max-lg:pb-[2rem]',
+  'lower-footer relative z-10 grid-container-inner items-end border-t-2 border-beige col-start-2 col-span-12',
+  'pt-[3rem] pb-[2.5rem] max-lg:items-start max-lg:pt-[2rem] max-lg:pb-[2rem]',
 ].join(' ');
+
+// Decorative birch-branch illustration (public/images/decor/tree-branch.png,
+// a transparent PNG) anchored to the footer's bottom-left corner, trunk at
+// the edge with the branch reaching rightward across the lower-footer row --
+// purely decorative (aria-hidden, no alt text). No overflow-hidden on this
+// wrapper: it's sized to the image's own rendered height, so the image is
+// never clipped, and it's deliberately allowed to bleed above the footer's
+// own top edge (see footerCls's overflow-x-clip comment).
+// z-20, ABOVE upper-footer/lower-footer's z-10: those two containers each
+// draw a beige border-top spanning the full 12-column row, which otherwise
+// cuts a hard line across the tree where the two overlap. The tree's own
+// footprint only reaches ~55-58% across the footer (see below), well short
+// of the text columns confined to col-start-8+, so painting it above those
+// containers hides the border line under the branch/leaves without ever
+// covering the real text content.
+const branchWrapperCls = 'pointer-events-none absolute bottom-0 left-0 z-20 w-[120rem] max-w-[100%] max-lg:w-[64rem]';
+const branchImgCls = 'block w-full h-auto opacity-90';
+
+// Leaf-color palette sampled directly from public/images/decor/tree-branch.png
+// (every ~6th pixel scanned, kept if opaque and green-toned, then bucketed and
+// ranked by frequency) -- dark olive through light yellow-green, matching the
+// actual foliage instead of one flat invented green.
+const LEAF_COLORS = ['#3c5028', '#506428', '#647828', '#788c3c', '#8ca050', '#a0b464'] as const;
+
+// A handful of leaves drift down out of the branch and fade -- pure CSS
+// (.leaf-fall keyframe in globals.css), no JS/client component needed.
+// left/top are read directly off the actual foliage clusters in
+// public/images/decor/tree-branch.png (as % of the image's own box, same
+// aspect ratio as branchWrapperCls, so they land on real leaf mass instead
+// of the empty space between branches) -- picked by eye against the source
+// image, not arbitrary/evenly-spaced points. The rest (fall distance, sway,
+// spin direction, duration, delay, size, color) are randomized per-leaf via
+// CSS custom properties / the fill color on that leaf's own inline style so
+// no two fall the same way, then the animation loops.
+const FALLING_LEAVES = [
+  { left: '10%', top: '22%', size: '2.4rem', duration: '11s', delay: '0s', sway: '2.4rem', spin: 1, fall: '30rem', color: LEAF_COLORS[0] },
+  { left: '22%', top: '53%', size: '2.1rem', duration: '9.5s', delay: '2.4s', sway: '-3rem', spin: -1, fall: '28rem', color: LEAF_COLORS[3] },
+  { left: '42%', top: '31%', size: '2.7rem', duration: '13s', delay: '5s', sway: '3.2rem', spin: 1, fall: '36rem', color: LEAF_COLORS[5] },
+  { left: '50%', top: '49%', size: '1.9rem', duration: '10s', delay: '1.2s', sway: '-2.2rem', spin: -1, fall: '26rem', color: LEAF_COLORS[1] },
+  { left: '60%', top: '58%', size: '2.5rem', duration: '12.5s', delay: '6.5s', sway: '2.8rem', spin: 1, fall: '34rem', color: LEAF_COLORS[4] },
+  { left: '67%', top: '37%', size: '1.8rem', duration: '8.5s', delay: '3.6s', sway: '-2.6rem', spin: -1, fall: '24rem', color: LEAF_COLORS[2] },
+  { left: '80%', top: '41%', size: '2.2rem', duration: '11.5s', delay: '7.5s', sway: '2rem', spin: 1, fall: '30rem', color: LEAF_COLORS[5] },
+  { left: '92%', top: '29%', size: '2rem', duration: '9s', delay: '4.2s', sway: '-1.8rem', spin: -1, fall: '26rem', color: LEAF_COLORS[0] },
+  { left: '97%', top: '28%', size: '1.8rem', duration: '10.5s', delay: '1.8s', sway: '2.2rem', spin: 1, fall: '28rem', color: LEAF_COLORS[3] },
+] as const;
+
+function FallingLeaf({ leaf }: { leaf: (typeof FALLING_LEAVES)[number] }) {
+  const style = {
+    left: leaf.left,
+    top: leaf.top,
+    width: `calc(${leaf.size} * 1.1)`,
+    height: leaf.size,
+    '--leaf-duration': leaf.duration,
+    '--leaf-delay': leaf.delay,
+    '--leaf-sway': leaf.sway,
+    '--leaf-spin': leaf.spin,
+    '--leaf-fall': leaf.fall,
+    '--leaf-opacity': 0.85,
+  } as CSSProperties;
+  return (
+    // Broad, rounded ovate leaf with a short pointed tip and a rounded base
+    // (traced off the actual birch/aspen leaves in tree-branch.png -- see
+    // scratchpad/leaf-closeup2.png), not a narrow diagonal teardrop.
+    <svg viewBox="0 0 24 24" preserveAspectRatio="none" className="leaf-fall absolute" style={{ ...style, fill: leaf.color }} aria-hidden="true">
+      <path d="M12 2C17 4 20.5 9 19.5 14C18.5 19 15 22 12 22C9 22 5.5 19 4.5 14C3.5 9 7 4 12 2Z" />
+      <path d="M12 4.5V19.5M12 9 8 12M12 9l4 3M12 14l-3 2.5M12 14l3 2.5" stroke="#3c3020" strokeOpacity="0.35" strokeWidth="0.6" strokeLinecap="round" fill="none" />
+    </svg>
+  );
+}
+
+// Mirrors upperFooterRightCls above: nav-extra/logo/footer-bottom-right
+// live in their own flex row confined to the branch-clear columns 8-12
+// instead of the full 12-column width.
+const lowerFooterRightCls = 'col-start-8 col-span-5 flex items-end justify-between gap-x-[1.6rem] max-lg:contents';
 
 // footer .lower-footer .logo,.nav-extra{grid-column-end:span 3} (shared) +
 // mobile{grid-column-end:span 6;grid-row-start:1;text-align:right} (shared) +
 // .nav-extra's own mobile{justify-self:flex-end;margin-bottom:3rem}
 const navExtraCls = [
-  'nav-extra col-span-3',
-  'max-lg:col-span-6 max-lg:row-start-1 max-lg:text-right max-lg:justify-self-end max-lg:mb-[3rem]',
+  'nav-extra flex-1 mb-[1.6rem]',
+  'max-lg:col-start-1 max-lg:col-span-6 max-lg:row-start-1 max-lg:text-right max-lg:justify-self-end max-lg:mb-[3rem]',
 ].join(' ');
 
 // same shared span-3/span-6/row-start-1/text-right rule as .nav-extra, plus
 // .logo's own mobile{grid-column-start:1;justify-self:flex-start} and
 // footer .lower-footer .logo svg{width:29.4rem} + mobile{width:13.7rem}
 const logoCls = [
-  'logo col-span-3 [&_img]:w-[29.4rem] [&_img]:h-auto',
-  'max-lg:col-span-6 max-lg:col-start-1 max-lg:row-start-1 max-lg:text-right max-lg:justify-self-start max-lg:[&_img]:w-[13.7rem]',
-].join(' ');
-
-// footer .lower-footer .luxury-hotels-logo{grid-column-start:9;grid-column-end:
-// span 1;justify-self:flex-end;text-align:right;width:90%} + mobile{align-self:
-// flex-end;grid-column-start:10;grid-column-end:span 3} (justify-self/text-align
-// aren't restated at mobile, so they carry through unprefixed) + img{width:100%}
-// (all sizes, applied directly to the <img> below)
-const luxuryLogoCls = [
-  'luxury-hotels-logo col-span-1 col-start-9 justify-self-end text-right w-[90%]',
-  'max-lg:self-end max-lg:col-span-3 max-lg:col-start-10',
+  'logo flex-1 justify-self-center [&_img]:w-[29.4rem] [&_img]:h-auto',
+  'max-lg:col-start-1 max-lg:col-span-6 max-lg:row-start-1 max-lg:text-right max-lg:justify-self-start max-lg:[&_img]:w-[13.7rem]',
 ].join(' ');
 
 // footer .lower-footer .footer-bottom-right{grid-column-end:span 3;justify-self:
@@ -137,82 +209,58 @@ const luxuryLogoCls = [
 // grid-row-start:2;justify-self:flex-start} (text-align:right isn't restated at
 // mobile, so it carries through unprefixed)
 const footerBottomRightCls = [
-  'footer-bottom-right col-span-3 justify-self-end text-right',
-  'max-lg:col-span-6 max-lg:col-start-1 max-lg:row-start-2 max-lg:justify-self-start',
+  'footer-bottom-right flex-1 mb-[1.6rem] justify-self-end text-right',
+  'max-lg:col-start-1 max-lg:col-span-6 max-lg:row-start-2 max-lg:justify-self-start',
 ].join(' ');
-
-// footer .lower-footer .nav-footer,.nav-lang{justify-self:flex-start;
-// text-align:left} (mobile only)
-const navLangCls = 'nav-lang max-lg:justify-self-start max-lg:text-left';
 
 // footer .lower-footer .nav-footer{margin-top:3rem} + mobile{margin-top:1.5rem}
-// plus the shared mobile-only justify-self/text-align rule above
-const navFooterCls = 'nav-footer mt-[3rem] max-lg:mt-[1.5rem] max-lg:justify-self-start max-lg:text-left';
-
-// footer .lower-footer .unikateur-signet{font-size:1.5rem;font-weight:400;
-// grid-column-start:1;grid-column-end:span 12;justify-self:flex-end;
-// letter-spacing:.07em;line-height:100%;margin-top:6rem;text-transform:none} +
-// mobile — resolving the file's two duplicate mobile rules for this selector
-// (one at max-width:1023px, a final one at the redundant max-width:1023px AND
-// max-width:1023px) last-wins per property: font-size:1.2rem (the later rule),
-// letter-spacing:.07em/line-height:100%/font-weight:400 unchanged from desktop,
-// margin-top:4rem (only ever set once, at mobile). Plus footer .lower-footer
-// .unikateur-signet svg{height:100%;width:7.1rem} + mobile{width:6rem}.
-const unikateurCls = [
-  'unikateur-signet col-span-12 col-start-1 justify-self-end',
-  'text-[1.5rem] font-normal tracking-[.07em] leading-[100%] normal-case mt-[6rem]',
-  'max-lg:text-[1.2rem] max-lg:mt-[4rem]',
-  '[&_svg]:h-full [&_svg]:w-[7.1rem] max-lg:[&_svg]:w-[6rem]',
-].join(' ');
-
-// footer .lower-footer .unikateur-signet a{display:inline-flex;white-space:pre} +
-// mobile{align-items:baseline}
-const unikateurLinkCls = 'inline-flex whitespace-pre max-lg:items-baseline';
+// -- the margin-top existed to clear the language nav that used to sit above
+// this (now removed per the user's request), so it's dropped on desktop;
+// kept at mobile since privacy still stacks below the language-independent
+// content there.
+const navFooterCls = 'nav-footer max-lg:mt-[1.5rem] max-lg:justify-self-start max-lg:text-left';
 
 export function Footer() {
   return (
     <footer className={footerCls}>
+      <div className={branchWrapperCls}>
+        {/* eslint-disable-next-line @next/next/no-img-element -- purely
+            decorative full-bleed illustration, not real content; no
+            next/image sizing/priority machinery needed for it. */}
+        <img className={branchImgCls} src="/images/decor/tree-branch.png" alt="" aria-hidden="true" />
+        {FALLING_LEAVES.map((leaf, i) => <FallingLeaf key={i} leaf={leaf} />)}
+      </div>
       <div className={upperFooterCls}>
-        <div className={emailCls}>
-          <h4 className={titleCls}>{site.t.contact}</h4>
-          <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
-          <br />
-          <a href={`tel:${site.contact.tel}`}>{site.contact.tel}</a>
-        </div>
-        <div className={socialCls}>
-          <h4 className={titleCls}>{site.t.social}</h4>
-          <RichText className="t3-ce-rte" html={nl2br(site.socialHtml)} />
-        </div>
-        <div className={addressCls}>
-          <h4 className={titleCls}>{site.t.address}</h4>
-          <RichText className="t3-ce-rte" html={nl2br(site.contact.address)} />
-        </div>
-        <div className={partnerCls}>
-          <h4 className={titleCls}>{site.t.partner}</h4>
-          <RichText html={site.partnerHtml} />
+        <div className={upperFooterRightCls}>
+          <div className={emailCls}>
+            <h4 className={titleCls}>{site.t.contact}</h4>
+            <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+            <br />
+            <a href={`tel:${site.contact.tel}`}>{site.contact.tel}</a>
+          </div>
+          <div className={socialCls}>
+            <h4 className={titleCls}>{site.t.social}</h4>
+            <RichText className="t3-ce-rte" html={nl2br(site.socialHtml)} />
+          </div>
+          <div className={addressCls}>
+            <h4 className={titleCls}>{site.t.address}</h4>
+            <RichText className="t3-ce-rte" html={nl2br(site.contact.address)} />
+          </div>
         </div>
       </div>
       <div className={lowerFooterCls}>
-        <nav className={navExtraCls} aria-label="Footer Menu">
-          {site.footerNav.map((n) => <AppLink key={n.uid} href={n.link}>{n.title}</AppLink>)}
-        </nav>
-        <div className={logoCls}>
-          <AppLink className="link-logo" href={site.pageLinks.home}><LogoIcon /></AppLink>
-        </div>
-        <div className={luxuryLogoCls}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="w-full" src="/slh_black.png" alt="Small Luxury Hotels of the World" />
-        </div>
-        <div className={footerBottomRightCls}>
-          <nav className={navLangCls} aria-label="Footer Language">
-            {site.languages.map((l) => <a key={l.code} className={l.code === 'en' ? 'router-link-active' : ''} href={l.link}>{l.title}</a>)}
+        <div className={lowerFooterRightCls}>
+          <nav className={navExtraCls} aria-label="Footer Menu">
+            {site.footerNav.map((n) => <AppLink key={n.uid} href={n.link}>{n.title}</AppLink>)}
           </nav>
-          <nav className={navFooterCls} aria-label="Footer Privacy">
-            {site.privacyNav.map((n) => <AppLink key={n.uid} href={n.link}>{n.title}</AppLink>)}
-          </nav>
-        </div>
-        <div className={unikateurCls}>
-          <a className={unikateurLinkCls} href={site.unikateur} target="_blank" rel="noopener"><span>{site.t.unikSignet}</span><UnikateurIcon /></a>
+          <div className={logoCls}>
+            <AppLink className="link-logo" href={site.pageLinks.home}><LogoIcon /></AppLink>
+          </div>
+          <div className={footerBottomRightCls}>
+            <nav className={navFooterCls} aria-label="Footer Privacy">
+              {site.privacyNav.map((n) => <AppLink key={n.uid} href={n.link}>{n.title}</AppLink>)}
+            </nav>
+          </div>
         </div>
       </div>
     </footer>
