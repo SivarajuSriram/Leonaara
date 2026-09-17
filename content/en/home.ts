@@ -15,8 +15,8 @@ export const hero: HeroSection = {
     text: '<p>und wir werden uns um den Rest kümmern<br>Ich bin ein kleiner Blindtext. Und zwar schon so lange ich denken kann. Es war nicht leicht zu verstehen, was es bedeutet, ein blinder Text zu sein: Man macht keinen Sinn. Wirklich keinen Sinn. Man wird zusammen hangsloseingeschoben und rumgedreht und wir werden uns um den Rest kümmern. Ich bin ein kleiner.</p>',
     img: [
       {
-        src: '/images/AlexMoling_Eriro_Winter-first-6.jpg', width: 3000, height: 2001, mime: 'image/jpeg', title: null,
-        alt: 'The eriro Alpine Hide as exclusive wooden chalet architecture before imposing rock wall in snow-covered winter landscape – alpine luxury retreat at alpenglow',
+        src: '/images/leonaara-hero-mountain-road.jpg', width: 3200, height: 1600, mime: 'image/jpeg', title: null,
+        alt: 'Gravel road cutting through a green alpine meadow toward a dark, storm-lit mountain ridge under a brooding sky',
         crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
       },
     ],
@@ -29,15 +29,15 @@ export const hero: HeroSection = {
     ],
     imgsummer: [
       {
-        src: '/images/unikateur_Bilder/AlexMoling_Eriro_Exterior.jpg', width: 3000, height: 2001, mime: 'image/jpeg', title: null,
-        alt: 'eriro Alpine Hide – exclusive wooden lodge amid flowering alpine meadow before imposing Wetterstein rock wall in golden evening light, pure alpine architecture',
+        src: '/images/leonaara-hero-mountain-road.jpg', width: 3200, height: 1600, mime: 'image/jpeg', title: null,
+        alt: 'Gravel road cutting through a green alpine meadow toward a dark, storm-lit mountain ridge under a brooding sky',
         crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
       },
     ],
     sideimgsummer: [
       {
-        src: '/images/unikateur_Bilder/eriro_alpinehide_lichtungfrau.jpg', width: 2560, height: 1708, mime: 'image/jpeg', title: null,
-        alt: 'Woman in black dress standing on sunlit forest clearing at Ehrwald – Wetterstein summits and spruce forests at eriro Alpine Hide',
+        src: '/images/leonaara-windswept-grass.jpg', width: 3199, height: 1791, mime: 'image/jpeg', title: null,
+        alt: 'Close-up of tall feathery reed grass plumes bending in the wind against a soft blue mountain backdrop',
         crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
       },
     ],
@@ -67,15 +67,30 @@ export const originsText: ImgTextSection = {
     ],
     imgleftsummer: [
       {
-        src: '/images/unikateur_Bilder/eriro_alpinehide_bergseemann.jpg', width: 2560, height: 1708, mime: 'image/jpeg', title: null,
-        alt: 'Meditation at crystal-clear Seebensee: Man practicing mindfulness before mirroring Zugspitze limestone wall at eriro Alpine Hide retreat',
-        crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
+        src: '/images/leonaara-tree-embrace.jpg', width: 3200, height: 1800, mime: 'image/jpeg', title: null,
+        alt: 'Bare arms wrapped around a tree trunk in a sunlit forest, hands clasped in a gentle embrace',
+        // Non-identity crop, left-anchored (x:0) on both variants: the source
+        // photo's hug is left-of-center (~31% across, measured against the
+        // full 7396px width), and object-fit:cover's default center-crop at
+        // this display slot's much narrower aspect ratio (501:390 desktop,
+        // 117:105 mobile) trimmed enough off both sides that the hug read as
+        // pushed toward the left edge of the frame. Anchoring the crop
+        // window's left edge at the image's own left edge (rather than
+        // centering it) is the rightward shift the user asked for -- pulling
+        // the window as far left as it'll go without cropping the arms
+        // themselves lands the hug close to centered (~43% desktop, ~49%
+        // mobile) instead of ~23%. Width fractions are targetAspectRatio /
+        // sourceAspectRatio (source is 7396/4160 = 1.778): 0.72 for desktop
+        // (501/390 / 1.778), 0.62 for mobile (117/105 / 1.778). Regenerate
+        // the actual cropped files with `npx tsx scripts/gen-image-crops.ts`
+        // after editing this.
+        crop: { default: { x: 0, y: 0, width: 0.72, height: 1 }, mobile: { x: 0, y: 0, width: 0.62, height: 1 } },
       },
     ],
     imgrightsummer: [
       {
-        src: '/images/Hendrik_Stüwe/Pool_Shooting_2605_09_neu.jpg', width: 2800, height: 1867, mime: 'image/jpeg', title: null,
-        alt: '',
+        src: '/images/leonaara-forest-fireflies.jpg', width: 3200, height: 1786, mime: 'image/jpeg', title: null,
+        alt: 'Fireflies glowing along a moss-covered forest path at night, beneath a crescent moon and starlit sky',
         crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
       },
     ],
@@ -108,35 +123,20 @@ export const roomSlider: RoomSliderSection = {
         size: '',
         previewimage: [
           {
-            src: '/images/Suiten/kadamba/AlexMoling_Eriro_Rooms-1.jpg', width: 8190, height: 5463, mime: 'image/jpeg', title: null,
-            alt: 'Living area of boum Suite: reclaimed wood ceiling, sculptural tree trunk daybed and linen sofa before panorama window with view of Wetterstein summits',
+            src: '/images/leonaara-kadamba-villa-2.jpg', width: 2400, height: 1350, mime: 'image/jpeg', title: null,
+            alt: 'Kadamba villa exterior surrounded by mature trees, with a lush landscaped entrance and covered carport',
             crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
           },
           {
-            src: '/images/Suiten/kadamba/AlexMoling_Eriro_Rooms-9.jpg', width: 8192, height: 5464, mime: 'image/jpeg', title: null,
-            alt: 'boum eriro Suite: reclaimed wood ceiling, stone lights and wool headboard framing double bed with white linen bedding and cashmere blanket on plank floor',
-            crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
-          },
-          {
-            src: '/images/Suiten/kadamba/AlexMoling_Eriro_Rooms-12.jpg', width: 2048, height: 1366, mime: 'image/jpeg', title: null,
-            alt: 'Bathroom of boum Suite with lime plaster walls, driftwood faucet, backlit mirror, reclaimed wood beam ceiling and glass rain shower',
-            crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
-          },
-          {
-            src: '/images/Suiten/kadamba/AlexMoling_Eriro_Rooms-5.jpg', width: 2001, height: 3000, mime: 'image/jpeg', title: null,
-            alt: 'Stylish interior of eriro Alpine Hide – sculptural designer light beneath reclaimed wood ceiling, linen fabrics and mountain panorama through window, warm sanctuary',
-            crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
-          },
-          {
-            src: '/images/Suiten/kadamba/AlexMoling_Eriro_Rooms-16.jpg', width: 8192, height: 5464, mime: 'image/jpeg', title: null,
-            alt: 'Private balcony lounge of boum Suite with upholstered daybed and wide view across green alpine meadows to summit silhouettes of Wetterstein',
+            src: '/images/leonaara-kadamba-villa-1.jpg', width: 1926, height: 817, mime: 'image/jpeg', title: null,
+            alt: 'Kadamba villa exterior at dusk with warm architectural lighting, wood-clad gable roof, stone accent wall and covered carport',
             crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
           },
         ],
         images: [
           {
-            src: '/images/eriro-alpine-hide-ehrwald-luxus-suite-boum-02.jpg', width: 1200, height: 1400, mime: 'image/jpeg', title: null,
-            alt: 'Mindful touch of rough tree bark in alpine forest – sensual nature connection and slowing down at eriro Alpine Hide retreat in Alps',
+            src: '/images/leonaara-kadamba-villa-1.jpg', width: 1926, height: 817, mime: 'image/jpeg', title: null,
+            alt: 'Kadamba villa exterior at dusk with warm architectural lighting, wood-clad gable roof, stone accent wall and covered carport',
             crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
           },
         ],
@@ -151,45 +151,15 @@ export const roomSlider: RoomSliderSection = {
         size: 'approx. 872 sq ft',
         previewimage: [
           {
-            src: '/images/Suiten/ananthameadows/AlexMoling_Eriro_Rooms-43.jpg', width: 7568, height: 5048, mime: 'image/jpeg', title: null,
-            alt: 'Eriro Suite living area with reclaimed wood ceiling, textured wool wall, sheepskin armchair before panorama window with terrace and view of conifer forests and mountain summits',
-            crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
-          },
-          {
-            src: '/images/Suiten/ananthameadows/AlexMoling_Eriro_Rooms-44.jpg', width: 8183, height: 5458, mime: 'image/jpeg', title: null,
-            alt: 'Eriro Suite seating area with white linen cushions, wooden table and pendant light before artful patchwork wool wall beneath rustic reclaimed wood beam ceiling',
-            crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
-          },
-          {
-            src: '/images/Suiten/ananthameadows/AlexMoling_Eriro_Rooms-51.jpg', width: 8186, height: 5460, mime: 'image/jpeg', title: null,
-            alt: 'Wisa Suite: reclaimed wood ceiling, natural stone wall and hand-woven dividers framing bed with white linen – sanctuary in honest materiality',
-            crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
-          },
-          {
-            src: '/images/Suiten/ananthameadows/AlexMoling_Eriro_Rooms-55.jpg', width: 8190, height: 5463, mime: 'image/jpeg', title: null,
-            alt: 'Bathroom of Wisa Suite: hand-plastered vanity, driftwood faucet, backlit mirror, reclaimed wood ceiling – purist elegance meets craftsmanship',
-            crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
-          },
-          {
-            src: '/images/Suiten/ananthameadows/AlexMoling_Eriro_Rooms-57.jpg', width: 8192, height: 5464, mime: 'image/jpeg', title: null,
-            alt: 'Cashmere blanket on wooden terrace of Wisa Suite at eriro with open view of Wetterstein massif, spruce forests and rock summits – alpine sanctuary',
-            crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
-          },
-          {
-            src: '/images/Suiten/ananthameadows/AlexMoling_Eriro_Rooms-77.jpg', width: 8192, height: 5464, mime: 'image/jpeg', title: null,
-            alt: 'Winter suite with wooden floor, desk, fur armchair and floor-to-ceiling window with panoramic view of snow-covered Zugspitze mountain range',
+            src: '/images/leonaara-anantha-meadow.jpg', width: 1642, height: 2000, mime: 'image/jpeg', title: null,
+            alt: 'Sunlit green hillside meadow with scattered trees rising toward a ridge under a wide blue sky',
             crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
           },
         ],
         images: [
           {
-            src: '/images/eriro-alpine-hide-ehrwald-luxus-suite-wisa-02.jpg', width: 1200, height: 1400, mime: 'image/jpeg', title: null,
-            alt: 'Couple resting closely embraced in sunlit alpine meadow near eriro Alpine Hide – carefree togetherness dressed in linen and golden light',
-            crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
-          },
-          {
-            src: '/images/unikateur_Bilder/Winter/eriro_alpinehide_fußstapfen.jpg', width: 2560, height: 3838, mime: 'image/jpeg', title: null,
-            alt: 'Deep footprints in powder snow at Wetterstein – snow-covered boots breaking trail through winter silence around eriro resort',
+            src: '/images/leonaara-anantha-meadow.jpg', width: 1642, height: 2000, mime: 'image/jpeg', title: null,
+            alt: 'Sunlit green hillside meadow with scattered trees rising toward a ridge under a wide blue sky',
             crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
           },
         ],
@@ -207,15 +177,15 @@ export const roomNatureText: ImgTextSection = {
     text: '<p>Driven by an uncompromising commitment to trust, quality, and lasting value, every creation is guided by four foundational promises: placing Human First by designing around the lives each space is meant to hold, embracing Nature Always not as an afterthought but as the living blueprint for how environments breathe and connect, curating Quiet Luxury where intentional simplicity elevates the subtle rhythms of everyday life, and ensuring everything is Built Forever to cradle the stories, memories, and generations that follow.</p>\n<p><a href="/projects" class="linkdetail">Explore Projects</a></p>',
     imgleft: [
       {
-        src: '/images/eriro-ehrwald-alpine-hide-luxus-natur-02.jpg', width: 1200, height: 950, mime: 'image/jpeg', title: null,
-        alt: 'Matte black rainfall shower with golden light beam beneath recycled spruce rafters, spa ritual room at eriro Alpine Hide',
+        src: '/images/leonaara-forest-canopy.jpg', width: 2464, height: 1856, mime: 'image/jpeg', title: null,
+        alt: 'Looking straight up through a dense green forest canopy at gnarled, intertwining tree branches',
         crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
       },
     ],
     imgright: [
       {
-        src: '/images/eriro-ehrwald-spa-alpinehide-suite-02.jpg', width: 1500, height: 1350, mime: 'image/jpeg', title: null,
-        alt: 'Cathedral suite at eriro with centuries-old spruce beams, bed with fur blanket, glass fireplace and integrated bath with matte black faucet beneath reclaimed wood ceiling',
+        src: '/images/leonaara-water-reflection.jpg', width: 2464, height: 1856, mime: 'image/jpeg', title: null,
+        alt: 'Rippling water surface reflecting a figure and trees in soft, fractured light and shadow',
         crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
       },
     ],
@@ -233,29 +203,29 @@ export const spaText: ImgTextSection = {
     text: '<p>Rooted in the belief that a strong foundation is the cornerstone of every enduring structure, Leonaara builds for the future by valuing quality over speed, design over crowding, and complete honesty at every step. Guided by a philosophy that places people at the center of each home, every space is conceived to breathe with natural light, abundant greenery, and effortless openness, while unobtrusive smart technology simplifies daily living without added complexity. By purposefully developing fewer, higher-caliber residences that honor the land, employing precision design, and choosing durable materials without compromise, we create enduring sanctuaries engineered for lasting comfort, genuine security, and generational value. </p>\n<p>&nbsp;</p>\n<p><a href="/about/" class="linkdetail">MEET THE FOUNDERS</a></p>',
     imgleft: [
       {
-        src: '/images/Hendrik_Stüwe/Pool_Shooting_2605_11.jpg', width: 2800, height: 1868, mime: 'image/jpeg', title: null,
-        alt: '',
+        src: '/images/leonaara-lakeside-repose.jpg', width: 2464, height: 1856, mime: 'image/jpeg', title: null,
+        alt: 'Woman in white seated on a folding chair on a lakeside lawn, framed beneath a dark pine bough with blurred foliage in the foreground',
         crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
       },
     ],
     imgright: [
       {
-        src: '/images/Hendrik_Stüwe/Pool_Shooting_2605_01_neu.jpg', width: 1867, height: 2800, mime: 'image/jpeg', title: null,
-        alt: '',
+        src: '/images/leonaara-misty-hills.jpg', width: 2000, height: 1116, mime: 'image/jpeg', title: null,
+        alt: 'Sunlit green hillside meadow with scattered trees rising toward a ridge under a wide blue sky',
         crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
       },
     ],
     imgleftsummer: [
       {
-        src: '/images/Hendrik_Stüwe/Pool_Shooting_2605_11.jpg', width: 2800, height: 1868, mime: 'image/jpeg', title: null,
-        alt: '',
+        src: '/images/leonaara-lakeside-repose.jpg', width: 2464, height: 1856, mime: 'image/jpeg', title: null,
+        alt: 'Woman in white seated on a folding chair on a lakeside lawn, framed beneath a dark pine bough with blurred foliage in the foreground',
         crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
       },
     ],
     imgrightsummer: [
       {
-        src: '/images/Hendrik_Stüwe/Pool_Shooting_2605_01_neu.jpg', width: 1867, height: 2800, mime: 'image/jpeg', title: null,
-        alt: '',
+        src: '/images/leonaara-misty-hills.jpg', width: 2000, height: 1116, mime: 'image/jpeg', title: null,
+        alt: 'Sunlit green hillside meadow with scattered trees rising toward a ridge under a wide blue sky',
         crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
       },
     ],

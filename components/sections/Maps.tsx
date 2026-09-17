@@ -20,17 +20,20 @@ export function Maps({ section }: { section: MapsSection }) {
   return (
     <div className={cls} {...{ uid: `c${section.id}` }}>
       {image ? (
-        // Back to full width, natural (uncropped) height -- every attempt to
-        // force a shorter height via object-cover (a 16:9 aspect-video, then
-        // a 2.6:1 band with object-position shifted to protect the pin) still
-        // read as "zoomed in", because ANY crop on a fixed-content graphic
-        // like this necessarily magnifies what's left relative to the whole.
-        // The only way to show this map without it looking zoomed is to not
-        // crop it at all -- full image, natural ~1450x980 (~1.48:1) ratio.
-        <div className="[grid-column:1/span_14] w-full overflow-hidden rounded-[1.6rem]">
-          {/* eslint-disable-next-line @next/next/no-img-element -- a single designed graphic, not a responsive photo needing next/image's crop machinery */}
-          <img src={image} alt={title || 'Location map'} className="block h-auto w-full" />
-        </div>
+        <>
+          <h2 className="h2 [grid-column:1/span_14] mt-[4rem] mb-[3rem] text-center">Location</h2>
+          {/* Back to full width, natural (uncropped) height -- every attempt to
+              force a shorter height via object-cover (a 16:9 aspect-video, then
+              a 2.6:1 band with object-position shifted to protect the pin) still
+              read as "zoomed in", because ANY crop on a fixed-content graphic
+              like this necessarily magnifies what's left relative to the whole.
+              The only way to show this map without it looking zoomed is to not
+              crop it at all -- full image, natural ~1450x980 (~1.48:1) ratio. */}
+          <div className="[grid-column:1/span_14] w-full overflow-hidden rounded-[1.6rem]">
+            {/* eslint-disable-next-line @next/next/no-img-element -- a single designed graphic, not a responsive photo needing next/image's crop machinery */}
+            <img src={image} alt={title || 'Location map'} className="block h-auto w-full" />
+          </div>
+        </>
       ) : (
         <div className="[grid-column:1/span_14] aspect-video w-full bg-ink/5 flex items-center justify-center">
           <span className="text-[1.4rem] tracking-[0.05em] text-ink/40 uppercase">

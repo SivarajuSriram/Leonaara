@@ -84,12 +84,18 @@ export function Lightbox({ images, index, onClose, onNavigate }: Props) {
           </button>
         </>
       ) : null}
+      {/* bg-canvas: matters for images with real transparency (e.g. the
+          Kadamba master plan PNG, keyed to alpha so it sits cleanly on the
+          page's own canvas-colored background in normal view) -- without it,
+          this dialog's dark bg-ink/95 backdrop showed through those
+          transparent pixels instead, so the same image looked wrong here
+          specifically. Opaque photos are unaffected either way. */}
       {/* eslint-disable-next-line @next/next/no-img-element -- a one-off full-size view, not a layout image needing next/image's responsive machinery */}
       <img
         src={staticSrc(img, 'default')}
         alt={img.alt ?? ''}
         onClick={(e) => e.stopPropagation()}
-        className="max-h-[90vh] max-w-[90vw] rounded-[0.8rem] object-contain"
+        className="max-h-[90vh] max-w-[90vw] rounded-[0.8rem] bg-canvas object-contain"
       />
     </div>,
     document.body,

@@ -67,9 +67,34 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
     // trigger against final, settled layout instead of relying on whatever
     // resize/scroll happens to trigger one next.
     document.fonts?.ready?.then(() => ScrollTrigger.refresh()).catch(() => {});
+    // Same root cause as the fonts.ready refresh above, different trigger:
+    // every ScrollTrigger (most visibly SplitWords.tsx's scroll-linked word
+    // fade-in) has its start/end computed from the rendered position/height
+    // at the moment it's created -- but next/image only reserves an
+    // aspect-ratio box up front and swaps the real pixels in once each
+    // image's own request resolves, which doesn't shift layout height the
+    // way a font swap does, EXCEPT for any image still missing explicit
+    // width/height (or a parent that sizes itself off the image rather than
+    // the reserved box), where the page genuinely reflows on load. With as
+    // many images as this site has, those late, uncoordinated reflows leave
+    // triggers below them pinned to stale bounds, which reads as the word
+    // animation "glitching"/re-fading once you scroll past where its
+    // (wrong) end boundary now falls. `load` doesn't bubble, so this listens
+    // in the capture phase on document instead of attaching one listener
+    // per <img>; debounced the same 150ms as the resize handler above since
+    // a content-heavy page can fire this dozens of times during initial load.
+    let imgT: ReturnType<typeof setTimeout> | undefined;
+    const onResourceLoad = (e: Event) => {
+      if (!(e.target instanceof HTMLImageElement)) return;
+      if (imgT) clearTimeout(imgT);
+      imgT = setTimeout(() => ScrollTrigger.refresh(), 150);
+    };
+    document.addEventListener('load', onResourceLoad, true);
     return () => {
       if (t) clearTimeout(t);
+      if (imgT) clearTimeout(imgT);
       window.removeEventListener('resize', onResize);
+      document.removeEventListener('load', onResourceLoad, true);
       kill();
     };
   }, []);

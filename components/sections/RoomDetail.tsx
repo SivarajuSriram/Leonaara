@@ -47,14 +47,26 @@ const roomContentCls = 'room-content col-start-9 col-span-4 -mt-[6rem] max-lg:co
 // + picture:last-child{margin-right:0} + img{height:9rem;width:9rem} + mobile{
 // margin-bottom:.5rem;margin-left:5.8rem;margin-top:3rem} + mobile picture{margin-right:1.5rem}
 // + mobile img{height:6rem;width:6rem}
-const roomIconsCls = 'room-icons flex ml-0 mt-[6rem] max-lg:mb-[.5rem] max-lg:ml-[5.8rem] max-lg:mt-[3rem]';
+// mobile margin-left dialed back from the verbatim 5.8rem to 3rem: with 3
+// icons (Kadamba's actual amenity count -- see icons.length below) at the
+// original spec's 6rem circle size and 1.5rem gap, the row's total width
+// plus that 5.8rem indent genuinely overflowed the right edge of a real
+// 390px mobile viewport (measured: row ran to x=430px, 40px past the
+// screen), clipping the third icon and its caption. Whatever content the
+// original reference had here either had fewer icons or was never checked
+// at this exact width; either way, a cut-off icon on an actual phone isn't
+// something to reproduce for fidelity's sake.
+const roomIconsCls = 'room-icons flex ml-0 mt-[6rem] max-lg:mb-[.5rem] max-lg:ml-[3rem] max-lg:mt-[3rem]';
 const roomIconPictureCls = '[&_img]:h-[9rem] [&_img]:w-[9rem] max-lg:[&_img]:h-[6rem] max-lg:[&_img]:w-[6rem]';
 // Visible caption under each icon, reusing the icon's own alt text as the
 // label (there's no separate caption field in the data) -- added at the
 // user's request so icons like "Concierge Service" read as text, not just
 // an unlabeled graphic.
 const roomIconCaptionCls = 'mt-[1rem] text-[1.4rem] tracking-[.05em] text-center max-lg:text-[1.1rem]';
-const roomIconWrapCls = (isLast: boolean) => `flex flex-col items-center ${isLast ? '' : 'mr-[4.5rem] max-lg:mr-[1.5rem]'}`;
+// max-lg:mr-[1rem] (was 1.5rem): trimmed alongside roomIconsCls's margin
+// above, for the same overflow reason -- every bit of width matters when
+// 3 icons already barely fit a 390px screen.
+const roomIconWrapCls = (isLast: boolean) => `flex flex-col items-center ${isLast ? '' : 'mr-[4.5rem] max-lg:mr-[1rem]'}`;
 // .room-info{flex-wrap:wrap;font-size:2rem;font-weight:300;grid-column-end:span 5;
 // grid-column-start:3;letter-spacing:.08em;line-height:125%;margin-top:6rem;
 // text-align:left;text-transform:uppercase} + mobile{font-size:1.3rem;letter-spacing:

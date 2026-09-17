@@ -10,12 +10,14 @@ export const site = {
         { uid: 85, title: 'Anantha Meadows', link: '/projects/ananthameadows/' },
       ],
     },
+    { uid: 9300, title: 'NRI Corner', link: '/nri/' },
     { uid: 95, title: 'Contact', link: '/contact/' },
   ] as NavItem[],
   footerNav: [
     { uid: 9057, title: 'Home', link: '/' },
     { uid: 9058, title: 'About', link: '/about/' },
     { uid: 44, title: 'Projects', link: '/projects/' },
+    { uid: 9300, title: 'NRI Corner', link: '/nri/' },
     { uid: 95, title: 'Contact', link: '/contact/' },
   ] as NavItem[],
   privacyNav: [
@@ -42,10 +44,10 @@ export const site = {
   // / "Telangana 501203.") because the first line alone was still wider than the
   // footer's address column, wrapping onto a 4th line -- see Footer.tsx's addressCls
   // comment for the matching column-width fix.
-  contact: { email: 'info@leonaara.com', tel: '+00 12345 67890', address: 'Sy No. 149,\r\nPrime Titania, 1st Floor,\r\nMokila, Telangana 501203.' },
+  contact: { email: 'hello@leonaara.com', tel: '+00 12345 67890', address: '1st Floor, Prime Titania,\r\n Above ICICI Bank,\r\nMokila, Telangana 501203.' },
   // raw value (no <br>); the footer applies nl2br like the original
   socialHtml:
-    '<a href="https://www.instagram.com/leonaara_org/" rel="nofollow" target="_blank" aria-label="Instagram">Instagram</a>\r\n<a href="https://www.linkedin.com/company/leonaarahyd/" rel="nofollow" target="_blank" aria-label="LinkedIn">LinkedIn</a>',
+    '<a href="https://www.instagram.com/leonaara_org/" rel="nofollow" target="_blank" aria-label="Instagram">Instagram</a>\r\n<a href="https://www.linkedin.com/company/leonaarahyd/" rel="nofollow" target="_blank" aria-label="LinkedIn">LinkedIn</a>\r\n<a href="https://www.facebook.com/leonaara/" rel="nofollow" target="_blank" aria-label="Facebook">Facebook</a>\r\n<a href="https://www.youtube.com/@Leonaara-infra" rel="nofollow" target="_blank" aria-label="YouTube">YouTube</a>',
   t: {
     menu: 'Menu', close: 'Close', email: 'Email', contact: 'Contact', partner: 'Partner', phone: 'Phone', address: 'Office Address',
     social: 'Follow us', request: 'Request', book: 'Book', visitSuite: 'Explore', year: 'y.', kidsage: 'Kids age',

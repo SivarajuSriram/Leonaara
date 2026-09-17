@@ -86,16 +86,22 @@ const roomContentWrapperCls = 'max-lg:pt-[147%]';
 // and {grid-column-end:span 10;grid-column-start:3} (shared with room-info/
 // room-button below, second block, same media query — applies together
 // with the first block since the two set disjoint properties).
-// whitespace-nowrap kept (per the user's explicit "single line" request),
-// but the fixed 6.7rem size is only safe for short one-word titles like
-// "Kadamba" -- at that size "Anantha Meadows" (more than twice as many
-// characters) overran the column, bled past the right edge of the
+// whitespace-nowrap kept on desktop (per the user's explicit "single line"
+// request), but the fixed 6.7rem size is only safe for short one-word
+// titles like "Kadamba" -- at that size "Anantha Meadows" (more than twice
+// as many characters) overran the column, bled past the right edge of the
 // viewport, and got silently clipped mid-word by body's overflow-x:hidden
 // (an earlier attempt let it wrap instead, which kept it on-screen but
 // broke the "single line" requirement). roomTitleSizeCls below picks a
 // smaller size only for titles too long to fit this box at the default
 // size, so short titles stay full-size and only the long one shrinks.
-const roomTitleCls = 'font-light tracking-normal leading-[88%] pt-[12rem] uppercase whitespace-nowrap col-start-8 col-span-3 max-lg:tracking-[.05em] max-lg:leading-[114%] max-lg:pt-[2rem] max-lg:col-start-3 max-lg:col-span-10';
+// max-lg:whitespace-normal resets nowrap on mobile: the smaller mobile
+// font size still isn't small enough to fit "Anantha Meadows" on one line
+// in this column at mobile widths (confirmed: 365px of text in a 292px
+// box), and nowrap there just repeats the same overflow/clip bug on a
+// narrower screen. Wrapping onto two lines at mobile is fine; it isn't
+// what the user's screenshot flagged, which was specifically desktop.
+const roomTitleCls = 'font-light tracking-normal leading-[88%] pt-[12rem] uppercase whitespace-nowrap col-start-8 col-span-3 max-lg:whitespace-normal max-lg:tracking-[.05em] max-lg:leading-[114%] max-lg:pt-[2rem] max-lg:col-start-3 max-lg:col-span-10';
 // Threshold picked empirically against this column's actual available
 // width (col-start-8 to the viewport's right margin) -- "Kadamba" (7
 // chars) fits at full size with room to spare; "Anantha Meadows" (15
@@ -133,7 +139,11 @@ const roomDescriptionCls = `room-description ${roomGridColCls} ml-[9rem] mt-[3re
 // the edge of the screen the same way the title did before that got its
 // own fix. The "|" is a reasonable proxy: prose descriptions don't
 // naturally contain literal pipe characters, short spec lines do.
-const roomDescriptionNowrapCls = (description: string) => (description.includes('|') ? 'whitespace-nowrap' : '');
+// Desktop-only (max-lg:whitespace-normal resets it): the desktop column is
+// wide enough for this line at full size, but mobile's narrower column
+// isn't, and nowrap there just pushed "G & G+1 Farm Villas" off the right
+// edge of the screen instead of onto a harmless second line.
+const roomDescriptionNowrapCls = (description: string) => (description.includes('|') ? 'whitespace-nowrap max-lg:whitespace-normal' : '');
 
 // mask_roomslider .navigation{align-self:flex-end;grid-column-end:span 2;
 // grid-column-start:8;grid-row-start:1;z-index:5} + mobile{align-self:flex-

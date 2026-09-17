@@ -67,7 +67,10 @@ export function Hero({ section }: { section: HeroSection }) {
     ? 'flex items-end h-fit pb-[14rem] [writing-mode:vertical-rl] [text-orientation:mixed] rotate-180 origin-center [grid-column:1/span_1] max-lg:[grid-column:12/span_1] max-lg:h-fit max-lg:pb-0 max-lg:pt-[4rem]'
     : 'flex items-end h-fit pb-[14rem] [writing-mode:vertical-rl] [text-orientation:mixed] rotate-180 origin-center [grid-column:1/span_1] max-lg:[grid-column:12/span_1] max-lg:h-fit max-lg:pb-0 max-lg:pt-[12rem]';
 
-  const titleimgCls = '[grid-column:9/span_5] pt-[6rem] max-lg:[grid-column:8/span_6] max-lg:[grid-row-start:2] max-lg:pt-[1.5rem]';
+  // max-lg:[grid-row-start:3] (was 2): bumped down one row to make room for
+  // titleh2Cls's own row -- see that comment below for the mobile overlap
+  // this and imageSmallCls's row were both shifted to fix.
+  const titleimgCls = '[grid-column:9/span_5] pt-[6rem] max-lg:[grid-column:8/span_6] max-lg:[grid-row-start:3] max-lg:pt-[1.5rem]';
 
   // .mask_hero .titleh2 (Hero.css, inside the max-width:1023px block) sets
   // font-size:6.5rem/font-weight:300/letter-spacing:0/line-height:88% with no
@@ -76,19 +79,58 @@ export function Hero({ section }: { section: HeroSection }) {
   // which none of the subpage/only-text ones do) — carried into all three
   // branches below as max-lg:text-[6.5rem] max-lg:font-light
   // max-lg:tracking-normal max-lg:leading-[88%].
+  //
+  // default branch's mobile row: explicitly bumped to row 2 (max-lg:
+  // [grid-row-start:2], replacing an inherited, unprefixed [grid-row-start:1]
+  // that put it in the SAME row as imageWrapperCls's hero image below --
+  // self-end plus a huge width-based margin-bottom (max-lg:mb-[calc(92%+2rem)])
+  // was standing in for a real second row, nudging the title up to
+  // approximately overlay just the top sliver of the image. That only held
+  // together for a short one-line title; Leonaara's actual heading here
+  // ("Bringing Purpose to Existence") wraps onto 4 lines at this width, so
+  // the same trick buried most of the image under close-to-illegible
+  // overlapping text instead. subpage's branch already sidesteps the same
+  // problem correctly (max-lg:row-[2/span_1], its own row below the image),
+  // so default now follows that same working pattern instead of the fragile
+  // overlap hack, at the cost of no longer matching the original short-title
+  // reference pixel-for-pixel at this breakpoint.
   const titleh2Cls =
     layout === 'default'
-      ? 'self-center [grid-column:2/span_4] [grid-row-start:1] max-lg:self-end max-lg:text-[6.5rem] max-lg:font-light max-lg:[grid-column:2/span_10] max-lg:tracking-normal max-lg:leading-[88%] max-lg:mb-[calc(92%+2rem)]'
+      ? 'self-center [grid-column:2/span_4] [grid-row-start:1] max-lg:self-start max-lg:text-[6.5rem] max-lg:font-light max-lg:[grid-column:2/span_10] max-lg:[grid-row-start:2] max-lg:tracking-normal max-lg:leading-[88%] max-lg:mt-[3rem]'
       : layout === 'subpage'
       ? '[grid-column:2/span_4] [grid-row-start:2] mt-[-18rem] max-lg:self-end max-lg:[grid-column:2/span_10] max-lg:row-[2/span_1] max-lg:text-[6.5rem] max-lg:font-light max-lg:tracking-normal max-lg:leading-[88%] max-lg:mb-[calc(92%+2rem)] max-lg:mt-[9rem]'
       : 'self-center [grid-column:2/span_4] [grid-row-start:1] max-lg:self-center max-lg:[grid-column:2/span_12] max-lg:text-[6.5rem] max-lg:font-light max-lg:tracking-normal max-lg:leading-[88%]';
 
+  // max-lg:[grid-row-start:4] (was 3): bumped down one row, same reason as
+  // titleimgCls above.
+  // w-[101.5%] (default layout only): the small accent image, sized 1.5%
+  // wider than its grid cell per the user's explicit request -- Picture's
+  // own img is h-auto w-full, so it just scales proportionally to whatever
+  // width this wrapper resolves to.
   const imageSmallCls =
     layout === 'default'
-      ? '[grid-column:3/span_2] [grid-row-start:2] mt-[-3.5rem] max-lg:[grid-column:4/span_5] max-lg:[grid-row-start:3] max-lg:mt-[4.5rem]'
+      ? 'w-[101.5%] [grid-column:3/span_2] [grid-row-start:2] mt-[-3.5rem] max-lg:[grid-column:4/span_5] max-lg:[grid-row-start:4] max-lg:mt-[4.5rem]'
       : '[grid-column:3/span_2] [grid-row-start:1] mt-[-6rem] max-lg:[grid-column:4/span_6] max-lg:row-[1/span_1] max-lg:mb-0 max-lg:mt-[4.5rem]';
 
+  // Only-text pages that also use titleh2 (Projects, the shared contact-form
+  // hero) already put that heading in this same left slot (titleh2Cls below,
+  // [grid-column:2/span_4] [grid-row-start:1]) -- rendering text there too
+  // would collide with it. Pages with no titleh2 (About) have that slot free,
+  // so text can sit there instead, sharing the image's row on the left the
+  // way the image sits on the right (per the user's explicit "same row"
+  // request). hasHeading picks between the two rendering paths below.
+  const hasHeading = Boolean(c.titleh2);
+
   const textCls = '[grid-column:1/span_4] ml-[9rem] mt-[3rem] max-lg:[grid-column:1/span_12] max-lg:ml-[5.8rem] max-lg:mt-[1.5rem]';
+  // Sibling-of-imageWrapperCls path (no titleh2): needs its own row-start to
+  // land level with the image -- nested, it inherited row 1 implicitly from
+  // imageWrapperCls itself; as a sibling in the outer grid it needs it stated.
+  const textClsLeft = `${textCls} [grid-row-start:1]`;
+  // Nested-in-imageWrapperCls path (titleh2 present): grid-column:1/span_4 is
+  // relative to imageWrapperCls's own 4-column subgrid (which sits at
+  // columns 9-12 of the page grid for only-text), so this lands on the
+  // right, below the heading -- the site's original, unmodified behavior.
+  const textClsNested = textCls;
 
   // .image-big's mobile align-self:flex-end (Hero.css, .mask_hero.hero-subpage
   // .image-big inside the max-width:1023px block) is subpage-only; hero-default's
@@ -100,13 +142,16 @@ export function Hero({ section }: { section: HeroSection }) {
       <div className="grid-container">
         <div className={imageWrapperCls}>
           {c.title ? <h1 className={titleCls} dangerouslySetInnerHTML={{ __html: c.title }} /> : null}
-          {c.text && onlyText ? <RichText className={textCls} html={c.text} /> : null}
+          {c.text && onlyText && hasHeading ? <RichText className={textClsNested} html={c.text} /> : null}
           {!onlyText && big.map((img, i) => (
             <div className={imageBigCls} key={i} ref={i === 0 ? bigRef : undefined}>
               <Picture image={img} widthD={1014} heightD={780} widthM={340} heightM={260} lazy={false} />
             </div>
           ))}
         </div>
+        {/* Sibling of imageWrapperCls, not nested inside it -- see textClsLeft's
+            own comment for why nesting put this in the wrong column. */}
+        {c.text && onlyText && !hasHeading ? <RichText className={textClsLeft} html={c.text} /> : null}
         {c.titleimg && layout === 'default' ? <p className={`h1 ${titleimgCls}`} dangerouslySetInnerHTML={{ __html: c.titleimg }} /> : null}
         {c.titleh2 ? <SplitWords as="h2" className={titleh2Cls} html={c.titleh2} /> : null}
         {!onlyText && small.map((img, i) => (

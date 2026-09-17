@@ -27,8 +27,13 @@ export function useParallax(ref: RefObject<HTMLElement | null>, speed: number) {
       // (grid rows stretch to their tallest item by default), which hands GSAP's
       // ScrollTrigger a different scroll range to compute progress against and
       // puts the parallax offset out of phase with the original. Target the
-      // <picture> descendant to match; fall back to the ref itself if there isn't one.
-      const target = ref.current.querySelector('picture') ?? ref.current;
+      // <picture> descendant(s) to match -- querySelectorAll so a wrapper
+      // stacking more than one image (ImgText.tsx's imageLeftCls/imageRightCls,
+      // when a side has more than one image) gets the effect on each of them,
+      // not just whichever happens to be first; effects() accepts a NodeList.
+      // Falls back to the ref itself if there's no <picture> inside it.
+      const targets = ref.current.querySelectorAll('picture');
+      const target = targets.length > 0 ? targets : ref.current;
       triggers = s.effects(target, { speed }) as ScrollTrigger[];
     });
     return () => {

@@ -40,7 +40,17 @@ const navPrevCls = `prev ${navArrowCls} rotate-180`;
 // reference extraction.
 const clickableSlideCls = 'cursor-pointer';
 
-export function ImgSlider({ section }: { section: ImgSliderSection }) {
+// alwaysCentered: keeps centeredSlides on at every breakpoint (the original
+// only centers below 1024px, per the `breakpoints` override below) -- opted
+// into by PlansTabs.tsx so a single master-plan image sits centered in the
+// viewport rather than pinned to the left edge like the room-photo carousels
+// this same component renders elsewhere, without changing THEIR behavior.
+// loop: Swiper's infinite-loop mode (duplicates slides so prev/next never
+// hit an end) -- on by default (matches the original room-photo carousels),
+// but PlansTabs.tsx opts out per the user's explicit "no need of infinite
+// loop for the floorplans" request, since a 1-4 image technical plan gallery
+// reads oddly cycling back to itself the way a large photo set doesn't.
+export function ImgSlider({ section, alwaysCentered = false, loop = true }: { section: ImgSliderSection; alwaysCentered?: boolean; loop?: boolean }) {
   const images = section.content.images;
   const { prevRef, nextRef, onSwiper } = useSwiperExternalNav();
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -55,7 +65,7 @@ export function ImgSlider({ section }: { section: ImgSliderSection }) {
         modules={[FreeMode, Navigation, Keyboard, A11y, Autoplay]}
         freeMode={{ momentum: true, momentumRatio: 0.09, momentumBounce: false, sticky: true }}
         centeredSlides
-        breakpoints={{ 1024: { centeredSlides: false } }}
+        breakpoints={alwaysCentered ? undefined : { 1024: { centeredSlides: false } }}
         spaceBetween={0}
         slidesPerGroup={1}
         // The original (Imgslider.vue) also passes `variable-width: true`, a
@@ -66,7 +76,7 @@ export function ImgSlider({ section }: { section: ImgSliderSection }) {
         // below is Swiper's modern replacement for the same variable-width-
         // slide behavior and is already present, so this is a faithful
         // fidelity gap, not a functional regression.
-        loop
+        loop={loop}
         speed={650}
         slidesPerView="auto"
         keyboard

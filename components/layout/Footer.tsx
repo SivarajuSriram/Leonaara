@@ -134,8 +134,19 @@ const lowerFooterCls = [
 // footprint only reaches ~55-58% across the footer (see below), well short
 // of the text columns confined to col-start-8+, so painting it above those
 // containers hides the border line under the branch/leaves without ever
-// covering the real text content.
-const branchWrapperCls = 'pointer-events-none absolute bottom-0 left-0 z-20 w-[120rem] max-w-[100%] max-lg:w-[64rem]';
+// covering the real text content -- true on desktop, where the text columns
+// stay clear of the tree's footprint, but NOT on mobile: max-lg:contents on
+// upperFooterRightCls/lowerFooterRightCls unwraps their children back into
+// the footer's own full-width mobile grid (email/nav/address/social all
+// spread edge-to-edge there, no clear column reserved), while the tree
+// itself is still capped at max-w-[100%] of that same full mobile width --
+// so at mobile its foliage genuinely lands on top of real nav/address text
+// (confirmed: "Projects"/"Contact" rendered with their first letter
+// literally painted over by a leaf). max-lg:z-[5] drops it below
+// upper-footer/lower-footer's z-10 on mobile only, so text always wins the
+// overlap there; the border-line-hiding trick stays intact on desktop,
+// where it was actually needed.
+const branchWrapperCls = 'pointer-events-none absolute bottom-0 left-0 z-20 max-lg:z-[5] w-[120rem] max-w-[100%] max-lg:w-[64rem]';
 const branchImgCls = 'block w-full h-auto opacity-90';
 
 // Leaf-color palette sampled directly from public/images/decor/tree-branch.png
