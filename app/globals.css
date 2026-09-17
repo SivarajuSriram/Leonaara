@@ -23,6 +23,15 @@
   --color-ink: #211d1d;
   --color-beige: #e4e0db;
   --color-canvas: #F2F1EF;
+  /* Deep/soft forest-green pair, same sage family as the leaf-branch
+     artwork's own foliage (see BRANCH_LEAF_COLORS in ImgText.tsx) but
+     pulled darker than anything in that palette -- the artwork's own
+     greens are all quite pale/light, which read as almost no contrast
+     against this site's off-white canvas once used as a button hover
+     fill; these two are deliberately deeper so light text stays legible
+     over them. */
+  --color-leaf-deep: #3f5c34;
+  --color-leaf-soft: #6f8f5c;
   --font-sans: karol-sans, sans-serif;
   --font-serif: 'Junge', serif;
 }
@@ -365,21 +374,6 @@ main a:hover {
   color:#211d1d;
   text-decoration-color:#e4e0db;
 }
-a.linkdetail {
-  font-size:2rem;
-  font-weight:700;
-  font-weight:300;
-  letter-spacing:.08em;
-  line-height:125%;
-  text-transform:uppercase;
-}
-@media (max-width:1023px) {
-  a.linkdetail {
-    font-size:1.7rem;
-    letter-spacing:.08em;
-    line-height:94%;
-  }
-}
 :where(ul:not(.multiselect-options)) {
   display:inline-block;
   font-size:2rem;
@@ -508,22 +502,25 @@ main #Bs-BookingWidget .Bs-Guest .Bs-Guest__PaymentMethod ul {
 
 /* Shared link/button classes -- unlayered (see the comment at the top of this file). */
 .ht-biglink {
+  border:2px solid #e4e0db;
+  display:inline-block;
   font-size:4.5rem;
   font-weight:300;
   letter-spacing:.08em;
   line-height:111%;
-  text-decoration:underline;
+  padding:1.5rem 2rem;
+  text-decoration:none;
   text-transform:uppercase;
+  position:relative;
+  overflow:hidden;
 }
 @media (max-width:1023px) {
   .ht-biglink {
     font-size:3.5rem;
     letter-spacing:.05em;
     line-height:114%;
+    padding:1rem 2rem;
   }
-}
-.ht-biglink:hover {
-  text-decoration-color:transparent;
 }
 .small-font {
   font-size:2rem;
@@ -548,6 +545,8 @@ a.ht-button {
   padding:1.5rem 2rem;
   text-decoration:none;
   text-transform:uppercase;
+  position:relative;
+  overflow:hidden;
 }
 @media (max-width:1023px) {
   a.ht-button {
@@ -556,16 +555,134 @@ a.ht-button {
     line-height:131%;
   }
 }
-a.ht-button:hover {
-  background-color: var(--color-canvas);
-}
 @media (max-width:1023px) {
   a.ht-button {
     padding:1rem 2rem;
   }
 }
+/* a.linkdetail: the "Explore Projects" / "Meet the Founders" CTA that
+   RichText injects raw from CMS text fields (see ImgText.tsx's textCls
+   comment) -- used to just be underlined text inheriting from the generic
+   `main a` rule (@layer base, above); per the user's "all the buttons with
+   underlines should look like an actual button with borders" request it
+   gets the same bordered-button treatment as ht-button/ht-biglink here,
+   which (being unlayered like this whole section) wins over that inherited
+   underline regardless of layer order. */
+a.linkdetail {
+  border:2px solid #e4e0db;
+  display:inline-block;
+  font-size:2rem;
+  font-weight:300;
+  letter-spacing:.08em;
+  line-height:125%;
+  padding:1.5rem 2rem;
+  text-decoration:none;
+  text-transform:uppercase;
+  position:relative;
+  overflow:hidden;
+}
+@media (max-width:1023px) {
+  a.linkdetail {
+    font-size:1.7rem;
+    letter-spacing:.08em;
+    line-height:94%;
+    padding:1rem 2rem;
+  }
+}
 .filled,.filled * {
   fill:currentColor;
+}
+
+/* Water-fill hover for both button styles: two oversized discs sit below
+   each button and rise into view on hover, clipped by the button's own
+   overflow:hidden so only their curved tops show through -- reads as a
+   wavy waterline filling the button, and the slow rotation while hovered
+   keeps that waterline gently undulating instead of freezing flat. z-index
+   -1 (on a position:relative button, so the -1 has a stacking context to
+   resolve against) keeps both discs behind the button's own text: raw
+   inline text always paints after negative-z-index siblings in normal
+   stacking-context paint order, so no extra span wrapper around the link
+   text is needed for it to stay legible on top. Fill color is a deep/soft
+   forest-green pair (--color-leaf-deep/-soft, same sage family as the
+   leaf-branch artwork -- see ImgText.tsx's BRANCH_LEAF_COLORS), not the
+   button's own beige border/canvas page background -- tried plain beige
+   first and it was nearly invisible (beige-on-off-white is ~2% contrast
+   on this site's pale palette); a nature green rising behind the text
+   plus flipping the text to canvas on hover keeps the same "filling up"
+   read while actually being visible, and reads as an intentional callback
+   to the leaf motif rather than a generic dark overlay (tried ink first,
+   worked but had nothing to do with the site's nature theme).
+   width/height are percentages of the button's own width/height
+   respectively (not aspect-ratio off just the width) deliberately: these
+   buttons are short and wide, so sizing a "circle" purely off the width
+   made it many times taller than the button itself, which meant even its
+   fully-hidden `bottom` offset still left the disc overlapping the whole
+   box -- the flatter, explicitly-sized ellipse here actually clears the
+   box at rest and shows a real curved waterline on hover instead of a
+   permanent solid fill. .wave-fill is the same treatment applied to plain
+   <button> elements that already carry their own border/padding via
+   Tailwind utilities (ContactForm.tsx's Submit button) -- it only supplies
+   the position:relative/overflow:hidden the pseudo-elements need, not a
+   border, so it layers onto whatever button styling is already there.
+   :not(:disabled) on every hover selector below keeps a disabled Submit
+   button inert on hover (harmless no-op on the anchor-based buttons, which
+   never match :disabled) instead of filling with green for a button that
+   can't actually be clicked yet. */
+.wave-fill {
+  position:relative;
+  overflow:hidden;
+}
+a.ht-button::before, a.ht-button::after,
+.ht-biglink::before, .ht-biglink::after,
+a.linkdetail::before, a.linkdetail::after,
+.wave-fill::before, .wave-fill::after {
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:-280%;
+  width:220%;
+  height:250%;
+  background:var(--color-leaf-deep);
+  border-radius:50%;
+  transform:translateX(-50%) rotate(0deg);
+  transition:bottom .7s cubic-bezier(.4,0,.2,1);
+  z-index:-1;
+  pointer-events:none;
+}
+a.ht-button::after, .ht-biglink::after, a.linkdetail::after, .wave-fill::after {
+  background:var(--color-leaf-soft);
+  opacity:.7;
+}
+a.ht-button:hover:not(:disabled), .ht-biglink:hover:not(:disabled),
+a.linkdetail:hover:not(:disabled), .wave-fill:hover:not(:disabled) {
+  color:var(--color-canvas);
+  transition:color .35s ease .2s;
+}
+a.ht-button:hover:not(:disabled)::before, a.ht-button:hover:not(:disabled)::after,
+.ht-biglink:hover:not(:disabled)::before, .ht-biglink:hover:not(:disabled)::after,
+a.linkdetail:hover:not(:disabled)::before, a.linkdetail:hover:not(:disabled)::after,
+.wave-fill:hover:not(:disabled)::before, .wave-fill:hover:not(:disabled)::after {
+  bottom:-150%;
+}
+a.ht-button:hover:not(:disabled)::before, .ht-biglink:hover:not(:disabled)::before,
+a.linkdetail:hover:not(:disabled)::before, .wave-fill:hover:not(:disabled)::before {
+  animation:water-wave 6s linear infinite;
+}
+a.ht-button:hover:not(:disabled)::after, .ht-biglink:hover:not(:disabled)::after,
+a.linkdetail:hover:not(:disabled)::after, .wave-fill:hover:not(:disabled)::after {
+  animation:water-wave 8s linear infinite reverse;
+}
+@keyframes water-wave {
+  from { transform:translateX(-50%) rotate(0deg); }
+  to { transform:translateX(-50%) rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  a.ht-button::before, a.ht-button::after,
+  .ht-biglink::before, .ht-biglink::after,
+  a.linkdetail::before, a.linkdetail::after,
+  .wave-fill::before, .wave-fill::after {
+    display:none;
+  }
 }
 
 /* Falling-leaf decoration over the footer's birch branch (Footer.tsx) -- each
@@ -618,6 +735,31 @@ a.ht-button:hover {
   .leaf-fall {
     animation: none;
     opacity: 0;
+  }
+}
+
+/* Gentle sway for the site-wide leaf-branch flourish (ImgText.tsx), on top
+   of its already-falling leaves -- the branch itself was previously
+   completely static, which read oddly next to leaves visibly detaching and
+   drifting off it. A tiny rotate (well under a degree either way) around
+   the trunk, not the whole box's center: the trunk is flush against the
+   right edge of the illustration (ImgText.tsx's w-[98%] ml-auto), so
+   pivoting from anywhere else would swing the heavy trunk end around
+   instead of the light, flexible foliage end, which reads backwards for a
+   branch anchored at one point. Kept deliberately subtle and slow --
+   anything faster/wider reads as the whole image shaking rather than
+   swaying in a breeze. */
+@keyframes branch-sway {
+  from { transform: rotate(-0.6deg); }
+  to { transform: rotate(0.6deg); }
+}
+.branch-sway {
+  animation: branch-sway 7s ease-in-out infinite alternate;
+  transform-origin: 97% 55%;
+}
+@media (prefers-reduced-motion: reduce) {
+  .branch-sway {
+    animation: none;
   }
 }
 

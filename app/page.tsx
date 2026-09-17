@@ -17,11 +17,11 @@ export default function HomePage() {
     <main>
       <BodyClass pageId={home.id} layout="layout-0" />
       <Hero section={hero} />
-      <ImgText section={originsText} leafSide="right" />
+      <ImgText section={originsText} leafSide="right" leaf />
       <Video section={originsVideo} />
       <RoomSlider section={roomSlider} />
-      <ImgText section={roomNatureText} leafSide="left" />
-      <ImgText section={spaText} leafSide="right" />
+      <ImgText section={roomNatureText} />
+      <ImgText section={spaText} />
     </main>
   );
 }

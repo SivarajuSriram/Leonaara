@@ -53,7 +53,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Header />
           <SmoothScroll>
             {children}
-            <Hero section={contactFormHero} />
+            {/* Hero's shared pt-[43rem]/22.5rem top padding (Hero.tsx) is
+                sized for a hero sitting at the very top of a page, clearing
+                the fixed header -- reused here as the "WE'D LOVE TO HEAR
+                FROM YOU" strip above the global contact form, mid-page,
+                where that much clearance just reads as a big empty gap
+                after whatever content came before it (e.g. the home page's
+                "Meet the Founders" section). Pulled up with a negative
+                margin on a wrapping div rather than touching Hero.tsx
+                itself, which stays untouched for the real page-top heroes
+                that still need the full clearance. */}
+            <div className="mt-[-20rem] max-lg:mt-[-8rem]">
+              <Hero section={contactFormHero} />
+            </div>
             <ContactForm section={globalContactFormSection} />
             <Footer />
           </SmoothScroll>

@@ -99,7 +99,14 @@ const imageRightCls = `${swiperWCls} image-right col-start-7 col-span-6 row-star
 // that matches them both. width:100% (from .swiper) does NOT apply to that
 // <p> though — it only has class "infotext", not "swiper" — so swiperWCls
 // is added just to the Swiper root, separately from this shared constant.
-const infotextSharedCls = 'infotext text-[2rem] font-light tracking-[.08em] leading-[125%] uppercase col-start-7 col-span-4 row-start-3 mt-[1.5rem] max-lg:text-[1.3rem] max-lg:tracking-[.05em] max-lg:leading-[131%] max-lg:col-start-4 max-lg:col-span-9 max-lg:mt-[0.5rem] max-lg:text-right';
+// whitespace-nowrap (desktop only -- dropped again at max-lg, where the
+// column is nearly full-width and text-right already reads fine wrapped):
+// Kadamba's infotext ("22 Acres | 800 Sq. Yds. | 81 Estates | G & G+1 Farm
+// Villas") was wrapping across two lines inside the narrow col-span-4 box,
+// per the user's "single line" request. Unlike RoomSlider's title, this
+// comfortably fits the remaining space out to the viewport's right edge at
+// this smaller 2rem size, so no extra font-size/length handling is needed.
+const infotextSharedCls = 'infotext text-[2rem] font-light tracking-[.08em] leading-[125%] uppercase whitespace-nowrap col-start-7 col-span-4 row-start-3 mt-[1.5rem] max-lg:text-[1.3rem] max-lg:tracking-[.05em] max-lg:leading-[131%] max-lg:whitespace-normal max-lg:col-start-4 max-lg:col-span-9 max-lg:mt-[0.5rem] max-lg:text-right';
 const infotextSwiperCls = `${swiperWCls} ${infotextSharedCls}`;
 
 // mask_teaserslider .infotext,.navigation{grid-row-start:3;margin-top:

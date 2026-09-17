@@ -53,10 +53,16 @@ const selectChevronStyle = {
   backgroundPosition: 'right 1.6rem center',
   backgroundSize: '1.2rem',
 };
+// wave-fill: the same water-fill hover as the site's other buttons
+// (ht-button/ht-biglink/linkdetail in globals.css) -- it only supplies
+// position:relative/overflow:hidden for the pseudo-elements, so the
+// border/padding/font styling below is untouched; the old instant
+// hover:bg-ink/hover:text-[...] swap is dropped since wave-fill's own
+// hover rule (color:canvas, :not(:disabled)-guarded) replaces it.
 const submitCls =
-  'inline-flex h-[5.6rem] items-center justify-center whitespace-nowrap border border-ink bg-transparent px-[3.5rem] text-[1.5rem] tracking-[0.03em] text-ink uppercase transition-colors outline-none hover:bg-ink hover:text-[#F5F4F2] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-ink';
+  'wave-fill inline-flex h-[5.6rem] items-center justify-center whitespace-nowrap border border-ink bg-transparent px-[3.5rem] text-[1.5rem] tracking-[0.03em] text-ink uppercase outline-none disabled:opacity-40 disabled:cursor-not-allowed';
 const compactSubmitCls =
-  'inline-flex h-[5rem] items-center justify-center whitespace-nowrap border border-ink bg-transparent px-[3.2rem] text-[1.5rem] tracking-[0.03em] text-ink uppercase transition-colors outline-none hover:bg-ink hover:text-[#F5F4F2] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-ink';
+  'wave-fill inline-flex h-[5rem] items-center justify-center whitespace-nowrap border border-ink bg-transparent px-[3.2rem] text-[1.5rem] tracking-[0.03em] text-ink uppercase outline-none disabled:opacity-40 disabled:cursor-not-allowed';
 
 export const VISIT_PURPOSES = ['Site Visit', 'Brochure Download', 'Other'] as const;
 

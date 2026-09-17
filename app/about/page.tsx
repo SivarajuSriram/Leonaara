@@ -40,12 +40,12 @@ export default function AboutPage() {
     <main>
       <BodyClass pageId={about.id} layout="layout-0" />
       <Hero section={hero} />
-      <ImgText section={imgtext1} leafSide="right" />
+      <ImgText section={imgtext1} />
       <Video section={video1} />
-      <ImgText section={imgtext2} leafSide="left" />
-      <ImgText section={imgtext3} leafSide="right" />
+      <ImgText section={imgtext2} />
+      <ImgText section={imgtext3} />
       <Img section={img} />
-      <ImgText section={imgtext4} leafSide="left" />
+      <ImgText section={imgtext4} />
       <Video section={video2} />
     </main>
   );

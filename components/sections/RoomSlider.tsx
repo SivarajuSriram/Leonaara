@@ -86,7 +86,23 @@ const roomContentWrapperCls = 'max-lg:pt-[147%]';
 // and {grid-column-end:span 10;grid-column-start:3} (shared with room-info/
 // room-button below, second block, same media query — applies together
 // with the first block since the two set disjoint properties).
-const roomTitleCls = 'text-[6.7rem] font-light tracking-normal leading-[88%] pt-[12rem] uppercase whitespace-nowrap col-start-8 col-span-3 max-lg:text-[3.5rem] max-lg:tracking-[.05em] max-lg:leading-[114%] max-lg:pt-[2rem] max-lg:col-start-3 max-lg:col-span-10';
+// whitespace-nowrap kept (per the user's explicit "single line" request),
+// but the fixed 6.7rem size is only safe for short one-word titles like
+// "Kadamba" -- at that size "Anantha Meadows" (more than twice as many
+// characters) overran the column, bled past the right edge of the
+// viewport, and got silently clipped mid-word by body's overflow-x:hidden
+// (an earlier attempt let it wrap instead, which kept it on-screen but
+// broke the "single line" requirement). roomTitleSizeCls below picks a
+// smaller size only for titles too long to fit this box at the default
+// size, so short titles stay full-size and only the long one shrinks.
+const roomTitleCls = 'font-light tracking-normal leading-[88%] pt-[12rem] uppercase whitespace-nowrap col-start-8 col-span-3 max-lg:tracking-[.05em] max-lg:leading-[114%] max-lg:pt-[2rem] max-lg:col-start-3 max-lg:col-span-10';
+// Threshold picked empirically against this column's actual available
+// width (col-start-8 to the viewport's right margin) -- "Kadamba" (7
+// chars) fits at full size with room to spare; "Anantha Meadows" (15
+// chars incl. the space) does not. 10 sits between the two.
+const roomTitleSizeCls = (title: string) => (title.length > 10
+  ? 'text-[5.2rem] max-lg:text-[2.9rem]'
+  : 'text-[6.7rem] max-lg:text-[3.5rem]');
 
 // mask_roomslider .room-content .room-button,.room-info{grid-column-end:
 // span 3;grid-column-start:8} + mobile (shared with h2 above){grid-column-
@@ -107,6 +123,17 @@ const roomButtonCls = `room-button ${roomGridColCls} mt-[9rem] max-lg:mt-[3rem]`
 // margin-top:3rem} is used below, in place of the price/size/people info
 // row, to show each room's description text instead.
 const roomDescriptionCls = `room-description ${roomGridColCls} ml-[9rem] mt-[3rem] max-lg:ml-0`;
+// whitespace-nowrap only for "|"-separated info-line descriptions (e.g.
+// Kadamba's "22 Acres | 800 Sq. Yds. | 81 Estates | G & G+1 Farm Villas",
+// per the user's "single line" request -- it was wrapping onto a second
+// line inside this narrow, ml-[9rem]-indented column) -- NOT applied
+// unconditionally to every room's description, since that field is
+// generically meant to hold a real prose paragraph (see the comment above)
+// and forcing an actual sentence onto one line would just overflow it off
+// the edge of the screen the same way the title did before that got its
+// own fix. The "|" is a reasonable proxy: prose descriptions don't
+// naturally contain literal pipe characters, short spec lines do.
+const roomDescriptionNowrapCls = (description: string) => (description.includes('|') ? 'whitespace-nowrap' : '');
 
 // mask_roomslider .navigation{align-self:flex-end;grid-column-end:span 2;
 // grid-column-start:8;grid-row-start:1;z-index:5} + mobile{align-self:flex-
@@ -192,10 +219,24 @@ export function RoomSlider({ section }: { section: RoomSliderSection }) {
             {rooms.map((r) => (
               <SwiperSlide key={r.uid} className="roomslide">
                 <div className={gridInnerCls}>
-                  <h2 className={roomTitleCls}>{r.title}</h2>
-                  <div className={roomDescriptionCls} dangerouslySetInnerHTML={{ __html: r.description }} />
+                  <h2 className={`${roomTitleCls} ${roomTitleSizeCls(r.title)}`}>{r.title}</h2>
+                  <div className={`${roomDescriptionCls} ${roomDescriptionNowrapCls(r.description)}`} dangerouslySetInnerHTML={{ __html: r.description }} />
                   <div className={roomButtonCls}>
-                    <Button href={suiteHref(r.uid)}>{site.t.visitSuite}</Button>
+                    {/* Anantha Meadows' own page force-404s (see
+                        app/projects/ananthameadows/page.tsx) -- it isn't
+                        public yet, so this shows "Coming Soon" instead of
+                        an Explore button that would link to a dead page.
+                        Rendered as an <a> with no href (matches a.ht-button's
+                        CSS selector for the border/padding styling, but
+                        without href it's not focusable or clickable) rather
+                        than Button/AppLink, plus pointer-events-none so it
+                        never shows the hover wave-fill either -- both cues
+                        that this one isn't a real link yet. */}
+                    {r.title === 'Anantha Meadows' ? (
+                      <a className="ht-button inline-block cursor-default pointer-events-none opacity-60">Coming Soon</a>
+                    ) : (
+                      <Button href={suiteHref(r.uid)}>{site.t.visitSuite}</Button>
+                    )}
                   </div>
                 </div>
               </SwiperSlide>

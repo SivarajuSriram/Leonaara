@@ -9,7 +9,7 @@ export const hero: HeroSection = {
   appearance: { layout: 'default', frameClass: 'default', spaceBefore: '', spaceAfter: '' },
   content: {
     herolayout: 'default',
-    title: 'INSPIRED BY THE FORCES THAT<br>\r\nSHAPE LIFE<br>\r\n',
+    title: '',
     titleh2: 'Bringing<br>\r\nPurpose<br>\r\nto Existence',
     titleimg: 'ROOTED TO THE ELEMENTS OF NATURE ',
     text: '<p>und wir werden uns um den Rest kümmern<br>Ich bin ein kleiner Blindtext. Und zwar schon so lange ich denken kann. Es war nicht leicht zu verstehen, was es bedeutet, ein blinder Text zu sein: Man macht keinen Sinn. Wirklich keinen Sinn. Man wird zusammen hangsloseingeschoben und rumgedreht und wir werden uns um den Rest kümmern. Ich bin ein kleiner.</p>',
@@ -145,7 +145,7 @@ export const roomSlider: RoomSliderSection = {
         uid: '4',
         pid: '85',
         title: 'Anantha Meadows',
-        description: '<p>Just a placeholder for now.</p>',
+        description: '',
         minprice: 'from 925,- € / night per person / All-In',
         people: 'for 2 persons',
         size: 'approx. 872 sq ft',
@@ -230,7 +230,7 @@ export const spaText: ImgTextSection = {
   appearance: { layout: 'default', frameClass: 'default', spaceBefore: '', spaceAfter: '' },
   content: {
     title: 'Our Foundations',
-    text: '<p>Rooted in the belief that a strong foundation is the cornerstone of every enduring structure, Leonaara builds for the future by valuing quality over speed, design over crowding, and complete honesty at every step. Guided by a philosophy that places people at the center of each home, every space is conceived to breathe with natural light, abundant greenery, and effortless openness, while unobtrusive smart technology simplifies daily living without added complexity. By purposefully developing fewer, higher-caliber residences that honor the land, employing precision design, and choosing durable materials without compromise, we create enduring sanctuaries engineered for lasting comfort, genuine security, and generational value. </p>\n<p>&nbsp;</p>\n<p><a href="/about/">MEET THE FOUNDERS</a></p>',
+    text: '<p>Rooted in the belief that a strong foundation is the cornerstone of every enduring structure, Leonaara builds for the future by valuing quality over speed, design over crowding, and complete honesty at every step. Guided by a philosophy that places people at the center of each home, every space is conceived to breathe with natural light, abundant greenery, and effortless openness, while unobtrusive smart technology simplifies daily living without added complexity. By purposefully developing fewer, higher-caliber residences that honor the land, employing precision design, and choosing durable materials without compromise, we create enduring sanctuaries engineered for lasting comfort, genuine security, and generational value. </p>\n<p>&nbsp;</p>\n<p><a href="/about/" class="linkdetail">MEET THE FOUNDERS</a></p>',
     imgleft: [
       {
         src: '/images/Hendrik_Stüwe/Pool_Shooting_2605_11.jpg', width: 2800, height: 1868, mime: 'image/jpeg', title: null,
