@@ -5,8 +5,8 @@ export const ananthaMeadows: PageContent = {
   slug: '/projects/ananthameadows/',
   backendLayout: 'defaultLayout',
   meta: {
-    title: "wisa Suite - living with a view of the vastness of the alpine pastures & mountains", description: "Living close to nature in the wisa Suite: flooded with light, with floor-to-ceiling glass fronts and direct access to the alpine meadows.", ogTitle: "WISA", ogDescription: "Living close to nature in the wisa Suite: flooded with light, with floor-to-ceiling glass fronts and direct access to the alpine meadows.", ogImage: null,
-    twitterTitle: "WISA", twitterDescription: "Living close to nature in the wisa Suite: flooded with light, with floor-to-ceiling glass fronts and direct access to the alpine meadows.", twitterImage: null, twitterCard: 'summary',
+    title: "Anantha Meadows - Leonaara", description: "Anantha Meadows is Leonaara's next low-density residence, set amid vast alpine meadows and mountain views. Coming soon.", ogTitle: "Anantha Meadows", ogDescription: "Anantha Meadows is Leonaara's next low-density residence, set amid vast alpine meadows and mountain views. Coming soon.", ogImage: null,
+    twitterTitle: "Anantha Meadows", twitterDescription: "Anantha Meadows is Leonaara's next low-density residence, set amid vast alpine meadows and mountain views. Coming soon.", twitterImage: null, twitterCard: 'summary',
     robots: { noIndex: false, noFollow: false },
   },
   columns: {

@@ -5,8 +5,8 @@ export const kadamba: PageContent = {
   slug: '/projects/kadamba/',
   backendLayout: 'defaultLayout',
   meta: {
-    title: "boum Suite - experience retreat and tranquillity at the edge of the forest", description: "The boum suite in the eriro - a retreat with a view of the untouched nature of the Alps. Experience the security and tranquillity of the forest. ", ogTitle: "BOUM", ogDescription: "The boum suite in the eriro - a retreat with a view of the untouched nature of the Alps. Experience the security and tranquillity of the forest. ", ogImage: null,
-    twitterTitle: "BOUM", twitterDescription: "The boum suite in the eriro - a retreat with a view of the untouched nature of the Alps. Experience the security and tranquillity of the forest. ", twitterImage: null, twitterCard: 'summary',
+    title: "Kadamba - Leonaara", description: "Kadamba spans 22 lush acres of low-density living: 81 estates of G and G+1 farm villas designed for privacy, tranquility and room to breathe.", ogTitle: "Kadamba", ogDescription: "Kadamba spans 22 lush acres of low-density living: 81 estates of G and G+1 farm villas designed for privacy, tranquility and room to breathe.", ogImage: null,
+    twitterTitle: "Kadamba", twitterDescription: "Kadamba spans 22 lush acres of low-density living: 81 estates of G and G+1 farm villas designed for privacy, tranquility and room to breathe.", twitterImage: null, twitterCard: 'summary',
     robots: { noIndex: false, noFollow: false },
   },
   columns: {

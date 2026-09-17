@@ -12,10 +12,10 @@ export const contact: PageContent = {
   meta: {
     title: 'Contact - Leonaara',
     description: 'Get in touch with Leonaara.',
-    ogTitle: 'Contact ',
+    ogTitle: 'Contact',
     ogDescription: 'Get in touch with Leonaara.',
     ogImage: null,
-    twitterTitle: 'Contact ',
+    twitterTitle: 'Contact',
     twitterDescription: 'Get in touch with Leonaara.',
     twitterImage: null,
     twitterCard: 'summary',
