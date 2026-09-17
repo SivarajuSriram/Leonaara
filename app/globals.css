@@ -596,8 +596,12 @@ a.linkdetail {
 /* Water-fill hover for both button styles: two oversized discs sit below
    each button and rise into view on hover, clipped by the button's own
    overflow:hidden so only their curved tops show through -- reads as a
-   wavy waterline filling the button, and the slow rotation while hovered
-   keeps that waterline gently undulating instead of freezing flat. z-index
+   wavy waterline filling the button. No rotation once risen (an earlier
+   version kept spinning the discs indefinitely while hovered -- per the
+   user's "after it gets filled, it is moving..." feedback, that read as
+   the fill never actually settling rather than staying filled, so the
+   rise is now the only motion: it fills in, then holds still until the
+   cursor leaves). z-index
    -1 (on a position:relative button, so the -1 has a stacking context to
    resolve against) keeps both discs behind the button's own text: raw
    inline text always paints after negative-z-index siblings in normal
@@ -619,7 +623,14 @@ a.linkdetail {
    fully-hidden `bottom` offset still left the disc overlapping the whole
    box -- the flatter, explicitly-sized ellipse here actually clears the
    box at rest and shows a real curved waterline on hover instead of a
-   permanent solid fill. .wave-fill is the same treatment applied to plain
+   permanent solid fill. Sized so the disc's curved edge clears the
+   button's top corners at the hover position (an ellipse this size left a
+   sliver of the button's own background showing at each top corner once
+   the rotation was removed above -- the rotation used to sweep that gap
+   out of view over time, but held static it just sat there uncovered; the
+   larger disc and higher hover position push the curve's edge-of-button
+   height above the box's top edge instead of just under it).
+   .wave-fill is the same treatment applied to plain
    <button> elements that already carry their own border/padding via
    Tailwind utilities (ContactForm.tsx's Submit button) -- it only supplies
    the position:relative/overflow:hidden the pseudo-elements need, not a
@@ -639,9 +650,9 @@ a.linkdetail::before, a.linkdetail::after,
   content:'';
   position:absolute;
   left:50%;
-  bottom:-280%;
+  bottom:-300%;
   width:220%;
-  height:250%;
+  height:280%;
   background:var(--color-leaf-deep);
   border-radius:50%;
   transform:translateX(-50%) rotate(0deg);
@@ -662,19 +673,7 @@ a.ht-button:hover:not(:disabled)::before, a.ht-button:hover:not(:disabled)::afte
 .ht-biglink:hover:not(:disabled)::before, .ht-biglink:hover:not(:disabled)::after,
 a.linkdetail:hover:not(:disabled)::before, a.linkdetail:hover:not(:disabled)::after,
 .wave-fill:hover:not(:disabled)::before, .wave-fill:hover:not(:disabled)::after {
-  bottom:-150%;
-}
-a.ht-button:hover:not(:disabled)::before, .ht-biglink:hover:not(:disabled)::before,
-a.linkdetail:hover:not(:disabled)::before, .wave-fill:hover:not(:disabled)::before {
-  animation:water-wave 6s linear infinite;
-}
-a.ht-button:hover:not(:disabled)::after, .ht-biglink:hover:not(:disabled)::after,
-a.linkdetail:hover:not(:disabled)::after, .wave-fill:hover:not(:disabled)::after {
-  animation:water-wave 8s linear infinite reverse;
-}
-@keyframes water-wave {
-  from { transform:translateX(-50%) rotate(0deg); }
-  to { transform:translateX(-50%) rotate(360deg); }
+  bottom:-100%;
 }
 @media (prefers-reduced-motion: reduce) {
   a.ht-button::before, a.ht-button::after,
