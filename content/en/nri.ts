@@ -75,7 +75,7 @@ export const nri: PageContent = {
             {
               uid: '9303-6', title: ' What documents will I need as an NRI to purchase a property?', info: '',
               text: '<p>Typically, documents such as a valid passport, PAN card, address proof and relevant NRI/OCI documentation may be required. Additional documentation can depend on your purchase, financing and legal requirements.</p>',
-              linktext: 'Get in touch', link: { href: '/contact/', target: null, class: null, title: null, linkText: 'Contact us', additionalAttributes: [] },
+              linktext: '', link: '',
             },
           ],
         },
