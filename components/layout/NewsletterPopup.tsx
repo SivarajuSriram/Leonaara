@@ -18,7 +18,7 @@ import Image from 'next/image';
 import { gsap, useGSAP } from '@/lib/gsap';
 import { ContactForm, globalContactFormSection } from '@/components/sections/ContactForm';
 
-const DISMISSED_KEY = 'eriro_popup_dismissed';
+const DISMISSED_KEY = 'leonaara_popup_dismissed';
 
 function hasBeenDismissed() {
   if (typeof sessionStorage === 'undefined') return false;
@@ -196,7 +196,7 @@ export function NewsletterPopup() {
             collapses to 0, hiding the image entirely. */}
         {step === 1 && (
           <div className="relative flex-1 self-stretch max-lg:h-[18.7rem] max-lg:flex-none max-lg:self-auto">
-            <Image src="/images/eriro-alpine-hide-oesterreich-ehrwald-luxus-08.jpg" alt="" fill sizes="(max-width: 1023px) 100vw, 620px" className="object-cover" quality={80} />
+            <Image src="/images/leonaara-lakeside-repose.jpg" alt="" fill sizes="(max-width: 1023px) 100vw, 620px" className="object-cover" quality={80} />
             <div className="absolute inset-0 bg-ink/20" />
           </div>
         )}

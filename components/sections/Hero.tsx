@@ -102,7 +102,7 @@ export function Hero({ section, centerText = false }: { section: HeroSection; ce
         // "Bringing Purpose" / "to Existence" -- at every width, per the
         // user's explicit request extended from mobile-only to desktop and
         // tablet too (was 3: Bringing / Purpose / to Existence, matching the
-        // original <br> markup copied from the eriro.at reference, which had
+        // original <br> markup copied from the reference page, which had
         // a shorter title). This project's :root font-size is vw-relative in
         // three different bands (2.7778vw below 768px, 1.502vw at
         // 768-1023px, 0.5208vw at >=1024px -- see globals.css), so the SAME

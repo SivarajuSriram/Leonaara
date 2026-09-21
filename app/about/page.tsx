@@ -4,7 +4,7 @@
 // FAQ-style accordion sections (Pools, Sauna, Relaxation and sound room),
 // the closing teaserslider, and the "Nature on the skin" break section were
 // all removed at the user's request, so this page's section list is Spa's
-// original minus those 5. The first video (the leftover eriro swimming
+// original minus those 5. The first video (a leftover swimming
 // clip, id 304 in content/en/about.ts) was removed at the user's later
 // explicit request; the trailing one (video2, id 300) has always had an
 // empty video array and already renders nothing (see Video.tsx), so it's

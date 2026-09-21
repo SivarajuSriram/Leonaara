@@ -1,8 +1,7 @@
 import type { PageContent } from '@/lib/content';
 
-// Cloned from eriro.at's /en/contact-and-arrival/ page design (hero,
-// directions accordion, map, second hero, contact form) at the user's
-// request. Per the user's own call: the directions accordion and map are
+// Contact page (hero, directions accordion, map, second hero, contact form).
+// Per the user's own call: the directions accordion and map are
 // left as placeholders (no real Leonaara address/location yet), and the
 // contact form is visual-only (no backend to submit to yet).
 export const contact: PageContent = {

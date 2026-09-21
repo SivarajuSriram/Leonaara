@@ -8,11 +8,10 @@ import { IncludePage } from '@/components/sections/IncludePage';
 export const metadata: Metadata = metadataFor(privacy);
 
 export default function PrivacyPage() {
-  // Was [first, include, last]: the trailing `last` section was an ADDITIVE+
-  // (a hotel-marketing vendor eriro used) promotional/legal block, unrelated
-  // to Leonaara and full of eriro-vendor links -- removed from the content
-  // itself (content/en/privacy.ts) rather than rendered-then-hidden here, per
-  // the user's "remove all external links that point to eriro" request.
+  // Was [first, include, last]: the trailing `last` section was a promotional/legal
+  // block from a third-party hotel-marketing vendor, unrelated to Leonaara --
+  // removed from the content itself (content/en/privacy.ts) rather than
+  // rendered-then-hidden here.
   const [first, include] = privacy.columns.colPos0;
   if (first.type !== 'mask_footerpagetext') throw new Error('expected footerpagetext');
   if (include.type !== 'hanthaincludepage_includepage') throw new Error('expected includepage');

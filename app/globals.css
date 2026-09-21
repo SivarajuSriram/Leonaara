@@ -442,7 +442,7 @@ main a:hover {
 picture {
   display:block;
 }
-.eriro-bg-attach {
+.bg-attach {
   height:100vh;
   left:0;
   -o-object-fit:cover;

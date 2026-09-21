@@ -1,7 +1,7 @@
 // lib/accordionIcons.ts
 // Four "plus" icon variants (i-accordionIcon1..4, cycling by index % 4), extracted
 // from the live site's rendered SVG (.accordion-icon .a1/.a2 path `d` attributes)
-// at https://eriro.at/en/alpine-hide/. OPEN_ICON is the single shared target both
+// from the reference page. OPEN_ICON is the single shared target both
 // paths morph to when an accordion opens (both a1 and a2 converge on the same
 // horizontal "minus" bar) -- confirmed identical across every variant on the live
 // site, matching spec §9.13's "icon .a1 and .a2 morph to the horizontal bar path".

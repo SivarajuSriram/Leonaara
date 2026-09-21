@@ -42,7 +42,6 @@ export type Partner = { uid: string; img: ImageRef[]; link: LinkRef | '' };
 export type PartnerMarqueeSection = Base<'mask_partnermarquee', { title: Html; text: Html; partners: Partner[] }>;
 export type FooterPageTextSection = Base<'mask_footerpagetext', { title: Html; text: Html }>;
 export type IncludePageSection = Base<'hanthaincludepage_includepage', { html: Html }>;
-export type CookieConsentButtonSection = Base<'mask_cookieconsentbutton', { buttontext: string }>;
 export type AccordionItem = { uid: string; title: Html; info: Html; text: Html; linktext: string; link: LinkRef | '' };
 export type AccordionsSection = Base<'mask_accordions', { title: Html; text: Html; accordion: AccordionItem[] }>;
 export type ListItem = { uid: string; title: Html; text: Html };
@@ -55,7 +54,7 @@ export type PageFilterItem = { uid: string; title: string; href: string };
 export type PageFilterSection = Base<'mask_pagefilter', { pages: PageFilterItem[] }>;
 export type RoomsFilterItem = { uid: string; title: string; slug: string; pid: string };
 export type RoomsSection = Base<'mask_rooms', { rooms: RoomsFilterItem[] }>;
-export type RoomDetailSection = Base<'mask_roomdetail', { room: Room; icons: ImageRef[] }>;
+export type RoomDetailSection = Base<'mask_roomdetail', { room: Room; icons: { alt: string }[] }>;
 export type ImgSliderSection = Base<'mask_imgslider', { images: ImageRef[] }>;
 export type RoomCtaSection = Base<'mask_roomcta', { room: { uid: string; title: string; asacode: string; bookingcode: string } }>;
 // `image` is an optional static location-map graphic (a designed illustration
@@ -64,10 +63,8 @@ export type RoomCtaSection = Base<'mask_roomcta', { room: { uid: string; title: 
 // No real address/coordinates exist for a live Google Maps embed yet, so this
 // still isn't a real map widget, just a nicer placeholder where one exists.
 export type MapsSection = Base<'mask_maps', { title: Html; image?: string }>;
-// Visual-only contact form: eriro's own contact page has no real backend
-// either (Powermail submits into TYPO3's own mail queue, which this project
-// has no equivalent of) -- ContactForm.tsx renders the fields but Submit is
-// inert until a real form backend exists.
+// Visual-only contact form: there is no form backend yet -- ContactForm.tsx
+// renders the fields but Submit is inert until a real form backend exists.
 export type ContactFormSection = Base<'powermail_pi1', { title: Html; text: Html }>;
 // `type: string` here would defeat literal narrowing on `Section.type` for
 // every other member (a bare string catch-all can't be excluded when a caller
@@ -84,7 +81,7 @@ export type UnknownSection = {
 export type Section =
   | HeroSection | ImgTextSection | ImgSection | VideoSection | QuoteSection | BreakSection
   | RoomSliderSection | TeaserSliderSection | PartnerMarqueeSection
-  | FooterPageTextSection | IncludePageSection | CookieConsentButtonSection
+  | FooterPageTextSection | IncludePageSection
   | AccordionsSection | ListSection | GallerySliderSection | GallerySection
   | NewsletterWidgetSection | VoucherWidgetSection
   | PageFilterSection | RoomsSection | RoomDetailSection | ImgSliderSection | RoomCtaSection

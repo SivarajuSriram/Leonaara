@@ -26,8 +26,8 @@ export const hero: HeroSection = {
     ],
     sideimg: [
       {
-        src: '/images/eriro-ehrwald-oesterreich-alpine-hide-08.jpg', width: 1200, height: 1600, mime: 'image/jpeg', title: null,
-        alt: 'Tyrolean felt boots with leather straps and Vibram sole in deep snow, traditional mountain boots leaving tracks at eriro Ehrwald',
+        src: '/images/leonaara-windswept-grass.jpg', width: 3199, height: 1791, mime: 'image/jpeg', title: null,
+        alt: 'Close-up of tall feathery reed grass plumes bending in the wind against a soft blue mountain backdrop',
         crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
       },
     ],
@@ -57,15 +57,30 @@ export const originsText: ImgTextSection = {
     text: '<p>Before there were structures, there were elements.<br/> Earth, water, air, light, and space have shaped existence for millennia. At Leonaara, we draw from these timeless forces to create environments that feel balanced, natural, and deeply connected to the way people want to live. Earth grounds us. Water brings calm. Air creates openness. Light brings life. Space allows us to breathe. These elements inspire how we think about architecture, from the way buildings meet the landscape to the way light moves through a home. Every detail is considered to create a sense of harmony between nature, design, and everyday living.</p>\n<p><a href="/projects/" class="linkdetail">Explore Projects</a></p>',
     imgleft: [
       {
-        src: '/images/eriro-ehrwald-alpine-hide-luxus-natur-01.jpg', width: 1200, height: 950, mime: 'image/jpeg', title: null,
-        alt: 'Snow-covered Wetterstein north face with rugged limestone ridges and ice fields beneath gray winter sky, telephoto perspective at Ehrwald',
-        crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
+        src: '/images/leonaara-tree-embrace.jpg', width: 3200, height: 1800, mime: 'image/jpeg', title: null,
+        alt: 'Bare arms wrapped around a tree trunk in a sunlit forest, hands clasped in a gentle embrace',
+        // Non-identity crop, left-anchored (x:0) on both variants: the source
+        // photo's hug is left-of-center (~31% across, measured against the
+        // full 7396px width), and object-fit:cover's default center-crop at
+        // this display slot's much narrower aspect ratio (501:390 desktop,
+        // 117:105 mobile) trimmed enough off both sides that the hug read as
+        // pushed toward the left edge of the frame. Anchoring the crop
+        // window's left edge at the image's own left edge (rather than
+        // centering it) is the rightward shift the user asked for -- pulling
+        // the window as far left as it'll go without cropping the arms
+        // themselves lands the hug close to centered (~43% desktop, ~49%
+        // mobile) instead of ~23%. Width fractions are targetAspectRatio /
+        // sourceAspectRatio (source is 7396/4160 = 1.778): 0.72 for desktop
+        // (501/390 / 1.778), 0.62 for mobile (117/105 / 1.778). Regenerate
+        // the actual cropped files with `npx tsx scripts/gen-image-crops.ts`
+        // after editing this.
+        crop: { default: { x: 0, y: 0, width: 0.72, height: 1 }, mobile: { x: 0, y: 0, width: 0.62, height: 1 } },
       },
     ],
     imgright: [
       {
-        src: '/images/AlexMoling_Eriro_Winter-first-13.jpg', width: 3000, height: 2001, mime: 'image/jpeg', title: null,
-        alt: 'eriro Alpine Hide – Meditative relaxation lounger with natural stone and wooden lattice before framed panoramic view of snow-covered alpine summit and winter landscape',
+        src: '/images/leonaara-forest-fireflies.jpg', width: 3200, height: 1786, mime: 'image/jpeg', title: null,
+        alt: 'Fireflies glowing along a moss-covered forest path at night, beneath a crescent moon and starlit sky',
         crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
       },
     ],
@@ -247,8 +262,8 @@ export const home: PageContent = {
     ogTitle: 'Leonaara',
     ogDescription: 'Leonaara designs fewer, higher-caliber residences inspired by the forces that shape life: earth, water, air, light and space. Explore Kadamba and Anantha Meadows.',
     ogImage: {
-      src: '/images/2c0a3fac2ab04ecb63b3c016f3214849.jpg', width: 4096, height: 2732, mime: 'image/jpeg', title: null,
-      alt: 'Young woman in black dress standing contemplatively on alpine meadow framed by spruce forest and Zugspitze Wetterstein limestone in golden evening light',
+      src: '/images/leonaara-hero-mountain-road.jpg', width: 3200, height: 1600, mime: 'image/jpeg', title: null,
+      alt: 'Gravel road cutting through a green alpine meadow toward a dark, storm-lit mountain ridge under a brooding sky',
       crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } },
     },
     twitterTitle: 'Leonaara',

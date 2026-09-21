@@ -1,5 +1,4 @@
-// Cloned from eriro.at's /en/contact-and-arrival/ page design:
-// hero, directions accordion, image, map, hero, contact form.
+// Contact page: hero, directions accordion, image, map, hero, contact form.
 // The directions accordion + map are placeholders (no real Leonaara
 // address yet), and the contact form is visual-only (no backend to submit
 // to yet) -- both per the user's explicit choice when this page was built.

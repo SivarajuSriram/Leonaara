@@ -1,13 +1,8 @@
 import type { ComponentType, SVGProps } from 'react';
 
-// Recreates the visual language of the original eriro icon SVGs
-// (public/images/Icons/EN-icons_EN_*.svg): the label curves along an open
-// circular stroke, with a glyph centered inside. Those originals are
-// bespoke illustrations (a drawn bed, record player, etc.) which can't be
-// generated here -- this uses a lucide-react icon in the center instead,
-// but keeps the same circular curved-label treatment so new concepts
-// ("Concierge Service" etc., which have no matching illustration) still
-// read as the same icon style rather than a plain generic icon.
+// A circular badge: the label curves along an open circular stroke, with a
+// lucide-react glyph centered inside, so concepts like "Concierge Service"
+// read as one consistent icon style.
 type Props = { id: string; label: string; icon: ComponentType<SVGProps<SVGSVGElement>> };
 
 const CX = 60;

@@ -3,13 +3,12 @@ import { useState, type FormEvent } from 'react';
 import type { ContactFormSection } from '@/lib/content';
 import { RichText } from '@/components/ui/RichText';
 
-// Visual-only: there's no form backend yet (eriro's own Powermail form posts
-// into TYPO3's mail queue, which this project has no equivalent of), so
-// Submit just prevents the page reload rather than sending anything.
+// Visual-only: there's no form backend yet, so Submit just prevents the page
+// reload rather than sending anything.
 // Wire up a real backend (API route, form service, mailto) before relying
 // on this for actual leads.
 //
-// Styling matches eriro.at's own contact-and-arrival form closely: a white
+// Styling: a white
 // card, sharp-cornered outlined fields (no fill, no border-radius) with
 // plain placeholder text (no separate label), and an outlined (not solid)
 // Submit button sized to its content, not full-width.

@@ -31,13 +31,7 @@ export const site = {
     { code: 'en', title: 'English', link: '/' },
   ],
   pageLinks: { home: '/', request: '/request/', contact: '/contact/' },
-  // Placeholder contact/social/booking details -- the original crawl's values all
-  // pointed at eriro.at's own accounts/booking engine (hide@eriro.at, the
-  // eriro.alpinehide Instagram/Facebook handles, a synxis booking link scoped to
-  // eriro's own hotel/chain IDs), none of which belong to Leonaara. Removed at
-  // the user's explicit request ("remove all external links that point to eriro
-  // or something related to that, use placeholder links for now") rather than
-  // left pointing at a real, unrelated business. Swap these for Leonaara's own
+  // Placeholder contact/social/booking details -- swap these for Leonaara's own
   // real values once they exist.
   // 3 lines (was 2) -- per the user's explicit "make the address come in 3 lines"
   // request. Rebalanced (was "Sy No. 149, Prime Titania," / "1st floor, Mokila,"

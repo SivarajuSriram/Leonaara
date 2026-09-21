@@ -2,7 +2,7 @@ import type { MapsSection } from '@/lib/content';
 
 // Placeholder only when there's no `image`: no real Leonaara address/coordinates
 // exist yet, so this reserves the map's spot in the page layout (same aspect
-// ratio the real eriro.at page's Google Maps embed uses) rather than wiring up
+// ratio a Google Maps embed would use) rather than wiring up
 // a fake pin. When a section does carry a designed location-map image (e.g.
 // Kadamba's), that renders instead -- still not a live Google Maps embed, but
 // closer to the real thing until real coordinates exist.

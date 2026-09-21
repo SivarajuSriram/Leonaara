@@ -8,14 +8,12 @@ import { SplitWords } from '@/components/ui/SplitWords';
 import { ArrowSliderIcon } from '@/components/ui/icons';
 import { useSwiperExternalNav } from '@/components/ui/useSwiperExternalNav';
 import { IconBadge } from '@/components/ui/IconBadge';
-import { BellRing, Building2, Trees } from 'lucide-react';
+import { BellRing, Building2, Sparkles, Trees } from 'lucide-react';
 
-// No source SVG exists for real-estate concepts like "Concierge Service" --
-// the icon library here is all literal eriro hotel-suite amenities (bed,
-// shower, sauna...). IconBadge recreates the original icons' circular
-// curved-label treatment around a lucide-react glyph instead of leaving the
-// mismatched hotel icons in place. Keyed by caption text since the data
-// itself is still a generic ImageRef, not a lucide icon name.
+// No source SVG exists for real-estate concepts like "Concierge Service", so
+// IconBadge draws a circular curved-label badge around a lucide-react glyph.
+// Keyed by caption text since the data only carries the caption, not an icon
+// name; any caption without a match gets the generic Sparkles glyph.
 const lucideIconByCaption: Record<string, typeof BellRing> = {
   'Concierge Service': BellRing,
   'Fully Serviced Estates': Building2,
@@ -60,12 +58,6 @@ const roomContentCls = 'room-content col-start-9 col-span-4 -mt-[6rem] max-lg:co
 // mobile/tablet (were indented 3rem from the left and ran off-center) per the
 // user's explicit "align those icons in the center" request.
 const roomIconsCls = 'room-icons flex ml-0 mt-[6rem] max-lg:mb-[.5rem] max-lg:ml-0 max-lg:w-full max-lg:justify-center max-lg:mt-[3rem]';
-const roomIconPictureCls = '[&_img]:h-[9rem] [&_img]:w-[9rem] max-lg:[&_img]:h-[6rem] max-lg:[&_img]:w-[6rem]';
-// Visible caption under each icon, reusing the icon's own alt text as the
-// label (there's no separate caption field in the data) -- added at the
-// user's request so icons like "Concierge Service" read as text, not just
-// an unlabeled graphic.
-const roomIconCaptionCls = 'mt-[1rem] text-[1.4rem] tracking-[.05em] text-center max-lg:text-[1.1rem]';
 // max-lg:mr-[1rem] (was 1.5rem): trimmed alongside roomIconsCls's margin
 // above, for the same overflow reason -- every bit of width matters when
 // 3 icons already barely fit a 390px screen.
@@ -142,17 +134,10 @@ export function RoomDetail({ section }: { section: RoomDetailSection }) {
         <span className="room-info-price w-full">{room.minprice}</span>
         <div className={roomIconsCls}>
           {icons.map((icon, i) => {
-            const LucideIcon = lucideIconByCaption[icon.alt];
+            const LucideIcon = lucideIconByCaption[icon.alt] ?? Sparkles;
             return (
               <div key={i} className={roomIconWrapCls(i === icons.length - 1)}>
-                {LucideIcon ? (
-                  <IconBadge id={`${section.id}-${i}`} label={icon.alt} icon={LucideIcon} />
-                ) : (
-                  <>
-                    <Picture image={icon} widthD={120} heightD={120} widthM={120} heightM={120} className={roomIconPictureCls} />
-                    {icon.alt ? <span className={roomIconCaptionCls}>{icon.alt}</span> : null}
-                  </>
-                )}
+                <IconBadge id={`${section.id}-${i}`} label={icon.alt} icon={LucideIcon} />
               </div>
             );
           })}

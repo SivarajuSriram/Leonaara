@@ -41,7 +41,7 @@ function tabCls(active: boolean) {
 }
 
 // Replaces the single decorative "boum.jpg" image that used to sit here
-// (a leftover eriro tree-bark photo) with the actual master plan and floor
+// (a leftover tree-bark photo) with the actual master plan and floor
 // plans fetched from the live kadamba.leonaara.com reference site, split into
 // tabs by category. Each tab reuses ImgSlider -- the same swipeable carousel
 // already used higher up on this page -- rather than a bespoke gallery, per

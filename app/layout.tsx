@@ -7,7 +7,6 @@ import { Footer } from '@/components/layout/Footer';
 import { ContactForm, globalContactFormSection } from '@/components/sections/ContactForm';
 import { Hero } from '@/components/sections/Hero';
 import { contactFormHero } from '@/content/en/contactFormShared';
-import { CookieConsentBanner } from '@/components/layout/CookieConsentBanner';
 // AmbientAudioToggle hidden for now (per the user's "hide the audio thing,
 // we can add it later" request) -- no real audio file exists yet anyway
 // (components/layout/AmbientAudioToggle.tsx's own NEEDS-AUDIO-FILE comment).
@@ -74,9 +73,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <Footer />
           </SmoothScroll>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="eriro-bg-attach" src="/HG.jpg" alt="" />
+          <img className="bg-attach" src="/HG.jpg" alt="" />
           {/* <NewsletterPopup /> -- hidden for now, see the import comment above */}
-          <CookieConsentBanner />
           {/* <AmbientAudioToggle /> -- hidden for now, see the import comment above */}
         </div>
       </body>

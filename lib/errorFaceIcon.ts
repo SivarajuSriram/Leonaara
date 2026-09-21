@@ -1,7 +1,6 @@
 // Mouth/eye morph targets for the 404 page's sad-face icon (ErrorFaceIcon.tsx), extracted
-// live from https://eriro.at (a nonexistent route) via a Playwright session with
-// navigator.webdriver spoofed to false (same technique as tests/e2e/cookie-consent.spec.ts --
-// automated sessions otherwise get a compressed/accelerated version of this whole sequence,
+// live from the reference site (a nonexistent route) via a Playwright session with
+// navigator.webdriver spoofed to false (automated sessions otherwise get a compressed/accelerated version of this whole sequence,
 // confirmed by comparing an unspoofed run's timings against a real screen recording of the
 // live page). Polled the SVG's path `d` attributes every 60ms from page load; both morphs are
 // real captured live states, not derived/guessed.

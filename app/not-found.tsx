@@ -1,5 +1,5 @@
 // Rebuilt 2026-09-08 from a fresh live extraction (getComputedStyle/outerHTML reads against
-// https://www.eriro.at, not the stale initial crawl this file was originally built from).
+// the reference page, not the stale initial crawl this file was originally built from).
 // That stale crawl had it wrong in three ways: (1) the glyph is a hand-drawn "sad face" SVG,
 // not the site LogoIcon; (2) the title is TWO lines — "Ooops!" then "something went wrong" —
 // the first line was missing entirely; (3) the real error page renders with NO header/nav/

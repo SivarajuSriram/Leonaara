@@ -28,7 +28,7 @@ export const nri: PageContent = {
         content: {
           herolayout: 'subpage', title: 'FOR OUR GLOBAL FAMILY', titleh2: 'NRI Corner', titleimg: '',
           text: '<p>Investing in a home back in India shouldn’t mean navigating it alone, from wherever you are. This is a straightforward guide to buying at Leonaara as a Non-Resident Indian, OCI or PIO cardholder: what you’re eligible for, what you’ll need, and how the whole process works from a distance.</p>',
-          img: [{ src: '/images/leonaara-hero-mountain-road.jpg', width: 3200, height: 1600, mime: 'image/jpeg', title: null, alt: 'Gravel road cutting through a green alpine meadow toward a dark, storm-lit mountain ridge under a brooding sky', crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } } }],
+          img: [{ src: '/images/leonaara-nri-family-trees.jpg', width: 3058, height: 1720, mime: 'image/jpeg', title: null, alt: 'A father lifting his young daughter into the air as the mother looks on, in a sunlit park beneath large old trees', crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } } }],
           sideimg: [], imgsummer: [], sideimgsummer: [],
         },
       },
@@ -37,7 +37,7 @@ export const nri: PageContent = {
         content: {
           title: 'RETURN TO YOUR ROOTS,<br>\r\nON YOUR TERMS.',
           text: '<p>Being miles away shouldn’t mean being out of touch with your investment. Our NRI services are designed to make owning property in India simpler, more transparent and more convenient; from choosing the right home to completing documentation and taking possession.</p><p>With trusted processes, expert assistance and end-to-end support, we help you make an informed property decision, even when you’re not physically here.</p><p>Because distance should never come between you and a place you can call your own.</p>',
-          imgleft: [{ src: '/images/leonaara-misty-hills.jpg', width: 2000, height: 1116, mime: 'image/jpeg', title: null, alt: 'Aerial view of a lone hilltop tree above rolling green farmland blanketed in morning mist, sunlight breaking through at the horizon', crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } } }],
+          imgleft: [{ src: '/images/leonaara-nri-lakeside-sunrise.jpg', width: 2730, height: 1536, mime: 'image/jpeg', title: null, alt: 'A couple sitting together on a lakeside bench at sunrise, mist rising over the water and rolling hills', crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } } }],
           imgright: [],
           imgleftsummer: [], imgrightsummer: [],
         },
