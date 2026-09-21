@@ -589,6 +589,51 @@ a.linkdetail {
     padding:1rem 2rem;
   }
 }
+/* .amenities-breakout / .amenities-grid: Kadamba's "Lifestyle Amenities"
+   listitem (content/en/kadamba.ts, mask_list) injects this pair raw via
+   RichText -- same CMS-content-class precedent as a.linkdetail above. The
+   desktop declarations below are copied verbatim from the inline
+   style="..." they replace (a full-bleed breakout wrapper around a
+   7-column grid, one column per amenity category e.g. "SOUL SPACE",
+   "MIYAWAKI FOREST"). They had to move from inline style to a class
+   because an inline style's specificity beats any external @media
+   override, even one written after it -- so a mobile fix couldn't be
+   layered on top while the inline style stayed. At 390px the unmodified
+   values broke two ways: 7 columns of ~50px each wrapped every label
+   letter-by-letter instead of at word boundaries, and translateX(-9rem)
+   (~97px, meant to offset a wide desktop breakout) shoved the whole grid
+   off-screen with horizontal overflow. Mobile override: 2 columns (wide
+   enough for every label incl. "MIYAWAKI FOREST"/"WELL SPRINGS" to wrap
+   at a word boundary, confirmed in a 390px screenshot -- 1 column was
+   tried and not needed), no translateX, and reduced side padding so the
+   breakout's negative margins don't push content past the viewport edge. */
+.amenities-breakout {
+  position:relative;
+  left:50%;
+  width:100vw;
+  margin-left:-50vw;
+  margin-top:7rem;
+  padding:0 2rem;
+  box-sizing:border-box;
+  transform:translateX(-9rem);
+}
+@media (max-width:1023px) {
+  .amenities-breakout {
+    margin-top:3rem;
+    padding:0 1rem;
+    transform:none;
+  }
+}
+.amenities-grid {
+  display:grid;
+  grid-template-columns:repeat(7,minmax(0,1fr));
+  gap:1.2rem;
+}
+@media (max-width:1023px) {
+  .amenities-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
 .filled,.filled * {
   fill:currentColor;
 }
