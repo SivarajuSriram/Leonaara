@@ -70,8 +70,9 @@ const imageLeftInsetCls = 'image-left col-start-2 col-span-4 row-start-2 row-spa
 // unconventional for a bio card. Now pinned to row 2 (below content, which
 // stays on row 1 -- see contentEvenCls below), full-width column but the
 // image itself narrowed to 75% and centered within it via mx-auto, rather
-// than stretching edge-to-edge.
-const imageLeftEvenCls = 'image-left col-start-2 col-span-4 row-start-1 row-span-2 max-lg:col-start-2 max-lg:col-span-12 max-lg:row-start-2 max-lg:row-span-1 max-lg:mt-[3rem] max-lg:w-[75%] max-lg:mx-auto';
+// than stretching edge-to-edge. max-md:w-[92%]: on phones (<768px) the photo is enlarged to 92%
+// per the user's "increase the size of these four images on mobile" request; tablet stays at 75%.
+const imageLeftEvenCls = 'image-left col-start-2 col-span-4 row-start-1 row-span-2 max-lg:col-start-2 max-lg:col-span-12 max-lg:row-start-2 max-lg:row-span-1 max-lg:mt-[3rem] max-lg:w-[75%] max-md:w-[92%] max-lg:mx-auto';
 
 // mask_imgtext .image-right{grid-column-start:10;margin-bottom:7.5rem} + shared
 // (with .content) grid-column-end:span 4 + mobile{grid-column-end:span 8;
@@ -83,7 +84,7 @@ const imageRightCls = 'image-right col-start-10 col-span-4 mb-[7.5rem] max-lg:co
 // stacking (col-span-12/row-start-2/etc.) mirrors imageLeftEvenCls's mobile
 // block exactly -- left and right must render identically once alternating
 // sides no longer matters at mobile (both stack the same way below the text).
-const imageRightEvenCls = 'image-right col-start-10 col-span-4 row-start-1 row-span-2 max-lg:col-start-2 max-lg:col-span-12 max-lg:row-start-2 max-lg:row-span-1 max-lg:mt-[3rem] max-lg:w-[75%] max-lg:mx-auto';
+const imageRightEvenCls = 'image-right col-start-10 col-span-4 row-start-1 row-span-2 max-lg:col-start-2 max-lg:col-span-12 max-lg:row-start-2 max-lg:row-span-1 max-lg:mt-[3rem] max-lg:w-[75%] max-md:w-[92%] max-lg:mx-auto';
 
 // mask_imgtext .content{grid-column-start:6} + shared grid-column-end:span 4 +
 // mobile{grid-column-end:span 11;grid-column-start:2;margin-top:4.5rem}
@@ -194,8 +195,11 @@ export function ImgText({ section, leafSide, leaf = false, wideTitle = false, ev
   const right = !winter && c.imgrightsummer.length ? c.imgrightsummer : c.imgright;
   const leftRef = useRef<HTMLDivElement>(null);
   const rightRef = useRef<HTMLDivElement>(null);
-  useParallax(leftRef, 1.5); // original: smoother.effects(picture-left, { speed: 1.5 })
-  useParallax(rightRef, 1.05); // original: smoother.effects(picture-right, { speed: 1.05 })
+  // Both sides drift in the same direction at the same gentle 1.2 (was left 1.5 / right 1.05; the
+  // right side at 1.05 looked still, and 1.5 / 0.7 read too strong) -- per the user's "both of
+  // those images on both sides to be moving... slowly" request.
+  useParallax(leftRef, 1.2);
+  useParallax(rightRef, 1.2);
   const cls = [section.appearance.layout, `space-before-${section.appearance.spaceBefore}`, 'mask', 'mask_imgtext']
     .filter(Boolean).join(' ');
   const leafOnLeft = leafSide === 'left';
