@@ -7,6 +7,7 @@ import { Picture } from '@/components/ui/Picture';
 import { ArrowSliderIcon } from '@/components/ui/icons';
 import { useSwiperExternalNav } from '@/components/ui/useSwiperExternalNav';
 import { Lightbox } from '@/components/ui/Lightbox';
+import { GatedPlan } from '@/components/ui/GatedPlan';
 
 // imgslider.css: .swiper-container{grid-column-end:span 14;grid-column-start:1;position:relative}
 const containerCls = 'swiper-container w-full col-start-1 col-span-14 relative';
@@ -17,7 +18,7 @@ const containerCls = 'swiper-container w-full col-start-1 col-span-14 relative';
 // (app/globals.css), and an unlayered normal declaration beats ANY layered
 // declaration regardless of specificity -- `.swiper-free-mode>.swiper-wrapper
 // {margin:0 auto}` (swiper.css) would otherwise beat the mx-[...] utility.
-const wrapperCls = 'h-[60rem]! mx-[calc((-1*var(--grid-gap))/2)]! max-lg:h-[30rem]! max-lg:ml-[calc(var(--grid-gap)/2.22)]! max-lg:mr-0!';
+const wrapperCls = 'h-[60rem]! mx-[calc((-1*var(--grid-gap))/2)]! max-lg:h-[30rem]! max-md:h-[29.7rem]! max-lg:ml-[calc(var(--grid-gap)/2.22)]! max-lg:mr-0!';
 // .swiper-slide{flex-shrink:1;padding-right:var(--grid-gap);width:auto}
 // (first-child/last-child restate the same padding-right -- no distinct value)
 // `!` required: swiper.css's own `.swiper-slide{flex-shrink:0;width:100%}`
@@ -25,8 +26,8 @@ const wrapperCls = 'h-[60rem]! mx-[calc((-1*var(--grid-gap))/2)]! max-lg:h-[30re
 const slideCls = 'shrink! w-auto! pr-[var(--grid-gap)]';
 // img,picture{height:100%;width:auto} + mobile{max-width:100vw} -- applies to
 // BOTH the picture wrapper and the img inside it in the original.
-const slideImgCls = '[&_img]:h-full [&_img]:w-auto max-lg:[&_img]:max-w-[100vw]';
-const slidePictureCls = 'h-full! w-auto! max-lg:max-w-[100vw]!';
+const slideImgCls = '[&_img]:h-full [&_img]:w-auto max-lg:[&_img]:max-w-[100vw] max-md:[&_img]:max-w-[99vw]';
+const slidePictureCls = 'h-full! w-auto! max-lg:max-w-[100vw]! max-md:max-w-[99vw]!';
 // .navigation{align-self:flex-end;grid-column-end:span 2;grid-column-start:9;
 // justify-self:center;margin-top:3rem;z-index:5}
 const navigationCls = 'navigation self-end justify-self-center col-start-9 col-span-2 mt-[3rem] z-[5]';
@@ -50,7 +51,10 @@ const clickableSlideCls = 'cursor-pointer';
 // but PlansTabs.tsx opts out per the user's explicit "no need of infinite
 // loop for the floorplans" request, since a 1-4 image technical plan gallery
 // reads oddly cycling back to itself the way a large photo set doesn't.
-export function ImgSlider({ section, alwaysCentered = false, loop = true }: { section: ImgSliderSection; alwaysCentered?: boolean; loop?: boolean }) {
+// gated: blurs every slide behind a "Download Floor Plan" button (see GatedPlan.tsx) and
+// disables the click-to-open lightbox, which would otherwise reveal the plan -- opted into
+// by PlansTabs.tsx for the floor-plan categories.
+export function ImgSlider({ section, alwaysCentered = false, loop = true, gated = false }: { section: ImgSliderSection; alwaysCentered?: boolean; loop?: boolean; gated?: boolean }) {
   const images = section.content.images;
   const { prevRef, nextRef, onSwiper } = useSwiperExternalNav();
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -90,8 +94,14 @@ export function ImgSlider({ section, alwaysCentered = false, loop = true }: { se
         }}
       >
         {images.map((img, i) => (
-          <SwiperSlide key={i} className={slideCls} onClick={() => setLightboxIndex(i)}>
-            <Picture image={img} heightD={600} heightM={300} lazy={i > 0} className={`${slidePictureCls} ${clickableSlideCls}`} />
+          <SwiperSlide key={i} className={slideCls} onClick={gated ? undefined : () => setLightboxIndex(i)}>
+            {gated ? (
+              <GatedPlan className="h-full w-fit">
+                <Picture image={img} heightD={600} heightM={300} lazy={i > 0} className={slidePictureCls} />
+              </GatedPlan>
+            ) : (
+              <Picture image={img} heightD={600} heightM={300} lazy={i > 0} className={`${slidePictureCls} ${clickableSlideCls}`} />
+            )}
           </SwiperSlide>
         ))}
       </Swiper>

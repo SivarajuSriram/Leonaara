@@ -10,7 +10,11 @@ export const hero: HeroSection = {
   content: {
     herolayout: 'default',
     title: '',
-    titleh2: 'Bringing<br>\r\nPurpose<br>\r\nto Existence',
+    // First <br> dropped (was a conditional max-md:hidden one, mobile-only) so "Bringing
+    // Purpose" joins onto one line at every width -- per the user's explicit "two lines"
+    // request, extended from mobile-only to desktop too. 2 lines total: "Bringing Purpose" /
+    // "to Existence".
+    titleh2: 'Bringing Purpose<br>\r\nto Existence',
     titleimg: 'ROOTED TO THE ELEMENTS OF NATURE ',
     text: '<p>und wir werden uns um den Rest kümmern<br>Ich bin ein kleiner Blindtext. Und zwar schon so lange ich denken kann. Es war nicht leicht zu verstehen, was es bedeutet, ein blinder Text zu sein: Man macht keinen Sinn. Wirklich keinen Sinn. Man wird zusammen hangsloseingeschoben und rumgedreht und wir werden uns um den Rest kümmern. Ich bin ein kleiner.</p>',
     img: [

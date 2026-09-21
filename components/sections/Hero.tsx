@@ -7,7 +7,9 @@ import { RichText } from '@/components/ui/RichText';
 import { useParallax } from '@/components/ui/useParallax';
 import { useIsWinter } from '@/lib/season';
 
-export function Hero({ section }: { section: HeroSection }) {
+// centerText: About page only -- centers the only-text hero paragraph on
+// mobile/tablet (see textClsLeftCentered below).
+export function Hero({ section, centerText = false }: { section: HeroSection; centerText?: boolean }) {
   const c = section.content;
   const winter = useIsWinter();
   const onlyText = c.herolayout === 'only-text';
@@ -96,23 +98,32 @@ export function Hero({ section }: { section: HeroSection }) {
   // reference pixel-for-pixel at this breakpoint.
   const titleh2Cls =
     layout === 'default'
-      ? // Two-value tablet/mobile split, not a single max-lg override: this
-        // project's :root font-size is vw-relative in different bands
-        // (2.7778vw below 768px, 1.502vw at 768-1023px, 0.5208vw at
-        // >=1024px -- see globals.css), so the SAME rem value renders very
-        // differently sized per band. max-lg:text-[6.5rem] (the eriro.at
-        // reference's mobile size, restored here) covers the 768-1023px
-        // tablet band, where it renders comfortably (widest line measured
-        // 344px inside a 632px column at 800px, still a clean 3 lines) --
-        // 6.5rem was only ever too big at narrower widths. max-md:text-
-        // [4.5rem] then overrides it below 768px (Tailwind v4 orders max-md
-        // after max-lg so the narrower breakpoint wins there), which is the
-        // largest size confirmed (via mobile-iframe screenshot) to keep all
-        // 3 <br>-separated segments ("Bringing" / "Purpose" / "to Existence")
-        // each on a single visual line within the 10-column mobile grid slot
-        // at 390px -- 6.5rem wrapped "to Existence" onto its own extra line
-        // ("to" / "Existence") at that width.
-        'self-center [grid-column:2/span_4] [grid-row-start:1] max-lg:self-start max-lg:text-[6.5rem] max-md:text-[4.5rem] max-lg:font-light max-lg:[grid-column:2/span_10] max-lg:[grid-row-start:2] max-lg:tracking-normal max-lg:leading-[88%] max-lg:mt-[3rem]'
+      ? // content/en/home.ts's titleh2 is now unconditionally 2 lines --
+        // "Bringing Purpose" / "to Existence" -- at every width, per the
+        // user's explicit request extended from mobile-only to desktop and
+        // tablet too (was 3: Bringing / Purpose / to Existence, matching the
+        // original <br> markup copied from the eriro.at reference, which had
+        // a shorter title). This project's :root font-size is vw-relative in
+        // three different bands (2.7778vw below 768px, 1.502vw at
+        // 768-1023px, 0.5208vw at >=1024px -- see globals.css), so the SAME
+        // rem value renders very differently sized per band, and each one
+        // needed checking separately (mobile-iframe screenshots at 390/800px
+        // plus a desktop tab) rather than assumed from one width:
+        // - Desktop (>=1024px, text-[6.3rem], NEW -- previously no override
+        //   here at all, so it fell back to the generic unlayered `h2{font-
+        //   size:7.4rem}` rule in globals.css): at 7.4rem, "Bringing" (312px)
+        //   + "Purpose" (295px) together measured ~607px against a 565px-wide
+        //   desktop column -- didn't fit, wrapped back to its own line.
+        //   6.3rem's combined width (~575px, still wider than the two words
+        //   summed at the smaller size) fits inside that same column.
+        // - Tablet (768-1023px, max-lg:text-[6.5rem], UNCHANGED): already
+        //   fit without any change -- measured "Bringing"+"Purpose" at ~605px
+        //   combined against a 632px column at 800px, comfortably on one
+        //   line even before this 2-line request.
+        // - Mobile (<768px, max-md:text-[3.1rem], UNCHANGED): already tuned
+        //   for exactly this "Bringing Purpose" one-line requirement in the
+        //   prior mobile-only pass.
+        'self-center [grid-column:2/span_4] [grid-row-start:1] text-[6.3rem] max-lg:self-start max-lg:text-[6.5rem] max-md:text-[3.1rem] max-lg:font-light max-lg:[grid-column:2/span_10] max-lg:[grid-row-start:2] max-lg:tracking-normal max-lg:leading-[88%] max-lg:mt-[3rem]'
       : layout === 'subpage'
       ? '[grid-column:2/span_4] [grid-row-start:2] mt-[-18rem] max-lg:self-end max-lg:[grid-column:2/span_10] max-lg:row-[2/span_1] max-lg:text-[6.5rem] max-lg:font-light max-lg:tracking-normal max-lg:leading-[88%] max-lg:mb-[calc(92%+2rem)] max-lg:mt-[9rem]'
       : 'self-center [grid-column:2/span_4] [grid-row-start:1] max-lg:self-center max-lg:[grid-column:2/span_12] max-lg:text-[6.5rem] max-lg:font-light max-lg:tracking-normal max-lg:leading-[88%]';
@@ -142,6 +153,9 @@ export function Hero({ section }: { section: HeroSection }) {
   // land level with the image -- nested, it inherited row 1 implicitly from
   // imageWrapperCls itself; as a sibling in the outer grid it needs it stated.
   const textClsLeft = `${textCls} [grid-row-start:1]`;
+  // centerText variant: cols 2-13 (symmetric at mobile, where col 1/14 are the
+  // zero-width margin tracks), no left indent, centered text.
+  const textClsLeftCentered = '[grid-column:1/span_4] ml-[9rem] mt-[3rem] [grid-row-start:1] max-lg:[grid-column:2/span_12] max-lg:ml-0 max-lg:px-[2rem] max-lg:mt-[1.5rem] max-lg:text-center';
   // Nested-in-imageWrapperCls path (titleh2 present): grid-column:1/span_4 is
   // relative to imageWrapperCls's own 4-column subgrid (which sits at
   // columns 9-12 of the page grid for only-text), so this lands on the
@@ -167,7 +181,7 @@ export function Hero({ section }: { section: HeroSection }) {
         </div>
         {/* Sibling of imageWrapperCls, not nested inside it -- see textClsLeft's
             own comment for why nesting put this in the wrong column. */}
-        {c.text && onlyText && !hasHeading ? <RichText className={textClsLeft} html={c.text} /> : null}
+        {c.text && onlyText && !hasHeading ? <RichText className={centerText ? textClsLeftCentered : textClsLeft} html={c.text} /> : null}
         {c.titleimg && layout === 'default' ? <p className={`h1 ${titleimgCls}`} dangerouslySetInnerHTML={{ __html: c.titleimg }} /> : null}
         {c.titleh2 ? <SplitWords as="h2" className={titleh2Cls} html={c.titleh2} /> : null}
         {!onlyText && small.map((img, i) => (

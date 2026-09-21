@@ -11,6 +11,10 @@
 // left in place as an inert placeholder rather than restructuring the
 // column array over a no-op.
 // hero, imgtext, imgtext, imgtext, img, imgtext, video
+// The fullbleed courtyard photo (mask_img, formerly rendered between the 3rd
+// and 4th founder) was removed per the user's explicit request -- `img` is
+// still destructured (and type-checked below) so this array's positions
+// stay in sync with about.columns.colPos0, it's just no longer rendered.
 import type { Metadata } from 'next';
 import { about } from '@/content/en/about';
 import { metadataFor } from '@/lib/pages';
@@ -18,7 +22,6 @@ import { BodyClass } from '@/components/layout/BodyClass';
 import { Hero } from '@/components/sections/Hero';
 import { ImgText } from '@/components/sections/ImgText';
 import { Video } from '@/components/sections/Video';
-import { Img } from '@/components/sections/Img';
 
 export const metadata: Metadata = metadataFor(about);
 
@@ -42,12 +45,16 @@ export default function AboutPage() {
   return (
     <main>
       <BodyClass pageId={about.id} layout="layout-0" />
-      <Hero section={hero} />
-      <ImgText section={imgtext1} />
-      <ImgText section={imgtext2} />
-      <ImgText section={imgtext3} />
-      <Img section={img} />
-      <ImgText section={imgtext4} />
+      <Hero section={hero} centerText />
+      {/* evenSpacing: these 4 founder bios each carry a single alternating
+          image (see about.ts) rather than the dual left+right image every
+          other ImgText instance on the site uses -- see ImgText.tsx's
+          imageLeftEvenCls/imageRightEvenCls comment for why the default
+          spacing/row values don't work for a single-image layout. */}
+      <ImgText section={imgtext1} evenSpacing />
+      <ImgText section={imgtext2} evenSpacing />
+      <ImgText section={imgtext3} evenSpacing />
+      <ImgText section={imgtext4} evenSpacing />
       <Video section={video2} />
     </main>
   );

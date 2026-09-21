@@ -28,7 +28,7 @@ export function Logo() {
           header .logo svg{height:auto;margin-bottom:0;width:56.7rem}, mobile width:100% — applied
           via an [&_svg] descendant variant since LogoIcon is a bare <svg>, matching the original's
           plain `svg` tag selector rather than relying on the icon's own className. */}
-      <div className="logo flex items-center justify-center [grid-column:5/span_4] pointer-events-auto [body.scrolled_&]:pointer-events-none max-lg:[grid-column:4/span_6] max-lg:justify-self-center max-lg:w-[16.5rem] [&_img]:h-auto [&_img]:mb-0 [&_img]:w-[56.7rem] max-lg:[&_img]:w-full">
+      <div className="logo flex items-center justify-center [grid-column:5/span_4] pointer-events-auto [body.scrolled_&]:pointer-events-none max-lg:[grid-column:4/span_8] max-lg:justify-self-center max-lg:w-[21rem] [&_img]:h-auto [&_img]:mb-0 [&_img]:w-[56.7rem] max-lg:[&_img]:w-full">
         <AppLink href={site.pageLinks.home} className="router-link-active router-link-exact-active text-ink no-underline opacity-100">
           <LogoIcon />
         </AppLink>

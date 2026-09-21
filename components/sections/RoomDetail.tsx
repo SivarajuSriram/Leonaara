@@ -38,7 +38,7 @@ const navPrevCls = `prev ${navArrowCls} rotate-180`;
 const roomImageRightCls = 'room-image-right col-start-12 col-span-2 mt-[12rem] max-lg:col-start-9 max-lg:col-span-5 max-lg:mt-[4.5rem]';
 // .room-content{grid-column-end:span 4;grid-column-start:9;margin-top:-6rem}
 // + mobile{grid-column-end:span 12;grid-column-start:2;margin-top:0}
-const roomContentCls = 'room-content col-start-9 col-span-4 -mt-[6rem] max-lg:col-start-2 max-lg:col-span-12 max-lg:mt-0';
+const roomContentCls = 'room-content col-start-9 col-span-4 -mt-[6rem] max-lg:col-start-2 max-lg:col-span-12 max-lg:mt-0 max-lg:text-center';
 // h1.h2 -- no component-specific size override exists in roomdetail.css, so
 // this genuinely uses the shared global `.h2,h2` typography rule (10rem
 // desktop / 4.2rem mobile, app/globals.css), unlike RoomSlider's own h2
@@ -56,7 +56,10 @@ const roomContentCls = 'room-content col-start-9 col-span-4 -mt-[6rem] max-lg:co
 // original reference had here either had fewer icons or was never checked
 // at this exact width; either way, a cut-off icon on an actual phone isn't
 // something to reproduce for fidelity's sake.
-const roomIconsCls = 'room-icons flex ml-0 mt-[6rem] max-lg:mb-[.5rem] max-lg:ml-[3rem] max-lg:mt-[3rem]';
+// max-lg:ml-0 max-lg:w-full max-lg:justify-center: icons centered on the page at
+// mobile/tablet (were indented 3rem from the left and ran off-center) per the
+// user's explicit "align those icons in the center" request.
+const roomIconsCls = 'room-icons flex ml-0 mt-[6rem] max-lg:mb-[.5rem] max-lg:ml-0 max-lg:w-full max-lg:justify-center max-lg:mt-[3rem]';
 const roomIconPictureCls = '[&_img]:h-[9rem] [&_img]:w-[9rem] max-lg:[&_img]:h-[6rem] max-lg:[&_img]:w-[6rem]';
 // Visible caption under each icon, reusing the icon's own alt text as the
 // label (there's no separate caption field in the data) -- added at the
@@ -71,11 +74,13 @@ const roomIconWrapCls = (isLast: boolean) => `flex flex-col items-center ${isLas
 // grid-column-start:3;letter-spacing:.08em;line-height:125%;margin-top:6rem;
 // text-align:left;text-transform:uppercase} + mobile{font-size:1.3rem;letter-spacing:
 // .05em;line-height:131%;justify-content:flex-start;margin-top:2rem;text-align:left}
-const roomInfoCls = 'room-info flex flex-wrap text-left col-start-3 col-span-5 font-light text-[2rem] tracking-[.08em] leading-[125%] uppercase mt-[6rem] max-lg:justify-start max-lg:text-[1.3rem] max-lg:tracking-[.05em] max-lg:leading-[131%] max-lg:mt-[2rem]';
+// max-lg:col-start-2 max-lg:col-span-12 max-lg:text-center (was col 3-7 at every width,
+// a narrow left-hand strip at mobile): whole block centered on the page.
+const roomInfoCls = 'room-info flex flex-wrap text-left col-start-3 col-span-5 max-lg:col-start-2 max-lg:col-span-12 max-lg:text-center font-light text-[2rem] tracking-[.08em] leading-[125%] uppercase mt-[6rem] max-lg:justify-center max-lg:text-[1.3rem] max-lg:tracking-[.05em] max-lg:leading-[131%] max-lg:mt-[2rem]';
 // .room-info-size/.room-info-people/.room-info-spacer are now dead: those
 // two fields were removed at the user's request, keeping only the price line.
 // .room-description{margin-left:9rem;margin-top:3rem} + mobile{margin-left:5.8rem;margin-top:1.5rem}
-const roomDescriptionCls = 'room-description ml-[9rem] mt-[3rem] max-lg:ml-[5.8rem] max-lg:mt-[1.5rem]';
+const roomDescriptionCls = 'room-description ml-[9rem] mt-[3rem] max-lg:ml-0 max-lg:px-[2rem] max-lg:mt-[1.5rem]';
 
 export function RoomDetail({ section }: { section: RoomDetailSection }) {
   const { room, icons } = section.content;

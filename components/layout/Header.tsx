@@ -104,7 +104,11 @@ export function Header() {
         {/* Request / Book are hidden while the menu is open (original: v-show).
             header .button-wrapper{...} plus its mobile override (display:block!important). */}
         <div
-          className="button-wrapper flex items-center justify-end [grid-column:10/span_4] pointer-events-auto max-lg:block! max-lg:justify-start max-lg:[grid-column:2/span_7] max-lg:[grid-row-start:1] max-lg:z-[5]"
+          // max-lg:block! (an !important class) beats the inline display:none below at
+          // mobile/tablet, so the button used to stay visible over the open menu; swapping
+          // it for max-lg:invisible while open hides it there too (visibility keeps the row's height so the close button doesn't shift up), freeing the top row for
+          // the call/mail icons (MenuPanel.tsx's nav-info-mobile) beside the close button.
+          className={`button-wrapper flex items-center justify-end [grid-column:10/span_4] pointer-events-auto ${isOpen ? 'max-lg:block! max-lg:invisible' : 'max-lg:block!'} max-lg:justify-start max-lg:[grid-column:2/span_7] max-lg:[grid-row-start:1] max-lg:z-[5]`}
           style={isOpen ? { display: 'none' } : undefined}
         >
           <BigLink className="small-font text-ink no-underline" href={site.pageLinks.contact}>Contact us</BigLink>

@@ -2,8 +2,12 @@
 import { useState } from 'react';
 import type { Appearance, ImageRef } from '@/lib/content';
 import { ImgSlider } from '@/components/sections/ImgSlider';
+import { Picture } from '@/components/ui/Picture';
+import { GatedPlan } from '@/components/ui/GatedPlan';
+import { Lightbox } from '@/components/ui/Lightbox';
 
-export type PlanCategory = { label: string; images: ImageRef[] };
+// gated: the category's plans are blurred behind a "Download Floor Plan" button (GatedPlan.tsx).
+export type PlanCategory = { label: string; images: ImageRef[]; gated?: boolean };
 
 // Bordered-box tab, matching the site's existing CTA-button convention
 // (a.linkdetail in globals.css -- "EXPLORE PROJECTS", "MEET THE FOUNDERS":
@@ -11,10 +15,27 @@ export type PlanCategory = { label: string; images: ImageRef[] };
 // style -- the active tab fills solid ink/canvas the way a pressed toggle
 // reads, inactive ones keep the plain bordered-box look and darken their
 // border on hover.
+// "800 Sq.Yds · 4320 Sq.ft" reads on one line on desktop and as two stacked lines in a
+// mobile/tablet segment; labels without a " · " (Site Plan) stay a single line.
+function TabLabel({ label }: { label: string }) {
+  const [first, second] = label.split(' · ');
+  if (!second) return <>{label}</>;
+  return (
+    <>
+      <span className="max-lg:block">{first}</span>
+      <span className="max-lg:hidden"> · </span>
+      <span className="max-lg:block">{second}</span>
+    </>
+  );
+}
+
 function tabCls(active: boolean) {
   return [
     'cursor-pointer text-[1.4rem] tracking-[.08em] uppercase whitespace-nowrap',
     'border-2 px-[2rem] py-[1rem] transition-colors duration-300',
+    // Mobile/tablet: the tabs share one row as equal-width segments (label split onto two
+    // lines by TabLabel below) instead of stacking one per row.
+    'max-lg:flex-1 max-lg:px-[.6rem] max-lg:text-[1.2rem] max-lg:tracking-[.05em] max-lg:leading-[125%] max-lg:text-center',
     active ? 'border-ink bg-ink text-canvas' : 'border-beige text-ink/70 hover:border-ink hover:text-ink',
   ].join(' ');
 }
@@ -27,16 +48,29 @@ function tabCls(active: boolean) {
 // the user's explicit "same slider that is used above" request.
 export function PlansTabs({ id, appearance, title, categories }: { id: number; appearance: Appearance; title: string; categories: PlanCategory[] }) {
   const [active, setActive] = useState(0);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const headerCls = [appearance.layout, `space-before-${appearance.spaceBefore}`, 'mask', 'grid-container'].filter(Boolean).join(' ');
 
   return (
     <>
       <div className={headerCls} {...{ uid: `c${id}` }}>
         <h2 className="h2 col-start-2 col-span-12 mb-[3rem] text-center max-lg:col-start-1 max-lg:col-span-14">{title}</h2>
-        <div className="col-start-2 col-span-12 flex justify-center gap-[1.5rem] max-lg:col-start-1 max-lg:col-span-14 max-lg:overflow-x-auto">
+        {/* max-lg:justify-start (was justify-center at every width): centering a
+            row that overflows its container starts the scroll position with
+            content already cut off on BOTH sides, which reads as "the tabs
+            aren't there" rather than "scroll to see more" -- per the user's
+            explicit "the tabs are not visible" report. Left-aligning at mobile
+            means the first tab is always fully visible on load, and the cut-off
+            edge of the next one is the natural invitation to scroll right.
+            max-lg:pb-[.5rem] makes room for the browser's own scrollbar so it
+            doesn't sit flush against the tab row. */}
+        {/* Mobile/tablet: tabs wrap onto extra rows and stay centered instead of
+            scrolling sideways (max-lg:flex-wrap + justify-center, no overflow-x-auto),
+            per the user's "I do not want that horizontal scrollbar" request. */}
+        <div className="col-start-2 col-span-12 flex justify-center gap-[1.5rem] max-lg:col-start-1 max-lg:col-span-14 max-lg:gap-[.6rem] max-lg:px-[1.6rem]">
           {categories.map((c, i) => (
             <button key={c.label} type="button" className={tabCls(i === active)} onClick={() => setActive(i)}>
-              {c.label}
+              <TabLabel label={c.label} />
             </button>
           ))}
         </div>
@@ -53,7 +87,33 @@ export function PlansTabs({ id, appearance, title, categories }: { id: number; a
           user's "should be starting with the first one" report. Keying on
           the active index forces a full remount (a fresh Swiper instance)
           on every switch. */}
-      <ImgSlider
+      {/* Mobile/tablet (<1024px): no carousel and no arrows -- the selected tab's plans
+          stack full-width as a plain list, each one visible as you scroll, per the user's
+          request. Gated plans show their blurred image + centered "Download Floor Plan"
+          button; the ungated Site Plan opens the full-screen Lightbox on tap. Desktop keeps
+          the ImgSlider below unchanged. Two renders of the same images (one hidden per
+          breakpoint) rather than a JS media query, so there is no hydration mismatch. */}
+      <div className="grid-container space-before-small lg:hidden">
+        {categories[active].images.map((img, i) => (
+          <div key={`${active}-${i}`} className="col-start-2 col-span-12 mb-[2rem]">
+            {categories[active].gated ? (
+              <GatedPlan><Picture image={img} lazy={i > 0} /></GatedPlan>
+            ) : (
+              <button
+                type="button"
+                aria-label={`View ${img.alt ?? 'plan'} full screen`}
+                onClick={() => setLightboxIndex(i)}
+                className="block w-full cursor-pointer appearance-none border-0 bg-transparent p-0 text-left"
+              >
+                <Picture image={img} lazy={i > 0} />
+              </button>
+            )}
+          </div>
+        ))}
+      </div>
+      <Lightbox images={categories[active].images} index={lightboxIndex} onClose={() => setLightboxIndex(null)} onNavigate={setLightboxIndex} />
+      <div className="max-lg:hidden">
+        <ImgSlider
         key={active}
         section={{
           id: id * 100 + active,
@@ -63,7 +123,9 @@ export function PlansTabs({ id, appearance, title, categories }: { id: number; a
         }}
         alwaysCentered
         loop={false}
+        gated={categories[active].gated}
       />
+      </div>
     </>
   );
 }

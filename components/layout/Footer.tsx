@@ -38,14 +38,32 @@ const nl2br = (s: string) => s.replace(/\r?\n/g, '<br>');
 // values instead of leaving it at .unikateur-signet's — confirmed empirically
 // against the pre-conversion baseline (the unikateur link renders 1px taller
 // without it). Transcribed in full rather than assumed away.
+//
+// Desktop (>=1024px) reverted to the original single-row layout (3 columns:
+// Contact/Follow Us/Address up top, Home-Contact-nav/logo/Privacy below) per
+// the user's explicit "revert the desktop layout, I didn't ask you to change
+// it" request -- only mobile/tablet (<1024px) keeps the restructured Quick
+// Links-under-Contact layout, bigger left-anchored tree, and right-aligned
+// logo from the earlier "space under Contact" request. Rather than one
+// responsive markup shared across breakpoints, the upper/lower footer rows
+// below each render TWO versions -- one hidden below 1024px, one hidden at
+// 1024px and up -- because the desktop structure (3 flex columns sharing one
+// row) and the mobile structure (a 2x2 grid with Quick Links occupying a cell
+// none of the desktop columns have) aren't reconcilable with a single set of
+// responsive classes on the same elements the way most of this file's other
+// breakpoint differences are.
 const footerCls = [
   // overflow-x-clip (not overflow-hidden): the decorative branch below is
   // deliberately allowed to bleed upward past the footer's own top edge
   // into whatever section sits above it -- only horizontal overflow (which
   // would add a page-wide scrollbar) needs containing.
   'grid-container relative overflow-x-clip',
+  // mt-[19rem]: reverted to the original desktop value (was briefly 12rem).
+  // max-lg:mt-[4rem] (was 6rem originally): this mobile-only reduction is
+  // kept -- the user's "revert the desktop layout" complaint was specifically
+  // about desktop, not the mobile padding trim from the same earlier pass.
   'text-[2rem] font-normal tracking-[.08em] leading-[125%] mt-[19rem] uppercase',
-  'max-lg:text-[1.3rem] max-lg:tracking-[.05em] max-lg:leading-[131%] max-lg:mt-[6rem]',
+  'max-lg:text-[1.3rem] max-lg:tracking-[.05em] max-lg:leading-[131%] max-lg:mt-[2rem]',
   '[&_a:not(.link-logo)]:text-ink [&_a:not(.link-logo)]:underline [&_a:not(.link-logo)]:decoration-transparent',
   'max-lg:[&_a:not(.link-logo)]:text-[1.3rem] max-lg:[&_a:not(.link-logo)]:tracking-[.05em] max-lg:[&_a:not(.link-logo)]:leading-[131%]',
   '[&_a:not(.link-logo):hover]:decoration-ink',
@@ -64,89 +82,98 @@ const titleCls = 'mb-[1rem] max-lg:mb-[.5rem]';
 // markup ever carries class "invisible" (grepped Footer.tsx and content/site.ts);
 // dead CSS, correctly dropped.
 
+// --- Desktop upper footer (>=1024px): original 3-column layout, unchanged
+// from before this session's mobile work. hidden below 1024px -- the mobile
+// version (upperFooterMobileCls further down) takes over there. ---
 // footer .upper-footer{border-top:2px solid #e4e0db (a border, stays beige — not
 // a fill, per Global Constraints);grid-column-start:2;grid-column-end:span 12;
-// padding-top:6rem;padding-bottom:6rem} + mobile{padding-top:2rem;
-// padding-bottom:4rem} (column placement is restated identically at mobile, so
-// it isn't repeated as a max-lg: variant)
-const upperFooterCls = [
-  'upper-footer relative z-10 grid-container-inner border-t-2 border-beige col-start-2 col-span-12',
-  'pt-[6rem] pb-[6rem] max-lg:pt-[2rem] max-lg:pb-[4rem]',
-].join(' ');
+// padding-top:6rem;padding-bottom:6rem}
+const upperFooterDesktopCls = 'upper-footer-desktop max-lg:hidden relative z-10 grid-container-inner border-t-2 border-beige col-start-2 col-span-12 pt-[6rem] pb-[6rem]';
 
 // footer .upper-footer .email,.social,.tel{grid-column-end:span 3} — .tel has no
 // corresponding element anywhere in this markup (the phone link lives inside
 // .email; grepped the whole repo, no element ever carries class "tel"), so its
-// desktop span-3 and its mobile span-6/justify-end/text-right restatement are
-// both dead CSS and correctly dropped here.
+// desktop span-3 is dead CSS and correctly dropped here.
 // The birch branch (branchWrapperCls below) is anchored bottom-left at full
-// size and its foliage/twigs reach roughly 55-58% across the footer's
-// width, so none of the three text groups below can start any earlier than
-// that without sitting over it. Rather than one 12-column grid spanning the
-// full footer, Contact/Follow Us/Address (and their lower-footer
-// counterparts nav-extra/logo/footer-bottom-right, sharing this same
-// wrapper) live in their own flex row confined to columns 8-12 (the
-// branch-clear right ~42%), tightly spaced with justify-between instead of
-// the wider even spacing they used across the full 12 columns.
-const upperFooterRightCls = 'col-start-8 col-span-5 flex items-start justify-between gap-x-[1.6rem] max-lg:contents';
+// size and its foliage/twigs reach roughly 55-58% across the footer's width,
+// so none of the three text groups below can start any earlier than that
+// without sitting over it. Rather than one 12-column grid spanning the full
+// footer, Contact/Follow Us/Address (and their lower-footer counterparts
+// nav-extra/logo/footer-bottom-right, sharing this same wrapper) live in
+// their own flex row confined to columns 8-12 (the branch-clear right ~42%).
+const upperFooterDesktopRowCls = 'col-start-8 col-span-5 flex items-start justify-between gap-x-[1.6rem]';
 
-// .email itself: desktop span 3 (above) + mobile{grid-column-end:span 6}
-const emailCls = 'email flex-1 max-lg:col-start-1 max-lg:col-span-6';
+const emailDesktopCls = 'email flex-1';
+const socialDesktopCls = 'social flex-1 justify-self-center text-center';
+// address is the last flex item. flex-[1.7] (was flex-1, splitting the row
+// evenly with email/social) gives the address noticeably more width than
+// those two -- a street address routinely needs more room than
+// "info@leonaara.com" or "Instagram", and at an even 1/3 share each of its 3
+// lines (site.ts's contact.address) was wrapping onto a 4th line instead of
+// the 3 the user asked for. text-left/justify-self-start (was text-right/
+// justify-self-end) -- per the user's explicit "align the address to left in
+// that column" request.
+const addressDesktopCls = 'address flex-[1.7] justify-self-start text-left';
 
-// social ("Follow Us") sits centered within its own flex-1 slot in
-// upperFooterRightCls, directly above logoCls below (same flex layout in
-// lowerFooterRightCls), so the two still stack exactly.
-const socialCls = [
-  'social flex-1 justify-self-center text-center',
-  'max-lg:col-span-5 max-lg:col-start-8 max-lg:row-start-2 max-lg:justify-self-end max-lg:text-right max-lg:mt-[3rem]',
-].join(' ');
+// --- Mobile/tablet upper footer (<1024px): Quick Links added under Contact,
+// per the user's explicit "move the Home/About/Projects/NRI Corner/Contact
+// links (and Privacy) to the space under Contact, add a Quick Links heading"
+// request. hidden at 1024px and up -- the desktop version above takes over
+// there. A 2x2 grid: row 1 = Contact | Address, row 2 = Quick Links | Follow
+// Us (Quick Links directly under Contact, matching the user's screenshot). ---
+const upperFooterMobileCls = 'upper-footer-mobile hidden max-lg:grid relative z-10 grid-container-inner border-t-2 border-beige col-start-2 col-span-12 pt-[1rem] pb-[1.5rem]';
 
-// address is the last flex item in upperFooterRightCls, matching the
-// last item in lowerFooterRightCls (footer-bottom-right). flex-[1.7] (was
-// flex-1, splitting the row evenly with email/social) gives the address
-// noticeably more width than those two -- a street address routinely needs
-// more room than "info@leonaara.com" or "Instagram", and at an even 1/3
-// share each of its 3 lines (site.ts's contact.address) was wrapping onto a
-// 4th line instead of the 3 the user asked for.
-// text-left/justify-self-start (was text-right/justify-self-end) -- per the
-// user's explicit "align the address to left in that column" request.
-const addressCls = 'address flex-[1.7] justify-self-start text-left max-lg:col-span-6 max-lg:mt-0';
+const emailMobileCls = 'email col-start-1 col-span-6 row-start-1';
+const quickLinksMobileCls = 'quick-links col-start-1 col-span-6 row-start-2 mt-[1.6rem]';
+const quickLinksNavCls = 'quick-links-nav';
+// Privacy appended directly below the main nav list with a bit of extra top
+// margin so it doesn't read as just another nav item.
+const quickLinksPrivacyCls = 'quick-links-privacy mt-[1.2rem]';
+const socialMobileCls = 'social col-span-5 col-start-8 row-start-2 justify-self-start text-left mt-[1.6rem]';
+const addressMobileCls = 'address col-start-8 col-span-5 row-start-1';
 
+// --- Desktop lower footer (>=1024px): original 3-column layout (nav-extra,
+// centered logo, Privacy), unchanged. hidden below 1024px. ---
 // footer .lower-footer{align-items:flex-end;border-top:2px solid #e4e0db (border,
 // stays beige);grid-column-start:2;grid-column-end:span 12;padding-top:6rem;
-// padding-bottom:2.5rem} + mobile{align-items:flex-start;padding-top:2rem;
-// padding-bottom:2rem} (column placement unchanged at mobile, not repeated)
-const lowerFooterCls = [
-  'lower-footer relative z-10 grid-container-inner items-end border-t-2 border-beige col-start-2 col-span-12',
-  'pt-[3rem] pb-[2.5rem] max-lg:items-start max-lg:pt-[2rem] max-lg:pb-[2rem]',
-].join(' ');
+// padding-bottom:2.5rem}
+const lowerFooterDesktopCls = 'lower-footer-desktop max-lg:hidden relative z-10 grid-container-inner items-end border-t-2 border-beige col-start-2 col-span-12 pt-[3rem] pb-[2.5rem]';
+const lowerFooterDesktopRowCls = 'col-start-8 col-span-5 flex items-end justify-between gap-x-[1.6rem]';
+const navExtraDesktopCls = 'nav-extra flex-1 mb-[1.6rem]';
+const logoDesktopCls = 'logo flex-1 justify-self-center [&_img]:w-[29.4rem] [&_img]:h-auto';
+const footerBottomRightDesktopCls = 'footer-bottom-right flex-1 mb-[1.6rem] justify-self-end text-right';
+// footer .lower-footer .nav-footer{margin-top:3rem} -- existed to clear the
+// language nav that used to sit above this (now removed per the user's
+// request), so no margin is needed on desktop.
+const navFooterDesktopCls = 'nav-footer';
+
+// --- Mobile/tablet lower footer (<1024px): just the logo, right-aligned, per
+// the user's explicit "logo on the right" request (nav-extra/Privacy moved up
+// into Quick Links above; the tree branch below is left-anchored and bigger
+// per the user's explicit "keep the tree on the left... increase its size"
+// request). hidden at 1024px and up. ---
+const lowerFooterMobileCls = 'lower-footer-mobile hidden max-lg:flex items-end min-h-[16rem] relative z-10 grid-container-inner border-t-2 border-beige col-start-2 col-span-12 pt-[1rem] pb-[1rem]';
+const logoMobileCls = 'logo ml-auto [&_img]:w-[17rem] [&_img]:h-auto';
 
 // Decorative birch-branch illustration (public/images/decor/tree-branch.png,
-// a transparent PNG) anchored to the footer's bottom-left corner, trunk at
-// the edge with the branch reaching rightward across the lower-footer row --
-// purely decorative (aria-hidden, no alt text). No overflow-hidden on this
-// wrapper: it's sized to the image's own rendered height, so the image is
-// never clipped, and it's deliberately allowed to bleed above the footer's
-// own top edge (see footerCls's overflow-x-clip comment).
-// z-20, ABOVE upper-footer/lower-footer's z-10: those two containers each
-// draw a beige border-top spanning the full 12-column row, which otherwise
-// cuts a hard line across the tree where the two overlap. The tree's own
-// footprint only reaches ~55-58% across the footer (see below), well short
-// of the text columns confined to col-start-8+, so painting it above those
-// containers hides the border line under the branch/leaves without ever
-// covering the real text content -- true on desktop, where the text columns
-// stay clear of the tree's footprint, but NOT on mobile: max-lg:contents on
-// upperFooterRightCls/lowerFooterRightCls unwraps their children back into
-// the footer's own full-width mobile grid (email/nav/address/social all
-// spread edge-to-edge there, no clear column reserved), while the tree
-// itself is still capped at max-w-[100%] of that same full mobile width --
-// so at mobile its foliage genuinely lands on top of real nav/address text
-// (confirmed: "Projects"/"Contact" rendered with their first letter
-// literally painted over by a leaf). max-lg:z-[5] drops it below
-// upper-footer/lower-footer's z-10 on mobile only, so text always wins the
-// overlap there; the border-line-hiding trick stays intact on desktop,
-// where it was actually needed.
-const branchWrapperCls = 'pointer-events-none absolute bottom-0 left-0 z-20 max-lg:z-[5] w-[120rem] max-w-[100%] max-lg:w-[64rem]';
+// a transparent PNG) anchored to the footer's bottom-left corner at every
+// width, trunk at the edge with the branch reaching rightward -- purely
+// decorative (aria-hidden, no alt text). No overflow-hidden on this wrapper:
+// it's sized to the image's own rendered height, so the image is never
+// clipped, and it's deliberately allowed to bleed above the footer's own top
+// edge (see footerCls's overflow-x-clip comment).
+// z-20, ABOVE the upper/lower footer rows' z-10: those each draw a beige
+// border-top spanning the full 12-column row, which otherwise cuts a hard
+// line across the tree where the two overlap; painting the tree above them
+// hides that line under the branch/leaves. Desktop sizing (w-[120rem]) is
+// the original, unchanged value. max-lg:w-[30rem] (was 26rem, before that 14rem,
+// briefly mirrored/right-anchored) is the mobile-only enlarged, left-anchored
+// version per the user's explicit "increase the size of that image a bit
+// more" request. The falling leaves are hidden below 1024px (max-lg:hidden on
+// each leaf) per the user's "remove the leaves falling animation for the
+// mobile and tablet layout" request; the FALLING_LEAVES percentages below are
+// relative to this same wrapper box and only apply on desktop.
+const branchWrapperCls = 'pointer-events-none absolute bottom-0 left-0 z-20 w-[120rem] max-w-[100%] max-lg:w-[30rem]';
 const branchImgCls = 'block w-full h-auto opacity-90';
 
 // Leaf-color palette sampled directly from public/images/decor/tree-branch.png
@@ -194,49 +221,12 @@ function FallingLeaf({ leaf }: { leaf: (typeof FALLING_LEAVES)[number] }) {
     // Broad, rounded ovate leaf with a short pointed tip and a rounded base
     // (traced off the actual birch/aspen leaves in tree-branch.png -- see
     // scratchpad/leaf-closeup2.png), not a narrow diagonal teardrop.
-    <svg viewBox="0 0 24 24" preserveAspectRatio="none" className="leaf-fall absolute" style={{ ...style, fill: leaf.color }} aria-hidden="true">
+    <svg viewBox="0 0 24 24" preserveAspectRatio="none" className="leaf-fall max-lg:hidden absolute" style={{ ...style, fill: leaf.color }} aria-hidden="true">
       <path d="M12 2C17 4 20.5 9 19.5 14C18.5 19 15 22 12 22C9 22 5.5 19 4.5 14C3.5 9 7 4 12 2Z" />
       <path d="M12 4.5V19.5M12 9 8 12M12 9l4 3M12 14l-3 2.5M12 14l3 2.5" stroke="#3c3020" strokeOpacity="0.35" strokeWidth="0.6" strokeLinecap="round" fill="none" />
     </svg>
   );
 }
-
-// Mirrors upperFooterRightCls above: nav-extra/logo/footer-bottom-right
-// live in their own flex row confined to the branch-clear columns 8-12
-// instead of the full 12-column width.
-const lowerFooterRightCls = 'col-start-8 col-span-5 flex items-end justify-between gap-x-[1.6rem] max-lg:contents';
-
-// footer .lower-footer .logo,.nav-extra{grid-column-end:span 3} (shared) +
-// mobile{grid-column-end:span 6;grid-row-start:1;text-align:right} (shared) +
-// .nav-extra's own mobile{justify-self:flex-end;margin-bottom:3rem}
-const navExtraCls = [
-  'nav-extra flex-1 mb-[1.6rem]',
-  'max-lg:col-start-1 max-lg:col-span-6 max-lg:row-start-1 max-lg:text-right max-lg:justify-self-end max-lg:mb-[3rem]',
-].join(' ');
-
-// same shared span-3/span-6/row-start-1/text-right rule as .nav-extra, plus
-// .logo's own mobile{grid-column-start:1;justify-self:flex-start} and
-// footer .lower-footer .logo svg{width:29.4rem} + mobile{width:13.7rem}
-const logoCls = [
-  'logo flex-1 justify-self-center [&_img]:w-[29.4rem] [&_img]:h-auto',
-  'max-lg:col-start-1 max-lg:col-span-6 max-lg:row-start-1 max-lg:text-right max-lg:justify-self-start max-lg:[&_img]:w-[13.7rem]',
-].join(' ');
-
-// footer .lower-footer .footer-bottom-right{grid-column-end:span 3;justify-self:
-// flex-end;text-align:right} + mobile{grid-column-start:1;grid-column-end:span 6;
-// grid-row-start:2;justify-self:flex-start} (text-align:right isn't restated at
-// mobile, so it carries through unprefixed)
-const footerBottomRightCls = [
-  'footer-bottom-right flex-1 mb-[1.6rem] justify-self-end text-right',
-  'max-lg:col-start-1 max-lg:col-span-6 max-lg:row-start-2 max-lg:justify-self-start',
-].join(' ');
-
-// footer .lower-footer .nav-footer{margin-top:3rem} + mobile{margin-top:1.5rem}
-// -- the margin-top existed to clear the language nav that used to sit above
-// this (now removed per the user's request), so it's dropped on desktop;
-// kept at mobile since privacy still stacks below the language-independent
-// content there.
-const navFooterCls = 'nav-footer max-lg:mt-[1.5rem] max-lg:justify-self-start max-lg:text-left';
 
 export function Footer() {
   return (
@@ -248,37 +238,78 @@ export function Footer() {
         <img className={branchImgCls} src="/images/decor/tree-branch.png" alt="" aria-hidden="true" />
         {FALLING_LEAVES.map((leaf, i) => <FallingLeaf key={i} leaf={leaf} />)}
       </div>
-      <div className={upperFooterCls}>
-        <div className={upperFooterRightCls}>
-          <div className={emailCls}>
+
+      {/* Desktop upper footer -- original 3-column layout. */}
+      <div className={upperFooterDesktopCls}>
+        <div className={upperFooterDesktopRowCls}>
+          <div className={emailDesktopCls}>
             <h4 className={titleCls}>{site.t.contact}</h4>
             <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
             <br />
             <a href={`tel:${site.contact.tel}`}>{site.contact.tel}</a>
           </div>
-          <div className={socialCls}>
+          <div className={socialDesktopCls}>
             <h4 className={titleCls}>{site.t.social}</h4>
             <RichText className="t3-ce-rte" html={nl2br(site.socialHtml)} />
           </div>
-          <div className={addressCls}>
+          <div className={addressDesktopCls}>
             <h4 className={titleCls}>{site.t.address}</h4>
             <RichText className="t3-ce-rte" html={nl2br(site.contact.address)} />
           </div>
         </div>
       </div>
-      <div className={lowerFooterCls}>
-        <div className={lowerFooterRightCls}>
-          <nav className={navExtraCls} aria-label="Footer Menu">
+
+      {/* Mobile/tablet upper footer -- Quick Links added under Contact. */}
+      <div className={upperFooterMobileCls}>
+        <div className={emailMobileCls}>
+          <h4 className={titleCls}>{site.t.contact}</h4>
+          <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+          <br />
+          <a href={`tel:${site.contact.tel}`}>{site.contact.tel}</a>
+        </div>
+        <div className={quickLinksMobileCls}>
+          <h4 className={titleCls}>{site.t.quickLinks}</h4>
+          <nav className={quickLinksNavCls} aria-label="Footer Menu">
             {site.footerNav.map((n) => <AppLink key={n.uid} href={n.link}>{n.title}</AppLink>)}
           </nav>
-          <div className={logoCls}>
+          <nav className={quickLinksPrivacyCls} aria-label="Footer Privacy">
+            {site.privacyNav.map((n) => <AppLink key={n.uid} href={n.link}>{n.title}</AppLink>)}
+          </nav>
+        </div>
+        <div className={socialMobileCls}>
+          <h4 className={titleCls}>{site.t.social}</h4>
+          <RichText className="t3-ce-rte" html={nl2br(site.socialHtml)} />
+        </div>
+        <div className={addressMobileCls}>
+          <h4 className={titleCls}>{site.t.address}</h4>
+          <RichText className="t3-ce-rte" html={nl2br(site.contact.address)} />
+        </div>
+      </div>
+
+      {/* Desktop lower footer -- original 3-column layout. */}
+      <div className={lowerFooterDesktopCls}>
+        <div className={lowerFooterDesktopRowCls}>
+          <div className={navExtraDesktopCls}>
+            <h4 className={titleCls}>{site.t.quickLinks}</h4>
+            <nav aria-label="Footer Menu">
+              {site.footerNav.map((n) => <AppLink key={n.uid} href={n.link}>{n.title}</AppLink>)}
+            </nav>
+          </div>
+          <div className={logoDesktopCls}>
             <AppLink className="link-logo" href={site.pageLinks.home}><LogoIcon /></AppLink>
           </div>
-          <div className={footerBottomRightCls}>
-            <nav className={navFooterCls} aria-label="Footer Privacy">
+          <div className={footerBottomRightDesktopCls}>
+            <nav className={navFooterDesktopCls} aria-label="Footer Privacy">
               {site.privacyNav.map((n) => <AppLink key={n.uid} href={n.link}>{n.title}</AppLink>)}
             </nav>
           </div>
+        </div>
+      </div>
+
+      {/* Mobile/tablet lower footer -- just the right-aligned logo. */}
+      <div className={lowerFooterMobileCls}>
+        <div className={logoMobileCls}>
+          <AppLink className="link-logo" href={site.pageLinks.home}><LogoIcon /></AppLink>
         </div>
       </div>
     </footer>

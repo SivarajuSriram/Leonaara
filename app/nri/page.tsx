@@ -21,7 +21,10 @@ export default function NriPage() {
     <main>
       <BodyClass pageId={nri.id} layout="layout-0" />
       <Hero section={hero} />
-      <ImgText section={imgtext} wideTitle />
+      {/* insetLeft: the hero image bled flush to the browser's left edge --
+          per the user's explicit "too far into the left edge, move it right
+          a bit" request. */}
+      <ImgText section={imgtext} wideTitle insetLeft />
       <Accordions section={accordions} />
     </main>
   );

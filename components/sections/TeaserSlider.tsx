@@ -106,7 +106,7 @@ const imageRightCls = `${swiperWCls} image-right col-start-7 col-span-6 row-star
 // per the user's "single line" request. Unlike RoomSlider's title, this
 // comfortably fits the remaining space out to the viewport's right edge at
 // this smaller 2rem size, so no extra font-size/length handling is needed.
-const infotextSharedCls = 'infotext text-[2rem] font-light tracking-[.08em] leading-[125%] uppercase whitespace-nowrap col-start-7 col-span-4 row-start-3 mt-[1.5rem] max-lg:text-[1.3rem] max-lg:tracking-[.05em] max-lg:leading-[131%] max-lg:whitespace-normal max-lg:col-start-4 max-lg:col-span-9 max-lg:mt-[0.5rem] max-lg:text-right';
+const infotextSharedCls = 'infotext text-[2rem] font-light tracking-[.08em] leading-[125%] uppercase whitespace-nowrap col-start-7 col-span-4 row-start-3 mt-[1.5rem] max-lg:text-[1.3rem] max-lg:tracking-[.05em] max-lg:leading-[131%] max-lg:whitespace-nowrap max-lg:col-start-1 max-lg:col-span-12 max-lg:mt-[0.5rem] max-lg:text-right';
 const infotextSwiperCls = `${swiperWCls} ${infotextSharedCls}`;
 
 // mask_teaserslider .infotext,.navigation{grid-row-start:3;margin-top:

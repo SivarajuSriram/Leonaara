@@ -3,15 +3,49 @@ import { useState, type Ref } from 'react';
 import { site } from '@/content/site';
 import { AppLink } from './AppLink';
 import { TelIcon, MailIcon } from '@/components/ui/icons';
+import type { SVGProps } from 'react';
 import { RichText } from '@/components/ui/RichText';
 
 type Props = { ref: Ref<HTMLDivElement>; isHome: boolean; pathname: string };
 
 const nl2br = (s: string) => s.replace(/\r?\n/g, '<br>');
 
+// Plain outline glyphs (not brand wordmarks) -- lucide-react (the project's only icon
+// dependency) ships no social-brand icons, so these four are hand-drawn to match its
+// stroke-based style (round caps/joins, 1.5 stroke) rather than pulling in a new package
+// for four icons used in one place.
+const InstagramIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none" />
+  </svg>
+);
+const LinkedinIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <rect x="3" y="3" width="18" height="18" rx="2" />
+    <line x1="7.5" y1="10" x2="7.5" y2="17" />
+    <circle cx="7.5" cy="6.8" r="0.9" fill="currentColor" stroke="none" />
+    <path d="M11.5 17v-4.2c0-1.5 1-2.4 2.3-2.4 1.3 0 2.2.9 2.2 2.4V17" />
+    <line x1="11.5" y1="10" x2="11.5" y2="17" />
+  </svg>
+);
+const FacebookIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M14.5 21v-7h2.4l.4-3h-2.8V9c0-.87.24-1.46 1.5-1.46H17.4V4.88c-.26-.03-1.15-.11-2.19-.11-2.17 0-3.65 1.32-3.65 3.75V11H9.1v3h2.46v7z" />
+  </svg>
+);
+const YoutubeIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <rect x="2.5" y="6" width="19" height="12" rx="4" />
+    <path d="M10.5 9.7v4.6l4-2.3z" fill="currentColor" stroke="none" />
+  </svg>
+);
+const socialIcons = [InstagramIcon, LinkedinIcon, FacebookIcon, YoutubeIcon];
+
 // header .nav-info>div{margin-right:2.8rem;transition:all .5s} (mobile: margin-right:3.5rem),
 // :last-child{margin-right:0}, :hover{opacity:.5}. Shared by all five contact icons below.
-const navInfoIconCls = 'mr-[2.8rem] max-lg:mr-[3.5rem] last:mr-0 [transition:all_.5s] hover:opacity-50';
+const navInfoIconCls = 'mr-[2.8rem] max-lg:mr-[3rem] last:mr-0 [transition:all_.5s] hover:opacity-50';
 // header .nav-info a,header .nav-info svg{display:block}; header .nav-info svg{color:transparent;
 // height:2.9rem;min-width:2rem;vertical-align:top;width:auto}, mobile height:3rem;min-width:2.1rem.
 // color:transparent looks like it should hide these icons, but their paths carry their own
@@ -21,7 +55,7 @@ const navInfoIconCls = 'mr-[2.8rem] max-lg:mr-[3.5rem] last:mr-0 [transition:all
 // pre-conversion baseline screenshot (tests/e2e/header-visual.spec.ts-snapshots/header-390-open-*)
 // and computed styles — the icons are visibly dark there, not a rendering bug to fix.
 const navInfoLinkCls =
-  'block text-ink no-underline [&_svg]:block [&_svg]:text-transparent [&_svg]:h-[2.9rem] [&_svg]:min-w-[2rem] [&_svg]:align-top [&_svg]:w-auto max-lg:[&_svg]:h-[3rem] max-lg:[&_svg]:min-w-[2.1rem]';
+  'block text-ink no-underline [&_svg]:block [&_svg]:text-transparent [&_svg]:h-[2.9rem] [&_svg]:min-w-[2rem] [&_svg]:align-top [&_svg]:w-auto max-lg:[&_svg]:h-[2.4rem] max-lg:[&_svg]:min-w-[1.7rem]';
 
 // The beige panel that slides down. Structure copied from the original header markup.
 export function MenuPanel({ ref, isHome, pathname }: Props) {
@@ -66,21 +100,25 @@ export function MenuPanel({ ref, isHome, pathname }: Props) {
           address block, so the icon-clearance problem and the "single frame, no
           scrollbar" requirement solve each other instead of fighting. */}
       <div
-        className="menu bg-canvas h-full w-[54.2rem] overflow-hidden pointer-events-auto z-[50] [transform:translateY(-101%)] [will-change:transform] pt-[9rem] px-[6rem] pb-[3rem] max-lg:w-full max-lg:pt-[9rem] max-lg:pr-[1rem] max-lg:pb-[1.5rem] max-lg:pl-[6.8rem]"
+        className="menu bg-canvas h-full w-[54.2rem] overflow-hidden pointer-events-auto z-[50] [transform:translateY(-101%)] [will-change:transform] pt-[9rem] px-[6rem] pb-[3rem] max-lg:w-full max-lg:pt-[9rem] max-lg:px-[3rem] max-lg:pb-[3rem]"
         ref={ref}
       >
         {/* top pushed down from 4rem to 10.5rem, swapping vertically with the
             header's own close/hamburger button (Header.tsx's MenuButton, moved
             up via its own conditional translate) -- per the user's explicit
-            "swap their positions, line-wise" request. */}
-        <nav className="nav-info flex absolute right-[6rem] top-[10.5rem] max-lg:right-auto max-lg:top-auto max-lg:bottom-[7.5rem] max-lg:left-1/2 max-lg:-translate-x-1/2">
+            "swap their positions, line-wise" request. Desktop only now: see
+            the mobile copy of this nav rendered further down, inside
+            main-nav-wrapper, for why. */}
+        <nav className="nav-info hidden lg:flex absolute right-[6rem] top-[10.5rem]">
           <div className={`tel-icon ${navInfoIconCls}`}><a className={navInfoLinkCls} href={`tel:${site.contact.tel}`}><TelIcon /></a></div>
           <div className={`mail-icon ${navInfoIconCls}`}><a className={navInfoLinkCls} href={`mailto:${site.contact.email}`}><MailIcon /></a></div>
         </nav>
         {/* header div.mobile-hr{...} lives entirely inside the max-width:1023px block in
             Header.css — at desktop it's an unstyled div (only header .menu>div{width:100%}
             applies to it there). */}
-        <div className="mobile-hr w-full max-lg:absolute max-lg:bottom-[5rem] max-lg:left-[1rem] max-lg:h-px max-lg:w-[calc(100%-2rem)] max-lg:bg-ink" />
+        <div // max-lg:hidden: the dark divider under the social icons is removed at mobile/tablet per the
+        // user's request. The element stays in the DOM because menuAnimations.ts still tweens it.
+        className="mobile-hr w-full max-lg:hidden" />
         {/* overflow-hidden (was overflow-auto): per the user's explicit "do not add a
             scroll bar" -- everything now fits within the panel's own height, so this is
             a safety net against a scrollbar ever appearing rather than something relied
@@ -100,7 +138,7 @@ export function MenuPanel({ ref, isHome, pathname }: Props) {
             className={[
               // pb biases the centered content upward within nav-main's own box (per the
               // user's "move the navigation links a bit up" follow-up to dead-centering).
-              'nav-main group/nav flex-1 flex flex-col justify-center min-h-0 pb-[8rem] max-lg:pb-[10rem]',
+              'nav-main group/nav flex-1 flex flex-col justify-center min-h-0 pb-[8rem] max-lg:pb-[4rem]',
               isHome ? '' : 'fadeOut',
             ].filter(Boolean).join(' ')}
           >
@@ -110,7 +148,7 @@ export function MenuPanel({ ref, isHome, pathname }: Props) {
               const isOpen = hasChildren && openUid === item.uid;
               return (
                 // header .menu .level-0{margin:1rem 0} (mobile only).
-                <div key={item.uid} className="level-0 max-lg:my-[1rem]">
+                <div key={item.uid} className="level-0 max-lg:my-[.6rem]">
                   <div className="flex items-center gap-[1.2rem]">
                   <AppLink
                     href={item.link}
@@ -124,7 +162,7 @@ export function MenuPanel({ ref, isHome, pathname }: Props) {
                       // Sized up further from the original 2rem/3.1rem at the user's explicit
                       // "increase the font size for the items in the menu overlay more" request.
                       'text-[2.8rem] font-normal tracking-[.05em] leading-[140%] uppercase',
-                      'max-lg:text-[3.8rem] max-lg:leading-[100%] max-lg:font-light',
+                      'max-lg:text-[2.8rem] max-lg:leading-[100%] max-lg:font-light',
                       // header .nav-main:not(:hover).fadeOut .level-0 a{opacity:.6} /
                       // a.router-link-active{opacity:1} — the no-hover baseline: every link dims
                       // unless active or on the home page (no fadeOut there).
@@ -171,7 +209,7 @@ export function MenuPanel({ ref, isHome, pathname }: Props) {
                     {/* pb reduced from 2rem -> .5rem: the trailing padding here (not the
                         gap between Kadamba/Anantha Meadows) was what read as "too much gap
                         after Anantha Meadows" before the next top-level item (Contact). */}
-                    <div className="pt-0 pr-0 pb-[.5rem] pl-[2rem] max-lg:pt-[1rem] max-lg:px-[2rem] max-lg:pb-[1rem] flex flex-col gap-0">
+                    <div className="pt-0 pr-0 pb-[.5rem] pl-[2rem] max-lg:pt-[.6rem] max-lg:px-[2rem] max-lg:pb-[.6rem] flex flex-col gap-0">
                       {item.children?.map((child) => {
                         // Anantha Meadows isn't public yet (per the user's "make totally
                         // unaccessible" request, its page route itself 404s regardless of URL --
@@ -186,9 +224,9 @@ export function MenuPanel({ ref, isHome, pathname }: Props) {
                         // tightened (140% -> 110%) -- flex `gap` alone wasn't the only source of
                         // the "too much gap between the project names" the user kept flagging;
                         // each link's own line-height was adding space on top of it.
-                        const linkCls = 'text-ink text-[2.4rem] font-normal tracking-[.05em] leading-[110%] uppercase max-lg:text-[3rem]';
+                        const linkCls = 'text-ink text-[2.4rem] font-normal tracking-[.05em] leading-[110%] uppercase whitespace-nowrap max-lg:text-[1.9rem]';
                         return (
-                          <div key={child.uid} className="sub-link level-1 flex items-center gap-[1rem] w-fit">
+                          <div key={child.uid} className="sub-link level-1 flex items-center gap-[1rem] max-lg:gap-[.8rem] w-fit">
                             {comingSoon ? (
                               <span className={`${linkCls} cursor-not-allowed select-none opacity-40`} aria-disabled="true">
                                 {child.title}
@@ -202,7 +240,7 @@ export function MenuPanel({ ref, isHome, pathname }: Props) {
                               </AppLink>
                             )}
                             {comingSoon ? (
-                              <span className="whitespace-nowrap rounded-full border border-ink/30 px-[1.1rem] py-[.3rem] text-[1.1rem] font-normal tracking-[.08em] uppercase text-ink/70 max-lg:text-[1.4rem] max-lg:px-[1.3rem]">
+                              <span className="whitespace-nowrap rounded-full border border-ink/30 px-[1.1rem] py-[.3rem] text-[1.1rem] font-normal tracking-[.08em] uppercase text-ink/70 max-lg:text-[1rem] max-lg:px-[.8rem]">
                                 Coming soon
                               </span>
                             ) : null}
@@ -215,6 +253,28 @@ export function MenuPanel({ ref, isHome, pathname }: Props) {
               );
             })}
           </nav>
+          {/* Mobile-only copy of the tel/mail icons nav above (which is now
+              lg:flex/desktop-only -- see its own comment). At mobile the
+              original single nav was absolute-positioned at a fixed
+              max-lg:bottom-[7.5rem] from the PANEL's own bottom edge, which
+              assumed a short, fixed-height block below it; once the Office
+              Address/Follow Us content (menu-contact, right below) grew
+              taller than that assumption, this fixed offset put the icons
+              directly on top of the "Office Address" heading and "Follow
+              Us" list (confirmed via mobile screenshot: the call icon
+              painted over the "Follow Us" divider). Rendering a second copy
+              here, in NORMAL FLOW right before menu-contact instead of
+              absolutely positioned against the panel, means it always sits
+              directly above that block regardless of how tall it is -- no
+              magic number to keep in sync as content changes. Per the
+              user's explicit "menu overlay needs to be aligned correctly on
+              mobile" report. */}
+          <nav // Pinned to the panel's top row, just left of the close (X) button (which is 3.5rem wide and
+              // 2rem from the right edge), per the user's "call and mail icons beside the close button".
+              className="nav-info-mobile hidden max-lg:flex max-lg:absolute max-lg:top-[2.6rem] max-lg:right-[7.5rem] max-lg:z-[130]">
+            <div className={`tel-icon ${navInfoIconCls}`}><a className={navInfoLinkCls} href={`tel:${site.contact.tel}`}><TelIcon /></a></div>
+            <div className={`mail-icon ${navInfoIconCls}`}><a className={navInfoLinkCls} href={`mailto:${site.contact.email}`}><MailIcon /></a></div>
+          </nav>
           {/* Address + social links, added at the user's request. mt-auto (was a fixed
               mt-[1.5rem]) pins this to the very bottom of main-nav-wrapper's flex column,
               per the user's explicit "address and sm handles will be at the bottom of the
@@ -223,7 +283,7 @@ export function MenuPanel({ ref, isHome, pathname }: Props) {
               added above the divider (was: divider directly on this wrapper, no heading) --
               per the user's explicit request. */}
           <div className="menu-contact mt-auto shrink-0">
-            <h4 className="text-[1.4rem] font-normal tracking-[.08em] uppercase text-ink/60 mb-[.8rem] max-lg:text-[1.6rem]">
+            <h4 className="text-[1.4rem] font-normal tracking-[.08em] uppercase text-ink/60 mb-[.8rem] max-lg:text-[1.2rem]">
               Office Address
             </h4>
             <div className="pt-[1rem] border-t border-ink/15">
@@ -231,13 +291,37 @@ export function MenuPanel({ ref, isHome, pathname }: Props) {
                   per the user's explicit "use the same font size as of the elements in the
                   overlay", up from an earlier, much smaller 1.4rem/1.8rem. */}
               <RichText
-                className="text-[2.4rem] font-normal tracking-[.05em] leading-[130%] text-ink/70 max-lg:text-[3rem]"
+                className="text-[2.4rem] font-normal tracking-[.05em] leading-[130%] text-ink/70 max-lg:text-[1.9rem]"
                 html={nl2br(site.contact.address)}
               />
-              <RichText
-                className="mt-[1.2rem] flex gap-[1.6rem] text-[2.4rem] font-normal tracking-[.05em] uppercase [&_a]:text-ink [&_a]:no-underline [&_a]:opacity-70 [&_a]:transition-opacity [&_a]:duration-300 [&_a:hover]:opacity-100 max-lg:text-[3rem]"
-                html={site.socialHtml.replace(/\r?\n/g, '')}
-              />
+            </div>
+            {/* "Follow Us" heading + divider added above the social icons, matching
+                "Office Address" above -- per the user's explicit request. mt shrunk
+                (was mt-[4.4rem] directly on the icons row, a blank-line spacer with no
+                heading) since the heading+border now does that separating job instead;
+                the address block above was nudged up by removing that spacer so this
+                heading sits directly under it. */}
+            <h4 className="mt-[2.4rem] text-[1.4rem] font-normal tracking-[.08em] uppercase text-ink/60 mb-[.8rem] max-lg:mt-[2rem] max-lg:text-[1.2rem]">
+              {site.t.social}
+            </h4>
+            <div className="pt-[1rem] border-t border-ink/15">
+              <div className="flex items-center gap-[1.6rem]">
+                {socialIcons.map((Icon, i) => {
+                  const { label, href } = site.social[i];
+                  return (
+                    <a
+                      key={label}
+                      href={href}
+                      rel="nofollow"
+                      target="_blank"
+                      aria-label={label}
+                      className="text-ink opacity-70 transition-opacity duration-300 hover:opacity-100"
+                    >
+                      <Icon className="h-[2.8rem] w-[2.8rem] max-lg:h-[2.8rem] max-lg:w-[2.8rem]" strokeWidth={1.5} />
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

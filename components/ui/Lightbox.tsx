@@ -70,7 +70,7 @@ export function Lightbox({ images, index, onClose, onNavigate }: Props) {
             type="button"
             aria-label="Previous image"
             onClick={(e) => { e.stopPropagation(); onNavigate((((index as number) - 1) % images.length + images.length) % images.length); }}
-            className="absolute left-[2.4rem] appearance-none border-0 bg-transparent p-0 cursor-pointer text-white transition-opacity duration-300 hover:opacity-60 rotate-180 [&_svg]:h-[2.5rem] [&_svg]:w-[7rem] max-lg:left-[1rem] max-lg:[&_svg]:h-[1.8rem] max-lg:[&_svg]:w-[5rem]"
+            className="absolute left-[2.4rem] appearance-none border-0 bg-transparent p-0 cursor-pointer text-white transition-opacity duration-300 hover:opacity-60 rotate-180 [&_svg]:h-[2.5rem] [&_svg]:w-[7rem] max-lg:left-1/2 max-lg:bottom-[3rem] max-lg:-translate-x-[calc(100%+.6rem)] max-lg:[&_svg]:h-[1.8rem] max-lg:[&_svg]:w-[5rem]"
           >
             <ArrowSliderIcon />
           </button>
@@ -78,7 +78,7 @@ export function Lightbox({ images, index, onClose, onNavigate }: Props) {
             type="button"
             aria-label="Next image"
             onClick={(e) => { e.stopPropagation(); onNavigate(((index as number) + 1) % images.length); }}
-            className="absolute right-[2.4rem] appearance-none border-0 bg-transparent p-0 cursor-pointer text-white transition-opacity duration-300 hover:opacity-60 [&_svg]:h-[2.5rem] [&_svg]:w-[7rem] max-lg:right-[1rem] max-lg:[&_svg]:h-[1.8rem] max-lg:[&_svg]:w-[5rem]"
+            className="absolute right-[2.4rem] appearance-none border-0 bg-transparent p-0 cursor-pointer text-white transition-opacity duration-300 hover:opacity-60 [&_svg]:h-[2.5rem] [&_svg]:w-[7rem] max-lg:right-auto max-lg:left-1/2 max-lg:bottom-[3rem] max-lg:translate-x-[.6rem] max-lg:[&_svg]:h-[1.8rem] max-lg:[&_svg]:w-[5rem]"
           >
             <ArrowSliderIcon />
           </button>
@@ -95,7 +95,7 @@ export function Lightbox({ images, index, onClose, onNavigate }: Props) {
         src={staticSrc(img, 'default')}
         alt={img.alt ?? ''}
         onClick={(e) => e.stopPropagation()}
-        className="max-h-[90vh] max-w-[90vw] rounded-[0.8rem] bg-canvas object-contain"
+        className="max-h-[90vh] max-w-[90vw] max-lg:max-h-[72vh] rounded-[0.8rem] bg-canvas object-contain"
       />
     </div>,
     document.body,

@@ -15,6 +15,7 @@ export const kadambaPlans: PlanCategory[] = [
   },
   {
     label: '800 Sq.Yds · 4320 Sq.ft',
+    gated: true,
     images: [
       { src: '/images/plans/kadamba-floorplan-4320-east-ground.jpg', width: 2400, height: 1714, mime: 'image/jpeg', title: null, alt: '4320 sq.ft villa, east-facing ground floor plan', crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } } },
       { src: '/images/plans/kadamba-floorplan-4320-east-first.jpg', width: 2400, height: 1714, mime: 'image/jpeg', title: null, alt: '4320 sq.ft villa, east-facing first floor plan', crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } } },
@@ -24,6 +25,7 @@ export const kadambaPlans: PlanCategory[] = [
   },
   {
     label: '800 Sq.Yds · 2040 Sq.ft',
+    gated: true,
     images: [
       { src: '/images/plans/kadamba-floorplan-2040-east-ground.jpg', width: 2400, height: 1697, mime: 'image/jpeg', title: null, alt: '2040 sq.ft villa, east-facing ground floor plan', crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } } },
       { src: '/images/plans/kadamba-floorplan-2040-west-ground.jpg', width: 2400, height: 1697, mime: 'image/jpeg', title: null, alt: '2040 sq.ft villa, west-facing ground floor plan', crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } } },

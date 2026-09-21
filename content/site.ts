@@ -48,10 +48,24 @@ export const site = {
   // raw value (no <br>); the footer applies nl2br like the original
   socialHtml:
     '<a href="https://www.instagram.com/leonaara_org/" rel="nofollow" target="_blank" aria-label="Instagram">Instagram</a>\r\n<a href="https://www.linkedin.com/company/leonaarahyd/" rel="nofollow" target="_blank" aria-label="LinkedIn">LinkedIn</a>\r\n<a href="https://www.facebook.com/leonaara/" rel="nofollow" target="_blank" aria-label="Facebook">Facebook</a>\r\n<a href="https://www.youtube.com/@Leonaara-infra" rel="nofollow" target="_blank" aria-label="YouTube">YouTube</a>',
+  // Same four accounts as socialHtml above, structured for the menu overlay's
+  // icon-only rendering (MenuPanel.tsx) -- the text labels there overflowed
+  // their row at mobile width, so that one spot swaps to icons per the user's
+  // request. Footer.tsx keeps the text version (socialHtml) unchanged.
+  social: [
+    { label: 'Instagram', href: 'https://www.instagram.com/leonaara_org/' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/company/leonaarahyd/' },
+    { label: 'Facebook', href: 'https://www.facebook.com/leonaara/' },
+    { label: 'YouTube', href: 'https://www.youtube.com/@Leonaara-infra' },
+  ],
   t: {
     menu: 'Menu', close: 'Close', email: 'Email', contact: 'Contact', partner: 'Partner', phone: 'Phone', address: 'Office Address',
     social: 'Follow us', request: 'Request', book: 'Book', visitSuite: 'Explore', year: 'y.', kidsage: 'Kids age',
     removeRoom: 'Remove room', addRoom: 'Add room', all: 'All',
+    // Heading for the footer's Home/About/Projects/NRI Corner/Contact/Privacy
+    // link group, added per the user's explicit "add a heading that says
+    // quick links" request (Footer.tsx).
+    quickLinks: 'Quick Links',
   },
   season: { seasonswitchstart: 0, seasonswitchend: 1792999620 },
 } as const;

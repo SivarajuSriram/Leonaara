@@ -3,12 +3,14 @@ import { RichText } from '@/components/ui/RichText';
 import { SplitWords } from '@/components/ui/SplitWords';
 
 // mask_list .content{grid-column-end:span 4;grid-column-start:9} + mobile{grid-column-end:span 9;grid-column-start:3}
-const contentCls = 'content col-start-9 col-span-4 max-lg:col-start-3 max-lg:col-span-9';
+// max-lg:text-center added: per the user's explicit "align these texts to the
+// center of the page" request for this section's mobile layout (was left-aligned).
+const contentCls = 'content col-start-9 col-span-4 max-lg:col-start-2 max-lg:col-span-12 max-lg:text-center';
 // .content .title{margin-bottom:3rem} + mobile{margin-bottom:1.5rem}
 const titleCls = 'title mb-[3rem] max-lg:mb-[1.5rem]';
 // .content .text{margin-bottom:12rem;transform:translate(9rem)} + mobile{margin-bottom:4rem;transform:translate(5.8rem)}
 // (mobile also: .content .text,.content .title:last-child{margin-bottom:4rem} -- covered since text is always last here)
-const textCls = 'text mb-[12rem] translate-x-[9rem] max-lg:mb-[4rem] max-lg:translate-x-[5.8rem]';
+const textCls = 'text mb-[12rem] translate-x-[9rem] max-lg:mb-[4rem] max-lg:translate-x-0 max-lg:px-[2rem]';
 // .list-wrapper{grid-column-end:span 12;grid-column-start:2}
 const wrapperCls = 'list-wrapper col-start-2 col-span-12';
 // .list-item{border-top:2px solid #e4e0db;padding-top:3rem} + :not(:last-child){padding-bottom:12rem} (mobile: 4.5rem)
@@ -22,15 +24,19 @@ const itemClsLast = 'last:pb-0';
 // .list-title (h4 style){font-size:2rem;font-weight:300;grid-column-end:span 3;grid-column-start:2;
 // letter-spacing:.08em;line-height:125%;text-transform:uppercase} + mobile{font-size:1.3rem;grid-column-end:span 12;
 // grid-column-start:2;letter-spacing:.05em;line-height:131%}
-// max-lg:col-start-2 is restated explicitly alongside max-lg:col-span-12
+// max-lg:col-start-1 (list-item-row is its own 12-column grid, so column 1 is
+// the left edge -- col-start-2/span-12 pushed the title and text one column
+// right of center) is restated explicitly alongside max-lg:col-span-12
 // even though the value doesn't change -- col-span's `grid-column:span
 // N/span N` shorthand also resets grid-column-start, so without re-asserting
 // col-start-2 at the same max-lg scope it would fall back to auto-placement
 // below 1024px. Same hazard documented in Break.tsx's imageLeftCls comment.
-const titleItemCls = 'list-title col-start-2 col-span-3 text-[2rem] font-light tracking-[.08em] leading-[125%] uppercase max-lg:col-start-2 max-lg:col-span-12 max-lg:text-[1.3rem] max-lg:tracking-[.05em] max-lg:leading-[131%]';
+// max-lg:text-center added alongside contentCls above -- same "align these
+// texts to the center" request, applied to each list item's own title/body too.
+const titleItemCls = 'list-title col-start-2 col-span-3 text-[2rem] font-light tracking-[.08em] leading-[125%] uppercase max-lg:col-start-1 max-lg:col-span-12 max-lg:text-[1.3rem] max-lg:tracking-[.05em] max-lg:leading-[131%] max-lg:text-center';
 // .list-text{grid-column-end:span 5;grid-column-start:5;transform:translate(9rem)} + mobile{grid-column-end:span 10;
 // grid-column-start:4;margin-top:2rem;transform:translate(0)}
-const textItemCls = 'list-text col-start-5 col-span-5 translate-x-[9rem] max-lg:col-start-4 max-lg:col-span-10 max-lg:mt-[2rem] max-lg:translate-x-0';
+const textItemCls = 'list-text col-start-5 col-span-5 translate-x-[9rem] max-lg:col-start-1 max-lg:col-span-12 max-lg:px-[2rem] max-lg:mt-[2rem] max-lg:translate-x-0 max-lg:text-center';
 
 export function List({ section }: { section: ListSection }) {
   const c = section.content;

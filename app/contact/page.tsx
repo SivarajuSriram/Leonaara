@@ -8,11 +8,17 @@ import { contact } from '@/content/en/contact';
 import { metadataFor } from '@/lib/pages';
 import { BodyClass } from '@/components/layout/BodyClass';
 import { Hero } from '@/components/sections/Hero';
-import { Img } from '@/components/sections/Img';
 
 export const metadata: Metadata = metadataFor(contact);
 
 export default function ContactPage() {
+  // `img` (the second full-bleed shutter-window photo, previously rendered
+  // right after the hero) is destructured and type-checked but no longer
+  // rendered -- removed per the user's explicit "remove the second
+  // full-bleed image on this page" request. The hero's own background photo
+  // is the page's only full-bleed image now. Kept in the destructuring so
+  // this array's positions stay in sync with contact.columns.colPos0 (same
+  // approach as About's removed mask_img -- see app/about/page.tsx).
   const [hero1, accordions, img] = contact.columns.colPos0;
   if (hero1.type !== 'mask_hero') throw new Error('expected hero');
   if (accordions.type !== 'mask_accordions') throw new Error('expected accordions');
@@ -21,7 +27,6 @@ export default function ContactPage() {
     <main>
       <BodyClass pageId={contact.id} layout="layout-0" />
       <Hero section={hero1} />
-      <Img section={img} />
     </main>
   );
 }

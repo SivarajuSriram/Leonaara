@@ -571,6 +571,8 @@ a.ht-button {
 a.linkdetail {
   border:2px solid #e4e0db;
   display:inline-block;
+  position:relative;
+  overflow:hidden;
   font-size:2rem;
   font-weight:300;
   letter-spacing:.08em;
@@ -648,9 +650,33 @@ a.linkdetail {
   grid-template-columns:repeat(7,minmax(0,1fr));
   gap:1.2rem;
 }
+/* Mobile/tablet: an evenly aligned 2-column layout. K-LIFE (16 items) spans
+   both columns and splits its own list into 2 balanced columns, so it no
+   longer leaves a tall empty gap beside a short neighbour; the other six
+   categories then pair up in 3 tidy rows. The inline padding-left:1.2rem on
+   every category but the first (meant for the 7-column desktop grid) made the
+   two columns sit unevenly, so it is zeroed here (!important beats inline). */
 @media (max-width:1023px) {
   .amenities-grid {
     grid-template-columns:repeat(2,minmax(0,1fr));
+    row-gap:3rem;
+  }
+  .amenities-grid > div {
+    padding-left:0!important;
+  }
+  .amenities-grid > div:first-child {
+    grid-column:1 / -1;
+  }
+  .amenities-grid > div:first-child ul {
+    column-count:2;
+    column-gap:1.2rem;
+  }
+  /* margin-top:0: CSS columns keep an li's top margin in column 1 but drop it at
+     the top of column 2, which left the two columns starting at different heights. */
+  .amenities-grid > div:first-child li {
+    break-inside:avoid;
+    margin-top:0;
+    margin-bottom:1.6rem;
   }
 }
 .filled,.filled * {
@@ -707,6 +733,15 @@ a.linkdetail {
   position:relative;
   overflow:hidden;
 }
+/* isolation:isolate gives every water-fill button its OWN stacking context.
+   position:relative alone does not (z-index stays auto), so the discs' z-index:-1
+   resolved against an ancestor instead and painted BEHIND the page background --
+   invisible discs under canvas-colored text (the mobile/tablet "can't see the
+   text or the green" glitch). Now the discs sit above the button's own
+   background but below its text, as intended. */
+a.ht-button, .ht-biglink, a.linkdetail, .wave-fill {
+  isolation:isolate;
+}
 a.ht-button::before, a.ht-button::after,
 .ht-biglink::before, .ht-biglink::after,
 a.linkdetail::before, a.linkdetail::after,
@@ -745,6 +780,28 @@ a.linkdetail:hover:not(:disabled)::before, a.linkdetail:hover:not(:disabled)::af
   a.linkdetail::before, a.linkdetail::after,
   .wave-fill::before, .wave-fill::after {
     display:none;
+  }
+}
+/* Mobile/tablet (<1024px, this project's usual breakpoint): touch devices have
+   no cursor, so a `:hover` state can never be triggered by the user the way
+   it is on desktop -- per the user's explicit "use the green hover color as
+   the default, no hover effects needed" request. Forces the same end-state
+   the desktop `:hover` rules above animate TO (`bottom:-100%`, canvas text)
+   as the unconditional resting state here instead, so buttons render already
+   "filled" green on every mobile/tablet page load. Placed after the base
+   pseudo-element rules and the `:hover` rules above so it wins the cascade
+   at this breakpoint (same specificity, later source position; this whole
+   button section is deliberately unlayered, so Tailwind utility classes on
+   these elements, e.g. BigLink's `text-ink`, can never outrank it either). */
+@media (max-width:1023px) {
+  a.ht-button::before, a.ht-button::after,
+  .ht-biglink::before, .ht-biglink::after,
+  a.linkdetail::before, a.linkdetail::after,
+  .wave-fill::before, .wave-fill::after {
+    bottom:-100%;
+  }
+  a.ht-button, .ht-biglink, a.linkdetail, .wave-fill {
+    color:var(--color-canvas);
   }
 }
 
@@ -819,6 +876,12 @@ a.linkdetail:hover:not(:disabled)::before, a.linkdetail:hover:not(:disabled)::af
 .branch-sway {
   animation: branch-sway 7s ease-in-out infinite alternate;
   transform-origin: 97% 55%;
+}
+/* No sway on mobile/tablet (<1024px), per the user's request. */
+@media (max-width:1023px) {
+  .branch-sway {
+    animation: none;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .branch-sway {
