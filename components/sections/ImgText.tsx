@@ -153,7 +153,12 @@ const contentWideCls = 'content col-start-6 col-span-9 max-lg:col-start-2 max-lg
 // (no z-index needed): later siblings in normal flow stack above earlier
 // ones. pointer-events-none on the image wrapper (see the render method)
 // keeps the overlap from blocking clicks on the button underneath.
-const leafDecorOuterCls = 'grid-container mt-[-26rem] mb-[-4rem] max-lg:mt-[1rem] max-lg:mb-[-2rem]';
+// max-lg:mb-[-21rem] (was -2rem): on mobile/tablet the next section (the room slider) starts with a
+// large empty band above its first image, which left a big blank gap under the branch -- pulling
+// that section up by ~21rem closes most of it, per the user's "too much space" request. Tablet
+// (768-1023px) needs -40rem: the root font size is smaller there relative to the page, so the same
+// gap is worth more rem.
+const leafDecorOuterCls = 'grid-container mt-[-26rem] mb-[-4rem] max-lg:mt-[1rem] max-lg:mb-[-21rem] md:max-lg:mb-[-40rem]';
 // w-full h-auto: sizing lives on the wrapper below (w-[98%] ml-auto), not
 // here, so this box exactly matches the image's own rendered box -- the
 // falling leaves are positioned by percentages against that same wrapper
