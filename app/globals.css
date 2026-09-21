@@ -591,6 +591,30 @@ a.linkdetail {
     padding:1rem 2rem;
   }
 }
+/* .list-subhead: the small sub-headings inside a list item's text ("CULINARY CARE",
+   "HOUSE KEEPING", "GARDEN CURATION" on Kadamba). They used to be inline-styled with
+   font-size:0.75em, which resolved against a DIFFERENT parent font size for the first
+   one (a direct child of the text block) than for the rest (which sat inside the <ul>),
+   so the first rendered larger; and the <ul>'s own 3rem top margin left a big gap under
+   it. One fixed size and a tight gap below, for every sub-heading. */
+.list-subhead {
+  font-size:1.5rem;
+  font-weight:700;
+  margin-top:1.5rem;
+}
+.list-subhead + ul {
+  margin-top:.5rem;
+}
+/* Mobile/tablet give every <li> a .8rem top margin (see the ul rules above), which
+   stacked on the ul's own margin and left a loose gap under the sub-heading. */
+.list-subhead + ul > li:first-child {
+  margin-top:0;
+}
+@media (max-width:1023px) {
+  .list-subhead {
+    font-size:.975rem;
+  }
+}
 /* .amenities-breakout / .amenities-grid: Kadamba's "Lifestyle Amenities"
    listitem (content/en/kadamba.ts, mask_list) injects this pair raw via
    RichText -- same CMS-content-class precedent as a.linkdetail above. The
