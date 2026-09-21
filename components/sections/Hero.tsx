@@ -96,7 +96,14 @@ export function Hero({ section }: { section: HeroSection }) {
   // reference pixel-for-pixel at this breakpoint.
   const titleh2Cls =
     layout === 'default'
-      ? 'self-center [grid-column:2/span_4] [grid-row-start:1] max-lg:self-start max-lg:text-[6.5rem] max-lg:font-light max-lg:[grid-column:2/span_10] max-lg:[grid-row-start:2] max-lg:tracking-normal max-lg:leading-[88%] max-lg:mt-[3rem]'
+      ? // max-lg:text-[4.5rem] (was 6.5rem, the eriro.at reference's mobile
+        // size): that reference's title was shorter and fit at 6.5rem;
+        // Leonaara's real 3rd line "to Existence" wrapped onto its own extra
+        // line ("to" / "Existence") at 390px at that size. 4.5rem is the
+        // largest size confirmed (via mobile-iframe screenshot) to keep all
+        // 3 <br>-separated segments ("Bringing" / "Purpose" / "to Existence")
+        // each on a single visual line within the 10-column mobile grid slot.
+        'self-center [grid-column:2/span_4] [grid-row-start:1] max-lg:self-start max-lg:text-[4.5rem] max-lg:font-light max-lg:[grid-column:2/span_10] max-lg:[grid-row-start:2] max-lg:tracking-normal max-lg:leading-[88%] max-lg:mt-[3rem]'
       : layout === 'subpage'
       ? '[grid-column:2/span_4] [grid-row-start:2] mt-[-18rem] max-lg:self-end max-lg:[grid-column:2/span_10] max-lg:row-[2/span_1] max-lg:text-[6.5rem] max-lg:font-light max-lg:tracking-normal max-lg:leading-[88%] max-lg:mb-[calc(92%+2rem)] max-lg:mt-[9rem]'
       : 'self-center [grid-column:2/span_4] [grid-row-start:1] max-lg:self-center max-lg:[grid-column:2/span_12] max-lg:text-[6.5rem] max-lg:font-light max-lg:tracking-normal max-lg:leading-[88%]';
