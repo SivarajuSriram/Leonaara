@@ -25,7 +25,7 @@ export const contact: PageContent = {
       {
         id: 9201, type: 'mask_hero', appearance: { layout: 'default', frameClass: 'default', spaceBefore: '', spaceAfter: '' },
         content: {
-          herolayout: 'subpage', title: 'GET IN TOUCH', titleh2: 'Contact ', titleimg: '',
+          herolayout: 'subpage', title: '', titleh2: 'Contact ', titleimg: '',
           text: '<p>Have a question about a project, or want to arrange a visit? Reach out below and our team will get back to you.</p>',
           img: [{ src: '/images/leonaara-about-courtyard.jpg', width: 3200, height: 1793, mime: 'image/jpeg', title: null, alt: 'Sunlit courtyard with an open wooden shutter window on a whitewashed wall, framed by tree branches and a rustic outdoor dining table', crop: { default: { x: 0, y: 0, width: 1, height: 1 }, mobile: { x: 0, y: 0, width: 1, height: 1 } } }],
           sideimg: [], imgsummer: [], sideimgsummer: [],

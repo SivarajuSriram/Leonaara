@@ -15,7 +15,11 @@ import { useIsWinter } from '@/lib/season';
 // way it does on desktop) -- this image-left had no breathing room on its
 // left side at all. Per the user's explicit "move those small images on the
 // left side to the right a bit so they have some space on the left" request.
-const imageLeftCls = 'image-left col-start-1 col-span-4 row-start-2 row-span-2 mt-[-22.5rem] max-lg:col-start-1 max-lg:col-span-5 max-lg:mt-[-5.5rem] max-lg:ml-[2rem]';
+// Desktop: lg:ml-[1.5vw] lg:w-full -- nudges the image 1.5% of the screen width in from the
+// browser's left edge (it used to touch it), per the user's request. Explicit width:100%
+// keeps the image the same size instead of letting the margin shrink it. Mobile keeps its
+// own ml-[2rem] below.
+const imageLeftCls = 'image-left col-start-1 col-span-4 lg:ml-[1.5vw] lg:w-full row-start-2 row-span-2 mt-[-22.5rem] max-lg:col-start-1 max-lg:col-span-5 max-lg:mt-[-5.5rem] max-lg:ml-[2rem]';
 
 // insetLeft variant: same as imageLeftCls, just one column further in (col-start-2,
 // not col-start-1) -- column 1 is the page margin gutter (var(--grid-margin), 5.5rem
