@@ -59,9 +59,9 @@ const selectChevronStyle = {
 // hover:bg-ink/hover:text-[...] swap is dropped since wave-fill's own
 // hover rule (color:canvas, :not(:disabled)-guarded) replaces it.
 const submitCls =
-  'wave-fill inline-flex h-[5.6rem] items-center justify-center whitespace-nowrap border border-ink bg-transparent px-[3.5rem] text-[1.5rem] tracking-[0.03em] text-ink uppercase outline-none disabled:opacity-40 disabled:cursor-not-allowed';
+  'wave-fill inline-flex h-[5.6rem] max-lg:h-[4.4rem] items-center justify-center whitespace-nowrap border border-ink bg-transparent px-[3.5rem] max-lg:px-[2.6rem] text-[1.5rem] max-lg:text-[1.3rem] tracking-[0.03em] text-ink uppercase outline-none disabled:opacity-40 disabled:cursor-not-allowed';
 const compactSubmitCls =
-  'wave-fill inline-flex h-[5rem] items-center justify-center whitespace-nowrap border border-ink bg-transparent px-[3.2rem] text-[1.5rem] tracking-[0.03em] text-ink uppercase outline-none disabled:opacity-40 disabled:cursor-not-allowed';
+  'wave-fill inline-flex h-[5rem] max-lg:h-[4.4rem] items-center justify-center whitespace-nowrap border border-ink bg-transparent px-[3.2rem] max-lg:px-[2.6rem] text-[1.5rem] max-lg:text-[1.3rem] tracking-[0.03em] text-ink uppercase outline-none disabled:opacity-40 disabled:cursor-not-allowed';
 
 export const VISIT_PURPOSES = ['Site Visit', 'Brochure Download', 'Other'] as const;
 
@@ -111,7 +111,7 @@ export function ContactForm({ section, onSubmitted, compact = false }: { section
               <textarea name="message" placeholder="Message" rows={compact ? 2 : undefined} className={compact ? compactTextareaCls : textareaCls} />
             </fieldset>
             <p className={`text-right text-ink/50 ${compact ? 'mb-[0.8rem] text-[1.5rem]' : 'mb-[1rem] text-[1.6rem]'}`}>* Required fields</p>
-            <label className={`flex items-start gap-[1rem] cursor-pointer ${compact ? 'mb-[1.4rem] text-[1.8rem] leading-[1.5]' : 'mb-[2.5rem] text-[1.7rem] leading-[1.5]'}`}>
+            <label className={`flex items-start gap-[1rem] cursor-pointer ${compact ? 'mb-[1.4rem] text-[1.8rem] leading-[1.5] max-lg:text-[1.4rem]' : 'mb-[2.5rem] text-[1.7rem] leading-[1.5] max-lg:text-[1.4rem]'}`}>
               <span className="relative mt-[0.2rem] h-[1.8rem] w-[1.8rem] shrink-0">
                 <input
                   type="checkbox"

@@ -72,7 +72,11 @@ const roomImageRightCls = 'room-image-right w-full self-end col-start-11 col-spa
 // same start-resetting hazard as col-span/col-start, verified against the
 // compiled Tailwind output for the row axis too). Also: .room-content
 // .swiper-slide:not(.swiper-slide-active){opacity:0!important}.
-const roomContentCls = 'room-content w-full col-start-1 col-span-12 row-start-1 max-lg:row-start-1 max-lg:row-span-3 [&_.swiper-slide:not(.swiper-slide-active)]:opacity-0!';
+// max-lg max-h-0/overflow-hidden on inactive slides: all slides sit in one flex row, so the
+// slider was always as tall as the TALLEST slide (Kadamba, with its paragraphs) -- swiping to
+// the shorter Anantha Meadows slide left a large blank gap before the next section. Collapsing
+// the inactive slides (already invisible via opacity-0) lets the height follow the active one.
+const roomContentCls = 'room-content w-full col-start-1 col-span-12 row-start-1 max-lg:row-start-1 max-lg:row-span-3 [&_.swiper-slide:not(.swiper-slide-active)]:opacity-0! max-lg:[&_.swiper-slide:not(.swiper-slide-active)]:max-h-0 max-lg:[&_.swiper-slide:not(.swiper-slide-active)]:overflow-hidden';
 
 // mask_roomslider .room-content .swiper-wrapper{padding-top:147%} (mobile
 // only) — Swiper's wrapperClass prop merges onto its internal .swiper-
@@ -143,7 +147,19 @@ const roomDescriptionCls = `room-description ${roomGridColCls} ml-[9rem] mt-[3re
 // wide enough for this line at full size, but mobile's narrower column
 // isn't, and nowrap there just pushed "G & G+1 Farm Villas" off the right
 // edge of the screen instead of onto a harmless second line.
-const roomDescriptionNowrapCls = (description: string) => (description.includes('|') ? 'whitespace-nowrap max-lg:whitespace-normal' : '');
+// Only the FIRST <p> gets nowrap (the "|" spec line); any paragraphs after it are real prose
+// and must wrap. On desktop the wrapper is sized to the spec line (w-max), and the prose
+// paragraphs are w-0 min-w-full so they fill that width without widening it -- so the
+// paragraphs line up with, and are exactly as wide as, the spec line above them.
+// [&>p+p]:mt-[1.5rem] spaces the paragraphs (the site reset zeroes <p> margins).
+const roomDescriptionNowrapCls = (description: string) => (description.includes('|')
+  ? '[&>p:first-child]:whitespace-nowrap max-lg:[&>p:first-child]:whitespace-normal lg:w-max lg:[&>p:not(:first-child)]:w-0 lg:[&>p:not(:first-child)]:min-w-full [&>p+p]:mt-[1.5rem] max-lg:[&>p+p]:mt-[1rem]'
+  : '');
+
+// Desktop: centre the button under the description's paragraphs. The description block is
+// indented ml-[9rem] and is as wide as the "|" spec line (~50.8rem, measured), so the button's
+// wrapper takes the same indent and width and centres its button (max-lg resets everything).
+const roomButtonCenterCls = (description: string) => (description.includes('|') ? 'lg:ml-[9rem] lg:w-[50.8rem] lg:flex lg:justify-center' : '');
 
 // mask_roomslider .navigation{align-self:flex-end;grid-column-end:span 2;
 // grid-column-start:8;grid-row-start:1;z-index:5} + mobile{align-self:flex-
@@ -231,7 +247,7 @@ export function RoomSlider({ section }: { section: RoomSliderSection }) {
                 <div className={gridInnerCls}>
                   <h2 className={`${roomTitleCls} ${roomTitleSizeCls(r.title)}`}>{r.title}</h2>
                   <div className={`${roomDescriptionCls} ${roomDescriptionNowrapCls(r.description)}`} dangerouslySetInnerHTML={{ __html: r.description }} />
-                  <div className={roomButtonCls}>
+                  <div className={`${roomButtonCls} ${roomButtonCenterCls(r.description)}`}>
                     {/* Anantha Meadows' own page force-404s (see
                         app/projects/ananthameadows/page.tsx) -- it isn't
                         public yet, so this shows "Coming Soon" instead of

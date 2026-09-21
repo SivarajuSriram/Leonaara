@@ -126,7 +126,12 @@ export function Hero({ section, centerText = false }: { section: HeroSection; ce
         'self-center [grid-column:2/span_4] [grid-row-start:1] text-[6.3rem] max-lg:self-start max-lg:text-[6.5rem] max-md:text-[3.1rem] max-lg:font-light max-lg:[grid-column:2/span_10] max-lg:[grid-row-start:2] max-lg:tracking-normal max-lg:leading-[88%] max-lg:mt-[3rem]'
       : layout === 'subpage'
       ? '[grid-column:2/span_4] [grid-row-start:2] mt-[-18rem] max-lg:self-end max-lg:[grid-column:2/span_10] max-lg:row-[2/span_1] max-lg:text-[6.5rem] max-lg:font-light max-lg:tracking-normal max-lg:leading-[88%] max-lg:mb-[calc(92%+2rem)] max-lg:mt-[9rem]'
-      : 'self-center [grid-column:2/span_4] [grid-row-start:1] max-lg:self-center max-lg:[grid-column:2/span_12] max-lg:text-[6.5rem] max-lg:font-light max-lg:tracking-normal max-lg:leading-[88%]';
+      : 'self-center [grid-column:2/span_6] [grid-row-start:1] leading-[120%] whitespace-nowrap max-lg:whitespace-normal max-lg:self-center max-lg:[grid-column:2/span_12] max-lg:font-light max-lg:tracking-normal ' + (centerText
+        // About only: 3rem so the two-line heading ("Creating Spaces That / Enrich Life") fits one
+        // line each at phone width (~11em wide first line); leading is loosened from 88% so the
+        // descenders of one line don't touch the capitals of the next.
+        ? 'max-lg:text-[3rem] max-lg:leading-[115%]'
+        : 'max-lg:text-[6.5rem] max-lg:leading-[88%]');
 
   // max-lg:[grid-row-start:4] (was 3): bumped down one row, same reason as
   // titleimgCls above.
@@ -160,7 +165,7 @@ export function Hero({ section, centerText = false }: { section: HeroSection; ce
   // relative to imageWrapperCls's own 4-column subgrid (which sits at
   // columns 9-12 of the page grid for only-text), so this lands on the
   // right, below the heading -- the site's original, unmodified behavior.
-  const textClsNested = textCls;
+  const textClsNested = centerText ? `${textCls} lg:mr-[-10rem]` : textCls;
 
   // .image-big's mobile align-self:flex-end (Hero.css, .mask_hero.hero-subpage
   // .image-big inside the max-width:1023px block) is subpage-only; hero-default's

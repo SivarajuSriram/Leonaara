@@ -892,19 +892,21 @@ a.linkdetail:hover:not(:disabled)::before, a.linkdetail:hover:not(:disabled)::af
    instead of the light, flexible foliage end, which reads backwards for a
    branch anchored at one point. Kept deliberately subtle and slow --
    anything faster/wider reads as the whole image shaking rather than
-   swaying in a breeze. */
+   swaying in a breeze. Runs at every width (was desktop-only until the user asked
+   for it on mobile too); the rotation is angular, so on a narrower image it moves
+   proportionally less in pixels and stays just as subtle. */
 @keyframes branch-sway {
-  from { transform: rotate(-0.6deg); }
-  to { transform: rotate(0.6deg); }
+  from { transform: rotate(-1deg); }
+  to { transform: rotate(1deg); }
 }
 .branch-sway {
-  animation: branch-sway 7s ease-in-out infinite alternate;
+  animation: branch-sway 3.8s ease-in-out infinite alternate;
   transform-origin: 97% 55%;
 }
-/* No sway on mobile/tablet (<1024px), per the user's request. */
+/* Faster on mobile/tablet (<1024px), per the user's "a bit faster on mobile" request. */
 @media (max-width:1023px) {
   .branch-sway {
-    animation: none;
+    animation-duration: 2.6s;
   }
 }
 @media (prefers-reduced-motion: reduce) {

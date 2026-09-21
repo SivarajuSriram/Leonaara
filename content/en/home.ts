@@ -136,7 +136,7 @@ export const roomSlider: RoomSliderSection = {
         uid: '3',
         pid: '84',
         title: 'Kadamba',
-        description: '<p>22 Acres | 800 Sq. Yds. | 81 Estates | G & G+1 Farm Villas</p>',
+        description: '<p>22 Acres | 800 Sq. Yds. | 81 Estates | G & G+1 Farm Villas</p><p>Inspired by Dolce Far Niente, the art of unhurried living, Kadamba is built on the belief that a home should enrich everyday life.  Rooted in nature’s finest luxuries: sunlight, fresh air, open space, and silence, Kadamba invites you to slow down, breathe deeply, and reconnect with what matters most.</p><p>Spread across 22 lush acres, Kadamba offers an exclusive low-density sanctuary designed for maximum privacy, tranquility, and room to breathe.</p>',
         minprice: '',
         people: '',
         size: '',

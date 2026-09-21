@@ -169,11 +169,15 @@ const logoMobileCls = 'logo ml-auto [&_img]:w-[17rem] [&_img]:h-auto';
 // the original, unchanged value. max-lg:w-[30rem] (was 26rem, before that 14rem,
 // briefly mirrored/right-anchored) is the mobile-only enlarged, left-anchored
 // version per the user's explicit "increase the size of that image a bit
-// more" request. The falling leaves are hidden below 1024px (max-lg:hidden on
-// each leaf) per the user's "remove the leaves falling animation for the
-// mobile and tablet layout" request; the FALLING_LEAVES percentages below are
-// relative to this same wrapper box and only apply on desktop.
-const branchWrapperCls = 'pointer-events-none absolute bottom-0 left-0 z-20 w-[120rem] max-w-[100%] max-lg:w-[30rem]';
+// more" request. The falling leaves used to be hidden below 1024px; they now run
+// there too, per the user's later "same falling leaves on mobile, without making it
+// weird" request. The FALLING_LEAVES percentages are relative to this same wrapper
+// box, so they land on the same foliage at any width -- but the rem-based leaf size,
+// sway and fall distance were tuned for the 120rem-wide desktop image, so at 30rem
+// wide they'd be far too big. The --leaf-*-k custom properties above scale those
+// three down on mobile (each defaults to 1 on desktop, so desktop is unchanged):
+// fall is kept short enough that leaves fade out before leaving the footer.
+const branchWrapperCls = 'pointer-events-none absolute bottom-0 left-0 z-20 w-[120rem] max-w-[100%] max-lg:w-[30rem] max-lg:[--leaf-size-k:0.5] max-lg:[--leaf-sway-k:0.4] max-lg:[--leaf-fall-k:0.25]';
 const branchImgCls = 'block w-full h-auto opacity-90';
 
 // Leaf-color palette sampled directly from public/images/decor/tree-branch.png
@@ -208,20 +212,20 @@ function FallingLeaf({ leaf }: { leaf: (typeof FALLING_LEAVES)[number] }) {
   const style = {
     left: leaf.left,
     top: leaf.top,
-    width: `calc(${leaf.size} * 1.1)`,
-    height: leaf.size,
+    width: `calc(${leaf.size} * 0.75 * var(--leaf-size-k, 1))`,
+    height: `calc(${leaf.size} * var(--leaf-size-k, 1))`,
     '--leaf-duration': leaf.duration,
     '--leaf-delay': leaf.delay,
-    '--leaf-sway': leaf.sway,
+    '--leaf-sway': `calc(${leaf.sway} * var(--leaf-sway-k, 1))`,
     '--leaf-spin': leaf.spin,
-    '--leaf-fall': leaf.fall,
+    '--leaf-fall': `calc(${leaf.fall} * var(--leaf-fall-k, 1))`,
     '--leaf-opacity': 0.85,
   } as CSSProperties;
   return (
     // Broad, rounded ovate leaf with a short pointed tip and a rounded base
     // (traced off the actual birch/aspen leaves in tree-branch.png -- see
     // scratchpad/leaf-closeup2.png), not a narrow diagonal teardrop.
-    <svg viewBox="0 0 24 24" preserveAspectRatio="none" className="leaf-fall max-lg:hidden absolute" style={{ ...style, fill: leaf.color }} aria-hidden="true">
+    <svg viewBox="0 0 24 24" preserveAspectRatio="none" className="leaf-fall absolute" style={{ ...style, fill: leaf.color }} aria-hidden="true">
       <path d="M12 2C17 4 20.5 9 19.5 14C18.5 19 15 22 12 22C9 22 5.5 19 4.5 14C3.5 9 7 4 12 2Z" />
       <path d="M12 4.5V19.5M12 9 8 12M12 9l4 3M12 14l-3 2.5M12 14l3 2.5" stroke="#3c3020" strokeOpacity="0.35" strokeWidth="0.6" strokeLinecap="round" fill="none" />
     </svg>

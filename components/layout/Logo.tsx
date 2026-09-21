@@ -20,7 +20,7 @@ export function Logo() {
   return (
     // header .logo-wrapper{padding-top:12.5rem;pointer-events:none;position:fixed}, mobile
     // padding-top:9rem. header,header>div{width:100%} (this div is a direct child of <header>).
-    <div className="logo-wrapper grid-container fixed w-full pt-[12.5rem] pointer-events-none max-lg:pt-[9rem]" ref={wrapperRef}>
+    <div className="logo-wrapper grid-container fixed w-full pt-[12.5rem] pointer-events-none max-lg:pt-[calc(9rem-4.5vh)]" ref={wrapperRef}>
       {/* header .logo{...}, mobile override of the grid placement + explicit width.
           body.scrolled .logo-wrapper .logo{pointer-events:none} is declared identically inside
           both the desktop and mobile media-query blocks in Header.css, so it's unconditional here
