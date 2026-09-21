@@ -96,14 +96,23 @@ export function Hero({ section }: { section: HeroSection }) {
   // reference pixel-for-pixel at this breakpoint.
   const titleh2Cls =
     layout === 'default'
-      ? // max-lg:text-[4.5rem] (was 6.5rem, the eriro.at reference's mobile
-        // size): that reference's title was shorter and fit at 6.5rem;
-        // Leonaara's real 3rd line "to Existence" wrapped onto its own extra
-        // line ("to" / "Existence") at 390px at that size. 4.5rem is the
+      ? // Two-value tablet/mobile split, not a single max-lg override: this
+        // project's :root font-size is vw-relative in different bands
+        // (2.7778vw below 768px, 1.502vw at 768-1023px, 0.5208vw at
+        // >=1024px -- see globals.css), so the SAME rem value renders very
+        // differently sized per band. max-lg:text-[6.5rem] (the eriro.at
+        // reference's mobile size, restored here) covers the 768-1023px
+        // tablet band, where it renders comfortably (widest line measured
+        // 344px inside a 632px column at 800px, still a clean 3 lines) --
+        // 6.5rem was only ever too big at narrower widths. max-md:text-
+        // [4.5rem] then overrides it below 768px (Tailwind v4 orders max-md
+        // after max-lg so the narrower breakpoint wins there), which is the
         // largest size confirmed (via mobile-iframe screenshot) to keep all
         // 3 <br>-separated segments ("Bringing" / "Purpose" / "to Existence")
-        // each on a single visual line within the 10-column mobile grid slot.
-        'self-center [grid-column:2/span_4] [grid-row-start:1] max-lg:self-start max-lg:text-[4.5rem] max-lg:font-light max-lg:[grid-column:2/span_10] max-lg:[grid-row-start:2] max-lg:tracking-normal max-lg:leading-[88%] max-lg:mt-[3rem]'
+        // each on a single visual line within the 10-column mobile grid slot
+        // at 390px -- 6.5rem wrapped "to Existence" onto its own extra line
+        // ("to" / "Existence") at that width.
+        'self-center [grid-column:2/span_4] [grid-row-start:1] max-lg:self-start max-lg:text-[6.5rem] max-md:text-[4.5rem] max-lg:font-light max-lg:[grid-column:2/span_10] max-lg:[grid-row-start:2] max-lg:tracking-normal max-lg:leading-[88%] max-lg:mt-[3rem]'
       : layout === 'subpage'
       ? '[grid-column:2/span_4] [grid-row-start:2] mt-[-18rem] max-lg:self-end max-lg:[grid-column:2/span_10] max-lg:row-[2/span_1] max-lg:text-[6.5rem] max-lg:font-light max-lg:tracking-normal max-lg:leading-[88%] max-lg:mb-[calc(92%+2rem)] max-lg:mt-[9rem]'
       : 'self-center [grid-column:2/span_4] [grid-row-start:1] max-lg:self-center max-lg:[grid-column:2/span_12] max-lg:text-[6.5rem] max-lg:font-light max-lg:tracking-normal max-lg:leading-[88%]';

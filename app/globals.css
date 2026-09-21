@@ -602,11 +602,26 @@ a.linkdetail {
    values broke two ways: 7 columns of ~50px each wrapped every label
    letter-by-letter instead of at word boundaries, and translateX(-9rem)
    (~97px, meant to offset a wide desktop breakout) shoved the whole grid
-   off-screen with horizontal overflow. Mobile override: 2 columns (wide
-   enough for every label incl. "MIYAWAKI FOREST"/"WELL SPRINGS" to wrap
-   at a word boundary, confirmed in a 390px screenshot -- 1 column was
-   tried and not needed), no translateX, and reduced side padding so the
-   breakout's negative margins don't push content past the viewport edge. */
+   off-screen with horizontal overflow.
+
+   Mobile/tablet override (<1024px): the desktop rule's
+   left:50%/width:100vw/margin-left:-50vw full-bleed math only centers
+   correctly when its parent is itself horizontally centered in the
+   viewport -- desktop's .list-text column is, but at <1024px that column
+   picks up a max-lg:translate-x-0 override that leaves it off-center (its
+   own left edge sits well right of true center), so the "full-bleed"
+   breakout was actually rendering ~37px off-center AND wider than the
+   viewport, causing horizontal overflow. Dropping just the transform (an
+   earlier version of this fix) wasn't enough because the position:relative/
+   left:50%/margin-left:-50vw breakout math was still active underneath.
+   The fix below fully neutralizes the breakout instead: position:static,
+   left/width/margin-left reset, and transform:none, so the grid renders as
+   a normal in-flow block inside its content column rather than trying to
+   full-bleed out of it. 2 columns (wide enough for every label incl.
+   "MIYAWAKI FOREST"/"WELL SPRINGS" to wrap at a word boundary, confirmed in
+   a 390px screenshot -- 1 column was tried and not needed), and reduced
+   side padding now only matters for spacing, not for containing a
+   full-bleed overflow. */
 .amenities-breakout {
   position:relative;
   left:50%;
@@ -619,8 +634,12 @@ a.linkdetail {
 }
 @media (max-width:1023px) {
   .amenities-breakout {
+    position:static;
+    left:auto;
+    width:auto;
+    margin-left:0;
     margin-top:3rem;
-    padding:0 1rem;
+    padding:0;
     transform:none;
   }
 }
