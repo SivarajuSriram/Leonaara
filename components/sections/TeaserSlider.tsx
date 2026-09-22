@@ -65,11 +65,46 @@ const teaserContentSwiperCls = `${teaserContentCls} ${teaserContentSlideCls}`;
 // + mobile{grid-column-end:span 10;grid-column-start:3;grid-row-end:span 1;
 // grid-row-start:1 (restated together with row-span-1, both change at the
 // same max-lg scope so no hazard);padding-right:0;padding-top:192%}
-const teaserContentInnerCls = 'teaser-content-inner row-start-2 row-span-1 pr-[55%] pt-[4.5rem] max-lg:col-start-3 max-lg:col-span-10 max-lg:row-start-1 max-lg:row-span-1 max-lg:pr-0 max-lg:pt-[192%]';
+// Mobile padding-top reduced from 192% to 160% per the user's explicit
+// request to tighten the gap between the stacked images above and the
+// Kadamba heading below (this padding-top is a spacer trick -- percentage
+// padding is relative to the box's WIDTH, used here to push the heading
+// down below the images that visually stack above it -- so it also had to
+// come down after col-span-10 became col-span-12 above, which widened the
+// box and made the same percentage taller than before).
+// Desktop padding-top reduced from the original 4.5rem to 1.5rem per the
+// user's explicit request to tighten the gap between the left-column image
+// (image-left) and the Kadamba heading rendered below it in this row.
+// max-lg:text-center centers the title/infotext/description/button as a
+// group at mobile and tablet widths, per the user's explicit request --
+// desktop keeps the original left-aligned layout. The mobile column was
+// also widened from col-start-3/col-span-10 to col-start-1/col-span-12
+// (full row width): the narrower, right-shifted original column (columns
+// 3-12) put centered text visibly off-center to the right of the images
+// above it, which only occupy the row's left portion (image-left spans
+// columns 3-7). A full-width box centers text against the whole row instead.
+const teaserContentInnerCls = 'teaser-content-inner row-start-2 row-span-1 pr-[55%] pt-[1.5rem] max-lg:col-start-1 max-lg:col-span-12 max-lg:row-start-1 max-lg:row-span-1 max-lg:pr-0 max-lg:pt-[160%] max-lg:text-center';
 
 // mask_teaserslider .teaser-content h2{margin-bottom:2rem} + mobile{font-
 // size:3.5rem;letter-spacing:.05em;line-height:114%}
 const teaserTitleCls = 'title mb-[2rem] max-lg:text-[3.5rem] max-lg:tracking-[.05em] max-lg:leading-[114%]';
+
+// Kadamba's own body copy (same two paragraphs shown on the home page's
+// RoomSlider), placed between the title and the Explore button. normal-case
+// overrides teaserContentCls's uppercase (applied to this whole swiper root
+// for the title/infotext/nav caps styling) since real prose shouldn't be
+// all-caps. [&>p+p]:mt-[1.5rem] spaces the paragraphs (the site reset zeroes
+// <p> margins) -- same technique as RoomSlider's roomDescriptionCls. Font
+// size bumped from 1.6rem/1.4rem to 1.9rem/1.6rem, then to 2.2rem/1.8rem,
+// per the user's explicit requests to increase the paragraph text size.
+const teaserDescriptionCls = 'description normal-case text-[2.2rem] font-light leading-[150%] mb-[2rem] [&>p+p]:mt-[1.5rem] max-lg:text-[1.8rem] max-lg:leading-[145%]';
+
+// The same infotext line (e.g. Kadamba's "22 Acres | 800 Sq. Yds. | 81
+// Estates | G & G+1 Farm Villas") that used to render on its own, to the
+// right, below image-right (see infotextSharedCls/infotextSwiperCls below,
+// now visually emptied) -- moved here, directly below the title, per the
+// user's request, and bolded.
+const teaserInfotextLeftCls = 'font-bold text-[2rem] tracking-[.08em] leading-[125%] mb-[1.5rem] max-lg:text-[1.3rem] max-lg:tracking-[.05em] max-lg:leading-[131%]';
 
 // mask_teaserslider .image-right{grid-column-end:span 6;grid-column-start:7;
 // grid-row-end:span 2;grid-row-start:1} + mobile{grid-row-end:span 1;grid-
@@ -208,10 +243,15 @@ export function TeaserSlider({ section, navVariant = 'default' }: { section: Tea
               </SwiperSlide>
             ))}
           </Swiper>
+          {/* infotext no longer renders its own text here -- per the user's request it now
+              renders inside teaser-content-inner, below the title, in the left column. This
+              Swiper root is kept (with an empty slide per s) purely so `info` stays part of
+              the four-way controller sync below; removing it would desync loop/index state
+              across the other three Swipers. */}
           <Swiper className={infotextSwiperCls} loop allowTouchMove={false} onSwiper={setInfo}>
             {slides.map((s) => (
               <SwiperSlide key={s.uid}>
-                <p className={infotextSharedCls} dangerouslySetInnerHTML={{ __html: s.infotext }} />
+                <p className={infotextSharedCls} />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -244,6 +284,10 @@ export function TeaserSlider({ section, navVariant = 'default' }: { section: Tea
                 <SwiperSlide key={s.uid}>
                   <div className={teaserContentInnerCls}>
                     {s.title ? <h2 className={teaserTitleCls} dangerouslySetInnerHTML={{ __html: s.title }} /> : null}
+                    {s.infotext ? <p className={teaserInfotextLeftCls} dangerouslySetInnerHTML={{ __html: s.infotext }} /> : null}
+                    {s.description ? (
+                      <div className={teaserDescriptionCls} dangerouslySetInnerHTML={{ __html: s.description }} />
+                    ) : null}
                     {s.link ? (
                       <Button href={s.link.href} target={s.link.target ?? undefined}>
                         {s.linktext}

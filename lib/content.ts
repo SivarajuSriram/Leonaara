@@ -35,7 +35,7 @@ export type Room = {
 };
 export type RoomSliderSection = Base<'mask_roomslider', { rooms: Room[] }>;
 export type TeaserSlide = {
-  uid: string; title: Html; imgleft: ImageRef[]; imgright: ImageRef[]; infotext: Html; linktext: string; link: LinkRef | '';
+  uid: string; title: Html; imgleft: ImageRef[]; imgright: ImageRef[]; infotext: Html; description?: Html; linktext: string; link: LinkRef | '';
 };
 export type TeaserSliderSection = Base<'mask_teaserslider', { teaserslides: TeaserSlide[] }>;
 export type Partner = { uid: string; img: ImageRef[]; link: LinkRef | '' };
