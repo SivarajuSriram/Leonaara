@@ -100,7 +100,7 @@ const teaserTitleCls = 'title mb-[2rem] max-lg:text-[3.5rem] max-lg:tracking-[.0
 const teaserDescriptionCls = 'description normal-case text-[2.2rem] font-light leading-[150%] mb-[2rem] [&>p+p]:mt-[1.5rem] max-lg:text-[1.8rem] max-lg:leading-[145%]';
 
 // The same infotext line (e.g. Kadamba's "22 Acres | 800 Sq. Yds. | 81
-// Estates | G & G+1 Farm Villas") that used to render on its own, to the
+// Estates | G & G+1 Estates") that used to render on its own, to the
 // right, below image-right (see infotextSharedCls/infotextSwiperCls below,
 // now visually emptied) -- moved here, directly below the title, per the
 // user's request, and bolded.
