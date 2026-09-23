@@ -134,7 +134,7 @@ const roomButtonCls = `room-button ${roomGridColCls} mt-[9rem] max-lg:mt-[3rem]`
 // row, to show each room's description text instead.
 const roomDescriptionCls = `room-description ${roomGridColCls} ml-[9rem] mt-[3rem] max-lg:ml-0`;
 // whitespace-nowrap only for "|"-separated info-line descriptions (e.g.
-// Kadamba's "22 Acres | 800 Sq. Yds. | 81 Estates | G & G+1 Farm Villas",
+// Kadamba's "22 Acres | 800 Sq. Yds. | 81 Estates | G & G+1 Estates",
 // per the user's "single line" request -- it was wrapping onto a second
 // line inside this narrow, ml-[9rem]-indented column) -- NOT applied
 // unconditionally to every room's description, since that field is
@@ -145,7 +145,7 @@ const roomDescriptionCls = `room-description ${roomGridColCls} ml-[9rem] mt-[3re
 // naturally contain literal pipe characters, short spec lines do.
 // Desktop-only (max-lg:whitespace-normal resets it): the desktop column is
 // wide enough for this line at full size, but mobile's narrower column
-// isn't, and nowrap there just pushed "G & G+1 Farm Villas" off the right
+// isn't, and nowrap there just pushed "G & G+1 Estates" off the right
 // edge of the screen instead of onto a harmless second line.
 // Only the FIRST <p> gets nowrap (the "|" spec line); any paragraphs after it are real prose
 // and must wrap. On desktop the wrapper is sized to the spec line (w-max), and the prose
